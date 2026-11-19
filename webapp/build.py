@@ -40,7 +40,7 @@ def bundle():
         "terms": load("terms.json")["terms"],
         "arguments": load("arguments.json"),
         "translation": load("translation.json"),
-        "quiz": {k: v for k, v in load("quiz.json").items() if not k.startswith("_")},
+        "quiz": {k: v for k, v in load("quiz.json").items() if k != "_note"},
         "mathChapters": mb["chapters"],
         "math": math,
     }

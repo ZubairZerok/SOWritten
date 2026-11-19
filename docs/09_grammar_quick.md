@@ -1,6 +1,10 @@
 # ০৯ · গ্রামার কুইক শিট (ইংরেজি ২০ + বাংলা ১০)
 
-> প্রশ্নের ধরন এখনো নিশ্চিত নয় (নতুন অংশ)। সম্ভাব্য ধরন: ভুল শুদ্ধকরণ, right form of verbs, transformation, narration, preposition, বাংলা বানান/বাক্যশুদ্ধি, সমাস, সন্ধি, প্রবাদ। পুরো বই না পড়ে এই শিট আর NCTB বইয়ের অনুশীলনী দিয়ে চালিয়ে নিন।
+> **অফিসিয়াল সিলেবাস (নিশ্চিত):**
+> - **English Language Proficiency (২০):** sentence structure, subject-verb agreement, finite & non-finite verb, transformation, speech, clause & phrase, group verb, idioms, right forms of verb
+> - **বাংলা ব্যাকরণ (১০):** বানান/বানানের নিয়ম, বাক্যশুদ্ধি, প্রবাদ-প্রবচনের নিহিতার্থ, কারক, সমাস, সন্ধি বিচ্ছেদ, এক কথায় প্রকাশ, প্রায় সমোচ্চারিত ভিন্নার্থক শব্দ
+>
+> লক্ষ্য: ইংরেজি ১৩/২০, বাংলা ৭/১০। ওয়েব অ্যাপের "ইংরেজি MCQ" আর "বাংলা MCQ"-তে প্রতিটি অংশ আলাদা করে অনুশীলন করা যায়: ৬৯টি ইংরেজি আর ৫৪টি বাংলা প্রশ্ন।
 
 ## ইংরেজি: সবচেয়ে বেশি নম্বর আসে যে ১২টি নিয়মে
 
@@ -25,6 +29,21 @@
 - Compound: *He was ill **and so** he could not attend.*
 - Affirmative ↔ Negative: *Only he can do it → None but he can do it.* · *He is too weak to walk → He is so weak that he cannot walk.*
 - Degree: *Dhaka is the largest city → No other city is as large as Dhaka / Dhaka is larger than any other city.*
+
+**Finite & non-finite verb:**
+- Finite verb কর্তার পুরুষ ও বচন অনুযায়ী বদলায় (He *goes*)। Non-finite বদলায় না: infinitive (*to go*), gerund (*going* বিশেষ্য হিসেবে), participle (*going/gone* বিশেষণ হিসেবে)।
+- এরপর bare infinitive (to ছাড়া) বসে: **let, make, see, hear, watch, help** (*Let him go. I saw him cross.*)
+- এরপর V-ing বসে: **be used to, look forward to, with a view to, can't help, mind, avoid, enjoy** (*I look forward to hearing from you.*)
+
+**Clause & phrase:**
+- Phrase-এ subject আর finite verb একসাথে থাকে না (*in the morning*)। Clause-এ থাকে।
+- Noun clause বাক্যের subject বা object হয় (*What he said* is true)। Adjective clause noun-কে বর্ণনা করে (the man *who works hard*)। Adverb clause সময়, কারণ বা শর্ত বোঝায় (*because it rained*)।
+
+**Group verb (প্রায়ই আসে):** put off = স্থগিত করা · call off = বাতিল করা · look into = তদন্ত করা · give up = ছেড়ে দেওয়া · carry out = বাস্তবায়ন করা · bring about = ঘটানো · run out of = ফুরিয়ে যাওয়া · look down upon = ঘৃণা করা · set up = প্রতিষ্ঠা করা · come across = হঠাৎ পাওয়া · turn down = প্রত্যাখ্যান করা · make up for = পুষিয়ে দেওয়া
+
+**Idioms:** a bolt from the blue = আকস্মিক আঘাত · at a stone's throw = খুব কাছে · once in a blue moon = কালেভদ্রে · break the ice = জড়তা ভাঙা · in black and white = লিখিতভাবে · call a spade a spade = স্পষ্ট বলা · red-letter day = স্মরণীয় দিন · the lion's share = সিংহভাগ · at sixes and sevens = বিশৃঙ্খল · a white elephant = ব্যয়বহুল অথচ অকেজো জিনিস
+
+**Speech (বিশেষ নিয়ম):** প্রশ্নবোধক → asked + (wh-word / if) + subject + verb · Let us → proposed/suggested that … should · চিরন্তন সত্যে tense বদলায় না।
 
 **প্রায়ই আসা Preposition:** comply **with**, abide **by**, prior **to**, independent **of**, dependent **on**, consist **of**, insist **on**, refrain **from**, invest **in**, deal **with**, accused **of**, charged **with**, according **to**, in spite **of** (despite + no of)।
 
@@ -55,6 +74,22 @@
 **সমাস (দ্রুত চেনা):** দ্বন্দ্ব (মা-বাবা), কর্মধারয় (নীলপদ্ম), তৎপুরুষ (রাজপুত্র = রাজার পুত্র), বহুব্রীহি (দশানন), দ্বিগু (ত্রিভুবন), অব্যয়ীভাব (প্রতিদিন)।
 
 **সন্ধি:** বিদ্যা+আলয় = বিদ্যালয়; সম্+তাপ = সন্তাপ; উৎ+হার = উদ্ধার; নিঃ+রোগ = নীরোগ; পর+পর = পরস্পর; তৎ+হিত = তদ্ধিত।
+
+**কারক (দ্রুত চেনা):**
+| কারক | প্রশ্ন | উদাহরণ |
+|---|---|---|
+| কর্তা | কে/কারা | **বাবা** অফিসে যান |
+| কর্ম | কী/কাকে | **বই** পড়ি |
+| করণ | কী দিয়ে/কীসের দ্বারা | **কলম দিয়ে** লেখ · **বৃষ্টিতে** ফসল নষ্ট হলো |
+| সম্প্রদান | কাকে (স্বত্ব ত্যাগ করে দান) | **গরিবকে** দান করো |
+| অপাদান | কোথা থেকে | **মেঘ থেকে** বৃষ্টি পড়ে |
+| অধিকরণ | কোথায়/কখন | **ছাদে** বসে চা খাই |
+
+**এক কথায় প্রকাশ:** যা আগে দেখা যায়নি = অদৃষ্টপূর্ব · যা আগে হয়নি = অভূতপূর্ব · যা বলা হয়নি = অনুক্ত · যা সহজে পাওয়া যায় না = দুর্লভ · যা অতিক্রম করা যায় না = অনতিক্রম্য · বক্তৃতায় পটু = বাগ্মী · মাটি দিয়ে তৈরি = মৃন্ময় · আকাশে বিচরণ করে = খেচর · ক্রমশ বাড়ছে = বর্ধিষ্ণু · কষ্টে জয় করা যায় = দুর্জয় · যার সন্তান বাঁচে না = মৃতবৎসা
+
+**প্রায় সমোচ্চারিত ভিন্নার্থক শব্দ:** অন্ন (ভাত) / অন্য (অপর) · আশা (প্রত্যাশা) / আসা (আগমন) · কুল (বংশ) / কূল (তীর) · দিন (দিবস) / দীন (দরিদ্র) · শব (মৃতদেহ) / সব (সকল) · নীড় (বাসা) / নীর (পানি) · শারদা (দুর্গা) / সারদা (সরস্বতী) · অবদান (কীর্তি) / অবধান (মনোযোগ)
+
+**প্রবাদ-প্রবচনের নিহিতার্থ:** অতি লোভে তাঁতি নষ্ট = বেশি লোভে ক্ষতি · দশের লাঠি একের বোঝা = সবাই মিলে করলে কঠিন কাজও সহজ · নাচতে না জানলে উঠান বাঁকা = নিজের অক্ষমতা ঢাকতে অন্যের দোষ · চকচক করলেই সোনা হয় না = বাইরের চাকচিক্যে বিচার নয় · যত গর্জে তত বর্ষে না = আস্ফালন বেশি, কাজ কম
 
 **প্রবাদ/বাগধারা (রচনাতেও কাজে লাগে):** অগ্নিমূল্য (খুব দামি), গোঁফ খেজুরে (অলস), কাঁঠালের আমসত্ত্ব (অসম্ভব বস্তু), সাপের পাঁচ পা দেখা (অহংকারী হওয়া), শাঁখের করাত (উভয় সংকট), ঢাকের কাঠি (মোসাহেব), ভরাডুবি (সর্বনাশ)।
 

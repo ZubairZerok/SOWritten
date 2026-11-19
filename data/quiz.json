@@ -1,83 +1,1629 @@
 {
  "_note": "MCQ কুইজ: ইংরেজি ভাষা (২০), বাংলা ব্যাকরণ (১০), GK/ব্যাংকিং (২০)। a = সঠিক উত্তরের index (0 থেকে)। ওয়েব অ্যাপ ও CLI ব্যবহার করে।",
  "eng": [
-  {"q": "One of the banks ___ been merged.", "o": ["has", "have", "are"], "a": 0, "x": "One of + plural noun → singular verb"},
-  {"q": "The number of defaulters ___ rising.", "o": ["is", "are", "were"], "a": 0, "x": "The number of → singular"},
-  {"q": "A number of banks ___ facing a liquidity crisis.", "o": ["are", "is", "has"], "a": 0, "x": "A number of → plural"},
-  {"q": "Economics ___ my favourite subject.", "o": ["is", "are", "were"], "a": 0, "x": "Economics/news/mathematics → singular"},
-  {"q": "I have been working here ___ 2020.", "o": ["since", "for", "from"], "a": 0, "x": "since + সময়ের শুরু"},
-  {"q": "He has been ill ___ three days.", "o": ["for", "since", "from"], "a": 0, "x": "for + সময়কাল"},
-  {"q": "If I ___ rich, I would help the poor.", "o": ["were", "am", "will be"], "a": 0, "x": "If + past (were), would + base"},
-  {"q": "It is high time we ___ action against wilful defaulters.", "o": ["took", "take", "have taken"], "a": 0, "x": "It is high time + past"},
-  {"q": "Walk fast lest you ___ miss the train.", "o": ["should", "will", "would"], "a": 0, "x": "lest + should"},
-  {"q": "He is senior ___ me.", "o": ["to", "than", "from"], "a": 0, "x": "senior/junior/superior/prefer + to"},
-  {"q": "She prefers tea ___ coffee.", "o": ["to", "than", "over"], "a": 0, "x": "prefer A to B"},
-  {"q": "___ honest officer is respected by all.", "o": ["An", "A", "The"], "a": 0, "x": "honest-এর h উচ্চারিত হয় না → an"},
-  {"q": "He is ___ university teacher.", "o": ["a", "an", "the"], "a": 0, "x": "university-র উচ্চারণ 'ইউ' → a"},
-  {"q": "The loan must ___ repaid within a year.", "o": ["be", "been", "being"], "a": 0, "x": "modal + be + V3"},
-  {"q": "Neither the manager nor the clerks ___ present.", "o": ["were", "was", "is"], "a": 0, "x": "neither…nor: কাছের subject (clerks) অনুযায়ী verb"},
-  {"q": "Each of the students ___ a laptop.", "o": ["has", "have", "are having"], "a": 0, "x": "Each of → singular"},
-  {"q": "He said, \"I am busy.\" → He said that he ___ busy.", "o": ["was", "is", "has been"], "a": 0, "x": "reporting verb past → tense এক ধাপ পেছায়"},
-  {"q": "Bank officers must comply ___ the rules.", "o": ["with", "to", "by"], "a": 0, "x": "comply with"},
-  {"q": "He was accused ___ fraud.", "o": ["of", "for", "with"], "a": 0, "x": "accused of / charged with"},
-  {"q": "She insisted ___ paying the bill.", "o": ["on", "to", "for"], "a": 0, "x": "insist on"},
-  {"q": "___ the rain, the exam was held on time.", "o": ["Despite", "In spite", "Although"], "a": 0, "x": "despite (of ছাড়া) / in spite of"},
-  {"q": "No sooner had he arrived ___ the meeting started.", "o": ["than", "then", "when"], "a": 0, "x": "No sooner … than"},
-  {"q": "Hardly had I reached the station ___ the train left.", "o": ["when", "than", "then"], "a": 0, "x": "Hardly/Scarcely … when"},
-  {"q": "Correct spelling:", "o": ["accommodation", "accomodation", "acommodation"], "a": 0, "x": "double c, double m"},
-  {"q": "Correct spelling:", "o": ["entrepreneur", "enterpreneur", "entreprenuer"], "a": 0, "x": "entre-pre-neur"},
-  {"q": "Correct spelling:", "o": ["occurrence", "occurence", "ocurrence"], "a": 0, "x": "double c, double r"},
-  {"q": "Bread and butter ___ my favourite breakfast.", "o": ["is", "are", "were"], "a": 0, "x": "একক ধারণা বোঝালে singular"},
-  {"q": "Negative of \"Only he can solve it\":", "o": ["None but he can solve it.", "No one can solve it.", "He cannot solve it."], "a": 0, "x": "Only (ব্যক্তি) → None but"},
-  {"q": "Passive of \"They will open a new branch\":", "o": ["A new branch will be opened by them.", "A new branch will opened by them.", "A new branch would be opened by them."], "a": 0, "x": "will + be + V3"},
-  {"q": "Would that I ___ a bird!", "o": ["were", "am", "was being"], "a": 0, "x": "অবাস্তব ইচ্ছা → were"},
-  {"q": "Complex form of \"Being ill, he could not attend.\"", "o": ["As he was ill, he could not attend.", "He was ill and could not attend.", "He could not attend being ill."], "a": 0, "x": "Being → As/Since + clause"},
-  {"q": "Comparative of \"Dhaka is the largest city in Bangladesh\":", "o": ["Dhaka is larger than any other city in Bangladesh.", "Dhaka is larger than all city in Bangladesh.", "Dhaka is large than any other city."], "a": 0, "x": "superlative → than any other + singular"}
+  {
+   "q": "One of the banks ___ been merged.",
+   "o": [
+    "has",
+    "have",
+    "are"
+   ],
+   "a": 0,
+   "x": "One of + plural noun → singular verb",
+   "tp": "sva"
+  },
+  {
+   "q": "The number of defaulters ___ rising.",
+   "o": [
+    "is",
+    "are",
+    "were"
+   ],
+   "a": 0,
+   "x": "The number of → singular",
+   "tp": "sva"
+  },
+  {
+   "q": "A number of banks ___ facing a liquidity crisis.",
+   "o": [
+    "are",
+    "is",
+    "has"
+   ],
+   "a": 0,
+   "x": "A number of → plural",
+   "tp": "sva"
+  },
+  {
+   "q": "Economics ___ my favourite subject.",
+   "o": [
+    "is",
+    "are",
+    "were"
+   ],
+   "a": 0,
+   "x": "Economics/news/mathematics → singular",
+   "tp": "sva"
+  },
+  {
+   "q": "I have been working here ___ 2020.",
+   "o": [
+    "since",
+    "for",
+    "from"
+   ],
+   "a": 0,
+   "x": "since + সময়ের শুরু",
+   "tp": "rfv"
+  },
+  {
+   "q": "He has been ill ___ three days.",
+   "o": [
+    "for",
+    "since",
+    "from"
+   ],
+   "a": 0,
+   "x": "for + সময়কাল",
+   "tp": "rfv"
+  },
+  {
+   "q": "If I ___ rich, I would help the poor.",
+   "o": [
+    "were",
+    "am",
+    "will be"
+   ],
+   "a": 0,
+   "x": "If + past (were), would + base",
+   "tp": "rfv"
+  },
+  {
+   "q": "It is high time we ___ action against wilful defaulters.",
+   "o": [
+    "took",
+    "take",
+    "have taken"
+   ],
+   "a": 0,
+   "x": "It is high time + past",
+   "tp": "rfv"
+  },
+  {
+   "q": "Walk fast lest you ___ miss the train.",
+   "o": [
+    "should",
+    "will",
+    "would"
+   ],
+   "a": 0,
+   "x": "lest + should",
+   "tp": "rfv"
+  },
+  {
+   "q": "He is senior ___ me.",
+   "o": [
+    "to",
+    "than",
+    "from"
+   ],
+   "a": 0,
+   "x": "senior/junior/superior/prefer + to",
+   "tp": "structure"
+  },
+  {
+   "q": "She prefers tea ___ coffee.",
+   "o": [
+    "to",
+    "than",
+    "over"
+   ],
+   "a": 0,
+   "x": "prefer A to B",
+   "tp": "structure"
+  },
+  {
+   "q": "___ honest officer is respected by all.",
+   "o": [
+    "An",
+    "A",
+    "The"
+   ],
+   "a": 0,
+   "x": "honest-এর h উচ্চারিত হয় না → an",
+   "tp": "structure"
+  },
+  {
+   "q": "He is ___ university teacher.",
+   "o": [
+    "a",
+    "an",
+    "the"
+   ],
+   "a": 0,
+   "x": "university-র উচ্চারণ 'ইউ' → a",
+   "tp": "rfv"
+  },
+  {
+   "q": "The loan must ___ repaid within a year.",
+   "o": [
+    "be",
+    "been",
+    "being"
+   ],
+   "a": 0,
+   "x": "modal + be + V3",
+   "tp": "sva"
+  },
+  {
+   "q": "Neither the manager nor the clerks ___ present.",
+   "o": [
+    "were",
+    "was",
+    "is"
+   ],
+   "a": 0,
+   "x": "neither…nor: কাছের subject (clerks) অনুযায়ী verb",
+   "tp": "sva"
+  },
+  {
+   "q": "Each of the students ___ a laptop.",
+   "o": [
+    "has",
+    "have",
+    "are having"
+   ],
+   "a": 0,
+   "x": "Each of → singular",
+   "tp": "speech"
+  },
+  {
+   "q": "He said, \"I am busy.\" → He said that he ___ busy.",
+   "o": [
+    "was",
+    "is",
+    "has been"
+   ],
+   "a": 0,
+   "x": "reporting verb past → tense এক ধাপ পেছায়",
+   "tp": "groupverb"
+  },
+  {
+   "q": "Bank officers must comply ___ the rules.",
+   "o": [
+    "with",
+    "to",
+    "by"
+   ],
+   "a": 0,
+   "x": "comply with",
+   "tp": "groupverb"
+  },
+  {
+   "q": "He was accused ___ fraud.",
+   "o": [
+    "of",
+    "for",
+    "with"
+   ],
+   "a": 0,
+   "x": "accused of / charged with",
+   "tp": "groupverb"
+  },
+  {
+   "q": "She insisted ___ paying the bill.",
+   "o": [
+    "on",
+    "to",
+    "for"
+   ],
+   "a": 0,
+   "x": "insist on",
+   "tp": "structure"
+  },
+  {
+   "q": "___ the rain, the exam was held on time.",
+   "o": [
+    "Despite",
+    "In spite",
+    "Although"
+   ],
+   "a": 0,
+   "x": "despite (of ছাড়া) / in spite of",
+   "tp": "structure"
+  },
+  {
+   "q": "No sooner had he arrived ___ the meeting started.",
+   "o": [
+    "than",
+    "then",
+    "when"
+   ],
+   "a": 0,
+   "x": "No sooner … than",
+   "tp": "structure"
+  },
+  {
+   "q": "Hardly had I reached the station ___ the train left.",
+   "o": [
+    "when",
+    "than",
+    "then"
+   ],
+   "a": 0,
+   "x": "Hardly/Scarcely … when",
+   "tp": "structure"
+  },
+  {
+   "q": "Correct spelling:",
+   "o": [
+    "accommodation",
+    "accomodation",
+    "acommodation"
+   ],
+   "a": 0,
+   "x": "double c, double m",
+   "tp": "structure"
+  },
+  {
+   "q": "Correct spelling:",
+   "o": [
+    "entrepreneur",
+    "enterpreneur",
+    "entreprenuer"
+   ],
+   "a": 0,
+   "x": "entre-pre-neur",
+   "tp": "structure"
+  },
+  {
+   "q": "Correct spelling:",
+   "o": [
+    "occurrence",
+    "occurence",
+    "ocurrence"
+   ],
+   "a": 0,
+   "x": "double c, double r",
+   "tp": "structure"
+  },
+  {
+   "q": "Bread and butter ___ my favourite breakfast.",
+   "o": [
+    "is",
+    "are",
+    "were"
+   ],
+   "a": 0,
+   "x": "একক ধারণা বোঝালে singular",
+   "tp": "sva"
+  },
+  {
+   "q": "Negative of \"Only he can solve it\":",
+   "o": [
+    "None but he can solve it.",
+    "No one can solve it.",
+    "He cannot solve it."
+   ],
+   "a": 0,
+   "x": "Only (ব্যক্তি) → None but",
+   "tp": "transformation"
+  },
+  {
+   "q": "Passive of \"They will open a new branch\":",
+   "o": [
+    "A new branch will be opened by them.",
+    "A new branch will opened by them.",
+    "A new branch would be opened by them."
+   ],
+   "a": 0,
+   "x": "will + be + V3",
+   "tp": "transformation"
+  },
+  {
+   "q": "Would that I ___ a bird!",
+   "o": [
+    "were",
+    "am",
+    "was being"
+   ],
+   "a": 0,
+   "x": "অবাস্তব ইচ্ছা → were",
+   "tp": "rfv"
+  },
+  {
+   "q": "Complex form of \"Being ill, he could not attend.\"",
+   "o": [
+    "As he was ill, he could not attend.",
+    "He was ill and could not attend.",
+    "He could not attend being ill."
+   ],
+   "a": 0,
+   "x": "Being → As/Since + clause",
+   "tp": "transformation"
+  },
+  {
+   "q": "Comparative of \"Dhaka is the largest city in Bangladesh\":",
+   "o": [
+    "Dhaka is larger than any other city in Bangladesh.",
+    "Dhaka is larger than all city in Bangladesh.",
+    "Dhaka is large than any other city."
+   ],
+   "a": 0,
+   "x": "superlative → than any other + singular",
+   "tp": "transformation"
+  },
+  {
+   "q": "In 'He wants to join a bank', the non-finite verb is:",
+   "o": [
+    "to join",
+    "wants",
+    "He"
+   ],
+   "a": 0,
+   "x": "to + verb = infinitive (non-finite); wants = finite",
+   "tp": "finite"
+  },
+  {
+   "q": "I saw him ___ the road.",
+   "o": [
+    "cross",
+    "to cross",
+    "crossed"
+   ],
+   "a": 0,
+   "x": "see/hear/watch + object + bare infinitive (crossing-ও চলে)",
+   "tp": "finite"
+  },
+  {
+   "q": "Let him ___ the form.",
+   "o": [
+    "fill in",
+    "to fill in",
+    "filled in"
+   ],
+   "a": 0,
+   "x": "let + object + bare infinitive",
+   "tp": "finite"
+  },
+  {
+   "q": "He made me ___ the work again.",
+   "o": [
+    "do",
+    "to do",
+    "did"
+   ],
+   "a": 0,
+   "x": "make + object + bare infinitive (active voice)",
+   "tp": "finite"
+  },
+  {
+   "q": "He is used to ___ late at night.",
+   "o": [
+    "working",
+    "work",
+    "worked"
+   ],
+   "a": 0,
+   "x": "be used to + V-ing",
+   "tp": "finite"
+  },
+  {
+   "q": "I look forward to ___ from you.",
+   "o": [
+    "hearing",
+    "hear",
+    "heard"
+   ],
+   "a": 0,
+   "x": "look forward to + V-ing",
+   "tp": "finite"
+  },
+  {
+   "q": "In 'Saving money is a good habit', 'Saving' is a:",
+   "o": [
+    "gerund",
+    "participle",
+    "finite verb"
+   ],
+   "a": 0,
+   "x": "V-ing used as a noun = gerund",
+   "tp": "finite"
+  },
+  {
+   "q": "'What he said' in 'What he said is true' is a:",
+   "o": [
+    "noun clause",
+    "adjective clause",
+    "adverb clause"
+   ],
+   "a": 0,
+   "x": "subject হিসেবে কাজ করছে → noun clause",
+   "tp": "clause"
+  },
+  {
+   "q": "'who works hard' in 'The man who works hard succeeds' is a:",
+   "o": [
+    "adjective clause",
+    "noun clause",
+    "adverb clause"
+   ],
+   "a": 0,
+   "x": "noun (man)-কে বর্ণনা করছে",
+   "tp": "clause"
+  },
+  {
+   "q": "'because it rained' in 'The match was postponed because it rained' is a:",
+   "o": [
+    "adverb clause",
+    "noun clause",
+    "adjective clause"
+   ],
+   "a": 0,
+   "x": "কারণ বোঝাচ্ছে → adverb clause",
+   "tp": "clause"
+  },
+  {
+   "q": "'In the morning' is a:",
+   "o": [
+    "phrase",
+    "clause",
+    "sentence"
+   ],
+   "a": 0,
+   "x": "subject + finite verb নেই → phrase",
+   "tp": "clause"
+  },
+  {
+   "q": "'Although he was ill, he attended the exam.' The main clause is:",
+   "o": [
+    "he attended the exam",
+    "Although he was ill",
+    "he was ill"
+   ],
+   "a": 0,
+   "x": "নিজে সম্পূর্ণ অর্থ দেয় → principal clause",
+   "tp": "clause"
+  },
+  {
+   "q": "The meeting was put off till Sunday. 'put off' means:",
+   "o": [
+    "postponed",
+    "cancelled",
+    "extinguished"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "groupverb"
+  },
+  {
+   "q": "'Look into' means:",
+   "o": [
+    "investigate",
+    "look outside",
+    "respect"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "groupverb"
+  },
+  {
+   "q": "'Give up' means:",
+   "o": [
+    "quit / abandon",
+    "distribute",
+    "return"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "groupverb"
+  },
+  {
+   "q": "'Carry out' means:",
+   "o": [
+    "execute / perform",
+    "take away",
+    "continue"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "groupverb"
+  },
+  {
+   "q": "'Bring about' means:",
+   "o": [
+    "cause to happen",
+    "bring back",
+    "bring up children"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "groupverb"
+  },
+  {
+   "q": "'Call off' means:",
+   "o": [
+    "cancel",
+    "telephone",
+    "shout"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "groupverb"
+  },
+  {
+   "q": "'Run out of' means:",
+   "o": [
+    "use up the supply of",
+    "escape from",
+    "run fast"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "groupverb"
+  },
+  {
+   "q": "'Look down upon' means:",
+   "o": [
+    "despise",
+    "look below",
+    "admire"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "groupverb"
+  },
+  {
+   "q": "'A bolt from the blue' means:",
+   "o": [
+    "a sudden shock",
+    "a lightning strike",
+    "good luck"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "idiom"
+  },
+  {
+   "q": "'At a stone's throw' means:",
+   "o": [
+    "very near",
+    "far away",
+    "by force"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "idiom"
+  },
+  {
+   "q": "'Once in a blue moon' means:",
+   "o": [
+    "very rarely",
+    "every month",
+    "at night"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "idiom"
+  },
+  {
+   "q": "'To break the ice' means:",
+   "o": [
+    "to start talking in an awkward situation",
+    "to destroy something",
+    "to cool down"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "idiom"
+  },
+  {
+   "q": "'In black and white' means:",
+   "o": [
+    "in writing",
+    "in colour",
+    "in confusion"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "idiom"
+  },
+  {
+   "q": "'To call a spade a spade' means:",
+   "o": [
+    "to speak frankly",
+    "to dig the ground",
+    "to insult someone"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "idiom"
+  },
+  {
+   "q": "'A red-letter day' means:",
+   "o": [
+    "a memorable day",
+    "a dangerous day",
+    "a working day"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "idiom"
+  },
+  {
+   "q": "'The lion's share' means:",
+   "o": [
+    "the largest part",
+    "a brave act",
+    "an equal part"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "idiom"
+  },
+  {
+   "q": "Choose the correct sentence:",
+   "o": [
+    "Hardly had he left when it started raining.",
+    "Hardly he had left when it started raining.",
+    "Hardly had he left than it started raining."
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "structure"
+  },
+  {
+   "q": "Choose the correct sentence:",
+   "o": [
+    "Each of the officers was given a laptop.",
+    "Each of the officers were given a laptop.",
+    "Each of officer was given laptop."
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "structure"
+  },
+  {
+   "q": "He said to me, \"Where do you live?\" →",
+   "o": [
+    "He asked me where I lived.",
+    "He asked me where did I live.",
+    "He said me where I lived."
+   ],
+   "a": 0,
+   "x": "প্রশ্নবোধক → asked; কর্তা আগে, verb পরে",
+   "tp": "speech"
+  },
+  {
+   "q": "She said, \"Let us go home.\" →",
+   "o": [
+    "She proposed that they should go home.",
+    "She said let us go home.",
+    "She told that they go home."
+   ],
+   "a": 0,
+   "x": "Let us (প্রস্তাব) → proposed/suggested that … should",
+   "tp": "speech"
+  },
+  {
+   "q": "The teacher said, \"The earth moves round the sun.\" →",
+   "o": [
+    "The teacher said that the earth moves round the sun.",
+    "The teacher said that the earth moved round the sun.",
+    "The teacher told that the earth had moved round the sun."
+   ],
+   "a": 0,
+   "x": "চিরন্তন সত্যে tense বদলায় না",
+   "tp": "speech"
+  },
+  {
+   "q": "The train ___ before we reached the station.",
+   "o": [
+    "had left",
+    "left",
+    "has left"
+   ],
+   "a": 0,
+   "x": "আগের ঘটনা past perfect, পরের ঘটনা past",
+   "tp": "rfv"
+  },
+  {
+   "q": "He ___ in this bank since 2019.",
+   "o": [
+    "has been working",
+    "is working",
+    "worked"
+   ],
+   "a": 0,
+   "x": "since + present perfect continuous",
+   "tp": "rfv"
+  },
+  {
+   "q": "If he had studied, he ___ passed.",
+   "o": [
+    "would have",
+    "would",
+    "will have"
+   ],
+   "a": 0,
+   "x": "If + past perfect → would have + V3",
+   "tp": "rfv"
+  },
+  {
+   "q": "Assertive form of 'What a beautiful bird it is!':",
+   "o": [
+    "It is a very beautiful bird.",
+    "It is a beautiful bird what.",
+    "The bird is not beautiful."
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "transformation"
+  }
  ],
  "bn": [
-  {"q": "শুদ্ধ বানান কোনটি?", "o": ["সরকারি", "সরকারী", "শরকারি"], "a": 0, "x": "-ই প্রত্যয়যুক্ত বিদেশি/তদ্ভব শব্দে ই-কার"},
-  {"q": "প্রমিত বানান কোনটি?", "o": ["শ্রেণি", "স্রেণী", "শ্রেনি"], "a": 0, "x": "বাংলা একাডেমির প্রমিত: শ্রেণি"},
-  {"q": "শুদ্ধ বানান কোনটি?", "o": ["মুহূর্ত", "মুহুর্ত", "মূহুর্ত"], "a": 0, "x": "মু-হূ-র্ত"},
-  {"q": "শুদ্ধ বানান কোনটি?", "o": ["উজ্জ্বল", "উজ্জল", "উজ্বল"], "a": 0, "x": "জ্জ্ব"},
-  {"q": "শুদ্ধ বানান কোনটি?", "o": ["দুরবস্থা", "দূরাবস্থা", "দুরাবস্থা"], "a": 0, "x": "দুঃ + অবস্থা = দুরবস্থা"},
-  {"q": "শুদ্ধ বানান কোনটি?", "o": ["সমীচীন", "সমিচীন", "সমীচিন"], "a": 0, "x": "দুটোই দীর্ঘ ঈ"},
-  {"q": "শুদ্ধ শব্দ কোনটি?", "o": ["দারিদ্র্য", "দারিদ্রতা", "দারিদ্র্যতা"], "a": 0, "x": "দারিদ্র্য নিজেই বিশেষ্য, -তা বাড়তি"},
-  {"q": "শুদ্ধ শব্দ কোনটি?", "o": ["সৌজন্য", "সৌজন্যতা", "সৌজন্যেতা"], "a": 0, "x": "-তা বাড়তি"},
-  {"q": "শুদ্ধ শব্দ কোনটি?", "o": ["অত্যধিক", "অত্যাধিক", "অত্যধীক"], "a": 0, "x": "অতি + অধিক = অত্যধিক"},
-  {"q": "শুদ্ধ শব্দ কোনটি?", "o": ["পৈতৃক", "পৈত্রিক", "পৈতিক"], "a": 0, "x": "পিতৃ → পৈতৃক"},
-  {"q": "শুদ্ধ বাক্য কোনটি?", "o": ["তিনি সস্ত্রীক এসেছেন।", "তিনি স্বস্ত্রীক এসেছেন।", "তিনি সস্ত্রীকসহ এসেছেন।"], "a": 0, "x": "স + স্ত্রীক; 'সহ' দিলে দ্বিরুক্তি"},
-  {"q": "'নীলপদ্ম' কোন সমাস?", "o": ["কর্মধারয়", "তৎপুরুষ", "বহুব্রীহি", "দ্বিগু"], "a": 0, "x": "নীল যে পদ্ম"},
-  {"q": "'দশানন' কোন সমাস?", "o": ["বহুব্রীহি", "দ্বিগু", "কর্মধারয়", "দ্বন্দ্ব"], "a": 0, "x": "দশ আনন যার (রাবণ) — অন্য পদের অর্থ প্রধান"},
-  {"q": "'ত্রিভুবন' কোন সমাস?", "o": ["দ্বিগু", "বহুব্রীহি", "দ্বন্দ্ব", "অব্যয়ীভাব"], "a": 0, "x": "তিন ভুবনের সমাহার"},
-  {"q": "'প্রতিদিন' কোন সমাস?", "o": ["অব্যয়ীভাব", "দ্বিগু", "তৎপুরুষ", "কর্মধারয়"], "a": 0, "x": "দিন দিন — অব্যয় পূর্বপদ"},
-  {"q": "'মা-বাবা' কোন সমাস?", "o": ["দ্বন্দ্ব", "দ্বিগু", "বহুব্রীহি", "কর্মধারয়"], "a": 0, "x": "উভয় পদ প্রধান"},
-  {"q": "'বিদ্যালয়'-এর সন্ধিবিচ্ছেদ:", "o": ["বিদ্যা + আলয়", "বিদ্য + আলয়", "বিদ্যা + লয়"], "a": 0, "x": "আ + আ = আ"},
-  {"q": "'উদ্ধার'-এর সন্ধিবিচ্ছেদ:", "o": ["উৎ + হার", "উদ + ধার", "উ + দ্ধার"], "a": 0, "x": "ৎ + হ = দ্ধ"},
-  {"q": "'অগ্নিমূল্য' বাগধারার অর্থ:", "o": ["খুব দামি", "আগুনের দাম", "খুব সস্তা"], "a": 0, "x": ""},
-  {"q": "'শাঁখের করাত' বাগধারার অর্থ:", "o": ["উভয় সংকট", "ধারালো অস্ত্র", "অলস ব্যক্তি"], "a": 0, "x": "দুই দিকেই কাটে"}
+  {
+   "q": "শুদ্ধ বানান কোনটি?",
+   "o": [
+    "সরকারি",
+    "সরকারী",
+    "শরকারি"
+   ],
+   "a": 0,
+   "x": "-ই প্রত্যয়যুক্ত বিদেশি/তদ্ভব শব্দে ই-কার",
+   "tp": "banan"
+  },
+  {
+   "q": "প্রমিত বানান কোনটি?",
+   "o": [
+    "শ্রেণি",
+    "স্রেণী",
+    "শ্রেনি"
+   ],
+   "a": 0,
+   "x": "বাংলা একাডেমির প্রমিত: শ্রেণি",
+   "tp": "banan"
+  },
+  {
+   "q": "শুদ্ধ বানান কোনটি?",
+   "o": [
+    "মুহূর্ত",
+    "মুহুর্ত",
+    "মূহুর্ত"
+   ],
+   "a": 0,
+   "x": "মু-হূ-র্ত",
+   "tp": "banan"
+  },
+  {
+   "q": "শুদ্ধ বানান কোনটি?",
+   "o": [
+    "উজ্জ্বল",
+    "উজ্জল",
+    "উজ্বল"
+   ],
+   "a": 0,
+   "x": "জ্জ্ব",
+   "tp": "banan"
+  },
+  {
+   "q": "শুদ্ধ বানান কোনটি?",
+   "o": [
+    "দুরবস্থা",
+    "দূরাবস্থা",
+    "দুরাবস্থা"
+   ],
+   "a": 0,
+   "x": "দুঃ + অবস্থা = দুরবস্থা",
+   "tp": "banan"
+  },
+  {
+   "q": "শুদ্ধ বানান কোনটি?",
+   "o": [
+    "সমীচীন",
+    "সমিচীন",
+    "সমীচিন"
+   ],
+   "a": 0,
+   "x": "দুটোই দীর্ঘ ঈ",
+   "tp": "banan"
+  },
+  {
+   "q": "শুদ্ধ শব্দ কোনটি?",
+   "o": [
+    "দারিদ্র্য",
+    "দারিদ্রতা",
+    "দারিদ্র্যতা"
+   ],
+   "a": 0,
+   "x": "দারিদ্র্য নিজেই বিশেষ্য, -তা বাড়তি",
+   "tp": "shuddhi"
+  },
+  {
+   "q": "শুদ্ধ শব্দ কোনটি?",
+   "o": [
+    "সৌজন্য",
+    "সৌজন্যতা",
+    "সৌজন্যেতা"
+   ],
+   "a": 0,
+   "x": "-তা বাড়তি",
+   "tp": "shuddhi"
+  },
+  {
+   "q": "শুদ্ধ শব্দ কোনটি?",
+   "o": [
+    "অত্যধিক",
+    "অত্যাধিক",
+    "অত্যধীক"
+   ],
+   "a": 0,
+   "x": "অতি + অধিক = অত্যধিক",
+   "tp": "shuddhi"
+  },
+  {
+   "q": "শুদ্ধ শব্দ কোনটি?",
+   "o": [
+    "পৈতৃক",
+    "পৈত্রিক",
+    "পৈতিক"
+   ],
+   "a": 0,
+   "x": "পিতৃ → পৈতৃক",
+   "tp": "shuddhi"
+  },
+  {
+   "q": "শুদ্ধ বাক্য কোনটি?",
+   "o": [
+    "তিনি সস্ত্রীক এসেছেন।",
+    "তিনি স্বস্ত্রীক এসেছেন।",
+    "তিনি সস্ত্রীকসহ এসেছেন।"
+   ],
+   "a": 0,
+   "x": "স + স্ত্রীক; 'সহ' দিলে দ্বিরুক্তি",
+   "tp": "shuddhi"
+  },
+  {
+   "q": "'নীলপদ্ম' কোন সমাস?",
+   "o": [
+    "কর্মধারয়",
+    "তৎপুরুষ",
+    "বহুব্রীহি",
+    "দ্বিগু"
+   ],
+   "a": 0,
+   "x": "নীল যে পদ্ম",
+   "tp": "somas"
+  },
+  {
+   "q": "'দশানন' কোন সমাস?",
+   "o": [
+    "বহুব্রীহি",
+    "দ্বিগু",
+    "কর্মধারয়",
+    "দ্বন্দ্ব"
+   ],
+   "a": 0,
+   "x": "দশ আনন যার (রাবণ) — অন্য পদের অর্থ প্রধান",
+   "tp": "somas"
+  },
+  {
+   "q": "'ত্রিভুবন' কোন সমাস?",
+   "o": [
+    "দ্বিগু",
+    "বহুব্রীহি",
+    "দ্বন্দ্ব",
+    "অব্যয়ীভাব"
+   ],
+   "a": 0,
+   "x": "তিন ভুবনের সমাহার",
+   "tp": "somas"
+  },
+  {
+   "q": "'প্রতিদিন' কোন সমাস?",
+   "o": [
+    "অব্যয়ীভাব",
+    "দ্বিগু",
+    "তৎপুরুষ",
+    "কর্মধারয়"
+   ],
+   "a": 0,
+   "x": "দিন দিন — অব্যয় পূর্বপদ",
+   "tp": "somas"
+  },
+  {
+   "q": "'মা-বাবা' কোন সমাস?",
+   "o": [
+    "দ্বন্দ্ব",
+    "দ্বিগু",
+    "বহুব্রীহি",
+    "কর্মধারয়"
+   ],
+   "a": 0,
+   "x": "উভয় পদ প্রধান",
+   "tp": "somas"
+  },
+  {
+   "q": "'বিদ্যালয়'-এর সন্ধিবিচ্ছেদ:",
+   "o": [
+    "বিদ্যা + আলয়",
+    "বিদ্য + আলয়",
+    "বিদ্যা + লয়"
+   ],
+   "a": 0,
+   "x": "আ + আ = আ",
+   "tp": "sondhi"
+  },
+  {
+   "q": "'উদ্ধার'-এর সন্ধিবিচ্ছেদ:",
+   "o": [
+    "উৎ + হার",
+    "উদ + ধার",
+    "উ + দ্ধার"
+   ],
+   "a": 0,
+   "x": "ৎ + হ = দ্ধ",
+   "tp": "sondhi"
+  },
+  {
+   "q": "'অগ্নিমূল্য' বাগধারার অর্থ:",
+   "o": [
+    "খুব দামি",
+    "আগুনের দাম",
+    "খুব সস্তা"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "probad"
+  },
+  {
+   "q": "'শাঁখের করাত' বাগধারার অর্থ:",
+   "o": [
+    "উভয় সংকট",
+    "ধারালো অস্ত্র",
+    "অলস ব্যক্তি"
+   ],
+   "a": 0,
+   "x": "দুই দিকেই কাটে",
+   "tp": "probad"
+  },
+  {
+   "q": "'ছাদে বসে চা খাই' — 'ছাদে' কোন কারকে কোন বিভক্তি?",
+   "o": [
+    "অধিকরণে ৭মী",
+    "করণে ৩য়া",
+    "অপাদানে ৫মী"
+   ],
+   "a": 0,
+   "x": "স্থান বোঝাচ্ছে → অধিকরণ",
+   "tp": "karok"
+  },
+  {
+   "q": "'মেঘ থেকে বৃষ্টি পড়ে' — 'মেঘ থেকে' কোন কারক?",
+   "o": [
+    "অপাদান",
+    "করণ",
+    "অধিকরণ"
+   ],
+   "a": 0,
+   "x": "যা থেকে কিছু বিচ্যুত/নির্গত হয় → অপাদান",
+   "tp": "karok"
+  },
+  {
+   "q": "'কলম দিয়ে লেখ' — 'কলম দিয়ে' কোন কারক?",
+   "o": [
+    "করণ",
+    "কর্ম",
+    "অপাদান"
+   ],
+   "a": 0,
+   "x": "যা দিয়ে কাজ করা হয় → করণ",
+   "tp": "karok"
+  },
+  {
+   "q": "'গরিবকে দান করো' — 'গরিবকে' কোন কারক?",
+   "o": [
+    "সম্প্রদান",
+    "কর্ম",
+    "অপাদান"
+   ],
+   "a": 0,
+   "x": "স্বত্ব ত্যাগ করে দান → সম্প্রদান",
+   "tp": "karok"
+  },
+  {
+   "q": "'বৃষ্টিতে ফসল নষ্ট হলো' — 'বৃষ্টিতে' কোন কারক?",
+   "o": [
+    "করণ",
+    "অধিকরণ",
+    "অপাদান"
+   ],
+   "a": 0,
+   "x": "কারণ/উপায় বোঝাচ্ছে → করণে ৭মী",
+   "tp": "karok"
+  },
+  {
+   "q": "যা পূর্বে কখনো দেখা যায়নি:",
+   "o": [
+    "অদৃষ্টপূর্ব",
+    "অভূতপূর্ব",
+    "অদৃশ্য"
+   ],
+   "a": 0,
+   "x": "অভূতপূর্ব = যা আগে কখনো হয়নি",
+   "tp": "ekkothay"
+  },
+  {
+   "q": "যা বলা হয়নি:",
+   "o": [
+    "অনুক্ত",
+    "অব্যয়",
+    "অনুপম"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "ekkothay"
+  },
+  {
+   "q": "যা সহজে লাভ করা যায় না:",
+   "o": [
+    "দুর্লভ",
+    "দুর্লঙ্ঘ্য",
+    "দুর্বোধ্য"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "ekkothay"
+  },
+  {
+   "q": "যা অতিক্রম করা যায় না:",
+   "o": [
+    "অনতিক্রম্য",
+    "দুর্লভ",
+    "দুর্বোধ্য"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "ekkothay"
+  },
+  {
+   "q": "যিনি বক্তৃতা দিতে পটু:",
+   "o": [
+    "বাগ্মী",
+    "বাচাল",
+    "শ্রোতা"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "ekkothay"
+  },
+  {
+   "q": "মাটি দিয়ে তৈরি:",
+   "o": [
+    "মৃন্ময়",
+    "চিন্ময়",
+    "তন্ময়"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "ekkothay"
+  },
+  {
+   "q": "আকাশে যে বিচরণ করে:",
+   "o": [
+    "খেচর",
+    "ভূচর",
+    "জলচর"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "ekkothay"
+  },
+  {
+   "q": "যা ক্রমশ বৃদ্ধি পাচ্ছে:",
+   "o": [
+    "বর্ধিষ্ণু",
+    "বর্ধিত",
+    "বর্ধমান্য"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "ekkothay"
+  },
+  {
+   "q": "'অন্ন' ও 'অন্য' — 'অন্ন' অর্থ:",
+   "o": [
+    "ভাত",
+    "ভিন্ন",
+    "অপর"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "somoccharito"
+  },
+  {
+   "q": "'আসা' ও 'আশা' — 'আশা' অর্থ:",
+   "o": [
+    "প্রত্যাশা",
+    "আগমন",
+    "বসা"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "somoccharito"
+  },
+  {
+   "q": "'কুল' ও 'কূল' — 'কূল' অর্থ:",
+   "o": [
+    "তীর",
+    "বংশ",
+    "একটি ফল"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "somoccharito"
+  },
+  {
+   "q": "'দিন' ও 'দীন' — 'দীন' অর্থ:",
+   "o": [
+    "দরিদ্র",
+    "দিবস",
+    "ধর্ম"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "somoccharito"
+  },
+  {
+   "q": "'শব' ও 'সব' — 'শব' অর্থ:",
+   "o": [
+    "মৃতদেহ",
+    "সকল",
+    "শব্দ"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "somoccharito"
+  },
+  {
+   "q": "'নীড়' ও 'নীর' — 'নীর' অর্থ:",
+   "o": [
+    "পানি",
+    "পাখির বাসা",
+    "নীল রং"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "somoccharito"
+  },
+  {
+   "q": "'অতি লোভে তাঁতি নষ্ট' প্রবাদের নিহিতার্থ:",
+   "o": [
+    "বেশি লোভে ক্ষতি হয়",
+    "তাঁতিরা লোভী",
+    "পরিশ্রমে ফল মেলে"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "probad"
+  },
+  {
+   "q": "'দশের লাঠি একের বোঝা' প্রবাদের নিহিতার্থ:",
+   "o": [
+    "সবাই মিলে করলে কঠিন কাজও সহজ",
+    "দশজনের লাঠি ভারী",
+    "একা কাজ করা ভালো"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "probad"
+  },
+  {
+   "q": "'নাচতে না জানলে উঠান বাঁকা' প্রবাদের নিহিতার্থ:",
+   "o": [
+    "নিজের অক্ষমতা ঢাকতে অন্যের দোষ দেওয়া",
+    "উঠান সমান রাখা দরকার",
+    "নাচ শেখা কঠিন"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "probad"
+  },
+  {
+   "q": "'চকচক করলেই সোনা হয় না' প্রবাদের নিহিতার্থ:",
+   "o": [
+    "বাইরের চাকচিক্য দেখে বিচার করা ঠিক নয়",
+    "সোনা চকচক করে",
+    "সব ধাতু মূল্যবান"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "probad"
+  },
+  {
+   "q": "'যত গর্জে তত বর্ষে না' প্রবাদের নিহিতার্থ:",
+   "o": [
+    "যে বেশি আস্ফালন করে, সে কাজে কম করে",
+    "মেঘ গর্জালে বৃষ্টি হয়",
+    "বেশি কথায় বেশি কাজ"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "probad"
+  },
+  {
+   "q": "শুদ্ধ বানান কোনটি?",
+   "o": [
+    "মরীচিকা",
+    "মরিচীকা",
+    "মরিচিকা"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "banan"
+  },
+  {
+   "q": "শুদ্ধ বানান কোনটি?",
+   "o": [
+    "পুরস্কার",
+    "পুরষ্কার",
+    "পুরুস্কার"
+   ],
+   "a": 0,
+   "x": "পুরঃ + কার = পুরস্কার",
+   "tp": "banan"
+  },
+  {
+   "q": "শুদ্ধ বানান কোনটি?",
+   "o": [
+    "উচ্ছ্বাস",
+    "উচ্ছাস",
+    "উচ্চ্বাস"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "banan"
+  },
+  {
+   "q": "শুদ্ধ বানান কোনটি?",
+   "o": [
+    "ভৌগোলিক",
+    "ভৌগলিক",
+    "ভৈগোলিক"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "banan"
+  },
+  {
+   "q": "শুদ্ধ বানান কোনটি?",
+   "o": [
+    "প্রণাম",
+    "প্রনাম",
+    "প্রণম"
+   ],
+   "a": 0,
+   "x": "ণত্ব বিধান: ঋ/র/ষ-এর পরে ন → ণ",
+   "tp": "banan"
+  },
+  {
+   "q": "প্রমিত বানানের নিয়মে বিদেশি শব্দে কোনটি ব্যবহৃত হয়?",
+   "o": [
+    "ই-কার (ি)",
+    "ঈ-কার (ী)",
+    "দুটোই সমানভাবে"
+   ],
+   "a": 0,
+   "x": "বিদেশি শব্দে ঈ, ঊ, ঋ, ণ, ষ বসে না (সাধারণ নিয়ম)",
+   "tp": "banan_niyom"
+  },
+  {
+   "q": "প্রমিত নিয়মে কোনটি শুদ্ধ?",
+   "o": [
+    "গাড়ি",
+    "গাড়ী",
+    "গারি"
+   ],
+   "a": 0,
+   "x": "তদ্ভব/দেশি শব্দে ই-কার",
+   "tp": "banan_niyom"
+  },
+  {
+   "q": "শুদ্ধ বাক্য কোনটি?",
+   "o": [
+    "তার সৌজন্যে মুগ্ধ হলাম।",
+    "তার সৌজন্যতায় মুগ্ধ হলাম।",
+    "তার সৌজন্যতা মুগ্ধ হলাম।"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "shuddhi"
+  },
+  {
+   "q": "শুদ্ধ বাক্য কোনটি?",
+   "o": [
+    "এ বিষয়ে আমার কোনো আগ্রহ নেই।",
+    "এ বিষয়ে আমার কোনো আগ্রহতা নেই।",
+    "এ বিষয়ে আমার কোন আগ্রহতা নাই।"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "shuddhi"
+  },
+  {
+   "q": "শুদ্ধ বাক্য কোনটি?",
+   "o": [
+    "আমি অপমানিত হয়েছি।",
+    "আমি অপমান হয়েছি।",
+    "আমি অপমানিতো হয়েছি।"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "shuddhi"
+  }
  ],
  "gk": [
-  {"q": "অক্টোবর ২০২৬-এ পয়েন্ট-টু-পয়েন্ট মূল্যস্ফীতি কত ছিল (BBS)?", "o": ["৮.২৭%", "৯.৪০%", "৭.৫০%", "৮.৬৬%"], "a": 0, "x": "খাদ্য ৬.৪০%, খাদ্যবহির্ভূত ৯.৮৯%; ৮.৬৬% হলো ১২ মাসের গড়"},
-  {"q": "বাংলাদেশ ব্যাংকের বর্তমান পলিসি (রেপো) রেট কত?", "o": ["১০%", "৮.৫%", "১১.৫%", "৭.৫%"], "a": 0, "x": "অক্টোবর ২০২৪ থেকে অপরিবর্তিত"},
-  {"q": "Standing Lending Facility (SLF) রেট কত?", "o": ["১১.৫%", "১০%", "৯%", "৭.৫%"], "a": 0, "x": "সুদ-করিডরের ঊর্ধ্বসীমা"},
-  {"q": "Standing Deposit Facility (SDF) রেট কত?", "o": ["৭.৫%", "৮.৫%", "৬%", "১০%"], "a": 0, "x": "সুদ-করিডরের নিম্নসীমা"},
-  {"q": "বাংলাদেশের এলডিসি উত্তরণের নতুন তারিখ কোনটি?", "o": ["২৪ নভেম্বর ২০২৯", "২৪ নভেম্বর ২০২৬", "২৪ নভেম্বর ২০৩১", "২৪ নভেম্বর ২০২৭"], "a": 0, "x": "জাতিসংঘ সাধারণ পরিষদ ৩ বছর পিছিয়েছে (অক্টোবর ২০২৬)"},
-  {"q": "মার্চ ২০২৬-এ ব্যাংক খাতে মোট খেলাপি ঋণের হার কত?", "o": ["৩২.২৬%", "৩৫.৭৩%", "২০.২০%", "১৫.০১%"], "a": 0, "x": "৩৫.৭৩% ছিল সেপ্টেম্বর ২০২৫-এর শীর্ষ; ১৫.০১% নিট খেলাপি"},
-  {"q": "আমানত সুরক্ষা আইন ২০২৬ অনুযায়ী আমানত বিমার সীমা কত?", "o": ["২ লাখ টাকা", "১ লাখ টাকা", "৫ লাখ টাকা", "১০ লাখ টাকা"], "a": 0, "x": "আগে ছিল ১ লাখ"},
-  {"q": "৫টি শরিয়াহভিত্তিক ব্যাংক একীভূত হয়ে নতুন রাষ্ট্রায়ত্ত ব্যাংকের নাম কী?", "o": ["সম্মিলিত ইসলামী ব্যাংক পিএলসি", "ইউনাইটেড ইসলামী ব্যাংক", "বাংলাদেশ ইসলামী ব্যাংক", "জাতীয় ইসলামী ব্যাংক"], "a": 0, "x": "সরকারি মূলধন ২০,০০০ কোটি টাকা"},
-  {"q": "বাংলাদেশ ব্যাংকের প্রণোদনা প্যাকেজের মোট আকার কত?", "o": ["৬০,০০০ কোটি টাকা", "৪১,০০০ কোটি টাকা", "১৯,০০০ কোটি টাকা", "১,২৫,০০০ কোটি টাকা"], "a": 0, "x": "৪১,০০০ (ব্যাংকের উদ্বৃত্ত তারল্য) + ১৯,০০০ (BB)"},
-  {"q": "FY27 বাজেটে GDP প্রবৃদ্ধির লক্ষ্য কত?", "o": ["৬.৫%", "৬.১%", "৪.১৪%", "৭.৫%"], "a": 0, "x": "৬.১% হলো BB-র পূর্বাভাস; ৭.৫% মূল্যস্ফীতি সীমা"},
-  {"q": "FY27 বাজেটে মূল্যস্ফীতির সীমা কত ধরা হয়েছে?", "o": ["৭.৫%", "৬.৫%", "৫%", "৯%"], "a": 0, "x": ""},
-  {"q": "সেপ্টেম্বর ২০২৬-এর সমন্বয়ের পর ডিজেলের দাম প্রতি লিটার কত?", "o": ["১৩৫ টাকা", "১১৫ টাকা", "১০০ টাকা", "১৬০ টাকা"], "a": 0, "x": "১৬০ টাকা পেট্রোল"},
-  {"q": "জাতীয় ইন্টারঅপারেবল QR পেমেন্ট মানের নাম কী?", "o": ["বাংলা QR", "টাকা পে", "NPSB", "BEFTN"], "a": 0, "x": "টাকা পে = দেশীয় কার্ড স্কিম"},
-  {"q": "IFRS 9-এর ECL পদ্ধতি পূর্ণ বাস্তবায়নের লক্ষ্য কোন বছর?", "o": ["২০২৭", "২০২৬", "২০৩০", "২০২৫"], "a": 0, "x": ""},
-  {"q": "Instant Interoperable Payment System (IIPS) চালুর লক্ষ্য কখন?", "o": ["জুন ২০২৭", "ডিসেম্বর ২০২৬", "জুন ২০২৬", "২০৩০"], "a": 0, "x": "গেটস ফাউন্ডেশনের সাথে MoU"},
-  {"q": "মোট রপ্তানির কত শতাংশ আসে তৈরি পোশাক (RMG) থেকে?", "o": ["প্রায় ৮০%", "প্রায় ৫০%", "প্রায় ৬৫%", "প্রায় ৯৫%"], "a": 0, "x": ""},
-  {"q": "BBS-এর সাময়িক হিসাবে FY26-এর প্রকৃত GDP প্রবৃদ্ধি কত?", "o": ["৪.১৪%", "৩.৪৯%", "৬.১%", "৫.৮%"], "a": 0, "x": "FY25 ছিল ৩.৪৯%"},
-  {"q": "জুলাই ২০২৪-এ মূল্যস্ফীতি শীর্ষে উঠেছিল কত শতাংশে?", "o": ["১১.৬৬%", "৯.৯৪%", "১৪.১০%", "১০.৮৭%"], "a": 0, "x": "১৪.১০% ছিল তখনকার খাদ্য মূল্যস্ফীতি"},
-  {"q": "CTR (Cash Transaction Report) কত টাকার বেশি নগদ লেনদেনে দিতে হয়?", "o": ["১০ লাখ টাকা", "৫ লাখ টাকা", "১ লাখ টাকা", "৫০ লাখ টাকা"], "a": 0, "x": "BFIU-তে রিপোর্ট"},
-  {"q": "সন্দেহজনক লেনদেনের রিপোর্ট (STR) কোথায় পাঠাতে হয়?", "o": ["BFIU", "দুদক", "NBR", "CIB"], "a": 0, "x": "Bangladesh Financial Intelligence Unit"},
-  {"q": "জুন ২০২৬-এ গ্রস রিজার্ভ (BPM6) কত ছিল?", "o": ["৩১.৭৪ বিলিয়ন ডলার", "২৬.৭৪ বিলিয়ন ডলার", "৪০ বিলিয়ন ডলার", "২০ বিলিয়ন ডলার"], "a": 0, "x": "জুন ২০২৫-এ ছিল ২৬.৭৪"},
-  {"q": "সরকারের FY27 বাজেটের অর্থনৈতিক কৌশলের নাম কী?", "o": ["3R Strategy", "Vision 2041", "Smart Bangladesh", "Delta Plan"], "a": 0, "x": "Recovery & Stabilization, Restoration, Reconstruction"}
- ]
+  {
+   "q": "অক্টোবর ২০২৬-এ পয়েন্ট-টু-পয়েন্ট মূল্যস্ফীতি কত ছিল (BBS)?",
+   "o": [
+    "৮.২৭%",
+    "৯.৪০%",
+    "৭.৫০%",
+    "৮.৬৬%"
+   ],
+   "a": 0,
+   "x": "খাদ্য ৬.৪০%, খাদ্যবহির্ভূত ৯.৮৯%; ৮.৬৬% হলো ১২ মাসের গড়"
+  },
+  {
+   "q": "বাংলাদেশ ব্যাংকের বর্তমান পলিসি (রেপো) রেট কত?",
+   "o": [
+    "১০%",
+    "৮.৫%",
+    "১১.৫%",
+    "৭.৫%"
+   ],
+   "a": 0,
+   "x": "অক্টোবর ২০২৪ থেকে অপরিবর্তিত"
+  },
+  {
+   "q": "Standing Lending Facility (SLF) রেট কত?",
+   "o": [
+    "১১.৫%",
+    "১০%",
+    "৯%",
+    "৭.৫%"
+   ],
+   "a": 0,
+   "x": "সুদ-করিডরের ঊর্ধ্বসীমা"
+  },
+  {
+   "q": "Standing Deposit Facility (SDF) রেট কত?",
+   "o": [
+    "৭.৫%",
+    "৮.৫%",
+    "৬%",
+    "১০%"
+   ],
+   "a": 0,
+   "x": "সুদ-করিডরের নিম্নসীমা"
+  },
+  {
+   "q": "বাংলাদেশের এলডিসি উত্তরণের নতুন তারিখ কোনটি?",
+   "o": [
+    "২৪ নভেম্বর ২০২৯",
+    "২৪ নভেম্বর ২০২৬",
+    "২৪ নভেম্বর ২০৩১",
+    "২৪ নভেম্বর ২০২৭"
+   ],
+   "a": 0,
+   "x": "জাতিসংঘ সাধারণ পরিষদ ৩ বছর পিছিয়েছে (অক্টোবর ২০২৬)"
+  },
+  {
+   "q": "মার্চ ২০২৬-এ ব্যাংক খাতে মোট খেলাপি ঋণের হার কত?",
+   "o": [
+    "৩২.২৬%",
+    "৩৫.৭৩%",
+    "২০.২০%",
+    "১৫.০১%"
+   ],
+   "a": 0,
+   "x": "৩৫.৭৩% ছিল সেপ্টেম্বর ২০২৫-এর শীর্ষ; ১৫.০১% নিট খেলাপি"
+  },
+  {
+   "q": "আমানত সুরক্ষা আইন ২০২৬ অনুযায়ী আমানত বিমার সীমা কত?",
+   "o": [
+    "২ লাখ টাকা",
+    "১ লাখ টাকা",
+    "৫ লাখ টাকা",
+    "১০ লাখ টাকা"
+   ],
+   "a": 0,
+   "x": "আগে ছিল ১ লাখ"
+  },
+  {
+   "q": "৫টি শরিয়াহভিত্তিক ব্যাংক একীভূত হয়ে নতুন রাষ্ট্রায়ত্ত ব্যাংকের নাম কী?",
+   "o": [
+    "সম্মিলিত ইসলামী ব্যাংক পিএলসি",
+    "ইউনাইটেড ইসলামী ব্যাংক",
+    "বাংলাদেশ ইসলামী ব্যাংক",
+    "জাতীয় ইসলামী ব্যাংক"
+   ],
+   "a": 0,
+   "x": "সরকারি মূলধন ২০,০০০ কোটি টাকা"
+  },
+  {
+   "q": "বাংলাদেশ ব্যাংকের প্রণোদনা প্যাকেজের মোট আকার কত?",
+   "o": [
+    "৬০,০০০ কোটি টাকা",
+    "৪১,০০০ কোটি টাকা",
+    "১৯,০০০ কোটি টাকা",
+    "১,২৫,০০০ কোটি টাকা"
+   ],
+   "a": 0,
+   "x": "৪১,০০০ (ব্যাংকের উদ্বৃত্ত তারল্য) + ১৯,০০০ (BB)"
+  },
+  {
+   "q": "FY27 বাজেটে GDP প্রবৃদ্ধির লক্ষ্য কত?",
+   "o": [
+    "৬.৫%",
+    "৬.১%",
+    "৪.১৪%",
+    "৭.৫%"
+   ],
+   "a": 0,
+   "x": "৬.১% হলো BB-র পূর্বাভাস; ৭.৫% মূল্যস্ফীতি সীমা"
+  },
+  {
+   "q": "FY27 বাজেটে মূল্যস্ফীতির সীমা কত ধরা হয়েছে?",
+   "o": [
+    "৭.৫%",
+    "৬.৫%",
+    "৫%",
+    "৯%"
+   ],
+   "a": 0,
+   "x": ""
+  },
+  {
+   "q": "সেপ্টেম্বর ২০২৬-এর সমন্বয়ের পর ডিজেলের দাম প্রতি লিটার কত?",
+   "o": [
+    "১৩৫ টাকা",
+    "১১৫ টাকা",
+    "১০০ টাকা",
+    "১৬০ টাকা"
+   ],
+   "a": 0,
+   "x": "১৬০ টাকা পেট্রোল"
+  },
+  {
+   "q": "জাতীয় ইন্টারঅপারেবল QR পেমেন্ট মানের নাম কী?",
+   "o": [
+    "বাংলা QR",
+    "টাকা পে",
+    "NPSB",
+    "BEFTN"
+   ],
+   "a": 0,
+   "x": "টাকা পে = দেশীয় কার্ড স্কিম"
+  },
+  {
+   "q": "IFRS 9-এর ECL পদ্ধতি পূর্ণ বাস্তবায়নের লক্ষ্য কোন বছর?",
+   "o": [
+    "২০২৭",
+    "২০২৬",
+    "২০৩০",
+    "২০২৫"
+   ],
+   "a": 0,
+   "x": ""
+  },
+  {
+   "q": "Instant Interoperable Payment System (IIPS) চালুর লক্ষ্য কখন?",
+   "o": [
+    "জুন ২০২৭",
+    "ডিসেম্বর ২০২৬",
+    "জুন ২০২৬",
+    "২০৩০"
+   ],
+   "a": 0,
+   "x": "গেটস ফাউন্ডেশনের সাথে MoU"
+  },
+  {
+   "q": "মোট রপ্তানির কত শতাংশ আসে তৈরি পোশাক (RMG) থেকে?",
+   "o": [
+    "প্রায় ৮০%",
+    "প্রায় ৫০%",
+    "প্রায় ৬৫%",
+    "প্রায় ৯৫%"
+   ],
+   "a": 0,
+   "x": ""
+  },
+  {
+   "q": "BBS-এর সাময়িক হিসাবে FY26-এর প্রকৃত GDP প্রবৃদ্ধি কত?",
+   "o": [
+    "৪.১৪%",
+    "৩.৪৯%",
+    "৬.১%",
+    "৫.৮%"
+   ],
+   "a": 0,
+   "x": "FY25 ছিল ৩.৪৯%"
+  },
+  {
+   "q": "জুলাই ২০২৪-এ মূল্যস্ফীতি শীর্ষে উঠেছিল কত শতাংশে?",
+   "o": [
+    "১১.৬৬%",
+    "৯.৯৪%",
+    "১৪.১০%",
+    "১০.৮৭%"
+   ],
+   "a": 0,
+   "x": "১৪.১০% ছিল তখনকার খাদ্য মূল্যস্ফীতি"
+  },
+  {
+   "q": "CTR (Cash Transaction Report) কত টাকার বেশি নগদ লেনদেনে দিতে হয়?",
+   "o": [
+    "১০ লাখ টাকা",
+    "৫ লাখ টাকা",
+    "১ লাখ টাকা",
+    "৫০ লাখ টাকা"
+   ],
+   "a": 0,
+   "x": "BFIU-তে রিপোর্ট"
+  },
+  {
+   "q": "সন্দেহজনক লেনদেনের রিপোর্ট (STR) কোথায় পাঠাতে হয়?",
+   "o": [
+    "BFIU",
+    "দুদক",
+    "NBR",
+    "CIB"
+   ],
+   "a": 0,
+   "x": "Bangladesh Financial Intelligence Unit"
+  },
+  {
+   "q": "জুন ২০২৬-এ গ্রস রিজার্ভ (BPM6) কত ছিল?",
+   "o": [
+    "৩১.৭৪ বিলিয়ন ডলার",
+    "২৬.৭৪ বিলিয়ন ডলার",
+    "৪০ বিলিয়ন ডলার",
+    "২০ বিলিয়ন ডলার"
+   ],
+   "a": 0,
+   "x": "জুন ২০২৫-এ ছিল ২৬.৭৪"
+  },
+  {
+   "q": "সরকারের FY27 বাজেটের অর্থনৈতিক কৌশলের নাম কী?",
+   "o": [
+    "3R Strategy",
+    "Vision 2041",
+    "Smart Bangladesh",
+    "Delta Plan"
+   ],
+   "a": 0,
+   "x": "Recovery & Stabilization, Restoration, Reconstruction"
+  }
+ ],
+ "_tp_names": {
+  "sva": "Subject-verb agreement",
+  "rfv": "Right forms of verb",
+  "structure": "Sentence structure & preposition",
+  "speech": "Speech (narration)",
+  "transformation": "Transformation",
+  "finite": "Finite & non-finite verb",
+  "clause": "Clause & phrase",
+  "groupverb": "Group verb",
+  "idiom": "Idioms",
+  "banan": "বানান",
+  "banan_niyom": "বানানের নিয়ম",
+  "shuddhi": "বাক্যশুদ্ধি",
+  "probad": "প্রবাদ-প্রবচনের নিহিতার্থ",
+  "karok": "কারক",
+  "somas": "সমাস",
+  "sondhi": "সন্ধি বিচ্ছেদ",
+  "ekkothay": "এক কথায় প্রকাশ",
+  "somoccharito": "প্রায় সমোচ্চারিত ভিন্নার্থক শব্দ"
+ }
 }

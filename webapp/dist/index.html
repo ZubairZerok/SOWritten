@@ -231,6 +231,20 @@ const SEC = {
   BANK: { name: "ব্যাংকিং ও আর্থিক জ্ঞান", short: "ব্যাংকিং", max: 10 },
   GK: { name: "সাধারণ জ্ঞান", short: "GK", max: 10 },
 };
+/* লক্ষ্য ১২৮: সহজ নম্বর আগে — অংশভিত্তিক বাস্তবসম্মত লক্ষ্য */
+const TARGET = { FW_EN: 18, FW_BN: 20, ARG: 24, TR: 13, MATH: 22, ENG: 13, BN: 7, BANK: 6, GK: 5 };
+const TARGET_TOTAL = 128;
+const EASY = {
+  MATH: "সবচেয়ে নিশ্চিত নম্বর: গতি/ট্রেন, সময়-কাজ, সমীকরণ, লাভ-ক্ষতি, শতকরা — ৫টির ৪টি পুরো ধাপসহ ঠিক করলেই ২২+",
+  FW_BN: "বাংলায় লেখা দ্রুত হয়: কাঠামো + ডেটা বক্স + ২০২৬-এর ৩টি সংখ্যা দিলেই ২০",
+  FW_EN: "সহজ ইংরেজিতে ছোট বাক্য; উপশিরোনাম + ডেটা বক্স + সমাধান থাকলেই ১৮",
+  ARG: "কাঠামোতেই অর্ধেক নম্বর: অবস্থান → ৩ যুক্তি ও প্রমাণ → বিপক্ষ খণ্ডন → সুপারিশ; ভাষা সরল রাখুন",
+  TR: "প্রতিটি বাক্যের মূল অর্থ + সঠিক tense; শব্দে শব্দে নয়, ভাব ধরে",
+  ENG: "নিয়মভিত্তিক তাই দ্রুত শেখা যায়: SVA, right form of verb, group verb, idioms, speech",
+  BN: "মুখস্থভিত্তিক: বানান, এক কথায় প্রকাশ, সমোচ্চারিত শব্দ, কারক, সমাস, প্রবাদ",
+  BANK: "পূর্ণরূপ + এক লাইনের সংজ্ঞা: CRR, SLR, Repo, NPL, CAR, KYC, AML, BFIU, RTGS…",
+  GK: "শুধু সাম্প্রতিক বড় খবর: মূল্যস্ফীতি, পলিসি রেট, এলডিসি ২০২৯, বাজেট FY27, ব্যাংক একীভূতকরণ",
+};
 const SEC_ORDER = ["FW_EN", "FW_BN", "ARG", "TR", "MATH", "ENG", "BN", "BANK", "GK"];
 /* base (1×) daily quota and minutes per unit */
 const QUOTA = {
@@ -311,7 +325,7 @@ async function loadData() {
 
 /* ═════════════════════════ state ═════════════════════════ */
 function fresh() {
-  return { v: SCHEMA, createdAt: Date.now(), updatedAt: 0, settings: { mult: 5 }, events: [], checks: {}, mathLog: {}, termBox: {}, quizWrong: {}, timer: null, mocks: [], hall: {} };
+  return { v: SCHEMA, createdAt: Date.now(), updatedAt: 0, settings: { mult: 5 }, events: [], checks: {}, mathLog: {}, termBox: {}, quizWrong: {}, timer: null, mocks: [], hall: {}, quizStat: {} };
 }
 function normalize(s) {
   const f = fresh();
@@ -322,7 +336,7 @@ function normalize(s) {
   o.settings.mult = clamp(Math.round(Number(o.settings.mult) || 5), 1, 5);
   o.events = Array.isArray(o.events) ? o.events.filter((e) => e && typeof e === "object" && typeof e.k === "string" && Number.isFinite(e.t)).slice(-MAX_EVENTS) : [];
   for (const e of o.events) { e.n = Number.isFinite(e.n) ? e.n : 1; if (e.s != null && !Number.isFinite(e.s)) e.s = null; if (!e.d) e.d = dhaka(e.t); if (!e.id) e.id = uid(); }
-  for (const k of ["checks", "mathLog", "termBox", "quizWrong", "hall"]) if (!o[k] || typeof o[k] !== "object" || Array.isArray(o[k])) o[k] = {};
+  for (const k of ["checks", "mathLog", "termBox", "quizWrong", "hall", "quizStat"]) if (!o[k] || typeof o[k] !== "object" || Array.isArray(o[k])) o[k] = {};
   o.mocks = Array.isArray(o.mocks) ? o.mocks.filter((m) => m && typeof m === "object" && m.scores && typeof m.scores === "object") : [];
   if (o.timer && !(Number.isFinite(o.timer.endAt) && typeof o.timer.kind === "string")) o.timer = null;
   o.updatedAt = Number.isFinite(o.updatedAt) ? o.updatedAt : 0;
@@ -691,7 +705,7 @@ function viewToday() {
       h("div", { class: "stat" }, h("b", null, pct(comp)), h("span", null, "আজকের কাজ সম্পন্ন")),
       h("div", { class: "stat" }, h("b", null, hm(minutesPlanned(di))), h("span", null, "আজকের মোট পরিকল্পিত সময়")),
       h("div", { class: "stat" }, h("b", null, proj.knownMax ? bn(Math.round(proj.total)) : "—"), h("span", null, proj.knownMax ? "প্রজেক্টেড নম্বর (যে " + bn(proj.knownMax) + " নম্বরের ডেটা আছে)" : "প্রজেক্টেড নম্বর: অনুশীলন করলে দেখাবে")),
-      h("div", { class: "stat" }, h("b", null, bn(streak())), h("span", null, "টানা দিন (অর্ধেকের বেশি কাজ)"))),
+      h("div", { class: "stat" }, h("b", null, bn(TARGET_TOTAL)), h("span", null, "লক্ষ্য নম্বর (২০০-এর মধ্যে) · টানা দিন " + bn(streak())))),
     bar(comp)));
   const recs = recommendations();
   out.push(h("section", { class: "sheet" }, h("div", { class: "sheet-head" }, h("h2", null, "এখন কী করবেন"), h("span", { class: "muted small" }, "বাকি কাজ × অংশের নম্বর অনুযায়ী")),
@@ -762,6 +776,10 @@ function viewPlan() {
       h("p", { class: "small muted" }, QUOTA_ORDER.filter((k) => !QUOTA[k].fixed).map((k) => QSHORT[k] + " " + bn(quotaFor(i, k))).join(" · ")),
       bar(comp));
   })));
+  out.push(h("section", { class: "sheet" }, h("h2", null, "নিশ্চিত নম্বর বণ্টন ও আপনার লক্ষ্য (১২৮)"),
+    h("div", { class: "tablewrap" }, h("table", null, h("thead", null, h("tr", null, h("th", null, "অংশ"), h("th", { class: "n" }, "পূর্ণ"), h("th", { class: "n" }, "লক্ষ্য"), h("th", null, "সহজ নম্বর কোথায়"))),
+      h("tbody", null, SEC_ORDER.map((k) => h("tr", null, h("td", null, SEC[k].name), h("td", { class: "n" }, bn(SEC[k].max)), h("td", { class: "n" }, h("b", null, bn(TARGET[k]))), h("td", { class: "small" }, EASY[k]))),
+        h("tr", null, h("td", null, h("b", null, "মোট")), h("td", { class: "n" }, "২০০"), h("td", { class: "n" }, h("b", null, bn(TARGET_TOTAL))), h("td", { class: "small" }, "৬৪% নম্বর; আগের পরীক্ষাগুলোতে এই রেঞ্জ থেকে ভাইভায় ডাক এসেছে")))))));
   out.push(h("section", { class: "sheet" }, h("h2", null, "প্রতিটি অংশের জন্য রিপোর কোন বই"),
     h("div", { class: "tablewrap" }, h("table", null, h("thead", null, h("tr", null, h("th", null, "অংশ"), h("th", { class: "n" }, "নম্বর"), h("th", null, "রিপোর ফাইল"), h("th", null, "কীভাবে"))),
       h("tbody", null, [
@@ -946,38 +964,56 @@ function pTerms() {
       : h("div", { class: "row", style: "justify-content:center" }, h("button", { class: "btn primary", onclick: () => { sub.termShow = true; render(); } }, "উত্তর দেখুন")));
 }
 /* MCQ quiz */
-function newQuiz(kind) {
+function newQuiz(kind, tp) {
   const bank = D.quiz[kind];
-  const wrong = bank.map((_, i) => i).filter((i) => S.quizWrong[kind + i]);
-  const rest = shuffle(bank.map((_, i) => i).filter((i) => !S.quizWrong[kind + i]));
-  const ids = shuffle(wrong).concat(rest).slice(0, 10);
-  sub.quiz = { kind, ids, pos: 0, ok: 0, answered: null, order: ids.map((i) => shuffle(bank[i].o.map((_, j) => j))) };
+  tp = tp || "all";
+  const inTp = (i) => tp === "all" || bank[i].tp === tp;
+  const all = bank.map((_, i) => i).filter(inTp);
+  const wrong = all.filter((i) => S.quizWrong[kind + i]);
+  const unseen = shuffle(all.filter((i) => !S.quizWrong[kind + i] && !(S.quizStat["q:" + kind + i])));
+  const rest = shuffle(all.filter((i) => !S.quizWrong[kind + i] && S.quizStat["q:" + kind + i]));
+  const ids = shuffle(wrong).concat(unseen, rest).slice(0, 10);
+  sub.quiz = { kind, tp, ids, pos: 0, ok: 0, answered: null, order: ids.map((i) => shuffle(bank[i].o.map((_, j) => j))) };
+}
+function tpName(tp) { return (D.quiz._tp_names || {})[tp] || tp; }
+function tpStats(kind) {
+  const bank = D.quiz[kind]; const out = {};
+  bank.forEach((q, i) => { const t = q.tp || "other"; const o = (out[t] = out[t] || { total: 0, seen: 0, n: 0, ok: 0 }); o.total++; if (S.quizStat["q:" + kind + i]) o.seen++; });
+  for (const t in out) { const st = S.quizStat[kind + ":" + t]; if (st) { out[t].n = st.n; out[t].ok = st.ok; } }
+  return out;
 }
 function pQuiz(kind) {
-  if (!sub.quiz || sub.quiz.kind !== kind) newQuiz(kind);
+  if (!sub.quiz || sub.quiz.kind !== kind) newQuiz(kind, "all");
   const Q = sub.quiz, bank = D.quiz[kind];
   const label = { eng: "ইংরেজি ভাষা", bn: "বাংলা ব্যাকরণ", gk: "সাম্প্রতিক তথ্য ও ব্যাংকিং" }[kind];
+  const tps = [...new Set(bank.map((q) => q.tp).filter(Boolean))];
+  const stats = tpStats(kind);
+  const filter = tps.length > 1 ? h("section", { class: "sheet" }, h("div", { class: "row between" }, h("b", null, "সিলেবাসের অংশ বেছে নিন"), h("span", { class: "muted small" }, "শতাংশ = আপনার সঠিক উত্তরের হার")),
+    h("div", { class: "seg", role: "group", "aria-label": "সিলেবাসের অংশ" }, h("button", { "aria-pressed": String(Q.tp === "all"), onclick: () => { newQuiz(kind, "all"); render(); } }, "সব (" + bn(bank.length) + ")"),
+      tps.map((t) => { const st = stats[t]; return h("button", { "aria-pressed": String(Q.tp === t), onclick: () => { newQuiz(kind, t); render(); } }, tpName(t) + " · " + (st.n ? pct(st.ok / st.n) : bn(st.total) + "টি")); }))) : null;
   if (Q.pos >= Q.ids.length) {
-    return h("section", { class: "sheet ruled" }, h("h2", null, label + ": ফলাফল"), h("p", { class: "big" }, bn(Q.ok) + "/" + bn(Q.ids.length)),
+    return [filter, h("section", { class: "sheet ruled" }, h("h2", null, label + ": ফলাফল"), h("p", { class: "big" }, bn(Q.ok) + "/" + bn(Q.ids.length)),
       h("p", null, Q.ok / Q.ids.length >= 0.8 ? "দারুণ! ভুলগুলো পরের সেটে আবার আসবে।" : "ভুলগুলো ব্যাখ্যাসহ পরের সেটে আগে আসবে।"),
-      h("button", { class: "btn primary", onclick: () => { newQuiz(kind); render(); } }, "পরের ১০টি"));
+      h("button", { class: "btn primary", onclick: () => { newQuiz(kind, Q.tp); render(); } }, "পরের ১০টি"))];
   }
   const qi = Q.ids[Q.pos], item = bank[qi], ord = Q.order[Q.pos];
   const choose = (j) => {
     if (Q.answered != null) return;
     Q.answered = j; const ok = j === item.a;
     if (ok) { Q.ok++; delete S.quizWrong[kind + qi]; } else S.quizWrong[kind + qi] = 1;
+    S.quizStat["q:" + kind + qi] = 1;
+    const tk = kind + ":" + (item.tp || "other"); const ts_ = S.quizStat[tk] || { n: 0, ok: 0 }; ts_.n++; if (ok) ts_.ok++; S.quizStat[tk] = ts_;
     const last = S.events[S.events.length - 1];
     if (last && last.k === kind && last.d === dhaka() && Date.now() - last.t < 20 * 60000 && last.n < 30) { last.s = (last.s * last.n + (ok ? 1 : 0)) / (last.n + 1); last.n++; last.t = Date.now(); }
     else logEvent(kind, { n: 1, s: ok ? 1 : 0 });
     save();
   };
-  return h("section", { class: "sheet ruled" },
-    h("div", { class: "row between" }, h("span", { class: "eyebrow" }, label + " · প্রশ্ন " + bn(Q.pos + 1) + "/" + bn(Q.ids.length)), h("span", { class: "num" }, "সঠিক " + bn(Q.ok))),
+  return [filter, h("section", { class: "sheet ruled" },
+    h("div", { class: "row between" }, h("span", { class: "eyebrow" }, label + (item.tp ? " · " + tpName(item.tp) : "") + " · প্রশ্ন " + bn(Q.pos + 1) + "/" + bn(Q.ids.length)), h("span", { class: "num" }, "সঠিক " + bn(Q.ok))),
     h("p", { class: "q" }, h("b", null, item.q)),
     h("div", { class: "stack" }, ord.map((j) => h("button", { class: "opt" + (Q.answered != null ? (j === item.a ? " right" : j === Q.answered ? " wrong" : "") : ""), onclick: () => choose(j), disabled: Q.answered != null && j !== item.a && j !== Q.answered }, item.o[j]))),
     Q.answered != null ? h("div", { class: "stack" }, h("p", null, Q.answered === item.a ? h("b", { style: "color:var(--good)" }, "সঠিক! ") : h("b", { style: "color:var(--bad)" }, "ভুল। "), item.x || ""),
-      h("button", { class: "btn primary", onclick: () => { Q.pos++; Q.answered = null; render(); } }, Q.pos + 1 < Q.ids.length ? "পরের প্রশ্ন" : "ফলাফল দেখুন")) : null);
+      h("button", { class: "btn primary", onclick: () => { Q.pos++; Q.answered = null; render(); } }, Q.pos + 1 < Q.ids.length ? "পরের প্রশ্ন" : "ফলাফল দেখুন")) : null)];
 }
 
 /* ═════════════════════════ views: assess ═════════════════════════ */
@@ -988,21 +1024,28 @@ function viewAssess() {
   const tot = Math.round(P.total);
   out.push(h("section", { class: "sheet ruled hero" },
     h("div", { class: "eyebrow" }, "প্রস্তুতির মূল্যায়ন"),
-    h("h1", null, full ? "প্রজেক্টেড: " + bn(tot) + " / ২০০" : P.knownMax ? "এখন পর্যন্ত: " + bn(tot) + " / " + bn(P.knownMax) + " (জানা অংশে)" : "অনুশীলন শুরু করলে মূল্যায়ন দেখাবে"),
-    h("p", null, full ? (tot >= 120 ? "ভাইভায় ডাক পাওয়ার মতো অবস্থায় আছেন। এখন ধারাবাহিকতা ধরে রাখুন।" : tot >= 100 ? "১০০ পার হয়েছে। দুর্বল অংশগুলো ঠিক করলে ১২০ সম্ভব।" : "১০০-এর নিচে। নিচের দুর্বল অংশগুলোতে আগে সময় দিন।") : "সব ৯টি অংশে অন্তত একবার অনুশীলন করুন, তাহলে পূর্ণ প্রজেকশন দেখাবে।"),
-    bar(full ? tot / 200 : P.knownMax ? tot / P.knownMax : 0, full && tot < 100 ? "bad" : full && tot < 120 ? "warn" : ""),
+    h("h1", null, full ? "প্রজেক্টেড: " + bn(tot) + " / ২০০ · লক্ষ্য " + bn(TARGET_TOTAL) : P.knownMax ? "এখন পর্যন্ত: " + bn(tot) + " / " + bn(P.knownMax) + " (জানা অংশে) · লক্ষ্য " + bn(TARGET_TOTAL) : "অনুশীলন শুরু করলে মূল্যায়ন দেখাবে · লক্ষ্য " + bn(TARGET_TOTAL)),
+    h("p", null, full ? (tot >= 130 ? "লক্ষ্যের উপরে। নতুন কিছু নয়, শুধু ধারাবাহিকতা আর ঘুম।" : tot >= 120 ? "১২০–১৩০ লক্ষ্যে পৌঁছে গেছেন। নিচের লাল/হলুদ অংশ ঠিক রাখুন।" : tot >= 100 ? "১০০ পার। নিচের ঘাটতি টেবিলের সবচেয়ে বড় ঘাটতি থেকে শুরু করুন, তাহলে ১২০ আসবে।" : "১০০-এর নিচে। আগে গণিত আর ব্যাকরণ: এগুলো দ্রুত নম্বর বাড়ায়।") : "সব ৯টি অংশে অন্তত একবার অনুশীলন করুন, তাহলে পূর্ণ প্রজেকশন দেখাবে।"),
+    bar(full ? tot / TARGET_TOTAL : P.knownMax ? tot / P.knownMax : 0, full && tot < 100 ? "bad" : full && tot < 120 ? "warn" : ""),
     h("p", { class: "muted small" }, "হিসাব: অংশের পূর্ণ নম্বর × আপনার সাম্প্রতিক দক্ষতা × (০.৭৫ + ০.২৫ × সপ্তাহের লক্ষ্যের কত অংশ করেছেন)। লেখার অংশে শেষ ৫টি স্ব-মূল্যায়ন, বাকিগুলোতে সাম্প্রতিক সঠিক উত্তরের হার, আর মক দিলে মকের নম্বর ৫০% ধরা হয়।")));
   out.push(h("section", { class: "sheet" }, h("h2", null, "অংশভিত্তিক"),
     h("div", { class: "tablewrap" }, h("table", null,
-      h("thead", null, h("tr", null, h("th", null, "অংশ"), h("th", { class: "n" }, "পূর্ণ"), h("th", { class: "n" }, "প্রজেক্টেড"), h("th", { class: "n" }, "১২০-এর লক্ষ্য"), h("th", null, "দক্ষতা"), h("th", { class: "n" }, "অনুশীলন"))),
-      h("tbody", null, P.rows.map((r) => { const goal = Math.round(SEC[r.sec].max * 0.6); const st = r.proj == null ? "" : r.proj >= goal ? "good" : r.proj >= goal * 0.8 ? "warn" : "bad";
-        return h("tr", null, h("td", null, SEC[r.sec].name), h("td", { class: "n" }, bn(SEC[r.sec].max)), h("td", { class: "n" }, r.proj == null ? "—" : h("span", { class: "pill " + st }, bn(Math.round(r.proj)))), h("td", { class: "n" }, bn(goal)),
+      h("thead", null, h("tr", null, h("th", null, "অংশ"), h("th", { class: "n" }, "পূর্ণ"), h("th", { class: "n" }, "প্রজেক্টেড"), h("th", { class: "n" }, "লক্ষ্য (১২৮)"), h("th", { class: "n" }, "ঘাটতি"), h("th", null, "দক্ষতা"), h("th", { class: "n" }, "অনুশীলন"))),
+      h("tbody", null, P.rows.map((r) => { const goal = TARGET[r.sec]; const st = r.proj == null ? "" : r.proj >= goal ? "good" : r.proj >= goal * 0.8 ? "warn" : "bad";
+        return h("tr", null, h("td", null, SEC[r.sec].name), h("td", { class: "n" }, bn(SEC[r.sec].max)), h("td", { class: "n" }, r.proj == null ? "—" : h("span", { class: "pill " + st }, bn(Math.round(r.proj)))), h("td", { class: "n" }, bn(goal)), h("td", { class: "n" }, r.proj == null ? bn(goal) : r.proj >= goal ? "✓" : bn(Math.ceil(goal - r.proj))),
           h("td", { style: "min-width:120px" }, r.skill == null ? h("span", { class: "muted small" }, "এখনো নেই") : bar(r.skill, r.skill < 0.5 ? "bad" : r.skill < 0.6 ? "warn" : "")), h("td", { class: "n" }, bn(r.count) + "/" + bn(r.tgt))); }))))));
-  const weak = P.rows.filter((r) => r.proj == null || r.proj < SEC[r.sec].max * 0.6).sort((a, b) => (a.proj == null ? -1 : a.proj / SEC[a.sec].max) - (b.proj == null ? -1 : b.proj / SEC[b.sec].max));
+  const gap = (r) => (r.proj == null ? TARGET[r.sec] : TARGET[r.sec] - r.proj);
+  const weak = P.rows.filter((r) => r.proj == null || r.proj < TARGET[r.sec]).sort((a, b) => gap(b) - gap(a));
   const go2 = { FW_EN: "practice/essay", FW_BN: "practice/essay", ARG: "practice/arg", TR: "practice/tr", MATH: "practice/math", ENG: "practice/quiz-eng", BN: "practice/quiz-bn", BANK: "practice/terms", GK: "practice/quiz-gk" };
-  out.push(h("section", { class: "sheet" }, h("h2", null, "দুর্বল জায়গা (আগে এগুলো)"),
-    weak.length ? h("div", { class: "grid g3" }, weak.slice(0, 6).map((r) => h("div", { class: "qbox stack" }, h("b", null, SEC[r.sec].name), h("span", { class: "muted small" }, r.proj == null ? "এখনো অনুশীলন করেননি" : "প্রজেক্টেড " + bn(Math.round(r.proj)) + "/" + bn(SEC[r.sec].max) + ", লক্ষ্য " + bn(Math.round(SEC[r.sec].max * 0.6))),
+  out.push(h("section", { class: "sheet" }, h("h2", null, "ঘাটতি (বড় ঘাটতি আগে)"),
+    weak.length ? h("div", { class: "grid g3" }, weak.slice(0, 6).map((r) => h("div", { class: "qbox stack" }, h("b", null, SEC[r.sec].name), h("span", { class: "muted small" }, r.proj == null ? "এখনো অনুশীলন করেননি · লক্ষ্য " + bn(TARGET[r.sec]) : "প্রজেক্টেড " + bn(Math.round(r.proj)) + "/" + bn(SEC[r.sec].max) + ", লক্ষ্য " + bn(TARGET[r.sec])), h("span", { class: "small" }, EASY[r.sec]),
       h("button", { class: "btn sm primary", onclick: () => { if (r.sec === "FW_EN" || r.sec === "FW_BN") sub.essayLang = r.sec === "FW_EN" ? "en" : "bn"; go(go2[r.sec]); } }, "অনুশীলন করুন")))) : h("p", null, "সব অংশ লক্ষ্যের উপরে। দারুণ!")));
+  out.push(h("section", { class: "sheet" }, h("h2", null, "ব্যাকরণ সিলেবাস কভারেজ (অফিসিয়াল তালিকা ধরে)"),
+    h("div", { class: "grid g2" }, [["eng", "English Language Proficiency (২০)"], ["bn", "বাংলা ব্যাকরণ (১০)"]].map(([k, lab]) => { const st = tpStats(k);
+      return h("div", { class: "tablewrap" }, h("table", null, h("thead", null, h("tr", null, h("th", null, lab), h("th", { class: "n" }, "দেখা"), h("th", { class: "n" }, "সঠিক"), h("th", null, ""))),
+        h("tbody", null, Object.keys(st).map((t) => h("tr", null, h("td", null, tpName(t)), h("td", { class: "n" }, bn(st[t].seen) + "/" + bn(st[t].total)), h("td", { class: "n" }, st[t].n ? h("span", { class: "pill " + (st[t].ok / st[t].n >= 0.7 ? "good" : st[t].ok / st[t].n >= 0.5 ? "warn" : "bad") }, pct(st[t].ok / st[t].n)) : "—"),
+          h("td", null, h("button", { class: "btn sm", onclick: () => { newQuiz(k, t); go("practice/quiz-" + k); } }, "অনুশীলন")))))));
+    }))));
   const ts = topicStats();
   out.push(h("section", { class: "sheet" }, h("h2", null, "টপিক কভারেজ"),
     h("div", { class: "tablewrap" }, h("table", null, h("thead", null, h("tr", null, h("th", null, "টপিক"), h("th", { class: "n" }, "বাংলা"), h("th", { class: "n" }, "ইংরেজি"), h("th", { class: "n" }, "সেরা স্কোর"))),
@@ -1130,7 +1173,7 @@ function viewLibrary() {
         ["docs/00_one_page.md", "এক পাতায় পুরো প্রস্তুতি (প্রিন্ট করে রাখুন)"], ["docs/01_exam_structure.md", "নম্বর বণ্টন ও সময় ভাগ"], ["docs/04_topic_bank.md", "১০টি টপিক কার্ড"], ["docs/05_argument_playbook.md", "আর্গুমেন্ট টেমপ্লেট ও প্রম্পট"], ["docs/07_math_playbook.md", "গণিতের অধ্যায় ক্রম, সূত্র, সাম্প্রতিক প্রশ্ন"], ["docs/09_grammar_quick.md", "গ্রামার কুইক শিট"], ["docs/10_gap_analysis.md", "রিপোতে যা নেই"],
         ["materials/01_focus_writing/books/Focus_Writing_Mini_Recent_Merged.pdf", "মূল ফোকাস বই"], ["materials/02_argument_writing/", "আর্গুমেন্টের ২টি PDF"], ["materials/03_math/khairul/", "খায়রুলের অধ্যায়ভিত্তিক শিট"], ["materials/03_math/question_bank/BIBM_Previous_All_Written_Math_Solution.pdf", "সাম্প্রতিক BIBM গণিত (২০২২–২৩)"], ["materials/05_gk_banking/GK_Banking_Terminologies_1_2.pdf", "ব্যাংকিং পরিভাষা"], ["materials/07_official_reports/BB_Monetary_Policy_Statement_H1FY27.pdf", "সর্বশেষ সংখ্যার উৎস"],
       ].map(([a, b]) => h("tr", null, h("td", { class: "mono small" }, a), h("td", null, b)))))),
-      h("p", { class: "muted small" }, "নোট: নম্বর বণ্টন একটি ব্লগ থেকে নেওয়া (নোটিশ ৩৪৮/২০২৬-এর উদ্ধৃতি)। erecruitment.bb.org.bd-তে মিলিয়ে নিন।")));
+      h("p", { class: "muted small" }, "নম্বর বণ্টন অফিসিয়াল বিজ্ঞপ্তির টেবিলের সাথে মিলিয়ে নিশ্চিত করা হয়েছে।")));
   }
   return out;
 }

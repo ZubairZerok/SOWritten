@@ -344,6 +344,33 @@ const noHScroll = (page) => page.evaluate(() => document.documentElement.scrollW
     await ctx.close();
   }
 
+
+  /* 11. confirmed syllabus: sub-topic quizzes, coverage, target 128 */
+  results.push("১১. অফিসিয়াল সিলেবাস: সাব-টপিক কুইজ, কভারেজ, লক্ষ্য ১২৮");
+  {
+    const { ctx, page, errors } = await newPage(browser, { time: "2026-11-22T10:00:00+06:00" });
+    const data = await page.evaluate(() => ({ eng: [...new Set(D.quiz.eng.map((q) => q.tp))], bn: [...new Set(D.quiz.bn.map((q) => q.tp))], names: D.quiz._tp_names, bad: [...D.quiz.eng, ...D.quiz.bn, ...D.quiz.gk].filter((q) => !(q.a >= 0 && q.a < q.o.length) || new Set(q.o).size !== q.o.length).length }));
+    for (const t of ["sva", "rfv", "structure", "speech", "transformation", "finite", "clause", "groupverb", "idiom"]) ok(data.eng.includes(t), "ইংরেজি সিলেবাস অংশ আছে: " + data.names[t]);
+    for (const t of ["banan", "banan_niyom", "shuddhi", "probad", "karok", "somas", "sondhi", "ekkothay", "somoccharito"]) ok(data.bn.includes(t), "বাংলা সিলেবাস অংশ আছে: " + data.names[t]);
+    ok(data.bad === 0, "সব MCQ-তে উত্তর index বৈধ আর অপশন আলাদা");
+    await page.evaluate(() => (location.hash = "practice-quiz-bn"));
+    await page.getByRole("button", { name: /^কারক/ }).click();
+    let tags = new Set();
+    for (let i = 0; i < 5; i++) { tags.add(await page.locator(".eyebrow").last().innerText()); await page.locator("button.opt").first().click(); await page.getByRole("button", { name: i < 4 ? "পরের প্রশ্ন" : "ফলাফল দেখুন" }).click(); }
+    ok([...tags].every((t) => t.includes("কারক")), "'কারক' ফিল্টারে শুধু কারকের প্রশ্ন (৫টি)", [...tags].join(" | "));
+    await page.evaluate(() => (location.hash = "assess"));
+    const at = await page.locator("main").innerText();
+    ok(at.includes("ব্যাকরণ সিলেবাস কভারেজ") && /কারক\s+৫\/৫/.test(at), "কভারেজ টেবিলে কারক ৫/৫ দেখা", at.match(/কারক[^\n]*/)?.[0]);
+    ok(at.includes("লক্ষ্য ১২৮") && at.includes("লক্ষ্য (১২৮)"), "মূল্যায়নে লক্ষ্য ১২৮");
+    await page.evaluate(() => (location.hash = "plan"));
+    const pt = await page.locator("main").innerText();
+    ok(pt.includes("নিশ্চিত নম্বর বণ্টন") && /মোট\s+২০০\s+১২৮/.test(pt), "প্ল্যানে নিশ্চিত বণ্টন ও লক্ষ্য টেবিল (মোট ২০০ / ১২৮)");
+    const sum = await page.evaluate(() => Object.values(TARGET).reduce((a, b) => a + b, 0) === TARGET_TOTAL && Object.keys(TARGET).every((k) => TARGET[k] <= SEC[k].max) && Object.values(SEC).reduce((a, s) => a + s.max, 0) === 200);
+    ok(sum, "অংশের লক্ষ্য যোগফল = ১২৮, পূর্ণ নম্বর যোগফল = ২০০");
+    ok(errors.length === 0, "কোনো JS error নেই", errors.join(","));
+    await ctx.close();
+  }
+
   srv.close();
   await browser.close();
   console.log(results.join("\n"));
