@@ -1,0 +1,1177 @@
+<title>SO Written Sprint</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500;700&family=Hind+Siliguri:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: an exam answer-script — ruled paper, red margin rule, navy ink; one sticky header with the countdown */
+:root {
+  --paper: #f5f7fb;
+  --sheet: #ffffff;
+  --ink: #17233d;
+  --ink-2: #4a5878;
+  --rule: #dbe2ee;
+  --margin: #c8453b;
+  --accent: #1f6f55;
+  --accent-ink: #ffffff;
+  --accent-soft: #e2f1ea;
+  --warn: #b5730f;
+  --warn-soft: #fbf0dc;
+  --bad: #b33a30;
+  --bad-soft: #fbe5e2;
+  --good: #1f7a4d;
+  --good-soft: #def2e6;
+  --shadow: 0 1px 2px rgba(23, 35, 61, .06), 0 4px 14px rgba(23, 35, 61, .06);
+  --f-display: "Baloo Da 2", "Hind Siliguri", "Noto Sans Bengali", "Nirmala UI", sans-serif;
+  --f-body: "Hind Siliguri", "Noto Sans Bengali", "Nirmala UI", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --r: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0e1525; --sheet: #151f34; --ink: #e5eaf4; --ink-2: #a3b0c8; --rule: #26324c;
+    --margin: #e0675c; --accent: #4cc79a; --accent-ink: #0b1a14; --accent-soft: #163a2e;
+    --warn: #e6a94a; --warn-soft: #3a2d14; --bad: #ef7d72; --bad-soft: #3d1f1d; --good: #5fd39a; --good-soft: #173527;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 18px rgba(0,0,0,.25); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0e1525; --sheet: #151f34; --ink: #e5eaf4; --ink-2: #a3b0c8; --rule: #26324c;
+  --margin: #e0675c; --accent: #4cc79a; --accent-ink: #0b1a14; --accent-soft: #163a2e;
+  --warn: #e6a94a; --warn-soft: #3a2d14; --bad: #ef7d72; --bad-soft: #3d1f1d; --good: #5fd39a; --good-soft: #173527;
+  --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 18px rgba(0,0,0,.25); color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { background: var(--paper); color: var(--ink); }
+body { font-family: var(--f-body); font-size: 15.5px; line-height: 1.6; margin: 0; -webkit-text-size-adjust: 100%; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--sheet); }
+h1, h2, h3 { font-family: var(--f-display); line-height: 1.25; text-wrap: balance; margin: 0; font-weight: 700; }
+h2 { font-size: 1.35rem; }
+h3 { font-size: 1.08rem; }
+p { margin: 0; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 2.5px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+.num, .mono { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+.muted { color: var(--ink-2); }
+.small { font-size: .86rem; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+/* header */
+header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--sheet); border-bottom: 1px solid var(--rule); }
+.top-row { display: flex; align-items: center; gap: 12px; padding-block: 10px 6px; flex-wrap: wrap; }
+.brand { display: flex; flex-direction: column; min-width: 0; }
+.brand b { font-family: var(--f-display); font-size: 1.15rem; line-height: 1.1; }
+.brand span { font-size: .78rem; color: var(--ink-2); }
+.count { margin-left: auto; display: flex; gap: 6px; align-items: baseline; }
+.count .cell { display: flex; flex-direction: column; align-items: center; min-width: 42px; padding: 2px 6px; border: 1px solid var(--rule); border-radius: 8px; background: var(--paper); }
+.count .cell b { font-family: var(--f-mono); font-size: 1.05rem; line-height: 1.2; }
+.count .cell i { font-style: normal; font-size: .66rem; color: var(--ink-2); }
+.sync { font-size: .72rem; padding: 2px 8px; border-radius: 99px; background: var(--paper); border: 1px solid var(--rule); color: var(--ink-2); white-space: nowrap; }
+.sync.ok { color: var(--good); border-color: var(--good); }
+.sync.warn { color: var(--warn); border-color: var(--warn); }
+nav.tabs { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; padding-bottom: 6px; }
+nav.tabs::-webkit-scrollbar { display: none; }
+nav.tabs a { flex: none; text-decoration: none; color: var(--ink-2); padding: 6px 12px; border-radius: 8px; font-weight: 600; font-size: .93rem; }
+nav.tabs a[aria-current="page"] { background: var(--ink); color: var(--sheet); }
+nav.tabs a:hover:not([aria-current]) { background: var(--paper); color: var(--ink); }
+
+main { padding-block: 18px 120px; display: grid; gap: 18px; }
+.grid { display: grid; gap: 14px; }
+.g2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.g3 { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+.g4 { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+.grid > * { min-width: 0; }
+
+/* the answer sheet */
+.sheet { background: var(--sheet); border: 1px solid var(--rule); border-radius: var(--r); box-shadow: var(--shadow); padding: 16px 18px; display: grid; gap: 12px; align-content: start; position: relative; }
+.sheet.ruled { padding-left: 34px; background-image: linear-gradient(var(--margin), var(--margin)); background-size: 1.5px 100%; background-repeat: no-repeat; background-position: 20px 0; }
+.sheet-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.eyebrow { font-size: .74rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-2); font-weight: 600; }
+.hero { display: grid; gap: 6px; }
+.hero h1 { font-size: clamp(1.45rem, 4vw, 2.1rem); }
+.pill { display: inline-flex; align-items: center; gap: 4px; padding: 1px 9px; border-radius: 99px; font-size: .78rem; font-weight: 600; background: var(--paper); border: 1px solid var(--rule); color: var(--ink-2); white-space: nowrap; }
+.pill.wrap { white-space: normal; border-radius: 10px; padding: 4px 10px; }
+main > * { min-width: 0; }
+.pill.good { background: var(--good-soft); color: var(--good); border-color: transparent; }
+.pill.warn { background: var(--warn-soft); color: var(--warn); border-color: transparent; }
+.pill.bad { background: var(--bad-soft); color: var(--bad); border-color: transparent; }
+.pill.acc { background: var(--accent-soft); color: var(--accent); border-color: transparent; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 8px 14px; border-radius: 8px; border: 1px solid var(--rule); background: var(--sheet); font-weight: 600; min-height: 40px; }
+.btn:hover { border-color: var(--ink-2); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.btn.primary:hover { filter: brightness(1.06); }
+.btn.danger { color: var(--bad); border-color: var(--bad); }
+.btn.ghost { background: transparent; border-color: transparent; }
+.btn.sm { min-height: 32px; padding: 4px 10px; font-size: .88rem; }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.row.between { justify-content: space-between; }
+.stack { display: grid; gap: 8px; }
+
+.bar { height: 8px; border-radius: 99px; background: var(--paper); border: 1px solid var(--rule); overflow: hidden; }
+.bar > i { display: block; height: 100%; background: var(--accent); border-radius: 99px; transition: width .3s; }
+.bar.warn > i { background: var(--warn); }
+.bar.bad > i { background: var(--bad); }
+.quota { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 12px; align-items: center; padding: 8px 0; border-bottom: 1px dashed var(--rule); }
+.quota:last-child { border-bottom: 0; }
+.quota .bar { grid-column: 1 / -1; }
+.quota .lbl { font-weight: 600; }
+.done-mark { color: var(--good); font-weight: 700; }
+
+.tl { display: grid; gap: 0; }
+.tl-item { display: grid; grid-template-columns: 62px minmax(0,1fr); gap: 10px; padding: 7px 0; border-bottom: 1px solid var(--rule); }
+.tl-item:last-child { border-bottom: 0; }
+.tl-item .t { font-family: var(--f-mono); font-size: .84rem; color: var(--ink-2); padding-top: 2px; }
+.tl-item.brk { color: var(--ink-2); font-size: .9rem; }
+
+.stat { display: grid; gap: 2px; padding: 12px 14px; border: 1px solid var(--rule); border-radius: var(--r); background: var(--sheet); }
+.stat b { font-family: var(--f-mono); font-size: 1.5rem; line-height: 1.2; }
+.stat span { font-size: .82rem; color: var(--ink-2); }
+
+.seg { display: flex; gap: 4px; flex-wrap: wrap; }
+.seg button { border: 1px solid var(--rule); background: var(--sheet); padding: 5px 12px; border-radius: 8px; font-weight: 600; font-size: .9rem; min-height: 36px; }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--sheet); border-color: var(--ink); }
+
+.q { font-size: 1.06rem; line-height: 1.7; }
+.qbox { border: 1px solid var(--rule); border-radius: var(--r); padding: 14px; background: var(--paper); }
+.opt { text-align: left; display: block; width: 100%; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--rule); background: var(--sheet); min-height: 44px; }
+.opt.right { background: var(--good-soft); border-color: var(--good); }
+.opt.wrong { background: var(--bad-soft); border-color: var(--bad); }
+.check { display: flex; gap: 10px; align-items: flex-start; padding: 6px 0; }
+.check input { width: 20px; height: 20px; margin-top: 3px; accent-color: var(--accent); flex: none; }
+.check .pts { margin-left: auto; font-family: var(--f-mono); color: var(--ink-2); font-size: .85rem; }
+label.f { display: grid; gap: 4px; font-weight: 600; font-size: .92rem; }
+input[type="number"], input[type="text"], select, textarea { border: 1px solid var(--rule); background: var(--sheet); border-radius: 8px; padding: 8px 10px; min-height: 40px; width: 100%; }
+textarea { min-height: 120px; resize: vertical; font-family: var(--f-mono); font-size: .8rem; }
+details.card { border: 1px solid var(--rule); border-radius: var(--r); background: var(--sheet); }
+details.card > summary { cursor: pointer; padding: 12px 14px; font-weight: 600; list-style: none; display: flex; gap: 8px; align-items: center; justify-content: space-between; }
+details.card > summary::-webkit-details-marker { display: none; }
+details.card > div { padding: 0 14px 14px; display: grid; gap: 10px; }
+ul.clean { margin: 0; padding-left: 1.1em; display: grid; gap: 3px; }
+.tablewrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: var(--r); }
+table { border-collapse: collapse; width: 100%; font-size: .92rem; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-size: .78rem; color: var(--ink-2); font-weight: 600; letter-spacing: .03em; background: var(--paper); }
+tr:last-child td { border-bottom: 0; }
+td.n, th.n { text-align: right; font-family: var(--f-mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.daycard { display: grid; gap: 8px; }
+.daycard.today { outline: 2px solid var(--accent); outline-offset: -1px; }
+.daycard.past { opacity: .86; }
+.big { font-family: var(--f-mono); font-size: 2.3rem; line-height: 1; font-weight: 500; }
+
+/* timer bar */
+#timerbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; background: var(--ink); color: var(--sheet); padding-block: 10px calc(10px + env(safe-area-inset-bottom, 0px)); box-shadow: 0 -6px 18px rgba(0,0,0,.2); }
+#timerbar .wrap { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+#timerbar .clock { font-family: var(--f-mono); font-size: 1.6rem; font-weight: 500; min-width: 96px; }
+#timerbar .lab { min-width: 0; flex: 1 1 160px; font-weight: 600; line-height: 1.3; }
+#timerbar .lab small { display: block; font-weight: 400; opacity: .8; }
+#timerbar .btn { background: transparent; color: var(--sheet); border-color: rgba(255,255,255,.35); min-height: 36px; }
+#timerbar.over { background: var(--margin); }
+#timerbar .tbar { flex-basis: 100%; height: 4px; background: rgba(255,255,255,.2); border-radius: 99px; overflow: hidden; }
+#timerbar .tbar i { display: block; height: 100%; background: var(--accent); }
+
+/* modal */
+#modal { position: fixed; inset: 0; z-index: 50; background: rgba(10, 16, 30, .55); display: grid; place-items: center; padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+#modal .box { background: var(--sheet); color: var(--ink); border-radius: 14px; width: min(620px, 100%); max-height: 100%; overflow: auto; padding: 18px; display: grid; gap: 12px; box-shadow: var(--shadow); }
+#toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(86px + env(safe-area-inset-bottom, 0px)); z-index: 60; background: var(--ink); color: var(--sheet); padding: 9px 16px; border-radius: 99px; font-weight: 600; font-size: .92rem; box-shadow: var(--shadow); max-width: calc(100% - 32px); text-align: center; }
+.kbd { font-family: var(--f-mono); font-size: .8rem; border: 1px solid var(--rule); border-radius: 5px; padding: 0 5px; }
+@media (max-width: 560px) {
+  .count .cell { min-width: 36px; padding: 2px 4px; }
+  .count .cell b { font-size: .95rem; }
+  .sheet { padding: 14px; }
+  .sheet.ruled { padding-left: 28px; background-position: 15px 0; }
+  .big { font-size: 1.9rem; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <div class="top-row">
+      <div class="brand"><b>SO Written Sprint</b><span>সিনিয়র অফিসার লিখিত · ২৭ নভেম্বর ২০২৬, সকাল ৯:৩০</span></div>
+      <div class="count" id="count" aria-label="পরীক্ষা পর্যন্ত বাকি সময়"></div>
+      <span class="sync" id="sync">লোড হচ্ছে…</span>
+    </div>
+    <nav class="tabs" id="tabs" aria-label="বিভাগ">
+      <a href="#today">আজ</a>
+      <a href="#plan">৭ দিনের প্ল্যান</a>
+      <a href="#practice">অনুশীলন</a>
+      <a href="#assess">মূল্যায়ন</a>
+      <a href="#mock">মক টেস্ট</a>
+      <a href="#library">টপিক ও তথ্য</a>
+      <a href="#backup">ব্যাকআপ</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap" id="view" aria-live="polite"></main>
+<div id="timerbar" hidden></div>
+<div id="modal" hidden role="dialog" aria-modal="true"></div>
+<div id="toast" hidden role="status"></div>
+
+<script id="so-data" type="application/json">__SO_DATA__</script>
+<script>
+"use strict";
+/* ═════════════════════════ constants ═════════════════════════ */
+const EXAM_MS = Date.parse("2026-11-27T09:30:00+06:00");
+const DAYS = ["2026-11-20", "2026-11-21", "2026-11-22", "2026-11-23", "2026-11-24", "2026-11-25", "2026-11-26"];
+const STORE_KEY = "so-sprint-v1";
+const SCHEMA = 1;
+const MAX_EVENTS = 1400;
+const SEC = {
+  FW_EN: { name: "ফোকাস রাইটিং (ইংরেজি)", short: "ফোকাস EN", max: 30 },
+  FW_BN: { name: "ফোকাস রাইটিং (বাংলা)", short: "ফোকাস BN", max: 30 },
+  ARG: { name: "আর্গুমেন্ট/অ্যানালিটিক্যাল", short: "আর্গুমেন্ট", max: 40 },
+  TR: { name: "বাংলা→ইংরেজি অনুবাদ", short: "অনুবাদ", max: 20 },
+  MATH: { name: "গণিত", short: "গণিত", max: 30 },
+  ENG: { name: "ইংরেজি ভাষা", short: "ইংরেজি", max: 20 },
+  BN: { name: "বাংলা ব্যাকরণ", short: "বাংলা", max: 10 },
+  BANK: { name: "ব্যাংকিং ও আর্থিক জ্ঞান", short: "ব্যাংকিং", max: 10 },
+  GK: { name: "সাধারণ জ্ঞান", short: "GK", max: 10 },
+};
+const SEC_ORDER = ["FW_EN", "FW_BN", "ARG", "TR", "MATH", "ENG", "BN", "BANK", "GK"];
+/* base (1×) daily quota and minutes per unit */
+const QUOTA = {
+  essay: { name: "রচনা (বাংলা/ইংরেজি পালাক্রমে)", base: 1, min: 23, unit: "টি", go: "practice/essay" },
+  arg: { name: "আর্গুমেন্ট", base: 1, min: 27, unit: "টি", go: "practice/arg" },
+  tr: { name: "অনুবাদ অনুচ্ছেদ", base: 1, min: 15, unit: "টি", go: "practice/tr" },
+  math: { name: "লিখিত অঙ্ক", base: 9, min: 5, unit: "টি", go: "practice/math" },
+  terms: { name: "ব্যাংকিং পরিভাষা", base: 15, min: 0.5, unit: "টি", go: "practice/terms" },
+  eng: { name: "ইংরেজি গ্রামার MCQ", base: 6, min: 0.6, unit: "টি", go: "practice/quiz-eng" },
+  bn: { name: "বাংলা ব্যাকরণ MCQ", base: 4, min: 0.6, unit: "টি", go: "practice/quiz-bn" },
+  gk: { name: "সাম্প্রতিক তথ্য MCQ", base: 4, min: 0.5, unit: "টি", go: "practice/quiz-gk" },
+  news: { name: "পত্রিকা: সম্পাদকীয় + অর্থনীতি পাতা", base: 1, min: 40, unit: "সেশন", go: null, fixed: true },
+};
+const QSHORT = { essay: "রচনা", arg: "আর্গুমেন্ট", tr: "অনুবাদ", math: "অঙ্ক", terms: "পরিভাষা", eng: "ইংরেজি MCQ", bn: "বাংলা MCQ", gk: "তথ্য MCQ" };
+const QUOTA_ORDER = ["essay", "arg", "tr", "math", "terms", "eng", "bn", "gk", "news"];
+const DAY_THEME = [
+  { topics: [1, 2], math: ["percentage", "profit_loss"], note: "মূল্যস্ফীতি ও খেলাপি ঋণ · শতকরা ও লাভ-ক্ষতি", load: 1 },
+  { topics: [3, 4], math: ["speed", "work"], note: "এলডিসি ২০২৯ ও জ্বালানি · গতি/ট্রেন ও সময়-কাজ", load: 1 },
+  { topics: [5, 6], math: ["algebra", "mixture"], note: "রেমিট্যান্স ও রপ্তানি · সমীকরণ ও মিশ্রণ", load: 1 },
+  { topics: [7, 8], math: ["geometry", "interest", "ratio"], note: "ডিজিটাল ব্যাংকিং ও জলবায়ু · জ্যামিতি, সুদ, অনুপাত", load: 1 },
+  { topics: [9, 10], math: ["series", "probability", "average"], note: "পূর্ণ মক (সকাল ৯:৩০) · আর্থিক অন্তর্ভুক্তি ও বাজেট", load: 1, mock: "full" },
+  { topics: [], math: [], note: "দুর্বল টপিক ও ভুলের খাতা (অ্যাপ নিজে বেছে দেবে)", load: 1, weak: true },
+  { topics: [], math: [], note: "লেখার মক + হালকা রিভিশন · রাতে ৭ ঘণ্টা ঘুম", load: 0.6, mock: "writing", weak: true },
+];
+const ESSAY_RUBRIC = [["শিরোনামে প্রশ্নের মূল শব্দ আছে", 2], ["কোটেশন বা সর্বশেষ সংখ্যা দিয়ে ভূমিকা", 4], ["৫টি বা তার বেশি উপশিরোনাম", 6], ["উৎসসহ ১টি ডেটা বক্স বা টেবিল", 5], ["২০২৬-এর অন্তত ৩টি সংখ্যা", 4], ["৫টি বা তার বেশি সমাধান/সুপারিশ", 5], ["উপসংহার লেখা হয়েছে", 2], ["১৮ মিনিটের মধ্যে শেষ", 2]];
+const ARG_RUBRIC = [["ভূমিকায় স্পষ্ট অবস্থান (agree / disagree / partly)", 5], ["৩টি আলাদা যুক্তি", 9], ["প্রতিটি যুক্তিতে প্রমাণ বা বাংলাদেশের উদাহরণ", 9], ["বিপক্ষের যুক্তি উল্লেখ করে খণ্ডন", 7], ["সুপারিশ বা ভারসাম্যপূর্ণ সমাধান", 4], ["উপসংহারে একই অবস্থান", 3], ["২২ মিনিটের মধ্যে শেষ", 3]];
+const TR_RUBRIC = [["মূল অর্থ ঠিক এসেছে", 8], ["Tense ও বাক্যগঠন ঠিক", 5], ["পরিভাষা ও সংখ্যা ঠিক", 4], ["বানান, article, punctuation ঠিক", 3]];
+const LANG_PEN = { essay: [0, 2, 4], arg: [0, 3, 6] };
+const MOCK_FULL = [["MATH", 22], ["ARG", 22], ["FW_EN", 18], ["FW_BN", 18], ["TR", 12], ["ENG", 10], ["BN_BANK_GK", 15], ["REV", 3]];
+const MOCK_WRITING = [["FW_EN", 18], ["FW_BN", 18], ["ARG", 22], ["TR", 12], ["REV", 5]];
+const CH_BN = { profit_loss: "লাভ-ক্ষতি", interest: "সুদ", percentage: "শতকরা", ratio: "অনুপাত/অংশীদারি", work: "সময়-কাজ", speed: "গতি/ট্রেন/নৌকা", mixture: "মিশ্রণ", average: "গড়", age: "বয়স", series: "ধারা", geometry: "জ্যামিতি", probability: "সম্ভাবনা", set: "সেট", algebra: "সমীকরণ/বীজগণিত" };
+
+/* ═════════════════════════ helpers ═════════════════════════ */
+const BND = "০১২৩৪৫৬৭৮৯";
+const bn = (x) => String(x).replace(/[0-9]/g, (d) => BND[d]);
+const $ = (s, r = document) => r.querySelector(s);
+const clamp = (x, a, b) => Math.max(a, Math.min(b, x));
+const uid = () => Math.random().toString(36).slice(2, 10) + Date.now().toString(36).slice(-4);
+const dhaka = (ms = Date.now()) => new Date(ms + 6 * 3600e3).toISOString().slice(0, 10);
+const fmtDate = (iso) => { const [y, m, d] = iso.split("-").map(Number); const mo = ["জানু", "ফেব্রু", "মার্চ", "এপ্রিল", "মে", "জুন", "জুলাই", "আগস্ট", "সেপ্টে", "অক্টো", "নভে", "ডিসে"][m - 1]; return bn(d) + " " + mo; };
+const WD = ["রবি", "সোম", "মঙ্গল", "বুধ", "বৃহস্পতি", "শুক্র", "শনি"];
+const weekday = (iso) => WD[new Date(iso + "T12:00:00+06:00").getUTCDay()];
+const pct = (x) => bn(Math.round(x * 100)) + "%";
+const mmss = (s) => { s = Math.max(0, Math.round(s)); const m = Math.floor(s / 60), r = s % 60; return bn(String(m).padStart(2, "0") + ":" + String(r).padStart(2, "0")); };
+const hm = (min) => { const h = Math.floor(min / 60), m = Math.round(min % 60); return (h ? bn(h) + " ঘ " : "") + bn(m) + " মি"; };
+function shuffle(a) { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+function pick(a) { return a[Math.floor(Math.random() * a.length)]; }
+function h(tag, attrs, ...kids) {
+  const el = document.createElement(tag);
+  if (attrs) for (const k in attrs) {
+    const v = attrs[k];
+    if (v == null || v === false) continue;
+    if (k === "class") el.className = v;
+    else if (k.startsWith("on") && typeof v === "function") el.addEventListener(k.slice(2), v);
+    else if (k === "style") el.setAttribute("style", v);
+    else if (v === true) el.setAttribute(k, "");
+    else el.setAttribute(k, v);
+  }
+  for (const kid of kids.flat(Infinity)) {
+    if (kid == null || kid === false) continue;
+    el.append(kid instanceof Node ? kid : document.createTextNode(String(kid)));
+  }
+  return el;
+}
+function bar(frac, cls = "") { const b = h("div", { class: "bar " + cls, role: "progressbar", "aria-valuemin": 0, "aria-valuemax": 100, "aria-valuenow": Math.round(clamp(frac, 0, 1) * 100) }); b.append(h("i", { style: "width:" + (clamp(frac, 0, 1) * 100).toFixed(1) + "%" })); return b; }
+function toast(msg) { const t = $("#toast"); t.textContent = msg; t.hidden = false; clearTimeout(toast._t); toast._t = setTimeout(() => (t.hidden = true), 2600); }
+
+/* ═════════════════════════ data ═════════════════════════ */
+let D = null;
+async function loadData() {
+  const el = document.getElementById("so-data");
+  const raw = el ? el.textContent.trim() : "";
+  if (raw && raw[0] === "{") { try { return JSON.parse(raw); } catch (e) { console.warn("inline data invalid", e); } }
+  const r = await fetch("data.json", { cache: "no-store" });
+  if (!r.ok) throw new Error("data.json " + r.status);
+  return r.json();
+}
+
+/* ═════════════════════════ state ═════════════════════════ */
+function fresh() {
+  return { v: SCHEMA, createdAt: Date.now(), updatedAt: 0, settings: { mult: 5 }, events: [], checks: {}, mathLog: {}, termBox: {}, quizWrong: {}, timer: null, mocks: [], hall: {} };
+}
+function normalize(s) {
+  const f = fresh();
+  if (!s || typeof s !== "object") return f;
+  const o = Object.assign(f, s);
+  o.v = SCHEMA;
+  if (!o.settings || typeof o.settings !== "object") o.settings = { mult: 5 };
+  o.settings.mult = clamp(Math.round(Number(o.settings.mult) || 5), 1, 5);
+  o.events = Array.isArray(o.events) ? o.events.filter((e) => e && typeof e === "object" && typeof e.k === "string" && Number.isFinite(e.t)).slice(-MAX_EVENTS) : [];
+  for (const e of o.events) { e.n = Number.isFinite(e.n) ? e.n : 1; if (e.s != null && !Number.isFinite(e.s)) e.s = null; if (!e.d) e.d = dhaka(e.t); if (!e.id) e.id = uid(); }
+  for (const k of ["checks", "mathLog", "termBox", "quizWrong", "hall"]) if (!o[k] || typeof o[k] !== "object" || Array.isArray(o[k])) o[k] = {};
+  o.mocks = Array.isArray(o.mocks) ? o.mocks.filter((m) => m && typeof m === "object" && m.scores && typeof m.scores === "object") : [];
+  if (o.timer && !(Number.isFinite(o.timer.endAt) && typeof o.timer.kind === "string")) o.timer = null;
+  o.updatedAt = Number.isFinite(o.updatedAt) ? o.updatedAt : 0;
+  return o;
+}
+let S = fresh();
+const Sync = { db: null, ref: null, uid: null, writing: false, pending: false, timer: 0, status: "local", unsub: null, cloudSeen: false };
+function readLocal() { try { const r = localStorage.getItem(STORE_KEY); return r ? JSON.parse(r) : null; } catch (e) { return null; } }
+function writeLocal() { try { localStorage.setItem(STORE_KEY, JSON.stringify(S)); return true; } catch (e) { return false; } }
+function save(opts = {}) {
+  S.updatedAt = Date.now();
+  if (S.events.length > MAX_EVENTS) S.events = S.events.slice(-MAX_EVENTS);
+  const okLocal = writeLocal();
+  if (!okLocal && !Sync.ref) setSync("warn", "সংরক্ষণ হচ্ছে না: ব্যাকআপ নিন");
+  scheduleRemote();
+  if (!opts.silent) render();
+}
+function scheduleRemote() { if (!Sync.ref) return; clearTimeout(Sync.timer); Sync.timer = setTimeout(pushRemote, 1200); }
+async function pushRemote() {
+  if (!Sync.ref) return;
+  if (Sync.writing) { Sync.pending = true; return; }
+  Sync.writing = true; Sync.pending = false;
+  try {
+    const body = JSON.parse(JSON.stringify(S));
+    let size = JSON.stringify(body).length;
+    while (size > 240000 && body.events.length > 50) { body.events = body.events.slice(Math.floor(body.events.length * 0.15)); size = JSON.stringify(body).length; }
+    await Sync.ref.set(body);
+    setSync("ok", "ক্লাউডে সংরক্ষিত");
+  } catch (e) {
+    const c = e && e.code;
+    if (c === "unavailable") { setSync("warn", "আবার চেষ্টা হবে"); setTimeout(scheduleRemote, 4000 + Math.random() * 3000); }
+    else if (c === "revoked" || c === "not_granted" || c === "invalid_argument") { Sync.ref = null; setSync("warn", "শুধু এই ডিভাইসে সংরক্ষিত"); }
+    else setSync("warn", "ক্লাউডে সংরক্ষণ ব্যর্থ, ডিভাইসে আছে");
+  } finally {
+    Sync.writing = false;
+    if (Sync.pending) pushRemote();
+  }
+}
+function setSync(kind, text) { Sync.status = kind; const el = $("#sync"); if (el) { el.textContent = text; el.className = "sync " + (kind === "ok" ? "ok" : kind === "warn" ? "warn" : ""); } }
+async function initCloud() {
+  const c = window.claude;
+  if (!c || typeof c.use !== "function") { setSync("", writeLocal() ? "এই ডিভাইসে সংরক্ষিত" : "সংরক্ষণ বন্ধ: ব্যাকআপ নিন"); return; }
+  setSync("", "ক্লাউড সংযোগ হচ্ছে…");
+  let db = null, user = null;
+  try { [db, user] = await Promise.all([c.use("db"), c.use("user")]); } catch (e) { db = null; }
+  const id = user ? await user.id() : null;
+  if (!db || !id) { setSync("", "এই ডিভাইসে সংরক্ষিত"); return; }
+  Sync.db = db; Sync.uid = id;
+  try { Sync.ref = db.doc("data/users/" + id + "/so_state"); } catch (e) { Sync.ref = null; setSync("warn", "এই ডিভাইসে সংরক্ষিত"); return; }
+  const slow = setTimeout(() => { if (!Sync.cloudSeen) setSync("warn", "ক্লাউড ধীর, ডিভাইসে সংরক্ষিত"); }, 10000);
+  Sync.unsub = Sync.ref.onSnapshot((snap) => {
+    if (snap.metadata && snap.metadata.fromCache && !Sync.cloudSeen) { /* wait for confirmed copy, but still use it if newer */ }
+    else { Sync.cloudSeen = true; clearTimeout(slow); }
+    if (snap.exists) {
+      const remote = snap.data();
+      const ru = remote && Number(remote.updatedAt) || 0;
+      if (ru > S.updatedAt) { S = normalize(JSON.parse(JSON.stringify(remote))); writeLocal(); render(); renderTimer(); setSync("ok", "ক্লাউডে সংরক্ষিত"); }
+      else if (ru < S.updatedAt) scheduleRemote();
+      else if (!snap.metadata || !snap.metadata.fromCache) setSync("ok", "ক্লাউডে সংরক্ষিত");
+    } else if (!snap.metadata || !snap.metadata.fromCache) {
+      if (S.updatedAt > 0) scheduleRemote(); else setSync("ok", "ক্লাউড প্রস্তুত");
+    }
+  }, (err) => { clearTimeout(slow); Sync.ref = null; setSync("warn", "শুধু এই ডিভাইসে সংরক্ষিত"); });
+}
+
+/* ═════════════════════════ events & stats ═════════════════════════ */
+function logEvent(k, fields) {
+  const t = Date.now();
+  const e = Object.assign({ id: uid(), t, d: dhaka(t), k, n: 1, s: null }, fields);
+  S.events.push(e);
+  return e;
+}
+function dayIndex(iso = dhaka()) { return DAYS.indexOf(iso); }
+function currentDay() { const t = dhaka(); const i = dayIndex(t); if (i >= 0) return i; if (t < DAYS[0]) return -1; return 7; }
+function quotaFor(dayIdx, key) {
+  const q = QUOTA[key];
+  if (q.fixed) return q.base;
+  const load = dayIdx >= 0 && dayIdx < 7 ? DAY_THEME[dayIdx].load : 1;
+  return Math.max(1, Math.round(q.base * S.settings.mult * load));
+}
+const QKIND = { essay: ["essay"], arg: ["arg"], tr: ["tr"], math: ["math"], terms: ["terms"], eng: ["eng"], bn: ["bn"], gk: ["gk"], news: ["news"] };
+function doneOn(iso, key) { let n = 0; for (const e of S.events) if (e.d === iso && QKIND[key].includes(e.k)) n += e.n; return n; }
+function minutesPlanned(dayIdx) { let m = 0; for (const k of QUOTA_ORDER) m += quotaFor(dayIdx, k) * QUOTA[k].min; return m; }
+function dayCompletion(iso) {
+  const idx = dayIndex(iso); let w = 0, got = 0;
+  for (const k of QUOTA_ORDER) { const need = quotaFor(idx, k), wt = need * QUOTA[k].min; w += wt; got += wt * Math.min(1, doneOn(iso, k) / need); }
+  return w ? got / w : 0;
+}
+function sectionOf(e) {
+  if (e.k === "essay") return e.lang === "en" ? "FW_EN" : "FW_BN";
+  return { arg: "ARG", tr: "TR", math: "MATH", eng: "ENG", bn: "BN", terms: "BANK", gk: "GK" }[e.k] || null;
+}
+function weekTarget(sec) {
+  const tot = (k) => DAYS.reduce((a, _, i) => a + quotaFor(i, k), 0);
+  return { FW_EN: Math.ceil(tot("essay") / 2), FW_BN: Math.floor(tot("essay") / 2), ARG: tot("arg"), TR: tot("tr"), MATH: tot("math"), ENG: tot("eng"), BN: tot("bn"), BANK: tot("terms"), GK: tot("gk") }[sec];
+}
+function skillOf(sec) {
+  const ev = S.events.filter((e) => sectionOf(e) === sec && e.s != null);
+  const scored = ["FW_EN", "FW_BN", "ARG", "TR"].includes(sec);
+  let skill = null, count = 0;
+  if (scored) {
+    const last = ev.slice(-5); count = ev.length;
+    if (last.length) skill = last.reduce((a, e) => a + e.s, 0) / last.length;
+  } else {
+    let n = 0, c = 0; const cap = sec === "MATH" ? 40 : 120;
+    for (let i = ev.length - 1; i >= 0 && n < cap; i--) { n += ev[i].n; c += ev[i].s * ev[i].n; }
+    count = ev.reduce((a, e) => a + e.n, 0);
+    if (n) skill = c / n;
+  }
+  const mock = [...S.mocks].reverse().find((m) => m.scores && Number.isFinite(m.scores[sec]));
+  if (mock) { const mr = clamp(mock.scores[sec] / SEC[sec].max, 0, 1); skill = skill == null ? mr : 0.5 * skill + 0.5 * mr; }
+  return { skill, count };
+}
+function projection() {
+  const rows = SEC_ORDER.map((sec) => {
+    const { skill, count } = skillOf(sec);
+    const tgt = weekTarget(sec) || 1;
+    const vol = clamp(count / tgt, 0, 1);
+    const proj = skill == null ? null : SEC[sec].max * skill * (0.75 + 0.25 * vol);
+    return { sec, skill, count, tgt, vol, proj };
+  });
+  const known = rows.filter((r) => r.proj != null);
+  const total = known.reduce((a, r) => a + r.proj, 0);
+  return { rows, total, knownMax: known.reduce((a, r) => a + SEC[r.sec].max, 0) };
+}
+function topicStats() {
+  const m = {};
+  for (const t of D.topics) m[t.n] = { bn: 0, en: 0, best: null };
+  for (const e of S.events) if (e.k === "essay" && m[e.topic]) { m[e.topic][e.lang === "en" ? "en" : "bn"]++; if (e.s != null) m[e.topic].best = Math.max(m[e.topic].best ?? 0, e.s); }
+  return m;
+}
+function chapterStats() {
+  const m = {};
+  for (const e of S.events) if (e.k === "math" && e.ch) { const c = (m[e.ch] = m[e.ch] || { n: 0, ok: 0 }); c.n += e.n; c.ok += (e.s || 0) * e.n; }
+  return m;
+}
+function weakTopics() {
+  const ts = topicStats();
+  return D.topics.map((t) => ({ t, st: ts[t.n], score: (ts[t.n].best ?? 0) + 0.15 * (ts[t.n].bn + ts[t.n].en) })).sort((a, b) => a.score - b.score);
+}
+function dayTopics(i) {
+  if (i < 0 || i > 6) return [1, 2];
+  const th = DAY_THEME[i];
+  if (th.weak) return weakTopics().slice(0, i === 6 ? 2 : 3).map((x) => x.t.n);
+  return th.topics;
+}
+function dayChapters(i) {
+  if (i < 0 || i > 6) return ["percentage", "profit_loss"];
+  const th = DAY_THEME[i];
+  if (!th.weak) return th.math;
+  const cs = chapterStats();
+  const top = ["speed", "work", "algebra", "profit_loss", "percentage", "mixture", "geometry", "interest", "ratio"];
+  return top.map((c) => ({ c, acc: cs[c] ? cs[c].ok / cs[c].n : -1 })).sort((a, b) => a.acc - b.acc).slice(0, 3).map((x) => x.c);
+}
+
+/* ═════════════════════════ recommender ═════════════════════════ */
+function recommendations() {
+  const di = currentDay(); const iso = dhaka();
+  const out = [];
+  const weight = { essay: 30, arg: 40, tr: 20, math: 30, terms: 10, eng: 20, bn: 10, gk: 10, news: 8 };
+  for (const k of QUOTA_ORDER) {
+    const need = quotaFor(di, k), have = doneOn(iso, k);
+    if (have >= need) continue;
+    out.push({ k, score: weight[k] * (1 - have / need), have, need });
+  }
+  const proj = projection();
+  for (const r of proj.rows) if (r.skill != null && r.skill < 0.55) {
+    const k = { FW_EN: "essay", FW_BN: "essay", ARG: "arg", TR: "tr", MATH: "math", ENG: "eng", BN: "bn", BANK: "terms", GK: "gk" }[r.sec];
+    const o = out.find((x) => x.k === k); if (o) { o.score += 15; o.weak = r.sec; }
+  }
+  return out.sort((a, b) => b.score - a.score).slice(0, 3);
+}
+
+/* ═════════════════════════ timer ═════════════════════════ */
+let audioCtx = null;
+document.addEventListener("pointerdown", () => { if (!audioCtx) { try { audioCtx = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) { audioCtx = null; } } }, { once: false, passive: true });
+function beep() {
+  try { if (navigator.vibrate) navigator.vibrate([200, 100, 200]); } catch (e) {}
+  if (!audioCtx) return;
+  try {
+    const now = audioCtx.currentTime;
+    [0, 0.35, 0.7].forEach((off) => { const o = audioCtx.createOscillator(), g = audioCtx.createGain(); o.frequency.value = 880; o.connect(g); g.connect(audioCtx.destination); g.gain.setValueAtTime(0.0001, now + off); g.gain.exponentialRampToValueAtTime(0.3, now + off + 0.02); g.gain.exponentialRampToValueAtTime(0.0001, now + off + 0.3); o.start(now + off); o.stop(now + off + 0.32); });
+  } catch (e) {}
+}
+let wakeLock = null;
+async function keepAwake(on) { try { if (on && "wakeLock" in navigator && !wakeLock) { wakeLock = await navigator.wakeLock.request("screen"); wakeLock.addEventListener("release", () => (wakeLock = null)); } else if (!on && wakeLock) { await wakeLock.release(); wakeLock = null; } } catch (e) { wakeLock = null; } }
+function startTimer(kind, minutes, label, ctx = {}) {
+  if (S.timer && !S.timer.fired) { toast("আগের টাইমার শেষ বা বাতিল করুন"); return false; }
+  const now = Date.now();
+  S.timer = { kind, label, startAt: now, endAt: now + minutes * 60000, dur: minutes * 60000, paused: null, fired: false, ctx };
+  save(); renderTimer(); keepAwake(true);
+  return true;
+}
+function timerRemaining() { const t = S.timer; if (!t) return 0; const ref = t.paused || Date.now(); return (t.endAt - ref) / 1000; }
+function pauseTimer() { const t = S.timer; if (!t) return; if (t.paused) { t.endAt += Date.now() - t.paused; t.paused = null; } else t.paused = Date.now(); save({ silent: true }); renderTimer(); }
+function cancelTimer() { S.timer = null; save(); renderTimer(); keepAwake(false); }
+function finishTimer(early) {
+  const t = S.timer; if (!t) return;
+  const usedMin = ((t.paused || Date.now()) - t.startAt) / 60000;
+  const ctx = Object.assign({}, t.ctx, { usedMin, onTime: !early ? true : usedMin <= t.dur / 60000 + 0.01, kind: t.kind });
+  S.timer = null; save({ silent: true }); renderTimer(); keepAwake(false);
+  if (ctx.kind === "essay") assessEssay(ctx);
+  else if (ctx.kind === "arg") assessArg(ctx);
+  else if (ctx.kind === "tr") assessTr(ctx);
+  else if (ctx.kind === "mock") mockScoreForm(ctx);
+  else render();
+}
+function renderTimer() {
+  const bar = $("#timerbar"); const t = S.timer;
+  if (!t) { bar.hidden = true; bar.replaceChildren(); return; }
+  const rem = timerRemaining(); const over = rem <= 0;
+  if (over && !t.fired) { t.fired = true; save({ silent: true }); beep(); toast("⏰ সময় শেষ! কলম থামান।"); }
+  bar.hidden = false; bar.className = over ? "over" : "";
+  let sub = t.paused ? "বিরতি" : over ? "সময় শেষ — ফলাফল দিন" : "চলছে";
+  if (t.kind === "mock" && t.ctx && t.ctx.plan) {
+    const el = (Date.now() - t.startAt) / 60000; let acc = 0, cur = null;
+    for (const [s, m] of t.ctx.plan) { if (el < acc + m) { cur = [s, acc + m - el]; break; } acc += m; }
+    if (cur) sub = "এখন: " + mockSecName(cur[0]) + " · এই অংশে বাকি " + hm(cur[1]);
+  }
+  const frac = clamp(1 - rem / (t.dur / 1000), 0, 1);
+  bar.replaceChildren(h("div", { class: "wrap" },
+    h("div", { class: "clock", "aria-live": "off" }, over ? "−" + mmss(-rem) : mmss(rem)),
+    h("div", { class: "lab" }, t.label, h("small", null, sub)),
+    h("div", { class: "row" },
+      over ? null : h("button", { class: "btn sm", onclick: pauseTimer }, t.paused ? "চালু" : "বিরতি"),
+      h("button", { class: "btn sm", onclick: () => finishTimer(!over) }, over ? "ফলাফল দিন" : "শেষ করেছি"),
+      h("button", { class: "btn sm", onclick: () => confirmBox("টাইমার বাতিল করবেন? এই অনুশীলন লগ হবে না।", "বাতিল করুন", cancelTimer) }, "বাতিল")),
+    h("div", { class: "tbar" }, h("i", { style: "width:" + (frac * 100).toFixed(1) + "%" }))));
+}
+setInterval(() => { if (S.timer) { if (!S.timer.paused || !$("#timerbar").childElementCount) renderTimer(); } tickCount(); }, 1000);
+
+/* ═════════════════════════ modal ═════════════════════════ */
+function openModal(...kids) { const m = $("#modal"); m.replaceChildren(h("div", { class: "box" }, ...kids)); m.hidden = false; const f = m.querySelector("button, input, select"); if (f) f.focus(); }
+function closeModal() { const m = $("#modal"); m.hidden = true; m.replaceChildren(); }
+document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("#modal").hidden && !$("#modal").dataset.sticky) closeModal(); });
+function confirmBox(msg, okText, fn) {
+  openModal(h("h3", null, "নিশ্চিত?"), h("p", null, msg), h("div", { class: "row" },
+    h("button", { class: "btn danger", onclick: () => { closeModal(); fn(); } }, okText),
+    h("button", { class: "btn", onclick: closeModal }, "ফিরে যান")));
+}
+function rubricForm(title, items, langPen, extra, onSave) {
+  const checks = items.map(([lab, pts], i) => h("input", { type: "checkbox", id: "rb" + i, "data-pts": pts }));
+  const out = h("b", { class: "num" }, "০");
+  const lang = langPen ? h("select", { id: "rb-lang" }, h("option", { value: "0" }, "ভাষা ভালো (কর্তন নেই)"), h("option", { value: "1" }, "ভাষা মাঝারি (−" + bn(langPen[1]) + ")"), h("option", { value: "2" }, "ভাষা দুর্বল (−" + bn(langPen[2]) + ")")) : null;
+  const max = items.reduce((a, x) => a + x[1], 0);
+  const calc = () => { let s = 0; checks.forEach((c) => c.checked && (s += Number(c.dataset.pts))); if (lang) s -= langPen[Number(lang.value)]; s = clamp(s, 0, max); out.textContent = bn(s) + "/" + bn(max); return s; };
+  checks.forEach((c) => c.addEventListener("change", calc)); if (lang) lang.addEventListener("change", calc);
+  openModal(h("h3", null, title), h("p", { class: "muted small" }, "নিজের খাতা দেখে সৎভাবে টিক দিন। পরীক্ষক এগুলোই খোঁজেন।"),
+    h("div", null, items.map(([lab, pts], i) => h("label", { class: "check", for: "rb" + i }, checks[i], h("span", null, lab), h("span", { class: "pts" }, "+" + bn(pts))))),
+    lang ? h("label", { class: "f", for: "rb-lang" }, "ভাষার মান", lang) : null,
+    extra || null,
+    h("div", { class: "row between" }, h("span", null, "স্কোর: ", out),
+      h("div", { class: "row" }, h("button", { class: "btn primary", onclick: () => { onSave(calc(), max); closeModal(); } }, "সংরক্ষণ"), h("button", { class: "btn", onclick: closeModal }, "পরে"))));
+  calc();
+}
+function assessEssay(ctx) {
+  const wc = h("input", { type: "number", id: "rb-wc", min: 0, max: 2000, inputmode: "numeric", placeholder: "যেমন ২৬০" });
+  const items = ESSAY_RUBRIC.map((x) => x.slice());
+  rubricForm("রচনা মূল্যায়ন: " + (ctx.title || ""), items, LANG_PEN.essay, h("label", { class: "f", for: "rb-wc" }, "আনুমানিক শব্দসংখ্যা (ঐচ্ছিক)", wc), (score, max) => {
+    logEvent("essay", { lang: ctx.lang, topic: ctx.topic, s: score / max, raw: score, max, min: Math.round(ctx.usedMin || 0), wc: Number(wc.value) || null });
+    save(); toast("রচনা লগ হয়েছে: " + bn(score) + "/" + bn(max));
+  });
+  if (ctx.usedMin && ctx.usedMin <= 18.2) { const c = $("#rb7"); if (c) { c.checked = true; c.dispatchEvent(new Event("change")); } }
+}
+function assessArg(ctx) {
+  rubricForm("আর্গুমেন্ট মূল্যায়ন", ARG_RUBRIC, LANG_PEN.arg, null, (score, max) => {
+    logEvent("arg", { prompt: ctx.prompt, s: score / max, raw: score, max, min: Math.round(ctx.usedMin || 0) });
+    save(); toast("আর্গুমেন্ট লগ হয়েছে: " + bn(score) + "/" + bn(max));
+  });
+  if (ctx.usedMin && ctx.usedMin <= 22.2) { const c = $("#rb6"); if (c) { c.checked = true; c.dispatchEvent(new Event("change")); } }
+}
+function assessTr(ctx) {
+  rubricForm("অনুবাদ মূল্যায়ন (উত্তর মিলিয়ে)", TR_RUBRIC, null, null, (score, max) => {
+    logEvent("tr", { s: score / max, raw: score, max, items: ctx.items, min: Math.round(ctx.usedMin || 0) });
+    save(); toast("অনুবাদ লগ হয়েছে: " + bn(score) + "/" + bn(max));
+  });
+}
+
+/* ═════════════════════════ router ═════════════════════════ */
+const VIEWS = { today: viewToday, plan: viewPlan, practice: viewPractice, assess: viewAssess, mock: viewMock, library: viewLibrary, backup: viewBackup };
+let sub = { practice: "essay" };
+function route() {
+  let hsh = (location.hash || "#today").slice(1);
+  if (hsh.startsWith("practice-")) { sub.practice = hsh.slice(9); hsh = "practice"; }
+  return VIEWS[hsh] ? hsh : "today";
+}
+function go(target) {
+  const [v, s] = target.split("/");
+  if (s) sub[v] = s;
+  const hash = v === "practice" && s ? "practice-" + s : v;
+  if (location.hash.slice(1) !== hash) location.hash = hash; else render();
+  window.scrollTo({ top: 0 });
+}
+window.addEventListener("hashchange", () => { render(); window.scrollTo({ top: 0 }); });
+function render() {
+  if (!D) return;
+  const v = route();
+  document.querySelectorAll("#tabs a").forEach((a) => { if (a.getAttribute("href") === "#" + v) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
+  const main = $("#view");
+  try { main.replaceChildren(...[].concat(VIEWS[v]())); }
+  catch (e) { console.error(e); main.replaceChildren(h("div", { class: "sheet" }, h("h2", null, "এই পাতাটা দেখাতে সমস্যা হয়েছে"), h("p", null, "আপনার ডেটা নিরাপদ আছে। অন্য ট্যাবে গিয়ে আবার আসুন, অথবা ব্যাকআপ ট্যাব থেকে ডেটা কপি করে রাখুন।"), h("p", { class: "muted small mono" }, String(e && e.message || e)))); }
+}
+function tickCount() {
+  const el = $("#count"); if (!el) return;
+  const diff = EXAM_MS - Date.now();
+  if (diff <= 0) { el.replaceChildren(h("span", { class: "pill acc" }, diff > -2 * 3600e3 ? "পরীক্ষা চলছে" : "পরীক্ষা শেষ")); return; }
+  const d = Math.floor(diff / 864e5), hh = Math.floor((diff % 864e5) / 36e5), mm = Math.floor((diff % 36e5) / 6e4);
+  const key = d + ":" + hh + ":" + mm; if (el.dataset.k === key) return; el.dataset.k = key;
+  el.replaceChildren(...[[d, "দিন"], [hh, "ঘণ্টা"], [mm, "মিনিট"]].map(([v, l]) => h("div", { class: "cell" }, h("b", null, bn(v)), h("i", null, l))));
+}
+
+/* ═════════════════════════ views: today ═════════════════════════ */
+function quotaRows(di, iso, compact) {
+  return QUOTA_ORDER.map((k) => {
+    const need = quotaFor(di, k), have = doneOn(iso, k), q = QUOTA[k];
+    const f = have / need;
+    return h("div", { class: "quota" },
+      h("div", null, h("span", { class: "lbl" }, q.name), " ", have >= need ? h("span", { class: "done-mark" }, "✓") : null,
+        compact ? null : h("div", { class: "muted small" }, "আনুমানিক " + hm(need * q.min))),
+      h("div", { class: "row" }, h("span", { class: "num" }, bn(have) + "/" + bn(need)),
+        q.go ? h("button", { class: "btn sm", onclick: () => go(q.go) }, "শুরু") : h("button", { class: "btn sm", onclick: () => { logEvent(k, { n: 1 }); save(); toast("লগ হয়েছে"); } }, "+১ করেছি")),
+      bar(f, f >= 1 ? "" : f < 0.34 ? "bad" : "warn"));
+  });
+}
+function schedule(di) {
+  const items = []; let t = 6 * 60 + 30;
+  const add = (label, min, brk) => { items.push({ t, label, brk }); t += min; };
+  const R = Math.max(1, Math.min(5, quotaFor(di, "essay")));
+  const per = (k) => Math.ceil(quotaFor(di, k) / R);
+  add("পত্রিকা: সম্পাদকীয় + অর্থনীতি পাতা, নতুন সংখ্যা টুকে রাখুন", 40);
+  const left = {}; for (const k of QUOTA_ORDER) left[k] = quotaFor(di, k);
+  const take = (k, n) => { const x = Math.min(left[k], n); left[k] -= x; return x; };
+  for (let r = 0; r < R; r++) {
+    const e = take("essay", 1); if (e) add("রচনা ১টি (" + (r % 2 === 0 ? "বাংলা" : "ইংরেজি") + ") · ১৮ মি + ৫ মি মূল্যায়ন", 23);
+    const m = take("math", per("math")); if (m) add("গণিত " + bn(m) + "টি অঙ্ক (" + dayChapters(di).map((c) => CH_BN[c] || c).join(", ") + ")", m * 5);
+    const a = take("arg", 1); if (a) add("আর্গুমেন্ট ১টি · ২২ মি + ৫ মি মূল্যায়ন", 27);
+    const tr = take("tr", 1); if (tr) add("অনুবাদ ১টি অনুচ্ছেদ · ১২ মি + মিলানো", 15);
+    const tm = take("terms", per("terms")); const en = take("eng", per("eng")); const b = take("bn", per("bn")); const g = take("gk", per("gk"));
+    if (tm || en || b || g) add("পরিভাষা " + bn(tm) + " · ইংরেজি MCQ " + bn(en) + " · বাংলা MCQ " + bn(b) + " · তথ্য MCQ " + bn(g), Math.ceil(tm * 0.5 + en * 0.6 + b * 0.6 + g * 0.5));
+    if (r === 1) add("দুপুরের খাবার ও বিশ্রাম", 45, true);
+    else if (r === 3) add("রাতের খাবার ও হাঁটা", 40, true);
+    else if (r < R - 1) add("বিরতি (চোখ বন্ধ, পানি)", 10, true);
+  }
+  add("ভুলের খাতা রিভিশন + পরের দিনের টপিক এক নজরে", 30);
+  add("ঘুম (কমপক্ষে ৭ ঘণ্টা)", 0, true);
+  const clock = (m) => { m = Math.round(m) % (24 * 60); const hh = Math.floor(m / 60), mm = m % 60; return bn(String(hh).padStart(2, "0") + ":" + String(mm).padStart(2, "0")); };
+  return { items: items.map((x) => Object.assign(x, { clock: clock(x.t) })), end: t };
+}
+function viewToday() {
+  const di = currentDay(); const iso = dhaka();
+  const out = [];
+  if (di === 7) {
+    out.push(h("section", { class: "sheet ruled" }, h("div", { class: "eyebrow" }, "পরীক্ষার দিন"), h("h1", null, EXAM_MS > Date.now() ? "আজ পরীক্ষা: সকাল ৯:৩০" : "পরীক্ষা শেষ"),
+      h("ul", { class: "clean" }, ["৮:৩০-এর মধ্যে কেন্দ্রে পৌঁছান", "প্রবেশপত্র, ৩টি কালো কলম, ঘড়ি", "প্রশ্ন পেয়ে ৩ মিনিটে রূপরেখা লিখুন", "সময় ভাগ: গণিত ২২ → আর্গুমেন্ট ২২ → ফোকাস EN ১৮ → ফোকাস BN ১৮ → অনুবাদ ১২ → ইংরেজি ১০ → বাকি ১৫ → রিভিশন ৩"].map((x) => h("li", null, x))),
+      h("button", { class: "btn", onclick: () => go("library/hall") }, "হলের পূর্ণ চেকলিস্ট")));
+    return out;
+  }
+  const dlabel = di < 0 ? "প্রস্তুতি দিন ০ (আজ রাতে শুরু)" : "দিন " + bn(di + 1) + " / ৭";
+  const theme = di < 0 ? "ভিত তৈরি: টাইমারে ১টি রচনা লিখে গতি মাপুন, তারপর দিন ১-এর কাজ এগিয়ে রাখুন" : DAY_THEME[di].note;
+  const comp = di >= 0 ? dayCompletion(iso) : 0;
+  const proj = projection();
+  out.push(h("section", { class: "sheet ruled hero" },
+    h("div", { class: "row between" }, h("span", { class: "eyebrow" }, dlabel + " · " + weekday(iso) + ", " + fmtDate(iso)), h("span", { class: "pill acc" }, "তীব্রতা " + bn(S.settings.mult) + "×")),
+    h("h1", null, theme),
+    h("div", { class: "grid g4" },
+      h("div", { class: "stat" }, h("b", null, pct(comp)), h("span", null, "আজকের কাজ সম্পন্ন")),
+      h("div", { class: "stat" }, h("b", null, hm(minutesPlanned(di))), h("span", null, "আজকের মোট পরিকল্পিত সময়")),
+      h("div", { class: "stat" }, h("b", null, proj.knownMax ? bn(Math.round(proj.total)) : "—"), h("span", null, proj.knownMax ? "প্রজেক্টেড নম্বর (যে " + bn(proj.knownMax) + " নম্বরের ডেটা আছে)" : "প্রজেক্টেড নম্বর: অনুশীলন করলে দেখাবে")),
+      h("div", { class: "stat" }, h("b", null, bn(streak())), h("span", null, "টানা দিন (অর্ধেকের বেশি কাজ)"))),
+    bar(comp)));
+  const recs = recommendations();
+  out.push(h("section", { class: "sheet" }, h("div", { class: "sheet-head" }, h("h2", null, "এখন কী করবেন"), h("span", { class: "muted small" }, "বাকি কাজ × অংশের নম্বর অনুযায়ী")),
+    recs.length ? h("div", { class: "grid g3" }, recs.map((r, i) => h("div", { class: "qbox stack" },
+      h("div", { class: "row between" }, h("b", null, QUOTA[r.k].name), i === 0 ? h("span", { class: "pill good" }, "সবার আগে") : null),
+      h("span", { class: "muted small" }, "আজ " + bn(r.have) + "/" + bn(r.need) + (r.weak ? " · " + SEC[r.weak].short + "-এ স্কোর কম" : "")),
+      QUOTA[r.k].go ? h("button", { class: "btn " + (i === 0 ? "primary" : ""), onclick: () => go(QUOTA[r.k].go) }, "শুরু করুন") : h("button", { class: "btn", onclick: () => { logEvent(r.k, { n: 1 }); save(); } }, "+১ করেছি")))) :
+      h("p", null, "আজকের সব কাজ শেষ! ভুলের খাতা দেখুন আর সময়মতো ঘুমান।")));
+  out.push(h("div", { class: "grid g2" },
+    h("section", { class: "sheet" }, h("div", { class: "sheet-head" }, h("h2", null, "আজকের কোটা"), h("button", { class: "btn sm ghost", onclick: () => manualLog() }, "খাতায় করা কাজ যোগ করুন")), h("div", null, quotaRows(di, iso))),
+    h("section", { class: "sheet" }, h("div", { class: "sheet-head" }, h("h2", null, "আজকের সময়সূচি"), h("span", { class: "muted small" }, "পরামর্শমূলক")),
+      h("div", { class: "tl" }, schedule(di).items.map((x) => h("div", { class: "tl-item" + (x.brk ? " brk" : "") }, h("span", { class: "t" }, x.clock), h("span", null, x.label)))))));
+  const tps = dayTopics(di);
+  out.push(h("section", { class: "sheet" }, h("h2", null, "আজকের টপিক ও অধ্যায়"),
+    h("div", { class: "grid g2" }, tps.map((n) => { const t = D.topics.find((x) => x.n === n); return h("div", { class: "qbox stack" }, h("b", null, bn(n) + ". " + t.bn), h("span", { class: "muted small" }, t.en), h("div", { class: "row" }, h("button", { class: "btn sm primary", onclick: () => { sub.essayTopic = n; go("practice/essay"); } }, "এই টপিকে লিখুন"), h("button", { class: "btn sm", onclick: () => { sub.libTopic = n; go("library/topics"); } }, "টপিক কার্ড"))); })),
+    h("div", { class: "row" }, h("span", { class: "muted" }, "গণিত:"), dayChapters(di).map((c) => h("button", { class: "btn sm", onclick: () => { sub.mathCh = c; go("practice/math"); } }, CH_BN[c] || c)))));
+  return out;
+}
+function streak() {
+  let n = 0;
+  for (let i = DAYS.length - 1; i >= 0; i--) { if (DAYS[i] > dhaka()) continue; if (dayCompletion(DAYS[i]) >= 0.5) n++; else if (DAYS[i] !== dhaka()) break; }
+  return n;
+}
+function manualLog() {
+  const kind = h("select", { id: "ml-k" }, h("option", { value: "math" }, "গণিত (বই থেকে করা অঙ্ক)"), h("option", { value: "essay-bn" }, "রচনা বাংলা (খাতায়)"), h("option", { value: "essay-en" }, "রচনা ইংরেজি (খাতায়)"), h("option", { value: "arg" }, "আর্গুমেন্ট (খাতায়)"), h("option", { value: "tr" }, "অনুবাদ (খাতায়)"), h("option", { value: "news" }, "পত্রিকা পড়া"));
+  const n = h("input", { type: "number", id: "ml-n", min: 1, max: 100, value: 5, inputmode: "numeric" });
+  const ok = h("input", { type: "number", id: "ml-ok", min: 0, max: 100, value: 4, inputmode: "numeric" });
+  const score = h("input", { type: "number", id: "ml-s", min: 0, max: 40, inputmode: "numeric", placeholder: "নিজের দেওয়া নম্বর" });
+  const okRow = h("label", { class: "f", for: "ml-ok" }, "কয়টি সঠিক হয়েছে", ok);
+  const scRow = h("label", { class: "f", for: "ml-s" }, "স্কোর (রচনা /৩০, আর্গুমেন্ট /৪০, অনুবাদ /২০)", score);
+  const sync = () => { const v = kind.value; okRow.hidden = v !== "math"; scRow.hidden = !(v.startsWith("essay") || v === "arg" || v === "tr"); n.closest("label").hidden = v !== "math" && v !== "news"; };
+  kind.addEventListener("change", sync);
+  const err = h("p", { class: "small", style: "color:var(--bad)" });
+  openModal(h("h3", null, "খাতায় করা কাজ যোগ করুন"), h("p", { class: "muted small" }, "অ্যাপের বাইরে বই বা খাতায় যা করেছেন, তা এখানে যোগ করলে কোটা আর মূল্যায়নে হিসাব হবে।"),
+    h("label", { class: "f", for: "ml-k" }, "কী করেছেন", kind), h("label", { class: "f", for: "ml-n" }, "সংখ্যা", n), okRow, scRow, err,
+    h("div", { class: "row" }, h("button", { class: "btn primary", onclick: () => {
+      const v = kind.value, nn = Math.round(Number(n.value)), oo = Math.round(Number(ok.value)), sc = Number(score.value);
+      if (v === "math") { if (!(nn >= 1 && nn <= 100) || !(oo >= 0 && oo <= nn)) { err.textContent = "সংখ্যা ১–১০০ আর সঠিক উত্তর ০ থেকে মোট সংখ্যার মধ্যে দিন।"; return; } logEvent("math", { n: nn, s: oo / nn, ch: null, manual: true }); }
+      else if (v === "news") { if (!(nn >= 1 && nn <= 5)) { err.textContent = "১–৫ দিন।"; return; } logEvent("news", { n: nn }); }
+      else { const max = v === "arg" ? 40 : v === "tr" ? 20 : 30; if (!(sc >= 0 && sc <= max) || score.value === "") { err.textContent = "স্কোর ০ থেকে " + bn(max) + "-এর মধ্যে দিন।"; return; } logEvent(v.startsWith("essay") ? "essay" : v, { lang: v === "essay-en" ? "en" : v === "essay-bn" ? "bn" : undefined, s: sc / max, raw: sc, max, manual: true }); }
+      closeModal(); save(); toast("যোগ হয়েছে");
+    } }, "যোগ করুন"), h("button", { class: "btn", onclick: closeModal }, "বাতিল")));
+  sync();
+}
+
+/* ═════════════════════════ views: plan ═════════════════════════ */
+function viewPlan() {
+  const today = dhaka();
+  const out = [];
+  const mins = minutesPlanned(0);
+  out.push(h("section", { class: "sheet ruled" },
+    h("div", { class: "eyebrow" }, "২০ থেকে ২৬ নভেম্বর · তারপর ২৭ নভেম্বর পরীক্ষা"),
+    h("h1", null, "৭ দিনের প্ল্যান"),
+    h("p", null, "প্রতিদিনের কোটা নিচের তীব্রতা অনুযায়ী বাড়ে-কমে। আপনার অনুরোধে ৫× ধরা আছে: দিনে ৫টি রচনা, ৫টি আর্গুমেন্ট, ৫টি অনুবাদ, ৪৫টি অঙ্ক, ৭৫টি পরিভাষা।"),
+    h("div", { class: "row" }, h("span", { class: "muted" }, "তীব্রতা:"), h("div", { class: "seg", role: "group", "aria-label": "তীব্রতা" }, [1, 2, 3, 4, 5].map((m) => h("button", { "aria-pressed": String(S.settings.mult === m), onclick: () => { S.settings.mult = m; save(); } }, bn(m) + "×")))),
+    h("p", { class: (mins > 12 * 60 ? "pill bad" : mins > 9 * 60 ? "pill warn" : "pill good") + " wrap" }, "দিনে আনুমানিক " + hm(mins) + " পড়া" + (mins > 12 * 60 ? ": ঘুম কমবে, সাবধান" : mins > 9 * 60 ? ": কঠিন কিন্তু সম্ভব, ঘুম ৭ ঘণ্টা রাখুন" : "")),
+    h("p", { class: "muted small" }, "দিন ৭ (২৬ নভেম্বর) পরীক্ষার আগের দিন, তাই সেদিন কোটা স্বয়ংক্রিয়ভাবে ৬০%। ক্লান্ত মাথায় পরীক্ষা দিলে নম্বর কমে।")));
+  out.push(h("div", { class: "grid g2" }, DAYS.map((iso, i) => {
+    const th = DAY_THEME[i]; const comp = dayCompletion(iso);
+    const cls = "sheet daycard" + (iso === today ? " today" : iso < today ? " past" : "");
+    return h("section", { class: cls },
+      h("div", { class: "sheet-head" }, h("h3", null, "দিন " + bn(i + 1) + " · " + weekday(iso) + ", " + fmtDate(iso)),
+        iso === today ? h("span", { class: "pill acc" }, "আজ") : iso < today ? h("span", { class: "pill " + (comp >= 0.8 ? "good" : comp >= 0.5 ? "warn" : "bad") }, pct(comp)) : h("span", { class: "pill" }, "আসছে")),
+      h("p", null, th.note),
+      th.mock ? h("p", null, h("span", { class: "pill warn" }, th.mock === "full" ? "পূর্ণ মক ২ ঘণ্টা · সকাল ৯:৩০" : "লেখার মক ৭৫ মিনিট")) : null,
+      h("p", { class: "small" }, h("b", null, "টপিক: "), dayTopics(i).map((n) => bn(n) + ". " + D.topics.find((t) => t.n === n).bn.split(":")[0]).join(" · ")),
+      h("p", { class: "small" }, h("b", null, "গণিত: "), dayChapters(i).map((c) => CH_BN[c] || c).join(", ")),
+      h("p", { class: "small muted" }, QUOTA_ORDER.filter((k) => !QUOTA[k].fixed).map((k) => QSHORT[k] + " " + bn(quotaFor(i, k))).join(" · ")),
+      bar(comp));
+  })));
+  out.push(h("section", { class: "sheet" }, h("h2", null, "প্রতিটি অংশের জন্য রিপোর কোন বই"),
+    h("div", { class: "tablewrap" }, h("table", null, h("thead", null, h("tr", null, h("th", null, "অংশ"), h("th", { class: "n" }, "নম্বর"), h("th", null, "রিপোর ফাইল"), h("th", null, "কীভাবে"))),
+      h("tbody", null, [
+        ["ফোকাস BN+EN", 60, "materials/01_focus_writing/books/Focus_Writing_Mini_Recent_Merged.pdf + topics_economy/ + topics_banking/", "প্রতি টপিকে উপশিরোনাম + ৫ সংখ্যা + ৫ সমাধান টুকুন; অ্যাপের টাইমারে লিখুন"],
+        ["আর্গুমেন্ট", 40, "materials/02_argument_writing/ (২টি PDF)", "কাঠামো মুখস্থ; নমুনা উত্তর থেকে ১০টি বাক্যাংশ"],
+        ["অনুবাদ", 20, "docs/06_translation.md + প্রথম আলো বাংলা/ইংরেজি সম্পাদকীয়", "আগে লিখুন, পরে মিলান"],
+        ["গণিত", 30, "materials/03_math/khairul/ + topic_sheets/ + question_bank/BIBM…pdf", "ক্যালকুলেটর ছাড়া ধাপসহ; ভুল আবার করুন"],
+        ["ইংরেজি + বাংলা", 30, "docs/09_grammar_quick.md + NCTB গ্রামার", "নিয়ম কম, প্রশ্ন বেশি"],
+        ["ব্যাংকিং + GK", 20, "materials/05_gk_banking/GK_Banking_Terminologies_1_2.pdf + data/facts.json", "দিনে ৭৫ পরিভাষা ফ্ল্যাশকার্ড"],
+      ].map(([a, b, c, d]) => h("tr", null, h("td", null, a), h("td", { class: "n" }, bn(b)), h("td", { class: "mono small" }, c), h("td", null, d))))))));
+  return out;
+}
+
+/* ═════════════════════════ views: practice ═════════════════════════ */
+const PRACTICE_TABS = [["essay", "রচনা"], ["arg", "আর্গুমেন্ট"], ["tr", "অনুবাদ"], ["math", "গণিত"], ["terms", "পরিভাষা"], ["quiz-eng", "ইংরেজি MCQ"], ["quiz-bn", "বাংলা MCQ"], ["quiz-gk", "তথ্য MCQ"]];
+function viewPractice() {
+  const cur = PRACTICE_TABS.some((t) => t[0] === sub.practice) ? sub.practice : "essay";
+  const tabs = h("div", { class: "seg", role: "group", "aria-label": "অনুশীলনের ধরন" }, PRACTICE_TABS.map(([k, l]) => h("button", { "aria-pressed": String(cur === k), onclick: () => go("practice/" + k) }, l)));
+  const body = { essay: pEssay, arg: pArg, tr: pTr, math: pMath, terms: pTerms, "quiz-eng": () => pQuiz("eng"), "quiz-bn": () => pQuiz("bn"), "quiz-gk": () => pQuiz("gk") }[cur]();
+  const iso = dhaka(), di = currentDay();
+  const qk = { essay: "essay", arg: "arg", tr: "tr", math: "math", terms: "terms", "quiz-eng": "eng", "quiz-bn": "bn", "quiz-gk": "gk" }[cur];
+  const need = quotaFor(di, qk), have = doneOn(iso, qk);
+  return [h("section", { class: "sheet" }, h("div", { class: "row between" }, h("h2", null, "অনুশীলন"), h("span", { class: "pill " + (have >= need ? "good" : "") }, "আজ " + bn(have) + "/" + bn(need))), tabs), ...[].concat(body)];
+}
+function busy() { return S.timer && !S.timer.fired; }
+function pEssay() {
+  const di = currentDay();
+  const todayT = dayTopics(di);
+  const ts = topicStats();
+  if (!sub.essayTopic) sub.essayTopic = todayT.find((n) => ts[n].bn + ts[n].en < 2) || todayT[0] || 1;
+  const t = D.topics.find((x) => x.n === sub.essayTopic) || D.topics[0];
+  if (!sub.essayLang) { const st = ts[t.n]; sub.essayLang = st.bn <= st.en ? "bn" : "en"; }
+  if (sub.essayVariant == null) sub.essayVariant = -1;
+  const lang = sub.essayLang;
+  const title = sub.essayVariant >= 0 ? t.variants[sub.essayVariant] : lang === "bn" ? t.bn : t.en;
+  const sel = h("select", { id: "es-topic", onchange: (e) => { sub.essayTopic = Number(e.target.value); sub.essayVariant = -1; render(); } }, D.topics.map((x) => h("option", { value: x.n, selected: x.n === t.n }, bn(x.n) + ". " + x.bn + "  (" + bn(ts[x.n].bn) + " বাং / " + bn(ts[x.n].en) + " ইং)")));
+  const showOutline = !!sub.essayOutline;
+  return h("section", { class: "sheet ruled" },
+    h("div", { class: "grid g2" }, h("label", { class: "f", for: "es-topic" }, "টপিক", sel),
+      h("div", { class: "f" }, h("span", null, "ভাষা"), h("div", { class: "seg" }, [["bn", "বাংলা"], ["en", "English"]].map(([k, l]) => h("button", { "aria-pressed": String(lang === k), onclick: () => { sub.essayLang = k; sub.essayVariant = -1; render(); } }, l))))),
+    h("div", { class: "qbox" }, h("div", { class: "eyebrow" }, "প্রশ্ন · ৩০ নম্বর · ১৮ মিনিট"), h("p", { class: "q" }, h("b", null, title))),
+    h("div", { class: "row" },
+      h("button", { class: "btn primary", disabled: busy(), onclick: () => startTimer("essay", 18, "রচনা: " + title, { lang, topic: t.n, title }) && toast("১৮ মিনিট শুরু। খাতায় লিখুন।") }, "১৮ মিনিট শুরু করুন"),
+      h("button", { class: "btn", onclick: () => { sub.essayVariant = (sub.essayVariant + 1) % t.variants.length; render(); } }, "অন্যভাবে প্রশ্ন"),
+      h("button", { class: "btn", onclick: () => assessEssay({ lang, topic: t.n, title }) }, "টাইমার ছাড়া লিখেছি: মূল্যায়ন")),
+    h("details", { class: "card", open: showOutline, ontoggle: (e) => (sub.essayOutline = e.target.open) }, h("summary", null, "কাঠামো, সংখ্যা ও সমাধান (প্রথমবার দেখে লিখুন, পরে না দেখে)", h("span", { class: "muted small" }, "▾")),
+      h("div", null, topicBody(t))),
+    h("p", { class: "muted small" }, "চেকলিস্ট: শিরোনাম → কোটেশন/সংখ্যা দিয়ে ভূমিকা → ৫–৭ উপশিরোনাম → ১টি ডেটা বক্স (উৎসসহ) → ৫–৬ সমাধান → উপসংহার।"));
+}
+function topicBody(t) {
+  const facts = D.facts.filter((f) => t.facts.includes(f.topic));
+  return [
+    h("div", { class: "grid g2" },
+      h("div", null, h("b", null, "বাংলা উপশিরোনাম"), h("ol", { class: "clean" }, t.outline_bn.map((x) => h("li", null, x)))),
+      h("div", null, h("b", null, "English sub-headings"), h("ol", { class: "clean" }, t.outline_en.map((x) => h("li", null, x))))),
+    h("p", null, h("b", null, "কোটেশন: "), t.quote),
+    h("div", null, h("b", null, "ডেটা বক্সের সংখ্যা"), h("ul", { class: "clean" }, facts.map((f) => h("li", null, f.bn, h("div", { class: "muted small" }, f.en + " [" + f.src + "]"))))),
+    h("div", null, h("b", null, "সমাধান/সুপারিশ"), h("ul", { class: "clean" }, t.solutions.map((x) => h("li", null, x)))),
+    h("div", null, h("b", null, "রিপোর উৎস"), h("ul", { class: "clean mono small" }, t.sources.map((x) => h("li", null, x + ".pdf")))),
+  ];
+}
+function pArg() {
+  const ps = D.arguments.prompts;
+  if (sub.argIdx == null || !ps[sub.argIdx]) {
+    const used = new Set(S.events.filter((e) => e.k === "arg").map((e) => e.prompt));
+    const fresh_ = ps.map((p, i) => i).filter((i) => !used.has(i));
+    sub.argIdx = fresh_.length ? fresh_[0] : Math.floor(Math.random() * ps.length);
+  }
+  const p = ps[sub.argIdx];
+  const count = S.events.filter((e) => e.k === "arg" && e.prompt === sub.argIdx).length;
+  return h("section", { class: "sheet ruled" },
+    h("div", { class: "qbox" }, h("div", { class: "eyebrow" }, "দাবি " + bn(sub.argIdx + 1) + "/" + bn(ps.length) + " · ৪০ নম্বর · ২২ মিনিট" + (count ? " · আগে " + bn(count) + " বার লিখেছেন" : "")), h("p", { class: "q" }, h("b", null, "\"" + p.claim + "\""), " Do you agree? Justify your answer.")),
+    h("div", { class: "row" },
+      h("button", { class: "btn primary", disabled: busy(), onclick: () => startTimer("arg", 22, "আর্গুমেন্ট " + bn(sub.argIdx + 1), { prompt: sub.argIdx }) && toast("২২ মিনিট শুরু") }, "২২ মিনিট শুরু করুন"),
+      h("button", { class: "btn", onclick: () => { sub.argIdx = (sub.argIdx + 1) % ps.length; sub.argHints = false; render(); } }, "পরের দাবি"),
+      h("button", { class: "btn", onclick: () => assessArg({ prompt: sub.argIdx }) }, "টাইমার ছাড়া লিখেছি: মূল্যায়ন")),
+    h("div", { class: "grid g2" },
+      h("div", null, h("b", null, "কাঠামো"), h("ol", { class: "clean small" }, D.arguments.template_en.map((x) => h("li", null, x.replace(/^\d+\.\s*/, ""))))),
+      h("div", null, h("b", null, "উপযোগী বাক্যাংশ"), h("ul", { class: "clean small" }, D.arguments.phrases.map((x) => h("li", null, x))))),
+    h("details", { class: "card", open: !!sub.argHints, ontoggle: (e) => (sub.argHints = e.target.open) }, h("summary", null, "পক্ষে/বিপক্ষে পয়েন্ট (লেখার পরে দেখুন)", h("span", { class: "muted small" }, "▾")),
+      h("div", null, h("p", null, h("b", { style: "color:var(--good)" }, "পক্ষে: "), p.pro.join("; ")), h("p", null, h("b", { style: "color:var(--bad)" }, "বিপক্ষে: "), p.con.join("; ")), h("p", null, h("b", null, "সম্ভাব্য অবস্থান: "), p.verdict))));
+}
+function pTr() {
+  const dr = D.translation.drills;
+  if (!sub.trSet || sub.trSet.some((i) => !dr[i])) {
+    const cnt = {}; for (const e of S.events) if (e.k === "tr" && Array.isArray(e.items)) e.items.forEach((i) => (cnt[i] = (cnt[i] || 0) + 1));
+    sub.trSet = dr.map((_, i) => i).sort((a, b) => (cnt[a] || 0) - (cnt[b] || 0) || Math.random() - 0.5).slice(0, 3);
+    sub.trShow = false;
+  }
+  const items = sub.trSet.map((i) => dr[i]);
+  return [h("section", { class: "sheet ruled" },
+    h("div", { class: "qbox" }, h("div", { class: "eyebrow" }, "Translate into English · ২০ নম্বর · ১২ মিনিট"), h("p", { class: "q" }, items.map((x) => x.bn).join(" "))),
+    h("div", { class: "row" },
+      h("button", { class: "btn primary", disabled: busy(), onclick: () => startTimer("tr", 12, "অনুবাদ", { items: sub.trSet }) && toast("১২ মিনিট শুরু") }, "১২ মিনিট শুরু করুন"),
+      h("button", { class: "btn", onclick: () => { sub.trShow = !sub.trShow; render(); } }, sub.trShow ? "উত্তর লুকান" : "উত্তর দেখুন"),
+      h("button", { class: "btn", onclick: () => { sub.trSet = null; render(); } }, "নতুন অনুচ্ছেদ"),
+      h("button", { class: "btn", onclick: () => assessTr({ items: sub.trSet }) }, "মূল্যায়ন দিন")),
+    sub.trShow ? h("div", { class: "qbox" }, h("b", null, "নমুনা অনুবাদ"), h("p", null, items.map((x) => x.en).join(" "))) : null),
+    h("section", { class: "sheet" }, h("h3", null, "মনে রাখার পরিভাষা"), h("div", { class: "tablewrap" }, h("table", null, h("tbody", null, D.translation.glossary.map(([b, e]) => h("tr", null, h("td", null, b), h("td", null, e)))))),
+      h("ul", { class: "clean small" }, D.translation.tips.map((x) => h("li", null, x))))];
+}
+/* math */
+function mathPool(mode) {
+  const all = D.math;
+  if (mode === "wrong") return all.filter((q) => S.mathLog[q.id] && S.mathLog[q.id].w > 0 && S.mathLog[q.id].last !== 1);
+  if (mode === "recent") return all.filter((q) => q.y >= 2019);
+  if (mode === "mixed") return all;
+  return all.filter((q) => q.c === mode);
+}
+function nextMath() {
+  const mode = sub.mathCh || dayChapters(currentDay())[0] || "mixed";
+  let pool = mathPool(mode);
+  if (!pool.length) pool = D.math;
+  const unseen = pool.filter((q) => !S.mathLog[q.id]);
+  const src = unseen.length ? unseen : pool;
+  const scored = src.map((q) => ({ q, w: (q.y >= 2019 ? 3 : q.y >= 2015 ? 2 : 1) + (/^(0[1-8]_|PDF)/.test(q.s) ? 1 : 0) + Math.random() * 2 }));
+  scored.sort((a, b) => b.w - a.w);
+  sub.mathQ = scored[0].q.id; sub.mathReveal = false;
+}
+function pMath() {
+  const modes = [...new Set([...dayChapters(currentDay()), "speed", "work", "algebra", "profit_loss", "percentage", "mixture", "geometry", "interest", "ratio", "probability", "series", "average", "age"])];
+  const wrongN = mathPool("wrong").length;
+  if (sub.mathQ == null || !D.math[sub.mathQ] && !D.math.find((q) => q.id === sub.mathQ)) nextMath();
+  const q = D.math.find((x) => x.id === sub.mathQ) || D.math[0];
+  const mode = sub.mathCh || dayChapters(currentDay())[0] || "mixed";
+  const cs = chapterStats();
+  const sess = sub.mathSess || (sub.mathSess = { n: 0, ok: 0 });
+  const mark = (ok) => {
+    const l = S.mathLog[q.id] || { r: 0, w: 0 };
+    if (ok) l.r++; else l.w++; l.last = ok ? 1 : 0; S.mathLog[q.id] = l;
+    logEvent("math", { s: ok ? 1 : 0, ch: q.c, q: q.id });
+    sess.n++; if (ok) sess.ok++;
+    nextMath(); save();
+  };
+  const chSel = h("select", { id: "m-ch", onchange: (e) => { sub.mathCh = e.target.value; nextMath(); render(); } },
+    h("option", { value: "mixed", selected: mode === "mixed" }, "মিশ্র (সব অধ্যায়)"),
+    h("option", { value: "recent", selected: mode === "recent" }, "সাম্প্রতিক (২০১৯+)"),
+    h("option", { value: "wrong", selected: mode === "wrong" }, "ভুলগুলো আবার (" + bn(wrongN) + ")"),
+    modes.map((c) => h("option", { value: c, selected: mode === c }, (CH_BN[c] || c) + (cs[c] ? "  · " + pct(cs[c].ok / cs[c].n) + " সঠিক" : ""))));
+  return [h("section", { class: "sheet ruled" },
+    h("div", { class: "grid g2" }, h("label", { class: "f", for: "m-ch" }, "অধ্যায়", chSel),
+      h("div", { class: "stack" }, h("span", { class: "muted small" }, "এই সেশনে"), h("b", { class: "num" }, bn(sess.ok) + "/" + bn(sess.n) + " সঠিক"))),
+    h("div", { class: "qbox" },
+      h("div", { class: "eyebrow" }, (CH_BN[q.c] || q.c) + (q.e ? " · " + q.e : "")),
+      h("p", { class: "q", lang: "en" }, q.t),
+      h("p", { class: "muted small" }, "উৎস: " + q.s + " · পৃষ্ঠা " + bn(q.p) + " (OCR থেকে; লেখা অস্পষ্ট হলে মূল PDF-এর এই পৃষ্ঠা দেখুন)")),
+    h("div", { class: "row" },
+      h("button", { class: "btn", onclick: () => { sub.mathReveal = true; render(); } }, q.a ? (sub.mathReveal ? "উত্তর: " + q.a : "উত্তর দেখুন") : "উত্তর PDF-এ আছে"),
+      h("button", { class: "btn primary", onclick: () => mark(true) }, "✓ সঠিক হয়েছে"),
+      h("button", { class: "btn danger", onclick: () => mark(false) }, "✗ ভুল/পারিনি"),
+      h("button", { class: "btn ghost", onclick: () => { nextMath(); render(); } }, "এড়িয়ে যান")),
+    h("p", { class: "muted small" }, "খাতায় ধাপসহ করুন, ক্যালকুলেটর ছাড়া। ৬ মিনিটে না মিললে 'ভুল' দিন। অঙ্কটা পরে 'ভুলগুলো আবার'-এ ফিরে আসবে।")),
+    h("section", { class: "sheet" }, h("h3", null, "সূত্র-শিট"), h("ul", { class: "clean small" }, FORMULAS.map(([a, b]) => h("li", null, h("b", null, a + ": "), b))))];
+}
+const FORMULAS = [["শতকরা", "x% বৃদ্ধির পর y% হ্রাস → নিট = x − y − xy/100"], ["লাভ-ক্ষতি", "লাভ% = লাভ/ক্রয়মূল্য × 100; বিক্রয়মূল্য = ক্রয়মূল্য × (100 ± %)/100"], ["সুদ", "সরল I = Pnr/100; চক্রবৃদ্ধি A = P(1 + r/100)ⁿ; ২ বছরে CI − SI = P(r/100)²"], ["অনুপাত", "অংশীদারি লাভ ∝ মূলধন × সময়"], ["সময়-কাজ", "একসাথে ১ দিনে = 1/A + 1/B; নল খালি করলে (−)"], ["গতি", "km/h × 5/18 = m/s; সমান দূরত্বে গড় গতি = 2xy/(x+y); ট্রেন: (ট্রেন + প্ল্যাটফর্ম)/আপেক্ষিক গতি"], ["নৌকা", "অনুকূলে u+v, প্রতিকূলে u−v"], ["মিশ্রণ", "(দামি − গড়):(গড় − সস্তা) = সস্তা : দামি"], ["ধারা", "Tₙ = a + (n−1)d; Sₙ = n/2[2a + (n−1)d]"], ["জ্যামিতি", "ত্রিভুজ ½bh; সমবাহু √3/4·a²; বৃত্ত πr², পরিধি 2πr"], ["সম্ভাবনা", "P = অনুকূল/মোট; nCr = n!/(r!(n−r)!); অন্তত একটি = 1 − কোনোটিই না"]];
+/* terms (Leitner) */
+function nextTerm() {
+  const terms = D.terms;
+  const box = (k) => S.termBox[k] || 0;
+  const sorted = terms.map((t, i) => ({ i, b: box(t[0]), r: Math.random() })).sort((a, b) => a.b - b.b || a.r - b.r);
+  const lowest = sorted[0].b; const cand = sorted.filter((x) => x.b <= lowest + 1).slice(0, 12);
+  sub.termIdx = pick(cand).i; sub.termShow = false;
+}
+function pTerms() {
+  if (sub.termIdx == null || !D.terms[sub.termIdx]) nextTerm();
+  const [k, full, def] = D.terms[sub.termIdx];
+  const sess = sub.termSess || (sub.termSess = { n: 0, ok: 0 });
+  const mastered = D.terms.filter((t) => (S.termBox[t[0]] || 0) >= 3).length;
+  const answer = (ok) => {
+    S.termBox[k] = ok ? Math.min(5, (S.termBox[k] || 0) + 1) : 0;
+    sess.n++; if (ok) sess.ok++;
+    const last = S.events[S.events.length - 1];
+    if (last && last.k === "terms" && last.d === dhaka() && Date.now() - last.t < 20 * 60000 && last.n < 50) { last.s = (last.s * last.n + (ok ? 1 : 0)) / (last.n + 1); last.n++; last.t = Date.now(); }
+    else logEvent("terms", { n: 1, s: ok ? 1 : 0 });
+    nextTerm(); save();
+  };
+  return h("section", { class: "sheet ruled" },
+    h("div", { class: "row between" }, h("span", { class: "muted small" }, "আয়ত্তে: " + bn(mastered) + "/" + bn(D.terms.length) + " (৩ বার টানা জানলে)"), h("span", { class: "num" }, "সেশন " + bn(sess.ok) + "/" + bn(sess.n))),
+    h("div", { class: "qbox", style: "text-align:center" }, h("div", { class: "eyebrow" }, "বাক্স " + bn(S.termBox[k] || 0) + " / ৫"), h("p", { class: "big", style: "font-family:var(--f-display)" }, k),
+      sub.termShow ? h("div", { class: "stack" }, h("b", null, full), h("p", null, def)) : h("p", { class: "muted" }, "পূর্ণরূপ আর এক লাইনের অর্থ মনে মনে বলুন")),
+    sub.termShow ? h("div", { class: "row", style: "justify-content:center" }, h("button", { class: "btn primary", onclick: () => answer(true) }, "জানতাম"), h("button", { class: "btn danger", onclick: () => answer(false) }, "জানতাম না"))
+      : h("div", { class: "row", style: "justify-content:center" }, h("button", { class: "btn primary", onclick: () => { sub.termShow = true; render(); } }, "উত্তর দেখুন")));
+}
+/* MCQ quiz */
+function newQuiz(kind) {
+  const bank = D.quiz[kind];
+  const wrong = bank.map((_, i) => i).filter((i) => S.quizWrong[kind + i]);
+  const rest = shuffle(bank.map((_, i) => i).filter((i) => !S.quizWrong[kind + i]));
+  const ids = shuffle(wrong).concat(rest).slice(0, 10);
+  sub.quiz = { kind, ids, pos: 0, ok: 0, answered: null, order: ids.map((i) => shuffle(bank[i].o.map((_, j) => j))) };
+}
+function pQuiz(kind) {
+  if (!sub.quiz || sub.quiz.kind !== kind) newQuiz(kind);
+  const Q = sub.quiz, bank = D.quiz[kind];
+  const label = { eng: "ইংরেজি ভাষা", bn: "বাংলা ব্যাকরণ", gk: "সাম্প্রতিক তথ্য ও ব্যাংকিং" }[kind];
+  if (Q.pos >= Q.ids.length) {
+    return h("section", { class: "sheet ruled" }, h("h2", null, label + ": ফলাফল"), h("p", { class: "big" }, bn(Q.ok) + "/" + bn(Q.ids.length)),
+      h("p", null, Q.ok / Q.ids.length >= 0.8 ? "দারুণ! ভুলগুলো পরের সেটে আবার আসবে।" : "ভুলগুলো ব্যাখ্যাসহ পরের সেটে আগে আসবে।"),
+      h("button", { class: "btn primary", onclick: () => { newQuiz(kind); render(); } }, "পরের ১০টি"));
+  }
+  const qi = Q.ids[Q.pos], item = bank[qi], ord = Q.order[Q.pos];
+  const choose = (j) => {
+    if (Q.answered != null) return;
+    Q.answered = j; const ok = j === item.a;
+    if (ok) { Q.ok++; delete S.quizWrong[kind + qi]; } else S.quizWrong[kind + qi] = 1;
+    const last = S.events[S.events.length - 1];
+    if (last && last.k === kind && last.d === dhaka() && Date.now() - last.t < 20 * 60000 && last.n < 30) { last.s = (last.s * last.n + (ok ? 1 : 0)) / (last.n + 1); last.n++; last.t = Date.now(); }
+    else logEvent(kind, { n: 1, s: ok ? 1 : 0 });
+    save();
+  };
+  return h("section", { class: "sheet ruled" },
+    h("div", { class: "row between" }, h("span", { class: "eyebrow" }, label + " · প্রশ্ন " + bn(Q.pos + 1) + "/" + bn(Q.ids.length)), h("span", { class: "num" }, "সঠিক " + bn(Q.ok))),
+    h("p", { class: "q" }, h("b", null, item.q)),
+    h("div", { class: "stack" }, ord.map((j) => h("button", { class: "opt" + (Q.answered != null ? (j === item.a ? " right" : j === Q.answered ? " wrong" : "") : ""), onclick: () => choose(j), disabled: Q.answered != null && j !== item.a && j !== Q.answered }, item.o[j]))),
+    Q.answered != null ? h("div", { class: "stack" }, h("p", null, Q.answered === item.a ? h("b", { style: "color:var(--good)" }, "সঠিক! ") : h("b", { style: "color:var(--bad)" }, "ভুল। "), item.x || ""),
+      h("button", { class: "btn primary", onclick: () => { Q.pos++; Q.answered = null; render(); } }, Q.pos + 1 < Q.ids.length ? "পরের প্রশ্ন" : "ফলাফল দেখুন")) : null);
+}
+
+/* ═════════════════════════ views: assess ═════════════════════════ */
+function viewAssess() {
+  const P = projection();
+  const out = [];
+  const full = P.rows.every((r) => r.proj != null);
+  const tot = Math.round(P.total);
+  out.push(h("section", { class: "sheet ruled hero" },
+    h("div", { class: "eyebrow" }, "প্রস্তুতির মূল্যায়ন"),
+    h("h1", null, full ? "প্রজেক্টেড: " + bn(tot) + " / ২০০" : P.knownMax ? "এখন পর্যন্ত: " + bn(tot) + " / " + bn(P.knownMax) + " (জানা অংশে)" : "অনুশীলন শুরু করলে মূল্যায়ন দেখাবে"),
+    h("p", null, full ? (tot >= 120 ? "ভাইভায় ডাক পাওয়ার মতো অবস্থায় আছেন। এখন ধারাবাহিকতা ধরে রাখুন।" : tot >= 100 ? "১০০ পার হয়েছে। দুর্বল অংশগুলো ঠিক করলে ১২০ সম্ভব।" : "১০০-এর নিচে। নিচের দুর্বল অংশগুলোতে আগে সময় দিন।") : "সব ৯টি অংশে অন্তত একবার অনুশীলন করুন, তাহলে পূর্ণ প্রজেকশন দেখাবে।"),
+    bar(full ? tot / 200 : P.knownMax ? tot / P.knownMax : 0, full && tot < 100 ? "bad" : full && tot < 120 ? "warn" : ""),
+    h("p", { class: "muted small" }, "হিসাব: অংশের পূর্ণ নম্বর × আপনার সাম্প্রতিক দক্ষতা × (০.৭৫ + ০.২৫ × সপ্তাহের লক্ষ্যের কত অংশ করেছেন)। লেখার অংশে শেষ ৫টি স্ব-মূল্যায়ন, বাকিগুলোতে সাম্প্রতিক সঠিক উত্তরের হার, আর মক দিলে মকের নম্বর ৫০% ধরা হয়।")));
+  out.push(h("section", { class: "sheet" }, h("h2", null, "অংশভিত্তিক"),
+    h("div", { class: "tablewrap" }, h("table", null,
+      h("thead", null, h("tr", null, h("th", null, "অংশ"), h("th", { class: "n" }, "পূর্ণ"), h("th", { class: "n" }, "প্রজেক্টেড"), h("th", { class: "n" }, "১২০-এর লক্ষ্য"), h("th", null, "দক্ষতা"), h("th", { class: "n" }, "অনুশীলন"))),
+      h("tbody", null, P.rows.map((r) => { const goal = Math.round(SEC[r.sec].max * 0.6); const st = r.proj == null ? "" : r.proj >= goal ? "good" : r.proj >= goal * 0.8 ? "warn" : "bad";
+        return h("tr", null, h("td", null, SEC[r.sec].name), h("td", { class: "n" }, bn(SEC[r.sec].max)), h("td", { class: "n" }, r.proj == null ? "—" : h("span", { class: "pill " + st }, bn(Math.round(r.proj)))), h("td", { class: "n" }, bn(goal)),
+          h("td", { style: "min-width:120px" }, r.skill == null ? h("span", { class: "muted small" }, "এখনো নেই") : bar(r.skill, r.skill < 0.5 ? "bad" : r.skill < 0.6 ? "warn" : "")), h("td", { class: "n" }, bn(r.count) + "/" + bn(r.tgt))); }))))));
+  const weak = P.rows.filter((r) => r.proj == null || r.proj < SEC[r.sec].max * 0.6).sort((a, b) => (a.proj == null ? -1 : a.proj / SEC[a.sec].max) - (b.proj == null ? -1 : b.proj / SEC[b.sec].max));
+  const go2 = { FW_EN: "practice/essay", FW_BN: "practice/essay", ARG: "practice/arg", TR: "practice/tr", MATH: "practice/math", ENG: "practice/quiz-eng", BN: "practice/quiz-bn", BANK: "practice/terms", GK: "practice/quiz-gk" };
+  out.push(h("section", { class: "sheet" }, h("h2", null, "দুর্বল জায়গা (আগে এগুলো)"),
+    weak.length ? h("div", { class: "grid g3" }, weak.slice(0, 6).map((r) => h("div", { class: "qbox stack" }, h("b", null, SEC[r.sec].name), h("span", { class: "muted small" }, r.proj == null ? "এখনো অনুশীলন করেননি" : "প্রজেক্টেড " + bn(Math.round(r.proj)) + "/" + bn(SEC[r.sec].max) + ", লক্ষ্য " + bn(Math.round(SEC[r.sec].max * 0.6))),
+      h("button", { class: "btn sm primary", onclick: () => { if (r.sec === "FW_EN" || r.sec === "FW_BN") sub.essayLang = r.sec === "FW_EN" ? "en" : "bn"; go(go2[r.sec]); } }, "অনুশীলন করুন")))) : h("p", null, "সব অংশ লক্ষ্যের উপরে। দারুণ!")));
+  const ts = topicStats();
+  out.push(h("section", { class: "sheet" }, h("h2", null, "টপিক কভারেজ"),
+    h("div", { class: "tablewrap" }, h("table", null, h("thead", null, h("tr", null, h("th", null, "টপিক"), h("th", { class: "n" }, "বাংলা"), h("th", { class: "n" }, "ইংরেজি"), h("th", { class: "n" }, "সেরা স্কোর"))),
+      h("tbody", null, D.topics.map((t) => { const s = ts[t.n]; return h("tr", null, h("td", null, bn(t.n) + ". " + t.bn), h("td", { class: "n" }, bn(s.bn)), h("td", { class: "n" }, bn(s.en)), h("td", { class: "n" }, s.best == null ? h("span", { class: "pill bad" }, "লেখা হয়নি") : h("span", { class: "pill " + (s.best >= 0.7 ? "good" : s.best >= 0.5 ? "warn" : "bad") }, bn(Math.round(s.best * 30)) + "/৩০"))); }))))));
+  const cs = chapterStats();
+  const chs = Object.keys(CH_BN).filter((c) => cs[c] || ["speed", "work", "algebra", "profit_loss", "percentage", "mixture", "geometry", "interest", "ratio"].includes(c));
+  out.push(h("section", { class: "sheet" }, h("h2", null, "গণিত অধ্যায়ভিত্তিক"),
+    h("div", { class: "tablewrap" }, h("table", null, h("thead", null, h("tr", null, h("th", null, "অধ্যায়"), h("th", { class: "n" }, "করেছেন"), h("th", { class: "n" }, "সঠিক"), h("th", null, ""))),
+      h("tbody", null, chs.map((c) => { const s = cs[c]; return h("tr", null, h("td", null, CH_BN[c]), h("td", { class: "n" }, bn(s ? s.n : 0)), h("td", { class: "n" }, s ? pct(s.ok / s.n) : "—"), h("td", null, h("button", { class: "btn sm", onclick: () => { sub.mathCh = c; nextMath(); go("practice/math"); } }, "ড্রিল"))); }))))));
+  out.push(h("section", { class: "sheet" }, h("h2", null, "দিনভিত্তিক অগ্রগতি"),
+    h("div", { class: "stack" }, DAYS.map((iso, i) => { const c = dayCompletion(iso); return h("div", { class: "grid", style: "grid-template-columns: 120px minmax(0,1fr) 52px; align-items:center; gap:10px" }, h("span", { class: "small" }, "দিন " + bn(i + 1) + " · " + fmtDate(iso)), bar(c, iso <= dhaka() && c < 0.5 ? "bad" : c < 0.8 ? "warn" : ""), h("span", { class: "num small", style: "text-align:right" }, pct(c))); }))));
+  out.push(activityLog());
+  return out;
+}
+function activityLog() {
+  const names = { essay: "রচনা", arg: "আর্গুমেন্ট", tr: "অনুবাদ", math: "গণিত", terms: "পরিভাষা", eng: "ইংরেজি MCQ", bn: "বাংলা MCQ", gk: "তথ্য MCQ", news: "পত্রিকা", mock: "মক" };
+  const ev = S.events.slice(-40).reverse();
+  return h("section", { class: "sheet" }, h("div", { class: "sheet-head" }, h("h2", null, "সাম্প্রতিক কাজ"), h("span", { class: "muted small" }, "ভুল এন্ট্রি মুছে দিতে পারেন")),
+    ev.length ? h("div", { class: "tablewrap" }, h("table", null, h("tbody", null, ev.map((e) => h("tr", null,
+      h("td", { class: "small mono" }, fmtDate(e.d) + " " + bn(new Date(e.t + 6 * 3600e3).toISOString().slice(11, 16))),
+      h("td", null, names[e.k] || e.k, e.lang ? " (" + (e.lang === "en" ? "EN" : "BN") + ")" : "", e.ch ? " · " + (CH_BN[e.ch] || e.ch) : "", e.manual ? " · খাতা" : ""),
+      h("td", { class: "n" }, e.raw != null ? bn(e.raw) + "/" + bn(e.max) : e.s != null ? bn(Math.round(e.s * e.n)) + "/" + bn(e.n) : "×" + bn(e.n)),
+      h("td", null, h("button", { class: "btn sm ghost", "aria-label": "মুছুন", onclick: () => confirmBox("এই এন্ট্রি মুছবেন?", "মুছুন", () => { S.events = S.events.filter((x) => x.id !== e.id); save(); }) }, "মুছুন")))))))
+      : h("p", { class: "muted" }, "এখনো কিছু লগ হয়নি। অনুশীলন ট্যাব থেকে শুরু করুন."));
+}
+
+/* ═════════════════════════ views: mock ═════════════════════════ */
+function mockSecName(k) { return k === "BN_BANK_GK" ? "বাংলা + ব্যাংকিং + GK" : k === "REV" ? "রিভিশন" : SEC[k].short; }
+function makePaper(kind) {
+  const [a, b] = shuffle(D.topics).slice(0, 2);
+  const arg = Math.floor(Math.random() * D.arguments.prompts.length);
+  const tr = shuffle(D.translation.drills.map((_, i) => i)).slice(0, 3);
+  const top = ["speed", "work", "algebra", "profit_loss", "percentage", "mixture", "geometry", "interest"];
+  const math = shuffle(top).slice(0, 5).map((c) => { const pool = D.math.filter((q) => q.c === c); return pick(pool.length ? pool : D.math).id; });
+  const eng = shuffle(D.quiz.eng.map((_, i) => i)).slice(0, 10), bnq = shuffle(D.quiz.bn.map((_, i) => i)).slice(0, 5), gk = shuffle(D.quiz.gk.map((_, i) => i)).slice(0, 5);
+  const terms = shuffle(D.terms.map((t) => t[0])).slice(0, 5);
+  return { kind, fwEn: a.n, fwBn: b.n, arg, tr, math, eng, bnq, gk, terms };
+}
+function viewMock() {
+  const out = [];
+  const t = S.timer && S.timer.kind === "mock" ? S.timer : null;
+  const paper = t ? t.ctx.paper : sub.paper;
+  out.push(h("section", { class: "sheet ruled hero" }, h("div", { class: "eyebrow" }, "মক পরীক্ষা"), h("h1", null, "আসল পরীক্ষার মতো সময় ধরে লিখুন"),
+    h("p", null, "পূর্ণ মক ১২০ মিনিট, ২০০ নম্বর, আসল সময় ভাগ মেনে। লেখার মক ৭৫ মিনিট (ফোকাস ২টি, আর্গুমেন্ট, অনুবাদ)। টাইমার চলার সময় নিচের বার জানিয়ে দেবে এখন কোন অংশে থাকার কথা।"),
+    h("div", { class: "row" },
+      h("button", { class: "btn primary", disabled: busy(), onclick: () => { const p = makePaper("full"); startTimer("mock", 120, "পূর্ণ মক (২০০)", { paper: p, plan: MOCK_FULL, mockKind: "full" }); render(); } }, "পূর্ণ মক শুরু (১২০ মি)"),
+      h("button", { class: "btn", disabled: busy(), onclick: () => { const p = makePaper("writing"); startTimer("mock", 75, "লেখার মক", { paper: p, plan: MOCK_WRITING, mockKind: "writing" }); render(); } }, "লেখার মক শুরু (৭৫ মি)"),
+      h("button", { class: "btn ghost", onclick: () => mockScoreForm({ mockKind: "full", manual: true }) }, "বাইরের মকের নম্বর যোগ করুন"))));
+  if (paper) out.push(paperView(paper));
+  out.push(h("section", { class: "sheet" }, h("h2", null, "মকের ইতিহাস"),
+    S.mocks.length ? h("div", { class: "tablewrap" }, h("table", null, h("thead", null, h("tr", null, h("th", null, "তারিখ"), h("th", null, "ধরন"), ...SEC_ORDER.map((s) => h("th", { class: "n" }, SEC[s].short)), h("th", { class: "n" }, "মোট"), h("th", null, ""))),
+      h("tbody", null, S.mocks.slice().reverse().map((m) => { const tot = SEC_ORDER.reduce((a, s) => a + (Number.isFinite(m.scores[s]) ? m.scores[s] : 0), 0); const mx = SEC_ORDER.reduce((a, s) => a + (Number.isFinite(m.scores[s]) ? SEC[s].max : 0), 0);
+        return h("tr", null, h("td", { class: "small" }, fmtDate(dhaka(m.t))), h("td", null, m.kind === "writing" ? "লেখা" : "পূর্ণ"), ...SEC_ORDER.map((s) => h("td", { class: "n" }, Number.isFinite(m.scores[s]) ? bn(m.scores[s]) : "—")), h("td", { class: "n" }, h("b", null, bn(tot) + "/" + bn(mx))),
+          h("td", null, h("button", { class: "btn sm ghost", onclick: () => confirmBox("এই মক মুছবেন?", "মুছুন", () => { S.mocks = S.mocks.filter((x) => x.id !== m.id); save(); }) }, "মুছুন"))); })))) : h("p", { class: "muted" }, "এখনো কোনো মক দেননি। প্ল্যান অনুযায়ী ২৪ নভেম্বর পূর্ণ মক, ২৬ নভেম্বর লেখার মক।")));
+  return out;
+}
+function paperView(p) {
+  const T = (n) => D.topics.find((x) => x.n === n);
+  const parts = [
+    ["১. Focus Writing (English) — ৩০", h("p", null, T(p.fwEn).en)],
+    ["২. ফোকাস রাইটিং (বাংলা) — ৩০", h("p", null, T(p.fwBn).bn)],
+    ["৩. Analytical/Argumentative Writing — ৪০", h("p", null, "\"" + D.arguments.prompts[p.arg].claim + "\" Do you agree? Justify with arguments and evidence.")],
+    ["৪. Translate into English — ২০", h("p", null, p.tr.map((i) => D.translation.drills[i].bn).join(" "))],
+  ];
+  if (p.kind === "full") {
+    parts.push(["৫. Mathematics — ৩০ (৫ × ৬)", h("ol", { class: "clean", lang: "en" }, p.math.map((id) => { const q = D.math.find((x) => x.id === id); return h("li", null, q ? q.t : ""); }))]);
+    parts.push(["৬. English Language — ২০ (১০ × ২)", h("ol", { class: "clean", lang: "en" }, p.eng.map((i) => { const q = D.quiz.eng[i]; return h("li", null, q.q + "  (" + shuffle(q.o).join(" / ") + ")"); }))]);
+    parts.push(["৭. বাংলা ব্যাকরণ — ১০ (৫ × ২)", h("ol", { class: "clean" }, p.bnq.map((i) => { const q = D.quiz.bn[i]; return h("li", null, q.q + "  (" + shuffle(q.o).join(" / ") + ")"); }))]);
+    parts.push(["৮. Banking & Financial Knowledge — ১০", h("p", null, "Write short notes (full form + meaning): " + p.terms.join(", "))]);
+    parts.push(["৯. সাধারণ জ্ঞান — ১০ (৫ × ২)", h("ol", { class: "clean" }, p.gk.map((i) => h("li", null, D.quiz.gk[i].q)))]);
+  }
+  return h("section", { class: "sheet ruled" }, h("div", { class: "sheet-head" }, h("h2", null, p.kind === "full" ? "প্রশ্নপত্র: পূর্ণ মক" : "প্রশ্নপত্র: লেখার মক"), h("span", { class: "muted small" }, "উত্তর খাতায় লিখুন")),
+    parts.map(([t, body]) => h("div", { class: "stack" }, h("b", null, t), body)),
+    p.kind === "full" ? h("details", { class: "card" }, h("summary", null, "উত্তর মিলানোর জন্য (পরীক্ষার পরে খুলুন)", h("span", { class: "muted small" }, "▾")),
+      h("div", null, h("p", null, h("b", null, "ইংরেজি: "), p.eng.map((i, k) => bn(k + 1) + ") " + D.quiz.eng[i].o[D.quiz.eng[i].a]).join(" · ")), h("p", null, h("b", null, "বাংলা: "), p.bnq.map((i, k) => bn(k + 1) + ") " + D.quiz.bn[i].o[D.quiz.bn[i].a]).join(" · ")), h("p", null, h("b", null, "GK: "), p.gk.map((i, k) => bn(k + 1) + ") " + D.quiz.gk[i].o[D.quiz.gk[i].a]).join(" · ")),
+        h("p", null, h("b", null, "গণিত: "), p.math.map((id, k) => { const q = D.math.find((x) => x.id === id); return bn(k + 1) + ") " + (q && q.a ? q.a : "উৎস " + (q ? q.s + " p" + q.p : "")); }).join(" · ")))) : null);
+}
+function mockScoreForm(ctx) {
+  const kind = ctx.mockKind || "full";
+  const secs = kind === "writing" ? ["FW_EN", "FW_BN", "ARG", "TR"] : SEC_ORDER;
+  const inputs = {};
+  const err = h("p", { class: "small", style: "color:var(--bad)" });
+  openModal(h("h3", null, kind === "writing" ? "লেখার মকের নম্বর" : "পূর্ণ মকের নম্বর"), h("p", { class: "muted small" }, "লেখার অংশগুলো অনুশীলন ট্যাবের রুব্রিক ধরে নিজে মার্ক করুন; MCQ ধরনের অংশ উত্তর মিলিয়ে।"),
+    h("div", { class: "grid g3" }, secs.map((s) => { const inp = h("input", { type: "number", id: "mk-" + s, min: 0, max: SEC[s].max, step: "0.5", inputmode: "decimal" }); inputs[s] = inp; return h("label", { class: "f", for: "mk-" + s }, SEC[s].short + " (/" + bn(SEC[s].max) + ")", inp); })), err,
+    h("div", { class: "row" }, h("button", { class: "btn primary", onclick: () => {
+      const scores = {}; let any = false;
+      for (const s of secs) { const v = inputs[s].value.trim(); if (v === "") continue; const n = Number(v); if (!Number.isFinite(n) || n < 0 || n > SEC[s].max) { err.textContent = SEC[s].short + ": ০ থেকে " + bn(SEC[s].max) + "-এর মধ্যে দিন।"; inputs[s].focus(); return; } scores[s] = n; any = true; }
+      if (!any) { err.textContent = "অন্তত একটি অংশের নম্বর দিন।"; return; }
+      S.mocks.push({ id: uid(), t: Date.now(), kind, scores, min: Math.round(ctx.usedMin || 0) });
+      if (scores.FW_EN != null) logEvent("essay", { lang: "en", s: scores.FW_EN / 30, raw: scores.FW_EN, max: 30, mock: true, topic: ctx.paper && ctx.paper.fwEn });
+      if (scores.FW_BN != null) logEvent("essay", { lang: "bn", s: scores.FW_BN / 30, raw: scores.FW_BN, max: 30, mock: true, topic: ctx.paper && ctx.paper.fwBn });
+      if (scores.ARG != null) logEvent("arg", { s: scores.ARG / 40, raw: scores.ARG, max: 40, mock: true, prompt: ctx.paper && ctx.paper.arg });
+      if (scores.TR != null) logEvent("tr", { s: scores.TR / 20, raw: scores.TR, max: 20, mock: true, items: ctx.paper && ctx.paper.tr });
+      if (scores.MATH != null) logEvent("math", { n: 5, s: scores.MATH / 30, ch: null, mock: true });
+      closeModal(); sub.paper = null; save(); go("assess"); toast("মকের নম্বর সংরক্ষিত");
+    } }, "সংরক্ষণ"), h("button", { class: "btn", onclick: () => { closeModal(); render(); } }, "পরে দেব")));
+  if (ctx.paper) sub.paper = ctx.paper;
+}
+
+/* ═════════════════════════ views: library ═════════════════════════ */
+function viewLibrary() {
+  const tab = sub.library || "topics";
+  const tabs = h("div", { class: "seg" }, [["topics", "১০ টপিক"], ["facts", "সর্বশেষ সংখ্যা"], ["terms", "পরিভাষা"], ["hall", "হলের চেকলিস্ট"], ["repo", "রিপোর ফাইল"]].map(([k, l]) => h("button", { "aria-pressed": String(tab === k), onclick: () => go("library/" + k) }, l)));
+  const out = [h("section", { class: "sheet" }, h("h2", null, "টপিক ও তথ্য"), tabs)];
+  if (tab === "topics") {
+    out.push(...D.topics.map((t) => h("details", { class: "card", open: sub.libTopic === t.n, ontoggle: (e) => { if (e.target.open) sub.libTopic = t.n; } }, h("summary", null, h("span", null, bn(t.n) + ". " + t.bn), h("span", { class: "pill" }, t.prob)), h("div", null, h("p", { class: "muted" }, t.en), h("p", { class: "small" }, h("b", null, "প্রশ্ন যেভাবে আসতে পারে: "), t.variants.join(" · ")), topicBody(t)))));
+  } else if (tab === "facts") {
+    const tags = [...new Set(D.facts.map((f) => f.topic))];
+    const ft = sub.factTag || "all";
+    out.push(h("section", { class: "sheet" }, h("div", { class: "seg" }, [["all", "সব"]].concat(tags.map((x) => [x, x])).map(([k, l]) => h("button", { "aria-pressed": String(ft === k), onclick: () => { sub.factTag = k; render(); } }, l))),
+      h("div", { class: "stack" }, D.facts.filter((f) => ft === "all" || f.topic === ft).map((f) => h("div", { class: "qbox" }, h("p", null, f.bn), h("p", { class: "muted small", lang: "en" }, f.en), h("p", { class: "small mono muted" }, f.src))))));
+  } else if (tab === "terms") {
+    const qi = h("input", { type: "text", id: "t-q", placeholder: "খুঁজুন: CRR, রেপো, BFIU…", value: sub.termQ || "" });
+    const list = h("div", { class: "tablewrap" });
+    const draw = () => { const q = (qi.value || "").toLowerCase(); sub.termQ = qi.value; list.replaceChildren(h("table", null, h("tbody", null, D.terms.filter((t) => !q || t.join(" ").toLowerCase().includes(q)).map(([k, f, d]) => h("tr", null, h("td", null, h("b", null, k)), h("td", null, f, h("div", { class: "muted small" }, d)), h("td", { class: "n" }, (S.termBox[k] || 0) >= 3 ? h("span", { class: "pill good" }, "আয়ত্তে") : "")))))); };
+    qi.addEventListener("input", draw); draw();
+    out.push(h("section", { class: "sheet" }, h("label", { class: "f", for: "t-q" }, "পরিভাষা খুঁজুন", qi), list));
+  } else if (tab === "hall") {
+    const items = ["প্রবেশপত্র ২ কপি প্রিন্ট করা", "কেন্দ্রের ঠিকানা আর যাওয়ার সময় মাপা", "৩টি একই রকম কালো বলপেন, পেনসিল, স্কেল, ইরেজার", "অ্যানালগ ঘড়ি (মোবাইল/স্মার্টওয়াচ নয়)", "স্বচ্ছ পানির বোতল", "আগের রাতে শুধু টপিক কার্ড, সংখ্যা আর সূত্র দেখা", "রাত ১১টার মধ্যে ঘুম", "৮:৩০-এর মধ্যে কেন্দ্রে পৌঁছানো", "প্রশ্ন পেয়ে ৩ মিনিটে প্রতিটি অংশের পাশে সময় লেখা", "প্রতিটি অংশ নতুন পৃষ্ঠায়, প্রশ্ন নম্বর বড় করে", "কোনো অংশে বরাদ্দের চেয়ে ২ মিনিটের বেশি নয়", "শেষ ৩ মিনিট: প্রশ্ন নম্বর, গণিতের উত্তর বক্স, রোল নম্বর"];
+    out.push(h("section", { class: "sheet ruled" }, h("h3", null, "পরীক্ষার হলের চেকলিস্ট"), h("p", { class: "muted small" }, "সময় ভাগ: গণিত ২২ → আর্গুমেন্ট ২২ → ফোকাস EN ১৮ → ফোকাস BN ১৮ → অনুবাদ ১২ → ইংরেজি ১০ → বাংলা + ব্যাংকিং + GK ১৫ → রিভিশন ৩"),
+      h("div", null, items.map((x, i) => { const c = h("input", { type: "checkbox", id: "hall" + i, checked: !!S.hall[i], onchange: (e) => { S.hall[i] = e.target.checked ? 1 : 0; save({ silent: true }); } }); return h("label", { class: "check", for: "hall" + i }, c, h("span", null, x)); }))));
+  } else {
+    out.push(h("section", { class: "sheet" }, h("h3", null, "রিপোতে কোথায় কী"), h("p", { class: "muted small" }, "github.com/ZubairZerok/SOWritten — নিচের পাথগুলো রিপোর ভেতরে"),
+      h("div", { class: "tablewrap" }, h("table", null, h("tbody", null, [
+        ["docs/00_one_page.md", "এক পাতায় পুরো প্রস্তুতি (প্রিন্ট করে রাখুন)"], ["docs/01_exam_structure.md", "নম্বর বণ্টন ও সময় ভাগ"], ["docs/04_topic_bank.md", "১০টি টপিক কার্ড"], ["docs/05_argument_playbook.md", "আর্গুমেন্ট টেমপ্লেট ও প্রম্পট"], ["docs/07_math_playbook.md", "গণিতের অধ্যায় ক্রম, সূত্র, সাম্প্রতিক প্রশ্ন"], ["docs/09_grammar_quick.md", "গ্রামার কুইক শিট"], ["docs/10_gap_analysis.md", "রিপোতে যা নেই"],
+        ["materials/01_focus_writing/books/Focus_Writing_Mini_Recent_Merged.pdf", "মূল ফোকাস বই"], ["materials/02_argument_writing/", "আর্গুমেন্টের ২টি PDF"], ["materials/03_math/khairul/", "খায়রুলের অধ্যায়ভিত্তিক শিট"], ["materials/03_math/question_bank/BIBM_Previous_All_Written_Math_Solution.pdf", "সাম্প্রতিক BIBM গণিত (২০২২–২৩)"], ["materials/05_gk_banking/GK_Banking_Terminologies_1_2.pdf", "ব্যাংকিং পরিভাষা"], ["materials/07_official_reports/BB_Monetary_Policy_Statement_H1FY27.pdf", "সর্বশেষ সংখ্যার উৎস"],
+      ].map(([a, b]) => h("tr", null, h("td", { class: "mono small" }, a), h("td", null, b)))))),
+      h("p", { class: "muted small" }, "নোট: নম্বর বণ্টন একটি ব্লগ থেকে নেওয়া (নোটিশ ৩৪৮/২০২৬-এর উদ্ধৃতি)। erecruitment.bb.org.bd-তে মিলিয়ে নিন।")));
+  }
+  return out;
+}
+
+/* ═════════════════════════ views: backup ═════════════════════════ */
+function viewBackup() {
+  const ta = h("textarea", { id: "bk-out", readonly: true, "aria-label": "ব্যাকআপ ডেটা" }, JSON.stringify(S));
+  const imp = h("textarea", { id: "bk-in", placeholder: "আগে কপি করা ব্যাকআপ এখানে পেস্ট করুন" });
+  const msg = h("p", { class: "small" });
+  const resetIn = h("input", { type: "text", id: "bk-reset", placeholder: "মুছতে RESET লিখুন", autocomplete: "off" });
+  return [h("section", { class: "sheet ruled" }, h("h2", null, "ব্যাকআপ ও সংরক্ষণ"),
+      h("p", null, "অবস্থা: ", h("b", null, $("#sync").textContent)),
+      h("ul", { class: "clean small" }, h("li", null, "claude.ai-তে খুললে আপনার অগ্রগতি আপনার নিজের প্রাইভেট ক্লাউড স্টোরেজে থাকে (আর কেউ দেখতে পায় না) আর যেকোনো ডিভাইস থেকে একই থাকে।"), h("li", null, "সরাসরি ফাইল (webapp/index.html) খুললে অগ্রগতি থাকে শুধু সেই ব্রাউজারে।"), h("li", null, "নিরাপত্তার জন্য দিনে একবার নিচের ব্যাকআপ কপি করে কোথাও রেখে দিন।"))),
+    h("section", { class: "sheet" }, h("h3", null, "ব্যাকআপ কপি করুন"), ta, h("div", { class: "row" }, h("button", { class: "btn primary", onclick: async () => { try { await navigator.clipboard.writeText(ta.value); toast("কপি হয়েছে"); } catch (e) { ta.focus(); ta.select(); toast("সিলেক্ট করা হয়েছে, Ctrl+C / কপি চাপুন"); } } }, "কপি"), h("span", { class: "muted small" }, bn(S.events.length) + "টি এন্ট্রি · " + bn(Math.round(ta.value.length / 1024)) + " KB"))),
+    h("section", { class: "sheet" }, h("h3", null, "ব্যাকআপ থেকে ফেরত আনুন"), imp, msg,
+      h("div", { class: "row" }, h("button", { class: "btn", onclick: () => {
+        let obj; try { obj = JSON.parse(imp.value); } catch (e) { msg.textContent = "এটা বৈধ ব্যাকআপ নয়। পুরো লেখাটা কপি-পেস্ট হয়েছে কিনা দেখুন।"; msg.style.color = "var(--bad)"; return; }
+        if (!obj || typeof obj !== "object" || !Array.isArray(obj.events)) { msg.textContent = "এটা এই অ্যাপের ব্যাকআপ নয়।"; msg.style.color = "var(--bad)"; return; }
+        const incoming = normalize(obj);
+        const ids = new Set(S.events.map((e) => e.id)); let added = 0;
+        for (const e of incoming.events) if (!ids.has(e.id)) { S.events.push(e); added++; }
+        S.events.sort((a, b) => a.t - b.t);
+        const mids = new Set(S.mocks.map((m) => m.id)); for (const m of incoming.mocks) if (!mids.has(m.id)) S.mocks.push(m);
+        for (const k in incoming.mathLog) if (!S.mathLog[k]) S.mathLog[k] = incoming.mathLog[k];
+        for (const k in incoming.termBox) S.termBox[k] = Math.max(S.termBox[k] || 0, incoming.termBox[k]);
+        save(); toast("মিলিয়ে নেওয়া হয়েছে: নতুন " + bn(added) + "টি এন্ট্রি");
+      } }, "মিলিয়ে নিন (দুটো একসাথে)"))),
+    h("section", { class: "sheet" }, h("h3", null, "সব মুছে নতুন করে শুরু"), h("p", { class: "muted small" }, "এটা ফেরানো যায় না। আগে ব্যাকআপ কপি করে নিন।"), resetIn,
+      h("button", { class: "btn danger", onclick: () => { if (resetIn.value.trim() !== "RESET") { toast("ঠিক RESET লিখুন"); return; } const m = S.settings.mult; S = fresh(); S.settings.mult = m; save(); toast("সব মুছে ফেলা হয়েছে"); } }, "সব মুছুন"))];
+}
+
+/* ═════════════════════════ boot ═════════════════════════ */
+async function boot() {
+  tickCount();
+  S = normalize(readLocal());
+  try { D = await loadData(); }
+  catch (e) { $("#view").replaceChildren(h("section", { class: "sheet" }, h("h2", null, "ডেটা লোড হয়নি"), h("p", null, "পাতাটা আবার খুলুন। সমস্যা থাকলে রিপোর webapp/index.html ফাইলটা সরাসরি খুলুন।"), h("p", { class: "muted small mono" }, String(e.message || e)))); setSync("warn", "ডেটা নেই"); return; }
+  if (S.timer && S.timer.ctx && S.timer.ctx.paper) sub.paper = S.timer.ctx.paper;
+  render(); renderTimer();
+  initCloud();
+}
+window.addEventListener("error", (e) => { console.error("app error", e.message); });
+boot();
+</script>
