@@ -37,38 +37,38 @@
 | ৪০ মি | ENG | Right form of verb + Subject-verb agreement | `docs/09_grammar_quick.md` |
 | ৩০ মি | GK | ১৫ পরিভাষা + পত্রিকা | `so.py terms --quiz 15` |
 
-## দিন ২: খেলাপি ঋণ/একীভূতকরণ + সমীকরণ — ২০২৬-১১-২১
+## দিন ২: খেলাপি ঋণ/একীভূতকরণ + গতি ও সময়-কাজ — ২০২৬-১১-২১
 
 | সময় | অংশ | কাজ | কোথা থেকে |
 |---|---|---|---|
 | ৬০ মি | FW | টপিক ২ (খেলাপি ঋণ) নোট | `so.py topic 2` |
 | ১৮+১৮ মি | FW_BN/FW_EN | খেলাপি ঋণ — বাংলা + ইংরেজি রচনা | `so.py essay --topic 2` |
 | ২০ মি | ARG | আর্গুমেন্ট: Bank merger | `so.py arg 2` |
-| ৯০ মি | MATH | সমীকরণ গঠন + বীজগণিত ১০টি | `materials/03_math/khairul/02_Algebra.pdf, so.py math algebra` |
+| ৯০ মি | MATH | গতি/ট্রেন/নৌকা-স্রোত + সময় ও কাজ: ১০টি (২০১৫+ পরীক্ষায় সবচেয়ে বেশি আসা দুই অধ্যায়) | `materials/03_math/khairul/04_Time_Speed.pdf, materials/03_math/khairul/03_Time_Work.pdf, so.py math speed; so.py math work` |
 | ১০ মি | TR | অনুবাদ ড্রিল ৪–৬ | `so.py tr` |
 | ৩০ মি | BN | বাংলা ব্যাকরণ: বানান + বাক্যশুদ্ধি | `docs/09_grammar_quick.md` |
 | ৩০ মি | GK | ১৫ পরিভাষা | `so.py terms --quiz 15` |
 
-## দিন ৩: এলডিসি + রপ্তানি + চক্রবৃদ্ধি/ধারা — ২০২৬-১১-২২
+## দিন ৩: এলডিসি + রপ্তানি + সমীকরণ/মিশ্রণ — ২০২৬-১১-২২
 
 | সময় | অংশ | কাজ | কোথা থেকে |
 |---|---|---|---|
 | ৬০ মি | FW | টপিক ৩ (এলডিসি) + টপিক ৬ (রপ্তানি) নোট | `so.py topic 3; so.py topic 6` |
 | ১৮+১৮ মি | FW_BN/FW_EN | এলডিসি — বাংলা; রপ্তানি বহুমুখীকরণ — ইংরেজি | `so.py essay` |
 | ২০ মি | ARG | আর্গুমেন্ট: LDC deferral a setback? | `so.py arg 3` |
-| ৯০ মি | MATH | চক্রবৃদ্ধি মুনাফা + সমান্তর ধারা | `materials/03_math/topic_sheets/PDF14_Compound_Interest.pdf, materials/03_math/khairul/05_Arithmetic_Progression.pdf` |
+| ৯০ মি | MATH | বীজগণিত/সমীকরণ + মিশ্রণ: ১০টি | `materials/03_math/khairul/02_Algebra.pdf, materials/03_math/khairul/06_Mixture.pdf, so.py math algebra; so.py math mixture` |
 | ১০ মি | TR | অনুবাদ ড্রিল ৭–৯ | `so.py tr` |
 | ৪০ মি | ENG | Narration + Transformation | `docs/09_grammar_quick.md` |
 | ৩০ মি | GK | ১৫ পরিভাষা | `so.py terms --quiz 15` |
 
-## দিন ৪: জ্বালানি + রেমিট্যান্স + জ্যামিতি/সময়-কাজ — ২০২৬-১১-২৩
+## দিন ৪: জ্বালানি + রেমিট্যান্স + জ্যামিতি/সুদ — ২০২৬-১১-২৩
 
 | সময় | অংশ | কাজ | কোথা থেকে |
 |---|---|---|---|
 | ৬০ মি | FW | টপিক ৪ (জ্বালানি) + টপিক ৫ (রেমিট্যান্স) নোট | `so.py topic 4; so.py topic 5` |
 | ১৮+১৮ মি | FW_BN/FW_EN | জ্বালানি — বাংলা; রেমিট্যান্স — ইংরেজি | `so.py essay` |
 | ২০ মি | ARG | আর্গুমেন্ট: Fuel subsidy | `so.py arg 4` |
-| ৯০ মি | MATH | জ্যামিতি/ক্ষেত্রফল + সময় ও কাজ | `materials/03_math/topic_sheets/PDF33_Geometry.pdf, materials/03_math/khairul/03_Time_Work.pdf` |
+| ৯০ মি | MATH | জ্যামিতি + চক্রবৃদ্ধি সুদ + অনুপাত: ১০টি | `materials/03_math/topic_sheets/PDF33_Geometry.pdf, materials/03_math/topic_sheets/PDF14_Compound_Interest.pdf, so.py math geometry; so.py math interest` |
 | ১০ মি | TR | অনুবাদ ড্রিল ১০–১২ | `so.py tr` |
 | ৩০ মি | BN | বাংলা: সমাস, সন্ধি, প্রবাদ | `docs/09_grammar_quick.md` |
 | ৩০ মি | GK | ১৫ পরিভাষা + সর্বশেষ সংখ্যা মুখস্থ | `so.py facts` |
@@ -80,7 +80,7 @@
 | ১২০ মি | MOCK | সকাল ৯:৩০–১১:৩০ পূর্ণ মক (আসল পরীক্ষার সময়েই) | `so.py mock` |
 | ৬০ মি | MOCK | নিজে খাতা দেখুন: কোন অংশে সময় বেশি গেল, কোথায় নম্বর কাটা যাবে | `docs/11_exam_hall_strategy.md` |
 | ৬০ মি | FW | টপিক ৭ (ডিজিটাল ব্যাংকিং/AI) নোট + ইংরেজি রচনা | `so.py topic 7` |
-| ৬০ মি | MATH | মকে ভুল হওয়া অধ্যায় আবার + সম্ভাবনা/অনুপাত | `so.py math` |
+| ৬০ মি | MATH | মকে ভুল হওয়া অধ্যায় আবার + ধারা/সম্ভাবনা | `so.py math series; so.py math probability` |
 | ৩০ মি | GK | পরিভাষা | `so.py terms --quiz 15` |
 
 ## দিন ৬: দুর্বলতা মেরামত + জলবায়ু/আর্থিক অন্তর্ভুক্তি — ২০২৬-১১-২৫

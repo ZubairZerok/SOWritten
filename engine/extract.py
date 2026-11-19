@@ -28,6 +28,20 @@ WATERMARK = re.compile(r"(?im)^.*(wondershare|pdfelement|remove\s*watermark|^\s*
                        r"like our page|join fb group|boimate|bdniyog|exambd|page \d+ of \d+|www\.[\w.]+).*$")
 
 
+# Tesseract-এর পরিচিত বাংলা OCR ভুল সংশোধন (ঋ প্রায়ই খ/ঝ হয়ে যায়)
+OCR_FIXES = [
+    (re.compile("(?<![\u0980-\u09FF])[খঝ]ণ(?!\u09CD)"), "ঋণ"),
+    (re.compile("(?<![\u0980-\u09FF])খতু"), "ঋতু"),
+    (re.compile("মুদ্রাক্ষীতি"), "মুদ্রাস্ফীতি"),
+]
+
+
+def fix_ocr(t):
+    for pat, rep in OCR_FIXES:
+        t = pat.sub(rep, t)
+    return t
+
+
 def real_text(t):
     return re.sub(r"\s+", "", WATERMARK.sub("", t))
 
@@ -137,6 +151,8 @@ def assemble(docs):
             methods[meth] = methods.get(meth, 0) + 1
             body = raw[m.end():] if m else raw
             body = re.sub(r"\n{3,}", "\n\n", body).strip()
+            if meth == "ocr":
+                body = fix_ocr(body)
             parts.append(f"\n\n<!-- page {p} -->\n## পৃষ্ঠা {p}\n\n{body}")
         if not parts:
             continue

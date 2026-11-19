@@ -170,12 +170,12 @@ def math_doc():
         out.append(f"| {str(i).translate(BN)} | {c['bn']} | {str(c['count']).translate(BN)} | {str(c['recent_2015plus']).translate(BN)} | "
                    f"{str(c['so_tagged']).translate(BN)} | `so.py math {c['key']}` |")
     out.append("\n> গণনা স্বয়ংক্রিয়, OCR থেকে নেওয়া। পরীক্ষার ট্যাগ পড়া না গেলে প্রশ্নটা \"২০১৫+\" কলামে গোনা হয়নি। ধারাটা নির্ভরযোগ্য, তবে প্রতিটি সংখ্যা হুবহু ধরে নেবেন না।\n")
-    out.append("## ৭ দিনের গণিত পরিকল্পনা (মোট ৬০টি অঙ্ক)\n\n| দিন | অধ্যায় | উৎস | সংখ্যা |\n|---|---|---|---|\n"
-               "| ১ | শতকরা + লাভ-ক্ষতি | `khairul/01_Percentage.pdf`, `topic_sheets/PDF45_Profit_Loss.pdf` | ১০ |\n"
-               "| ২ | বীজগণিত/সমীকরণ + বয়স | `khairul/02_Algebra.pdf`, `topic_sheets/PDF16_Formation_of_Equation.pdf` | ১০ |\n"
-               "| ৩ | সুদ + ধারা | `topic_sheets/PDF14_Compound_Interest.pdf`, `khairul/05_Arithmetic_Progression.pdf` | ১০ |\n"
-               "| ৪ | সময়-কাজ + গতি/ট্রেন + জ্যামিতি | `khairul/03_Time_Work.pdf`, `khairul/04_Time_Speed.pdf`, `topic_sheets/PDF33_Geometry.pdf` | ১০ |\n"
-               "| ৫ | মক + অনুপাত/মিশ্রণ | `topic_sheets/PDF30/31`, `khairul/06_Mixture.pdf` | ৮ |\n"
+    out.append("## ৭ দিনের গণিত পরিকল্পনা (মোট ৬০টি অঙ্ক, উপরের ফ্রিকোয়েন্সি অনুযায়ী)\n\n| দিন | অধ্যায় | উৎস | সংখ্যা |\n|---|---|---|---|\n"
+               "| ১ | শতকরা + লাভ-ক্ষতি (ভিত্তি, অন্য সব অধ্যায়ে লাগে) | `khairul/01_Percentage.pdf`, `topic_sheets/PDF45_Profit_Loss.pdf` | ১০ |\n"
+               "| ২ | **গতি/ট্রেন/নৌকা + সময়-কাজ** (২০১৫+ পরীক্ষায় সবচেয়ে বেশি) | `khairul/04_Time_Speed.pdf`, `khairul/03_Time_Work.pdf`, `topic_sheets/PDF62_Problem_on_Train.pdf` | ১০ |\n"
+               "| ৩ | বীজগণিত/সমীকরণ + মিশ্রণ (SO ট্যাগে মিশ্রণ বেশি) | `khairul/02_Algebra.pdf`, `topic_sheets/PDF16_Formation_of_Equation.pdf`, `khairul/06_Mixture.pdf` | ১০ |\n"
+               "| ৪ | জ্যামিতি + চক্রবৃদ্ধি সুদ + অনুপাত | `topic_sheets/PDF33_Geometry.pdf`, `topic_sheets/PDF14_Compound_Interest.pdf`, `topic_sheets/PDF30/31` | ১০ |\n"
+               "| ৫ | মক + ধারা/সম্ভাবনা | `khairul/05_Arithmetic_Progression.pdf`, `topic_sheets/PDF32_Probability.pdf` | ৮ |\n"
                "| ৬ | BIBM সাম্প্রতিক মিশ্র (২০২২–২৩) | `question_bank/BIBM_Previous_All_Written_Math_Solution.pdf` | ১০ |\n"
                "| ৭ | ভুলের খাতা + সূত্র | নিজের খাতা | ২–৪ |\n")
     out.append("## নিয়ম\n- ক্যালকুলেটর ছাড়া, **প্রতিটি ধাপ লিখে** করবেন।\n- ৬ মিনিটে না মিললে সমাধান দেখুন, তারপর পরদিন অঙ্কটা আবার নিজে করুন।\n"

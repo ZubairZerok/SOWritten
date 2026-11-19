@@ -587,15 +587,6 @@
    "page": 6
   },
   {
-   "text": "<!--method:ocr--> [ডি",
-   "tag": "Green Finance /BHBFC SO-2017",
-   "year": 2017,
-   "kind": "SO",
-   "theme": "other",
-   "source": "Unique_Bank_Focus_Writing_and_Essay",
-   "page": 9
-  },
-  {
    "text": "Establishing Special Economic Zones",
    "tag": "Bangladesh Bank AD-2017",
    "year": 2017,
@@ -758,6 +749,24 @@
    "theme": "math",
    "source": "BIBM_Previous_All_Written_Math_Solution",
    "page": 31
+  },
+  {
+   "text": "Janata, Sonali, Agrani & Rupali Bank (Officer) 2008 49",
+   "tag": "Janata, Sonali, Agrani & Rupali Bank Ltd. (Officer) Cash 2008",
+   "year": 2008,
+   "kind": "Officer",
+   "theme": "math",
+   "source": "Bank_Written_Math_1986-2021",
+   "page": 5
+  },
+  {
+   "text": "Karmashangsthan Bank Ltd. (Officer) 2011",
+   "tag": ". Karmashangsthan Bank Ltd. (AO) Cash 2011",
+   "year": 2011,
+   "kind": "Cash",
+   "theme": "math",
+   "source": "Bank_Written_Math_1986-2021",
+   "page": 6
   }
  ]
 }

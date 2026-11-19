@@ -1,0 +1,1141 @@
+[
+ {
+  "id": "A2B_Focus_Writing",
+  "pdf": "materials/01_focus_writing/books/A2B_Focus_Writing.pdf",
+  "text": "corpus/01_focus_writing/books/A2B_Focus_Writing.md",
+  "title": "A2B পাবলিকেশন্স ফোকাস রাইটিং (২৩৮ পৃষ্ঠা, স্ক্যান)",
+  "sections": [
+   "FW_BN",
+   "FW_EN",
+   "TR"
+  ],
+  "priority": 2,
+  "pages": 238,
+  "pages_extracted": 238,
+  "methods": {
+   "ocr": 238
+  }
+ },
+ {
+  "id": "Focus_Writing_July_Edition",
+  "pdf": "materials/01_focus_writing/books/Focus_Writing_July_Edition.pdf",
+  "text": "corpus/01_focus_writing/books/Focus_Writing_July_Edition.md",
+  "title": "ফোকাস রাইটিং জুলাই সংস্করণ (২৪ পৃষ্ঠা)",
+  "sections": [
+   "FW_EN",
+   "FW_BN"
+  ],
+  "priority": 2,
+  "pages": 24,
+  "pages_extracted": 24,
+  "methods": {
+   "ocr": 19,
+   "text": 5
+  }
+ },
+ {
+  "id": "Focus_Writing_Mini_Recent_Merged",
+  "pdf": "materials/01_focus_writing/books/Focus_Writing_Mini_Recent_Merged.pdf",
+  "text": "corpus/01_focus_writing/books/Focus_Writing_Mini_Recent_Merged.md",
+  "title": "ফোকাস রাইটিং মিনি PDF (সাম্প্রতিক, ১৯১ পৃষ্ঠা) — ১ নম্বর রচনা-উৎস",
+  "sections": [
+   "FW_BN",
+   "FW_EN",
+   "TR"
+  ],
+  "priority": 1,
+  "pages": 191,
+  "pages_extracted": 191,
+  "methods": {
+   "ocr": 191
+  }
+ },
+ {
+  "id": "Unique_Bank_Focus_Writing_and_Essay",
+  "pdf": "materials/01_focus_writing/books/Unique_Bank_Focus_Writing_and_Essay.pdf",
+  "text": "corpus/01_focus_writing/books/Unique_Bank_Focus_Writing_and_Essay.md",
+  "title": "ইউনিক ব্যাংক ফোকাস রাইটিং ও রচনা (৪২৭ পৃষ্ঠা, স্ক্যান)",
+  "sections": [
+   "FW_BN",
+   "FW_EN",
+   "TR"
+  ],
+  "priority": 2,
+  "pages": 427,
+  "pages_extracted": 427,
+  "methods": {
+   "ocr": 427
+  }
+ },
+ {
+  "id": "PDF02_Informative_Focus_Writing_Technique",
+  "pdf": "materials/01_focus_writing/technique/PDF02_Informative_Focus_Writing_Technique.pdf",
+  "text": "corpus/01_focus_writing/technique/PDF02_Informative_Focus_Writing_Technique.md",
+  "title": "ইনফরমেটিভ ফোকাস ও ফ্রি-হ্যান্ড রাইটিং কৌশল",
+  "sections": [
+   "FW_BN",
+   "FW_EN"
+  ],
+  "priority": 1,
+  "pages": 12,
+  "pages_extracted": 12,
+  "methods": {
+   "ocr": 12
+  }
+ },
+ {
+  "id": "PDF03_Informative_Focus_Writing_Technique_v2",
+  "pdf": "materials/01_focus_writing/technique/PDF03_Informative_Focus_Writing_Technique_v2.pdf",
+  "text": "corpus/01_focus_writing/technique/PDF03_Informative_Focus_Writing_Technique_v2.md",
+  "title": "ইনফরমেটিভ ফোকাস কৌশল (সংস্করণ ২)",
+  "sections": [
+   "FW_BN",
+   "FW_EN"
+  ],
+  "priority": 3,
+  "pages": 12,
+  "pages_extracted": 12,
+  "methods": {
+   "ocr": 12
+  }
+ },
+ {
+  "id": "PDF18_Quotations_for_Focus_Writing",
+  "pdf": "materials/01_focus_writing/technique/PDF18_Quotations_for_Focus_Writing.pdf",
+  "text": "corpus/01_focus_writing/technique/PDF18_Quotations_for_Focus_Writing.md",
+  "title": "ফোকাস রাইটিংয়ের জন্য কোটেশন (বাংলা/ইংরেজি)",
+  "sections": [
+   "FW_BN",
+   "FW_EN"
+  ],
+  "priority": 1,
+  "pages": 4,
+  "pages_extracted": 4,
+  "methods": {
+   "ocr": 4
+  }
+ },
+ {
+  "id": "PDF04_Digital_Bank_Prospects_Challenges_En",
+  "pdf": "materials/01_focus_writing/topics_banking/PDF04_Digital_Bank_Prospects_Challenges_En.pdf",
+  "text": "corpus/01_focus_writing/topics_banking/PDF04_Digital_Bank_Prospects_Challenges_En.md",
+  "title": "Digital Bank: Prospects & Challenges",
+  "sections": [
+   "FW_EN",
+   "FW_BN"
+  ],
+  "priority": 1,
+  "pages": 5,
+  "pages_extracted": 5,
+  "methods": {
+   "text": 5
+  }
+ },
+ {
+  "id": "PDF05_MFS_Cashless_Financial_Inclusion_En",
+  "pdf": "materials/01_focus_writing/topics_banking/PDF05_MFS_Cashless_Financial_Inclusion_En.pdf",
+  "text": "corpus/01_focus_writing/topics_banking/PDF05_MFS_Cashless_Financial_Inclusion_En.md",
+  "title": "MFS to Cashless Society for Financial Inclusion",
+  "sections": [
+   "FW_EN",
+   "FW_BN"
+  ],
+  "priority": 2,
+  "pages": 5,
+  "pages_extracted": 5,
+  "methods": {
+   "text": 3,
+   "ocr": 2
+  }
+ },
+ {
+  "id": "PDF10_IT_Impact_on_Banking_En",
+  "pdf": "materials/01_focus_writing/topics_banking/PDF10_IT_Impact_on_Banking_En.pdf",
+  "text": "corpus/01_focus_writing/topics_banking/PDF10_IT_Impact_on_Banking_En.md",
+  "title": "Impacts of IT on Banking Sector",
+  "sections": [
+   "FW_EN"
+  ],
+  "priority": 2,
+  "pages": 5,
+  "pages_extracted": 5,
+  "methods": {
+   "text": 5
+  }
+ },
+ {
+  "id": "PDF37_TakaPay_Cashless_Bn",
+  "pdf": "materials/01_focus_writing/topics_banking/PDF37_TakaPay_Cashless_Bn.pdf",
+  "text": "corpus/01_focus_writing/topics_banking/PDF37_TakaPay_Cashless_Bn.md",
+  "title": "টাকা পে কার্ড ও ক্যাশলেস বাংলাদেশ",
+  "sections": [
+   "FW_BN",
+   "GK"
+  ],
+  "priority": 3,
+  "pages": 3,
+  "pages_extracted": 3,
+  "methods": {
+   "ocr": 3
+  }
+ },
+ {
+  "id": "PDF55_Default_Loans_Banking_Sector_En",
+  "pdf": "materials/01_focus_writing/topics_banking/PDF55_Default_Loans_Banking_Sector_En.pdf",
+  "text": "corpus/01_focus_writing/topics_banking/PDF55_Default_Loans_Banking_Sector_En.md",
+  "title": "Default Loans: Cancer for the Banking Sector",
+  "sections": [
+   "FW_EN",
+   "FW_BN",
+   "ARG"
+  ],
+  "priority": 1,
+  "pages": 4,
+  "pages_extracted": 4,
+  "methods": {
+   "text": 2,
+   "ocr": 2
+  }
+ },
+ {
+  "id": "PDF56_Good_Governance_Banking_En",
+  "pdf": "materials/01_focus_writing/topics_banking/PDF56_Good_Governance_Banking_En.pdf",
+  "text": "corpus/01_focus_writing/topics_banking/PDF56_Good_Governance_Banking_En.md",
+  "title": "Good Governance in Banking Sector",
+  "sections": [
+   "FW_EN",
+   "ARG"
+  ],
+  "priority": 1,
+  "pages": 3,
+  "pages_extracted": 3,
+  "methods": {
+   "text": 3
+  }
+ },
+ {
+  "id": "PDF22_Rural_Development_Poverty_En",
+  "pdf": "materials/01_focus_writing/topics_economy/PDF22_Rural_Development_Poverty_En.pdf",
+  "text": "corpus/01_focus_writing/topics_economy/PDF22_Rural_Development_Poverty_En.md",
+  "title": "Rural Development and Poverty Reduction (BB Officer প্রশ্ন)",
+  "sections": [
+   "FW_EN"
+  ],
+  "priority": 2,
+  "pages": 4,
+  "pages_extracted": 4,
+  "methods": {
+   "text": 4
+  }
+ },
+ {
+  "id": "PDF23_Bottomless_Basket_to_Rising_Economy",
+  "pdf": "materials/01_focus_writing/topics_economy/PDF23_Bottomless_Basket_to_Rising_Economy.pdf",
+  "text": "corpus/01_focus_writing/topics_economy/PDF23_Bottomless_Basket_to_Rising_Economy.md",
+  "title": "Bangladesh: From Bottomless Basket to Rising Economy",
+  "sections": [
+   "FW_EN"
+  ],
+  "priority": 2,
+  "pages": 4,
+  "pages_extracted": 4,
+  "methods": {
+   "text": 3,
+   "ocr": 1
+  }
+ },
+ {
+  "id": "PDF24_Smart_Bangladesh_2041_En",
+  "pdf": "materials/01_focus_writing/topics_economy/PDF24_Smart_Bangladesh_2041_En.pdf",
+  "text": "corpus/01_focus_writing/topics_economy/PDF24_Smart_Bangladesh_2041_En.md",
+  "title": "Smart Bangladesh: Vision 2041",
+  "sections": [
+   "FW_EN"
+  ],
+  "priority": 3,
+  "pages": 5,
+  "pages_extracted": 5,
+  "methods": {
+   "text": 5
+  }
+ },
+ {
+  "id": "PDF25_Foreign_Debt_IMF_Loan_Bn",
+  "pdf": "materials/01_focus_writing/topics_economy/PDF25_Foreign_Debt_IMF_Loan_Bn.pdf",
+  "text": "corpus/01_focus_writing/topics_economy/PDF25_Foreign_Debt_IMF_Loan_Bn.md",
+  "title": "বাংলাদেশের বৈদেশিক ঋণ ও IMF লোন",
+  "sections": [
+   "FW_BN",
+   "ARG"
+  ],
+  "priority": 2,
+  "pages": 6,
+  "pages_extracted": 6,
+  "methods": {
+   "ocr": 6
+  }
+ },
+ {
+  "id": "PDF26_Ukraine_War_Impact_on_BD_Economy_Bn",
+  "pdf": "materials/01_focus_writing/topics_economy/PDF26_Ukraine_War_Impact_on_BD_Economy_Bn.pdf",
+  "text": "corpus/01_focus_writing/topics_economy/PDF26_Ukraine_War_Impact_on_BD_Economy_Bn.md",
+  "title": "বাংলাদেশের অর্থনীতিতে ইউক্রেন-রাশিয়া যুদ্ধের প্রভাব",
+  "sections": [
+   "FW_BN"
+  ],
+  "priority": 3,
+  "pages": 5,
+  "pages_extracted": 5,
+  "methods": {
+   "ocr": 5
+  }
+ },
+ {
+  "id": "PDF27_Inflation_Govt_CentralBank_Role_Bn",
+  "pdf": "materials/01_focus_writing/topics_economy/PDF27_Inflation_Govt_CentralBank_Role_Bn.pdf",
+  "text": "corpus/01_focus_writing/topics_economy/PDF27_Inflation_Govt_CentralBank_Role_Bn.md",
+  "title": "মূল্যস্ফীতি নিয়ন্ত্রণে সরকার ও কেন্দ্রীয় ব্যাংকের ভূমিকা",
+  "sections": [
+   "FW_BN",
+   "FW_EN",
+   "ARG"
+  ],
+  "priority": 1,
+  "pages": 6,
+  "pages_extracted": 6,
+  "methods": {
+   "ocr": 6
+  }
+ },
+ {
+  "id": "PDF28_LDC_Graduation_Bn",
+  "pdf": "materials/01_focus_writing/topics_economy/PDF28_LDC_Graduation_Bn.pdf",
+  "text": "corpus/01_focus_writing/topics_economy/PDF28_LDC_Graduation_Bn.md",
+  "title": "এলডিসি উত্তরণ: সমস্যা ও সম্ভাবনা",
+  "sections": [
+   "FW_BN",
+   "FW_EN",
+   "ARG"
+  ],
+  "priority": 1,
+  "pages": 4,
+  "pages_extracted": 4,
+  "methods": {
+   "ocr": 4
+  }
+ },
+ {
+  "id": "PDF38_Karnaphuli_Tunnel_En",
+  "pdf": "materials/01_focus_writing/topics_economy/PDF38_Karnaphuli_Tunnel_En.pdf",
+  "text": "corpus/01_focus_writing/topics_economy/PDF38_Karnaphuli_Tunnel_En.md",
+  "title": "Socio-Economic Impacts of Karnaphuli Tunnel",
+  "sections": [
+   "FW_EN",
+   "GK"
+  ],
+  "priority": 3,
+  "pages": 3,
+  "pages_extracted": 3,
+  "methods": {
+   "text": 3
+  }
+ },
+ {
+  "id": "PDF39_Price_Hike_Ways_to_Overcome",
+  "pdf": "materials/01_focus_writing/topics_economy/PDF39_Price_Hike_Ways_to_Overcome.pdf",
+  "text": "corpus/01_focus_writing/topics_economy/PDF39_Price_Hike_Ways_to_Overcome.md",
+  "title": "দ্রব্যমূল্যের ঊর্ধ্বগতি ও উত্তরণের উপায়",
+  "sections": [
+   "FW_BN",
+   "FW_EN"
+  ],
+  "priority": 1,
+  "pages": 4,
+  "pages_extracted": 4,
+  "methods": {
+   "ocr": 3,
+   "text": 1
+  }
+ },
+ {
+  "id": "PDF40_Remittance_Driving_Force_En",
+  "pdf": "materials/01_focus_writing/topics_economy/PDF40_Remittance_Driving_Force_En.pdf",
+  "text": "corpus/01_focus_writing/topics_economy/PDF40_Remittance_Driving_Force_En.md",
+  "title": "Remittance: The Driving Force of Our Economy",
+  "sections": [
+   "FW_EN",
+   "FW_BN"
+  ],
+  "priority": 1,
+  "pages": 5,
+  "pages_extracted": 5,
+  "methods": {
+   "text": 3,
+   "ocr": 2
+  }
+ },
+ {
+  "id": "PDF41_Padma_Bridge_Bn",
+  "pdf": "materials/01_focus_writing/topics_economy/PDF41_Padma_Bridge_Bn.pdf",
+  "text": "corpus/01_focus_writing/topics_economy/PDF41_Padma_Bridge_Bn.md",
+  "title": "অর্থনৈতিক উন্নয়নে পদ্মা সেতুর গুরুত্ব",
+  "sections": [
+   "FW_BN",
+   "GK"
+  ],
+  "priority": 3,
+  "pages": 4,
+  "pages_extracted": 4,
+  "methods": {
+   "ocr": 4
+  }
+ },
+ {
+  "id": "PDF43_Universal_Pension_Social_Safety_Bn",
+  "pdf": "materials/01_focus_writing/topics_economy/PDF43_Universal_Pension_Social_Safety_Bn.pdf",
+  "text": "corpus/01_focus_writing/topics_economy/PDF43_Universal_Pension_Social_Safety_Bn.md",
+  "title": "সর্বজনীন পেনশন ও সামাজিক সুরক্ষা",
+  "sections": [
+   "FW_BN"
+  ],
+  "priority": 3,
+  "pages": 5,
+  "pages_extracted": 5,
+  "methods": {
+   "ocr": 5
+  }
+ },
+ {
+  "id": "PDF51_RMG_Sector_Prospects_Challenges",
+  "pdf": "materials/01_focus_writing/topics_economy/PDF51_RMG_Sector_Prospects_Challenges.pdf",
+  "text": "corpus/01_focus_writing/topics_economy/PDF51_RMG_Sector_Prospects_Challenges.md",
+  "title": "RMG খাত: সম্ভাবনা ও চ্যালেঞ্জ",
+  "sections": [
+   "FW_EN",
+   "FW_BN"
+  ],
+  "priority": 1,
+  "pages": 4,
+  "pages_extracted": 4,
+  "methods": {
+   "ocr": 1,
+   "text": 3
+  }
+ },
+ {
+  "id": "PDF52_Reserve_Crisis_Bn",
+  "pdf": "materials/01_focus_writing/topics_economy/PDF52_Reserve_Crisis_Bn.pdf",
+  "text": "corpus/01_focus_writing/topics_economy/PDF52_Reserve_Crisis_Bn.md",
+  "title": "রিজার্ভ সংকটে বাংলাদেশ: কারণ ও উত্তরণ",
+  "sections": [
+   "FW_BN",
+   "FW_EN"
+  ],
+  "priority": 1,
+  "pages": 5,
+  "pages_extracted": 5,
+  "methods": {
+   "ocr": 5
+  }
+ },
+ {
+  "id": "PDF53_Dollar_Crisis_Bn",
+  "pdf": "materials/01_focus_writing/topics_economy/PDF53_Dollar_Crisis_Bn.pdf",
+  "text": "corpus/01_focus_writing/topics_economy/PDF53_Dollar_Crisis_Bn.md",
+  "title": "ডলার সংকটে বাংলাদেশ: কারণ ও উত্তরণ",
+  "sections": [
+   "FW_BN",
+   "FW_EN"
+  ],
+  "priority": 2,
+  "pages": 5,
+  "pages_extracted": 5,
+  "methods": {
+   "ocr": 5
+  }
+ },
+ {
+  "id": "PDF54_Mega_Projects_Bn",
+  "pdf": "materials/01_focus_writing/topics_economy/PDF54_Mega_Projects_Bn.pdf",
+  "text": "corpus/01_focus_writing/topics_economy/PDF54_Mega_Projects_Bn.md",
+  "title": "উন্নয়নের অগ্রযাত্রায় মেগাপ্রকল্পসমূহ",
+  "sections": [
+   "FW_BN",
+   "GK"
+  ],
+  "priority": 3,
+  "pages": 6,
+  "pages_extracted": 6,
+  "methods": {
+   "ocr": 6
+  }
+ },
+ {
+  "id": "PDF57_Inclusive_Development_En",
+  "pdf": "materials/01_focus_writing/topics_economy/PDF57_Inclusive_Development_En.pdf",
+  "text": "corpus/01_focus_writing/topics_economy/PDF57_Inclusive_Development_En.md",
+  "title": "Inclusive Development & Bangladesh",
+  "sections": [
+   "FW_EN"
+  ],
+  "priority": 2,
+  "pages": 5,
+  "pages_extracted": 5,
+  "methods": {
+   "text": 5
+  }
+ },
+ {
+  "id": "PDF58_Global_Impact_Russia_Ukraine_En",
+  "pdf": "materials/01_focus_writing/topics_economy/PDF58_Global_Impact_Russia_Ukraine_En.pdf",
+  "text": "corpus/01_focus_writing/topics_economy/PDF58_Global_Impact_Russia_Ukraine_En.md",
+  "title": "Global Impact of Russia-Ukraine Conflict",
+  "sections": [
+   "FW_EN"
+  ],
+  "priority": 3,
+  "pages": 6,
+  "pages_extracted": 6,
+  "methods": {
+   "text": 4,
+   "ocr": 2
+  }
+ },
+ {
+  "id": "PDF08_COP27_Global_Environment",
+  "pdf": "materials/01_focus_writing/topics_environment_social/PDF08_COP27_Global_Environment.pdf",
+  "text": "corpus/01_focus_writing/topics_environment_social/PDF08_COP27_Global_Environment.md",
+  "title": "COP27, বাংলাদেশ ও বৈশ্বিক পরিবেশ",
+  "sections": [
+   "FW_EN",
+   "FW_BN"
+  ],
+  "priority": 2,
+  "pages": 4,
+  "pages_extracted": 4,
+  "methods": {
+   "ocr": 2,
+   "text": 2
+  }
+ },
+ {
+  "id": "PDF09_Climate_Change_Bangladesh_Bn",
+  "pdf": "materials/01_focus_writing/topics_environment_social/PDF09_Climate_Change_Bangladesh_Bn.pdf",
+  "text": "corpus/01_focus_writing/topics_environment_social/PDF09_Climate_Change_Bangladesh_Bn.md",
+  "title": "জলবায়ু পরিবর্তন ও বাংলাদেশ",
+  "sections": [
+   "FW_BN",
+   "FW_EN"
+  ],
+  "priority": 1,
+  "pages": 5,
+  "pages_extracted": 5,
+  "methods": {
+   "ocr": 5
+  }
+ },
+ {
+  "id": "PDF21_Women_Empowerment_En",
+  "pdf": "materials/01_focus_writing/topics_environment_social/PDF21_Women_Empowerment_En.pdf",
+  "text": "corpus/01_focus_writing/topics_environment_social/PDF21_Women_Empowerment_En.md",
+  "title": "Women Empowerment and Bangladesh",
+  "sections": [
+   "FW_EN"
+  ],
+  "priority": 2,
+  "pages": 5,
+  "pages_extracted": 5,
+  "methods": {
+   "text": 4,
+   "ocr": 1
+  }
+ },
+ {
+  "id": "Argument_Writing_Technique_Sheet_1",
+  "pdf": "materials/02_argument_writing/Argument_Writing_Technique_Sheet_1.pdf",
+  "text": "corpus/02_argument_writing/Argument_Writing_Technique_Sheet_1.md",
+  "title": "আর্গুমেন্ট রাইটিং কৌশল শিট-১",
+  "sections": [
+   "ARG"
+  ],
+  "priority": 1,
+  "pages": 8,
+  "pages_extracted": 8,
+  "methods": {
+   "ocr": 6,
+   "text": 2
+  }
+ },
+ {
+  "id": "PDF48_Argumentative_Writing_Technique_2",
+  "pdf": "materials/02_argument_writing/PDF48_Argumentative_Writing_Technique_2.pdf",
+  "text": "corpus/02_argument_writing/PDF48_Argumentative_Writing_Technique_2.md",
+  "title": "আর্গুমেন্টেটিভ রাইটিং কৌশল-২ (নমুনা উত্তরসহ)",
+  "sections": [
+   "ARG"
+  ],
+  "priority": 1,
+  "pages": 14,
+  "pages_extracted": 14,
+  "methods": {
+   "ocr": 6,
+   "text": 8
+  }
+ },
+ {
+  "id": "01_Percentage",
+  "pdf": "materials/03_math/khairul/01_Percentage.pdf",
+  "text": "corpus/03_math/khairul/01_Percentage.md",
+  "title": "খায়রুল: শতকরা",
+  "sections": [
+   "MATH"
+  ],
+  "priority": 1,
+  "pages": 13,
+  "pages_extracted": 13,
+  "methods": {
+   "text": 13
+  }
+ },
+ {
+  "id": "02_Algebra",
+  "pdf": "materials/03_math/khairul/02_Algebra.pdf",
+  "text": "corpus/03_math/khairul/02_Algebra.md",
+  "title": "খায়রুল: বীজগণিত/সমীকরণ",
+  "sections": [
+   "MATH"
+  ],
+  "priority": 1,
+  "pages": 58,
+  "pages_extracted": 58,
+  "methods": {
+   "text": 58
+  }
+ },
+ {
+  "id": "03_Time_Work",
+  "pdf": "materials/03_math/khairul/03_Time_Work.pdf",
+  "text": "corpus/03_math/khairul/03_Time_Work.md",
+  "title": "খায়রুল: সময় ও কাজ",
+  "sections": [
+   "MATH"
+  ],
+  "priority": 2,
+  "pages": 64,
+  "pages_extracted": 64,
+  "methods": {
+   "text": 64
+  }
+ },
+ {
+  "id": "04_Time_Speed",
+  "pdf": "materials/03_math/khairul/04_Time_Speed.pdf",
+  "text": "corpus/03_math/khairul/04_Time_Speed.md",
+  "title": "খায়রুল: সময় ও গতি",
+  "sections": [
+   "MATH"
+  ],
+  "priority": 2,
+  "pages": 10,
+  "pages_extracted": 10,
+  "methods": {
+   "text": 10
+  }
+ },
+ {
+  "id": "05_Arithmetic_Progression",
+  "pdf": "materials/03_math/khairul/05_Arithmetic_Progression.pdf",
+  "text": "corpus/03_math/khairul/05_Arithmetic_Progression.md",
+  "title": "খায়রুল: সমান্তর ধারা",
+  "sections": [
+   "MATH"
+  ],
+  "priority": 1,
+  "pages": 10,
+  "pages_extracted": 10,
+  "methods": {
+   "text": 10
+  }
+ },
+ {
+  "id": "06_Mixture",
+  "pdf": "materials/03_math/khairul/06_Mixture.pdf",
+  "text": "corpus/03_math/khairul/06_Mixture.md",
+  "title": "খায়রুল: মিশ্রণ",
+  "sections": [
+   "MATH"
+  ],
+  "priority": 2,
+  "pages": 6,
+  "pages_extracted": 6,
+  "methods": {
+   "text": 5,
+   "ocr": 1
+  }
+ },
+ {
+  "id": "07_Boat_Stream",
+  "pdf": "materials/03_math/khairul/07_Boat_Stream.pdf",
+  "text": "corpus/03_math/khairul/07_Boat_Stream.md",
+  "title": "খায়রুল: নৌকা ও স্রোত",
+  "sections": [
+   "MATH"
+  ],
+  "priority": 3,
+  "pages": 4,
+  "pages_extracted": 4,
+  "methods": {
+   "text": 4
+  }
+ },
+ {
+  "id": "08_Unitary_Method",
+  "pdf": "materials/03_math/khairul/08_Unitary_Method.pdf",
+  "text": "corpus/03_math/khairul/08_Unitary_Method.md",
+  "title": "খায়রুল: ঐকিক নিয়ম",
+  "sections": [
+   "MATH"
+  ],
+  "priority": 3,
+  "pages": 6,
+  "pages_extracted": 6,
+  "methods": {
+   "text": 6
+  }
+ },
+ {
+  "id": "BIBM_Previous_All_Written_Math_Solution",
+  "pdf": "materials/03_math/question_bank/BIBM_Previous_All_Written_Math_Solution.pdf",
+  "text": "corpus/03_math/question_bank/BIBM_Previous_All_Written_Math_Solution.md",
+  "title": "BIBM বিগত সব লিখিত গণিত সমাধান (জাফর ইকবাল আনসারী)",
+  "sections": [
+   "MATH"
+  ],
+  "priority": 1,
+  "pages": 141,
+  "pages_extracted": 141,
+  "methods": {
+   "ocr": 141
+  }
+ },
+ {
+  "id": "Bank_Written_Math_1986-2021",
+  "pdf": "materials/03_math/question_bank/Bank_Written_Math_1986-2021.pdf",
+  "text": "corpus/03_math/question_bank/Bank_Written_Math_1986-2021.md",
+  "title": "ব্যাংক লিখিত গণিত ১৯৮৬–২০২১ (৫৭৭ পৃষ্ঠা, অধ্যায়ভিত্তিক বিগত প্রশ্ন)",
+  "sections": [
+   "MATH"
+  ],
+  "priority": 1,
+  "pages": 577,
+  "pages_extracted": 577,
+  "methods": {
+   "ocr": 577
+  }
+ },
+ {
+  "id": "PDF14_Compound_Interest",
+  "pdf": "materials/03_math/topic_sheets/PDF14_Compound_Interest.pdf",
+  "text": "corpus/03_math/topic_sheets/PDF14_Compound_Interest.md",
+  "title": "চক্রবৃদ্ধি মুনাফা",
+  "sections": [
+   "MATH"
+  ],
+  "priority": 1,
+  "pages": 24,
+  "pages_extracted": 24,
+  "methods": {
+   "ocr": 24
+  }
+ },
+ {
+  "id": "PDF16_Formation_of_Equation",
+  "pdf": "materials/03_math/topic_sheets/PDF16_Formation_of_Equation.pdf",
+  "text": "corpus/03_math/topic_sheets/PDF16_Formation_of_Equation.md",
+  "title": "সমীকরণ গঠন",
+  "sections": [
+   "MATH"
+  ],
+  "priority": 1,
+  "pages": 31,
+  "pages_extracted": 31,
+  "methods": {
+   "ocr": 31
+  }
+ },
+ {
+  "id": "PDF30_Ratio_Proportion",
+  "pdf": "materials/03_math/topic_sheets/PDF30_Ratio_Proportion.pdf",
+  "text": "corpus/03_math/topic_sheets/PDF30_Ratio_Proportion.md",
+  "title": "অনুপাত-সমানুপাত",
+  "sections": [
+   "MATH"
+  ],
+  "priority": 2,
+  "pages": 16,
+  "pages_extracted": 16,
+  "methods": {
+   "ocr": 16
+  }
+ },
+ {
+  "id": "PDF31_Partnership",
+  "pdf": "materials/03_math/topic_sheets/PDF31_Partnership.pdf",
+  "text": "corpus/03_math/topic_sheets/PDF31_Partnership.md",
+  "title": "অংশীদারি কারবার",
+  "sections": [
+   "MATH"
+  ],
+  "priority": 2,
+  "pages": 23,
+  "pages_extracted": 23,
+  "methods": {
+   "ocr": 23
+  }
+ },
+ {
+  "id": "PDF32_Probability",
+  "pdf": "materials/03_math/topic_sheets/PDF32_Probability.pdf",
+  "text": "corpus/03_math/topic_sheets/PDF32_Probability.md",
+  "title": "সম্ভাবনা",
+  "sections": [
+   "MATH"
+  ],
+  "priority": 2,
+  "pages": 18,
+  "pages_extracted": 18,
+  "methods": {
+   "ocr": 18
+  }
+ },
+ {
+  "id": "PDF33_Geometry",
+  "pdf": "materials/03_math/topic_sheets/PDF33_Geometry.pdf",
+  "text": "corpus/03_math/topic_sheets/PDF33_Geometry.md",
+  "title": "জ্যামিতি/ক্ষেত্রফল",
+  "sections": [
+   "MATH"
+  ],
+  "priority": 1,
+  "pages": 26,
+  "pages_extracted": 26,
+  "methods": {
+   "ocr": 26
+  }
+ },
+ {
+  "id": "PDF45_Profit_Loss",
+  "pdf": "materials/03_math/topic_sheets/PDF45_Profit_Loss.pdf",
+  "text": "corpus/03_math/topic_sheets/PDF45_Profit_Loss.md",
+  "title": "লাভ-ক্ষতি (৫১ পৃষ্ঠা)",
+  "sections": [
+   "MATH"
+  ],
+  "priority": 1,
+  "pages": 51,
+  "pages_extracted": 51,
+  "methods": {
+   "ocr": 51
+  }
+ },
+ {
+  "id": "PDF46_Time_Work",
+  "pdf": "materials/03_math/topic_sheets/PDF46_Time_Work.pdf",
+  "text": "corpus/03_math/topic_sheets/PDF46_Time_Work.md",
+  "title": "সময় ও কাজ (৬৪ পৃষ্ঠা)",
+  "sections": [
+   "MATH"
+  ],
+  "priority": 3,
+  "pages": 64,
+  "pages_extracted": 64,
+  "methods": {
+   "ocr": 64
+  }
+ },
+ {
+  "id": "PDF60_Mixture",
+  "pdf": "materials/03_math/topic_sheets/PDF60_Mixture.pdf",
+  "text": "corpus/03_math/topic_sheets/PDF60_Mixture.md",
+  "title": "মিশ্রণ",
+  "sections": [
+   "MATH"
+  ],
+  "priority": 3,
+  "pages": 26,
+  "pages_extracted": 26,
+  "methods": {
+   "ocr": 26
+  }
+ },
+ {
+  "id": "PDF61_Time_Speed_Distance",
+  "pdf": "materials/03_math/topic_sheets/PDF61_Time_Speed_Distance.pdf",
+  "text": "corpus/03_math/topic_sheets/PDF61_Time_Speed_Distance.md",
+  "title": "সময়, গতি ও দূরত্ব",
+  "sections": [
+   "MATH"
+  ],
+  "priority": 3,
+  "pages": 40,
+  "pages_extracted": 40,
+  "methods": {
+   "ocr": 40
+  }
+ },
+ {
+  "id": "PDF62_Problem_on_Train",
+  "pdf": "materials/03_math/topic_sheets/PDF62_Problem_on_Train.pdf",
+  "text": "corpus/03_math/topic_sheets/PDF62_Problem_on_Train.md",
+  "title": "ট্রেন সংক্রান্ত অঙ্ক",
+  "sections": [
+   "MATH"
+  ],
+  "priority": 3,
+  "pages": 16,
+  "pages_extracted": 16,
+  "methods": {
+   "ocr": 16
+  }
+ },
+ {
+  "id": "Class_9-10_English_Grammar_NCTB",
+  "pdf": "materials/04_english/Class_9-10_English_Grammar_NCTB.pdf",
+  "text": "corpus/04_english/Class_9-10_English_Grammar_NCTB.md",
+  "title": "NCTB ৯ম-১০ম ইংরেজি গ্রামার",
+  "sections": [
+   "ENG",
+   "TR"
+  ],
+  "priority": 2,
+  "pages": 327,
+  "pages_extracted": 327,
+  "methods": {
+   "ocr": 327
+  }
+ },
+ {
+  "id": "PDF02_Comprehension_Technique_Old",
+  "pdf": "materials/04_english/comprehension_legacy/PDF02_Comprehension_Technique_Old.pdf",
+  "text": "corpus/04_english/comprehension_legacy/PDF02_Comprehension_Technique_Old.md",
+  "title": "কম্প্রিহেনশন কৌশল (পুরোনো সংস্করণ)",
+  "sections": [
+   "META"
+  ],
+  "priority": 3,
+  "pages": 13,
+  "pages_extracted": 13,
+  "methods": {
+   "ocr": 11,
+   "text": 2
+  }
+ },
+ {
+  "id": "PDF34_Comprehension_Technique",
+  "pdf": "materials/04_english/comprehension_legacy/PDF34_Comprehension_Technique.pdf",
+  "text": "corpus/04_english/comprehension_legacy/PDF34_Comprehension_Technique.md",
+  "title": "কম্প্রিহেনশন কৌশল (পুরোনো সিলেবাস)",
+  "sections": [
+   "META"
+  ],
+  "priority": 3,
+  "pages": 14,
+  "pages_extracted": 14,
+  "methods": {
+   "ocr": 8,
+   "text": 6
+  }
+ },
+ {
+  "id": "GK_Banking_Terminologies_1_2",
+  "pdf": "materials/05_gk_banking/GK_Banking_Terminologies_1_2.pdf",
+  "text": "corpus/05_gk_banking/GK_Banking_Terminologies_1_2.md",
+  "title": "ব্যাংকিং পরিভাষা ১ ও ২",
+  "sections": [
+   "GK"
+  ],
+  "priority": 1,
+  "pages": 6,
+  "pages_extracted": 6,
+  "methods": {
+   "text": 5,
+   "ocr": 1
+  }
+ },
+ {
+  "id": "GK_Practice_Sheet_1",
+  "pdf": "materials/05_gk_banking/GK_Practice_Sheet_1.pdf",
+  "text": "corpus/05_gk_banking/GK_Practice_Sheet_1.md",
+  "title": "GK প্র্যাকটিস শিট-১",
+  "sections": [
+   "GK"
+  ],
+  "priority": 2,
+  "pages": 6,
+  "pages_extracted": 6,
+  "methods": {
+   "ocr": 2,
+   "text": 4
+  }
+ },
+ {
+  "id": "PDF12_Previous_All_Bank_Written_GK",
+  "pdf": "materials/05_gk_banking/PDF12_Previous_All_Bank_Written_GK.pdf",
+  "text": "corpus/05_gk_banking/PDF12_Previous_All_Bank_Written_GK.md",
+  "title": "বিগত সব ব্যাংক লিখিত GK + কৌশল",
+  "sections": [
+   "GK"
+  ],
+  "priority": 1,
+  "pages": 18,
+  "pages_extracted": 18,
+  "methods": {
+   "ocr": 11,
+   "text": 7
+  }
+ },
+ {
+  "id": "PDF35_Recent_GK",
+  "pdf": "materials/05_gk_banking/PDF35_Recent_GK.pdf",
+  "text": "corpus/05_gk_banking/PDF35_Recent_GK.md",
+  "title": "সাম্প্রতিক GK (BB AD)",
+  "sections": [
+   "GK"
+  ],
+  "priority": 2,
+  "pages": 10,
+  "pages_extracted": 10,
+  "methods": {
+   "text": 4,
+   "ocr": 6
+  }
+ },
+ {
+  "id": "PDF49_Selected_GK",
+  "pdf": "materials/05_gk_banking/PDF49_Selected_GK.pdf",
+  "text": "corpus/05_gk_banking/PDF49_Selected_GK.md",
+  "title": "নির্বাচিত GK (BB AD)",
+  "sections": [
+   "GK"
+  ],
+  "priority": 3,
+  "pages": 14,
+  "pages_extracted": 14,
+  "methods": {
+   "text": 6,
+   "ocr": 8
+  }
+ },
+ {
+  "id": "PDF50_Sports_GK",
+  "pdf": "materials/05_gk_banking/PDF50_Sports_GK.pdf",
+  "text": "corpus/05_gk_banking/PDF50_Sports_GK.md",
+  "title": "খেলাধুলা GK",
+  "sections": [
+   "GK"
+  ],
+  "priority": 3,
+  "pages": 9,
+  "pages_extracted": 9,
+  "methods": {
+   "ocr": 3,
+   "text": 6
+  }
+ },
+ {
+  "id": "MT01_Question",
+  "pdf": "materials/06_question_analysis_model_tests/MT01_Question.pdf",
+  "text": "corpus/06_question_analysis_model_tests/MT01_Question.md",
+  "title": "মডেল টেস্ট-০১ (প্রশ্ন)",
+  "sections": [
+   "META"
+  ],
+  "priority": 1,
+  "pages": 3,
+  "pages_extracted": 3,
+  "methods": {
+   "text": 3
+  }
+ },
+ {
+  "id": "MT01_Solution_Analysis",
+  "pdf": "materials/06_question_analysis_model_tests/MT01_Solution_Analysis.pdf",
+  "text": "corpus/06_question_analysis_model_tests/MT01_Solution_Analysis.md",
+  "title": "মডেল টেস্ট-০১ (সমাধান ও বিশ্লেষণ)",
+  "sections": [
+   "META"
+  ],
+  "priority": 1,
+  "pages": 7,
+  "pages_extracted": 7,
+  "methods": {
+   "ocr": 6,
+   "text": 1
+  }
+ },
+ {
+  "id": "MT02_Question",
+  "pdf": "materials/06_question_analysis_model_tests/MT02_Question.pdf",
+  "text": "corpus/06_question_analysis_model_tests/MT02_Question.md",
+  "title": "মডেল টেস্ট-০২ (প্রশ্ন)",
+  "sections": [
+   "META"
+  ],
+  "priority": 1,
+  "pages": 3,
+  "pages_extracted": 3,
+  "methods": {
+   "text": 3
+  }
+ },
+ {
+  "id": "MT02_Solution_Analysis",
+  "pdf": "materials/06_question_analysis_model_tests/MT02_Solution_Analysis.pdf",
+  "text": "corpus/06_question_analysis_model_tests/MT02_Solution_Analysis.md",
+  "title": "মডেল টেস্ট-০২ (সমাধান ও বিশ্লেষণ)",
+  "sections": [
+   "META"
+  ],
+  "priority": 1,
+  "pages": 6,
+  "pages_extracted": 6,
+  "methods": {
+   "ocr": 5,
+   "text": 1
+  }
+ },
+ {
+  "id": "PDF01_BIBM_Question_Analysis",
+  "pdf": "materials/06_question_analysis_model_tests/PDF01_BIBM_Question_Analysis.pdf",
+  "text": "corpus/06_question_analysis_model_tests/PDF01_BIBM_Question_Analysis.md",
+  "title": "BIBM বিগত প্রশ্ন বিশ্লেষণ (মার্কস বণ্টন ও টপিক)",
+  "sections": [
+   "META"
+  ],
+  "priority": 1,
+  "pages": 6,
+  "pages_extracted": 6,
+  "methods": {
+   "ocr": 6
+  }
+ },
+ {
+  "id": "BB_Monetary_Policy_Statement_H1FY27",
+  "pdf": "materials/07_official_reports/BB_Monetary_Policy_Statement_H1FY27.pdf",
+  "text": "corpus/07_official_reports/BB_Monetary_Policy_Statement_H1FY27.md",
+  "title": "বাংলাদেশ ব্যাংক মুদ্রানীতি বিবৃতি H1 FY27 (সর্বশেষ)",
+  "sections": [
+   "FW_BN",
+   "FW_EN",
+   "ARG",
+   "GK"
+  ],
+  "priority": 1,
+  "pages": 34,
+  "pages_extracted": 34,
+  "methods": {
+   "ocr": 3,
+   "text": 31
+  }
+ }
+]

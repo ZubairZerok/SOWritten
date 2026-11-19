@@ -47,7 +47,8 @@ def hr(title=""):
 
 
 def norm(s):
-    return unicodedata.normalize("NFC", s).lower()
+    # ঋ/খ/ঝ OCR-এ গুলিয়ে যায় — সার্চে একই ধরা হয়
+    return unicodedata.normalize("NFC", s).lower().replace("ঋ", "খ").replace("ঝণ", "খণ")
 
 
 # ───────────────────────── today / plan ─────────────────────────
@@ -279,7 +280,7 @@ def iter_pages():
         txt = open(f, encoding="utf-8").read()
         title = txt.split("\n", 1)[0].lstrip("# ")
         for m in re.finditer(r"<!-- page (\d+) -->\n(.*?)(?=<!-- page \d+ -->|\Z)", txt, re.S):
-            yield f, title, int(m.group(1)), m.group(2)
+            yield f, title, int(m.group(1)), re.sub(r"^## পৃষ্ঠা \d+\s*", "", m.group(2))
 
 
 def cmd_search(a):

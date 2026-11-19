@@ -17,8 +17,8 @@ CHAPTERS = [
     ("percentage", "শতকরা", 1, r"percent|%"),
     ("ratio", "অনুপাত ও অংশীদারি", 2, r"ratio|proportion|partner|share[sd]? .* (profit|ratio)|divided among"),
     ("work", "সময় ও কাজ / নল-চৌবাচ্চা", 2, r"work|job|pipe|tank|cistern|fill|empty|days to (do|finish|complete)"),
-    ("speed", "গতি, ট্রেন, নৌকা-স্রোত", 2, r"speed|km/h|kmph|mph|train|boat|stream|current|distance|travel|miles"),
-    ("mixture", "মিশ্রণ", 2, r"mixture|mixed|alloy|solution .* (water|milk|acid)|milk and water|concentration"),
+    ("speed", "গতি, ট্রেন, নৌকা-স্রোত", 2, r"speed|km/h|kmph|mph|km ?/ ?hr|train|boat|stream|current|distance|travel|miles|kilomet"),
+    ("mixture", "মিশ্রণ", 2, r"mixture|mixed|alloy|solution .* (water|milk|acid|alcohol)|milk and water|concentration|alcohol"),
     ("average", "গড়", 2, r"average|mean"),
     ("age", "বয়স", 2, r"\bage[sd]?\b|years old|older|younger"),
     ("series", "ধারা", 1, r"series|progression|sequence|term of|sum of (the )?first|consecutive"),
@@ -56,7 +56,9 @@ def classify(text, src):
     if src in SOURCE_CHAPTER:
         return SOURCE_CHAPTER[src]
     t = text.lower()
-    for key, _bn, _p, pat in CHAPTERS:
+    order = ["mixture", "interest", "profit_loss", "probability", "speed", "work", "ratio", "average", "age", "series",
+             "geometry", "set", "percentage", "algebra"]
+    for key, _bn, _p, pat in sorted(CHAPTERS, key=lambda c: order.index(c[0])):
         if re.search(pat, t):
             return key
     return "algebra"
