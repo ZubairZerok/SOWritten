@@ -1,0 +1,763 @@
+{
+ "_note": "OCR থেকে স্বয়ংক্রিয় — engine/mine_past_questions.py",
+ "writing": [
+  {
+   "text": "পরিকল্পিত পরিবার, সুরক্ষিত মানবাধিকার",
+   "tag": "Combined 5 Bank Officer — 2018",
+   "year": 2018,
+   "kind": "Officer",
+   "theme": "social",
+   "source": "A2B_Focus_Writing",
+   "page": 7
+  },
+  {
+   "text": "রেমিট্যান্স ও সামাজিক জীবন",
+   "tag": "Combined 3 Bank SO — 2018",
+   "year": 2018,
+   "kind": "SO",
+   "theme": "economy",
+   "source": "A2B_Focus_Writing",
+   "page": 7
+  },
+  {
+   "text": "ই-কমার্সের যুগে বাংলাদেশ",
+   "tag": "Bangladesh Bank AD _ 2018",
+   "year": 2018,
+   "kind": "BB AD",
+   "theme": "other",
+   "source": "A2B_Focus_Writing",
+   "page": 7
+  },
+  {
+   "text": "চ্যালেঞ্জ মোকাবেলা করতে হবে- তা বিশদভাবে ব্যাখ্যা কর।",
+   "tag": "Uttara Bank PO — 2018",
+   "year": 2018,
+   "kind": "Officer",
+   "theme": "other",
+   "source": "A2B_Focus_Writing",
+   "page": 7
+  },
+  {
+   "text": "জীবন ও স্বাস্থ্য সুরক্ষায় নিরাপদ খাদ্য",
+   "tag": "Sonali Bank SO — 2018",
+   "year": 2018,
+   "kind": "SO",
+   "theme": "social",
+   "source": "A2B_Focus_Writing",
+   "page": 7
+  },
+  {
+   "text": "তৈরি পোশাক শিল্প : অর্থনৈতিক উন্নয়নের হাতিয়ার",
+   "tag": "Rupali Bank Officer — 2018",
+   "year": 2018,
+   "kind": "Officer",
+   "theme": "economy",
+   "source": "A2B_Focus_Writing",
+   "page": 7
+  },
+  {
+   "text": "স্বাধীনতার আসন্ন সুবর্ণ জয়ন্তী ও আমাদের প্রত্যাশী",
+   "tag": "Agrani Bank SO — 2018",
+   "year": 2018,
+   "kind": "SO",
+   "theme": "other",
+   "source": "A2B_Focus_Writing",
+   "page": 8
+  },
+  {
+   "text": "কৃষি নির্ভর অর্থনীতি বনাম শিল্প ও সেবাখাত নির্ভর অর্থনীতি বাংলাদেশ প্রেক্ষাপট",
+   "tag": "Dhaka Bank TACO — 2018",
+   "year": 2018,
+   "kind": "Other",
+   "theme": "economy",
+   "source": "A2B_Focus_Writing",
+   "page": 8
+  },
+  {
+   "text": "বৈষ্কিক Derm : সমস্যা ও প্রতিবিধান (",
+   "tag": "BDBL SO — 2018",
+   "year": 2018,
+   "kind": "SO",
+   "theme": "other",
+   "source": "A2B_Focus_Writing",
+   "page": 8
+  },
+  {
+   "text": "রোহিঙ্গা সংকট ও বাংলাদেশের অর্থনীতিতে এর প্রভাব",
+   "tag": "National Bank PO — 2017",
+   "year": 2017,
+   "kind": "Officer",
+   "theme": "economy",
+   "source": "A2B_Focus_Writing",
+   "page": 8
+  },
+  {
+   "text": "রোহিঙ্গা সমস্যা ও বৈশ্বিক প্রতিক্রিয়া",
+   "tag": "BHBFC SO - 2017",
+   "year": 2017,
+   "kind": "SO",
+   "theme": "social",
+   "source": "A2B_Focus_Writing",
+   "page": 8
+  },
+  {
+   "text": "গ্রামীণ কর্মসংস্থান বৃদ্ধিতে কৃষি acta ভূমিকা",
+   "tag": "RAKUB Officer — 2017",
+   "year": 2017,
+   "kind": "Officer",
+   "theme": "social",
+   "source": "A2B_Focus_Writing",
+   "page": 8
+  },
+  {
+   "text": "ভাষা শহীদদের অবদান উল্লেখপূর্বক আন্তর্জাতিক মাতৃভাষা দিবসের তাৎপর্য]",
+   "tag": "Bangladesh Bank AD — 2017",
+   "year": 2017,
+   "kind": "BB AD",
+   "theme": "other",
+   "source": "A2B_Focus_Writing",
+   "page": 8
+  },
+  {
+   "text": "Impact of Globalization in Bangladeshi Culture",
+   "tag": "DBBL PO — 2018",
+   "year": 2018,
+   "kind": "Officer",
+   "theme": "global",
+   "source": "A2B_Focus_Writing",
+   "page": 9
+  },
+  {
+   "text": "International Mother Language Day",
+   "tag": "Combined 6 Bank Cash — 2018",
+   "year": 2018,
+   "kind": "Cash",
+   "theme": "other",
+   "source": "A2B_Focus_Writing",
+   "page": 9
+  },
+  {
+   "text": "Your Specific Recommendation How to Reduce Non Performing Loans?",
+   "tag": "Janata Bank EO — 2018",
+   "year": 2018,
+   "kind": "Officer",
+   "theme": "banking",
+   "source": "A2B_Focus_Writing",
+   "page": 9
+  },
+  {
+   "text": "Enhancing the Capacity of Human Resources in Bangladesh Necessity & | 108 Challenge",
+   "tag": "Shahjalal Islami Bank PO — 2018",
+   "year": 2018,
+   "kind": "Officer",
+   "theme": "other",
+   "source": "A2B_Focus_Writing",
+   "page": 9
+  },
+  {
+   "text": "Role of Commercial Banks in SME",
+   "tag": "Combined 3 Banks SO — 2018",
+   "year": 2018,
+   "kind": "SO",
+   "theme": "banking",
+   "source": "A2B_Focus_Writing",
+   "page": 9
+  },
+  {
+   "text": "Imagination is Greater than Knowledge",
+   "tag": "Bangladesh Bank AD - 2018",
+   "year": 2018,
+   "kind": "BB AD",
+   "theme": "other",
+   "source": "A2B_Focus_Writing",
+   "page": 9
+  },
+  {
+   "text": "A Self Reliant Economy : Concept & Reality",
+   "tag": "Sonali Bank SO — 2018",
+   "year": 2018,
+   "kind": "SO",
+   "theme": "economy",
+   "source": "A2B_Focus_Writing",
+   "page": 9
+  },
+  {
+   "text": "Green Economy : A Solution for Future Dhaka",
+   "tag": "BHBFC SO — 2017",
+   "year": 2017,
+   "kind": "SO",
+   "theme": "economy",
+   "source": "A2B_Focus_Writing",
+   "page": 10
+  },
+  {
+   "text": "Role of Opposition in Democracy",
+   "tag": "Agrani Bank SO — 2017",
+   "year": 2017,
+   "kind": "SO",
+   "theme": "other",
+   "source": "A2B_Focus_Writing",
+   "page": 10
+  },
+  {
+   "text": "Bangladesh on the Way to Middle Income Country",
+   "tag": "DBBL PO — 2017",
+   "year": 2017,
+   "kind": "Officer",
+   "theme": "other",
+   "source": "A2B_Focus_Writing",
+   "page": 10
+  },
+  {
+   "text": "Role of Foreign Remittance inflow on the Socio-Economic Development",
+   "tag": "Bangladesh Samabaya Bank Officer 2015",
+   "year": 2015,
+   "kind": "Officer",
+   "theme": "economy",
+   "source": "A2B_Focus_Writing",
+   "page": 10
+  },
+  {
+   "text": "Corporate Socia Responsibilty (CSR)",
+   "tag": "PKB Officer — 2014",
+   "year": 2014,
+   "kind": "Officer",
+   "theme": "other",
+   "source": "A2B_Focus_Writing",
+   "page": 10
+  },
+  {
+   "text": "Ways to Increase the Private Sector Investment",
+   "tag": "Bangladesh Bank AD — 2014",
+   "year": 2014,
+   "kind": "BB AD",
+   "theme": "economy",
+   "source": "A2B_Focus_Writing",
+   "page": 10
+  },
+  {
+   "text": "Impact of IT in Banking",
+   "tag": "Sonali Bank SO — 2014",
+   "year": 2014,
+   "kind": "SO",
+   "theme": "banking",
+   "source": "A2B_Focus_Writing",
+   "page": 10
+  },
+  {
+   "text": "Importance of Discipline in Financial Sector",
+   "tag": "Bangladesh Bank AD _ 2013",
+   "year": 2013,
+   "kind": "BB AD",
+   "theme": "economy",
+   "source": "A2B_Focus_Writing",
+   "page": 10
+  },
+  {
+   "text": "Bangladesh Bank explaining its feasibility",
+   "tag": "Sonali Bank SO — 2018",
+   "year": 2018,
+   "kind": "SO",
+   "theme": "banking",
+   "source": "A2B_Focus_Writing",
+   "page": 11
+  },
+  {
+   "text": "case of withdrawal money from your bank account without any authorization",
+   "tag": "Dhaka Bank TACO — 2018",
+   "year": 2018,
+   "kind": "Other",
+   "theme": "banking",
+   "source": "A2B_Focus_Writing",
+   "page": 11
+  },
+  {
+   "text": "service & environment-friendly products along with professional courtesies",
+   "tag": "BDBL SO — 2018",
+   "year": 2018,
+   "kind": "SO",
+   "theme": "environment",
+   "source": "A2B_Focus_Writing",
+   "page": 11
+  },
+  {
+   "text": "Rania ig about s M of the bank frequently being founded out of service",
+   "tag": "Agrani Bank SO — 2017",
+   "year": 2017,
+   "kind": "SO",
+   "theme": "banking",
+   "source": "A2B_Focus_Writing",
+   "page": 12
+  },
+  {
+   "text": "for the increasing of your credit card limit",
+   "tag": "Southeast Bank PO — 2017",
+   "year": 2017,
+   "kind": "Officer",
+   "theme": "banking",
+   "source": "A2B_Focus_Writing",
+   "page": 12
+  },
+  {
+   "text": "SME industry",
+   "tag": "Janata Bank EO — 2017",
+   "year": 2017,
+   "kind": "Officer",
+   "theme": "banking",
+   "source": "A2B_Focus_Writing",
+   "page": 12
+  },
+  {
+   "text": "করে বিভিন্ন শাখ-পরধানদের নিকট প্রেরণের জন্য এ পত্রের খসড়া প্রস্তুত করুন।",
+   "tag": "Combined 5 Bank Officer — 2018",
+   "year": 2018,
+   "kind": "Officer",
+   "theme": "letter_report",
+   "source": "A2B_Focus_Writing",
+   "page": 12
+  },
+  {
+   "text": "সংবাদপত্রে প্রকাশের জন্য একটি প্রতিবেদন প্রস্তুত করুন।",
+   "tag": "Sonali Bank SO _ 2018",
+   "year": 2018,
+   "kind": "SO",
+   "theme": "letter_report",
+   "source": "A2B_Focus_Writing",
+   "page": 12
+  },
+  {
+   "text": "মন্ত্রনালয়ের সচিবের কাছে একটি আবেদনপত্র লিখুন।",
+   "tag": "Sonali Bank Officer — 2018",
+   "year": 2018,
+   "kind": "Officer",
+   "theme": "letter_report",
+   "source": "A2B_Focus_Writing",
+   "page": 12
+  },
+  {
+   "text": "বরাবর একটি আবেদনপত্র লিখুন।",
+   "tag": "Sonali Bank Officer — 2018",
+   "year": 2018,
+   "kind": "Officer",
+   "theme": "letter_report",
+   "source": "A2B_Focus_Writing",
+   "page": 12
+  },
+  {
+   "text": "শিরোনামে ৫০০ শব্দের একটি প্রতিবেদন রচনা করুন।",
+   "tag": "Sonali Bank Officer — 2018",
+   "year": 2018,
+   "kind": "Officer",
+   "theme": "letter_report",
+   "source": "A2B_Focus_Writing",
+   "page": 12
+  },
+  {
+   "text": "করবেন তা জানিয়ে উর্ধতন কর্তৃপক্ষকে একটি পত্র লিখুন।",
+   "tag": "BHBFC SO - 2017",
+   "year": 2017,
+   "kind": "SO",
+   "theme": "letter_report",
+   "source": "A2B_Focus_Writing",
+   "page": 13
+  },
+  {
+   "text": "Green Diplomacy",
+   "tag": "BB Officer 2018",
+   "year": 2018,
+   "kind": "Officer",
+   "theme": "environment",
+   "source": "A2B_Focus_Writing",
+   "page": 13
+  },
+  {
+   "text": "Buy One Get One Free",
+   "tag": "BB Officer 2018",
+   "year": 2018,
+   "kind": "Officer",
+   "theme": "other",
+   "source": "A2B_Focus_Writing",
+   "page": 13
+  },
+  {
+   "text": "MCQ Based Exam System",
+   "tag": "BB Officer 2018",
+   "year": 2018,
+   "kind": "Officer",
+   "theme": "other",
+   "source": "A2B_Focus_Writing",
+   "page": 13
+  },
+  {
+   "text": "Cyber Security",
+   "tag": "BB Officer 2018",
+   "year": 2018,
+   "kind": "Officer",
+   "theme": "technology",
+   "source": "A2B_Focus_Writing",
+   "page": 13
+  },
+  {
+   "text": "New Development Bank",
+   "tag": "Bangladesh Bank Officer — 2015",
+   "year": 2015,
+   "kind": "Officer",
+   "theme": "banking",
+   "source": "A2B_Focus_Writing",
+   "page": 13
+  },
+  {
+   "text": "Urbanization",
+   "tag": "BHFC SO — 2015",
+   "year": 2015,
+   "kind": "SO",
+   "theme": "environment",
+   "source": "A2B_Focus_Writing",
+   "page": 13
+  },
+  {
+   "text": "যে ধরণের চ্যালেঞ্জ মোকাবেলা করতে হবে- তা বিশদভাবে ব্যাখ্যা কর।",
+   "tag": "Uttara Bank PO — 2018",
+   "year": 2018,
+   "kind": "Officer",
+   "theme": "other",
+   "source": "A2B_Focus_Writing",
+   "page": 41
+  },
+  {
+   "text": "ব্যাংকিং খাতে খণ খেলাপি সমস্যা সমাধানে পদক্ষেপসমূহ",
+   "tag": "Meghna Bank MTO - 2018",
+   "year": 2018,
+   "kind": "Officer",
+   "theme": "banking",
+   "source": "A2B_Focus_Writing",
+   "page": 58
+  },
+  {
+   "text": "Reduce Non Performing Loans?",
+   "tag": "Janata Bank EO — 2018",
+   "year": 2018,
+   "kind": "Officer",
+   "theme": "banking",
+   "source": "A2B_Focus_Writing",
+   "page": 105
+  },
+  {
+   "text": "Necessity & Challenge",
+   "tag": "Shahjalal Islami Bank PO — 2018",
+   "year": 2018,
+   "kind": "Officer",
+   "theme": "other",
+   "source": "A2B_Focus_Writing",
+   "page": 107
+  },
+  {
+   "text": "in Our National Life",
+   "tag": "Al-Arafah Islami Bank MTO-2017",
+   "year": 2017,
+   "kind": "Officer",
+   "theme": "other",
+   "source": "A2B_Focus_Writing",
+   "page": 126
+  },
+  {
+   "text": "Increase Private Sector Investment in Bangladesh? Discuss",
+   "tag": "Bangladesh Bank AD —- 2017",
+   "year": 2017,
+   "kind": "BB AD",
+   "theme": "economy",
+   "source": "A2B_Focus_Writing",
+   "page": 136
+  },
+  {
+   "text": "on the Socio-Economic Development",
+   "tag": "Bangladesh Samabaya Bank Officer — 2015",
+   "year": 2015,
+   "kind": "Officer",
+   "theme": "economy",
+   "source": "A2B_Focus_Writing",
+   "page": 143
+  },
+  {
+   "text": "service & environment-fricndly products along with professional courtesies",
+   "tag": "BDBL SO — 2018",
+   "year": 2018,
+   "kind": "SO",
+   "theme": "environment",
+   "source": "A2B_Focus_Writing",
+   "page": 197
+  },
+  {
+   "text": "complaining about some of the ATM of the bank frequently being founded out of service",
+   "tag": "Agrani Bank SO — 2017",
+   "year": 2017,
+   "kind": "SO",
+   "theme": "banking",
+   "source": "A2B_Focus_Writing",
+   "page": 198
+  },
+  {
+   "text": "the increasing of your credit card limit",
+   "tag": "Southeast Bank PO — 2017",
+   "year": 2017,
+   "kind": "Officer",
+   "theme": "banking",
+   "source": "A2B_Focus_Writing",
+   "page": 199
+  },
+  {
+   "text": "requesting him to finance it",
+   "tag": "Janata Bank EO — 2018",
+   "year": 2018,
+   "kind": "Officer",
+   "theme": "other",
+   "source": "A2B_Focus_Writing",
+   "page": 202
+  },
+  {
+   "text": "প্রকাশের জন্য একটি প্রতিবেদন প্রস্তুত করুন।",
+   "tag": "Sonali Bank SO — 2018",
+   "year": 2018,
+   "kind": "SO",
+   "theme": "letter_report",
+   "source": "A2B_Focus_Writing",
+   "page": 205
+  },
+  {
+   "text": "একটি আবেদনপত্র লিখুন।",
+   "tag": "Sonali Bank Officer — 2018",
+   "year": 2018,
+   "kind": "Officer",
+   "theme": "letter_report",
+   "source": "A2B_Focus_Writing",
+   "page": 209
+  },
+  {
+   "text": "যৌক্তিকতা তুলে ধরে আপনার অফিস প্রধানের নিকট আবেদনপত্র লিখুন।",
+   "tag": "BDBL SO — 2018",
+   "year": 2018,
+   "kind": "SO",
+   "theme": "letter_report",
+   "source": "A2B_Focus_Writing",
+   "page": 213
+  },
+  {
+   "text": "ধকিং' বিষয়ে একটি প্রতিবেদন প্রস্তুত করুন।",
+   "tag": "Bangladesh Bank Officer _ 2018",
+   "year": 2018,
+   "kind": "Officer",
+   "theme": "letter_report",
+   "source": "A2B_Focus_Writing",
+   "page": 215
+  },
+  {
+   "text": "উধ্বতন কর্তৃপক্ষকে একটি পত্র লিখুন।",
+   "tag": "BHBFC SO — 2017",
+   "year": 2017,
+   "kind": "SO",
+   "theme": "letter_report",
+   "source": "A2B_Focus_Writing",
+   "page": 217
+  },
+  {
+   "text": "তহবিল চেয়ে আঞ্লিক মহাব্যবস্থাপকের নিকট আবেদনপত্র লিখুন।",
+   "tag": "RAKUB Officer — 2017",
+   "year": 2017,
+   "kind": "Officer",
+   "theme": "letter_report",
+   "source": "A2B_Focus_Writing",
+   "page": 219
+  },
+  {
+   "text": "Digital Bangladesh in Government Plans; ’ ~S,",
+   "tag": "Bangabandhu Satellite-1 /BB, Officer -2018",
+   "year": 2018,
+   "kind": "Officer",
+   "theme": "technology",
+   "source": "Unique_Bank_Focus_Writing_and_Essay",
+   "page": 6
+  },
+  {
+   "text": "Social media & its Impact ১৩৭-১৩। 12)",
+   "tag": "Globalization & Bangladesh /PKB -2019,8 Bank, SO -2019",
+   "year": 2019,
+   "kind": "SO",
+   "theme": "other",
+   "source": "Unique_Bank_Focus_Writing_and_Essay",
+   "page": 6
+  },
+  {
+   "text": "<!--method:ocr--> [ডি",
+   "tag": "Green Finance /BHBFC SO-2017",
+   "year": 2017,
+   "kind": "SO",
+   "theme": "other",
+   "source": "Unique_Bank_Focus_Writing_and_Essay",
+   "page": 9
+  },
+  {
+   "text": "Establishing Special Economic Zones",
+   "tag": "Bangladesh Bank AD-2017",
+   "year": 2017,
+   "kind": "BB AD",
+   "theme": "economy",
+   "source": "Unique_Bank_Focus_Writing_and_Essay",
+   "page": 9
+  },
+  {
+   "text": "Currency: Future Medium of Exchange ২৭২ 28",
+   "tag": "Biodiversity and Preservation /5 Bank, Officer _ 2019",
+   "year": 2019,
+   "kind": "Officer",
+   "theme": "other",
+   "source": "Unique_Bank_Focus_Writing_and_Essay",
+   "page": 9
+  },
+  {
+   "text": "Balance of Payments ৩৪১ | 19,",
+   "tag": "Green Diplomacy /BB Officer 2018",
+   "year": 2018,
+   "kind": "Officer",
+   "theme": "other",
+   "source": "Unique_Bank_Focus_Writing_and_Essay",
+   "page": 11
+  },
+  {
+   "text": "Security /BB Officer 2018] ৩৪২ 21,",
+   "tag": "New Development Bank /Bangladesh Bank Officer-2015",
+   "year": 2015,
+   "kind": "Officer",
+   "theme": "other",
+   "source": "Unique_Bank_Focus_Writing_and_Essay",
+   "page": 11
+  },
+  {
+   "text": "Give reasons for your answer and include any felevant examples from your own knowledge or experience",
+   "tag": "BB AD-2021",
+   "year": 2021,
+   "kind": "BB AD",
+   "theme": "other",
+   "source": "Argument_Writing_Technique_Sheet_1",
+   "page": 3
+  },
+  {
+   "text": "not? Justify your position by presenting arguments for and against the topic",
+   "tag": "BB Officer-2015",
+   "year": 2015,
+   "kind": "Officer",
+   "theme": "other",
+   "source": "Argument_Writing_Technique_Sheet_1",
+   "page": 3
+  },
+  {
+   "text": "wellbeing. Do you agree? Write your arguments accordingly",
+   "tag": "BB AD-2011",
+   "year": 2011,
+   "kind": "BB AD",
+   "theme": "other",
+   "source": "Argument_Writing_Technique_Sheet_1",
+   "page": 3
+  },
+  {
+   "text": "development.' What is your opinion about it?",
+   "tag": "BB AD-2015",
+   "year": 2015,
+   "kind": "BB AD",
+   "theme": "other",
+   "source": "Argument_Writing_Technique_Sheet_1",
+   "page": 3
+  }
+ ],
+ "math_tagged": [
+  {
+   "text": "more income?",
+   "tag": "AB Bank PO 02, BB AD 2022",
+   "year": 2022,
+   "kind": "BB AD",
+   "theme": "math",
+   "source": "BIBM_Previous_All_Written_Math_Solution",
+   "page": 10
+  },
+  {
+   "text": "D, if D weights 15 kgs less than C?",
+   "tag": "BB AD 2022",
+   "year": 2022,
+   "kind": "BB AD",
+   "theme": "math",
+   "source": "BIBM_Previous_All_Written_Math_Solution",
+   "page": 11
+  },
+  {
+   "text": "which the money was invested? (Same as",
+   "tag": "BASIC Bank PO 1999",
+   "year": 1999,
+   "kind": "Officer",
+   "theme": "math",
+   "source": "BIBM_Previous_All_Written_Math_Solution",
+   "page": 12
+  },
+  {
+   "text": "ছুটি সংখ্যার অনুপাতে 8:1 সংখ্যাদ্বয়ের সাথে ১০ যোগ করলে অনুপাত €:9 V | সংখ্যাদ্ধয় কত?",
+   "tag": "BB Cash 2023",
+   "year": 2023,
+   "kind": "Cash",
+   "theme": "math",
+   "source": "BIBM_Previous_All_Written_Math_Solution",
+   "page": 16
+  },
+  {
+   "text": "একটি পন্যের বিক্রয় মূল্য ১০% বাড়নো হলো এবং PA ৩০% কমে গেলো। প্রভাব কি হবে?",
+   "tag": "BB Cash 2023",
+   "year": 2023,
+   "kind": "Cash",
+   "theme": "math",
+   "source": "BIBM_Previous_All_Written_Math_Solution",
+   "page": 16
+  },
+  {
+   "text": "থাকলে প্রথমে কত ছিলো?",
+   "tag": "BB Cash 2023",
+   "year": 2023,
+   "kind": "Cash",
+   "theme": "math",
+   "source": "BIBM_Previous_All_Written_Math_Solution",
+   "page": 16
+  },
+  {
+   "text": "একটি আয়তক্ষেত্রর HT AY অপেক্ষা ২গুন। প্রস্থ ৫ মিটার বাড়ালে এবং দৈর্ঘ্য ৫ মিটার কমালে আয়তক্ষেত্র ৭৫ বৃদ্ধি পায়। OTT এবং প্রহ কত?",
+   "tag": "BB Cash 2023",
+   "year": 2023,
+   "kind": "Cash",
+   "theme": "math",
+   "source": "BIBM_Previous_All_Written_Math_Solution",
+   "page": 16
+  },
+  {
+   "text": "Solve the following equation: I + = =",
+   "tag": "One Bank PO 2007",
+   "year": 2007,
+   "kind": "Officer",
+   "theme": "math",
+   "source": "BIBM_Previous_All_Written_Math_Solution",
+   "page": 18
+  },
+  {
+   "text": "period for which the money was invested",
+   "tag": "BASIC Bank PO 1999",
+   "year": 1999,
+   "kind": "Officer",
+   "theme": "math",
+   "source": "BIBM_Previous_All_Written_Math_Solution",
+   "page": 19
+  },
+  {
+   "text": "Solve the following equation: = + = 1",
+   "tag": "One Bank PO 2007",
+   "year": 2007,
+   "kind": "Officer",
+   "theme": "math",
+   "source": "BIBM_Previous_All_Written_Math_Solution",
+   "page": 31
+  }
+ ]
+}

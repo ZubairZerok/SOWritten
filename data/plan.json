@@ -1,0 +1,73 @@
+{
+ "_note": "দিনভিত্তিক রুটিন। exam_date পরিবর্তন হলে এখানে বদলান। engine: python3 engine/so.py today",
+ "exam": {"date": "2026-11-27", "time": "09:30-11:30", "duration_min": 120, "marks": 200, "verify": "erecruitment.bb.org.bd — নোটিশ ৩৬৩/২০২৬ (১৬ নভেম্বর ২০২৬)"},
+ "daily_core": [
+  "১টি রচনা ঘড়ি ধরে (বাংলা/ইংরেজি পালাক্রমে) — ১৮ মিনিট",
+  "১টি আর্গুমেন্ট — ২০ মিনিট",
+  "১টি অনুবাদ অনুচ্ছেদ — ১০ মিনিট",
+  "৮–১০টি লিখিত অঙ্ক, ক্যালকুলেটর ছাড়া",
+  "১৫টি ব্যাংকিং পরিভাষা (so.py terms --quiz 15)",
+  "৩০–৪০ মিনিট পত্রিকা: সংখ্যা টুকে data/facts.json-এ যোগ"
+ ],
+ "days": [
+  {"date": "2026-11-19", "title": "দিন ০ (আজ রাত): ভিত তৈরি", "blocks": [
+   ["৪৫ মি", "META", "পরীক্ষার কাঠামো ও সময় ভাগ মুখস্থ", "docs/01_exam_structure.md"],
+   ["৪০ মি", "FW", "ইনফরমেটিভ ফোকাস কৌশল এক বসায়", "materials/01_focus_writing/technique/PDF02_Informative_Focus_Writing_Technique.pdf"],
+   ["৩০ মি", "ARG", "আর্গুমেন্ট টেমপ্লেট + নমুনা উত্তর (Syndicate)", "docs/05_argument_playbook.md, materials/02_argument_writing/PDF48_Argumentative_Writing_Technique_2.pdf"],
+   ["১৮ মি", "FW_BN", "পরীক্ষামূলক রচনা: মূল্যস্ফীতি (হাতে লিখে গতি মাপুন — কত লাইন হলো লিখে রাখুন)", "so.py essay --topic 1"],
+   ["২০ মি", "GK", "২০টি পরিভাষা", "so.py terms --quiz 20"]]},
+  {"date": "2026-11-20", "title": "দিন ১: মূল্যস্ফীতি + শতকরা/লাভ-ক্ষতি", "blocks": [
+   ["৬০ মি", "FW", "টপিক ১ (মূল্যস্ফীতি) নোট: উপশিরোনাম + ৫ তথ্য + ৫ সমাধান", "so.py topic 1"],
+   ["১৮+১৮ মি", "FW_BN/FW_EN", "মূল্যস্ফীতি — বাংলা রচনা, তারপর ইংরেজি রচনা", "so.py essay --topic 1"],
+   ["২০ মি", "ARG", "আর্গুমেন্ট: 'Raising the policy rate is the only way...'", "so.py arg 1"],
+   ["৯০ মি", "MATH", "শতকরা + লাভ-ক্ষতি: ১০টি বিগত প্রশ্ন", "materials/03_math/khairul/01_Percentage.pdf, so.py math percentage"],
+   ["১০ মি", "TR", "অনুবাদ ড্রিল ১–৩", "so.py tr"],
+   ["৪০ মি", "ENG", "Right form of verb + Subject-verb agreement", "docs/09_grammar_quick.md"],
+   ["৩০ মি", "GK", "১৫ পরিভাষা + পত্রিকা", "so.py terms --quiz 15"]]},
+  {"date": "2026-11-21", "title": "দিন ২: খেলাপি ঋণ/একীভূতকরণ + সমীকরণ", "blocks": [
+   ["৬০ মি", "FW", "টপিক ২ (খেলাপি ঋণ) নোট", "so.py topic 2"],
+   ["১৮+১৮ মি", "FW_BN/FW_EN", "খেলাপি ঋণ — বাংলা + ইংরেজি রচনা", "so.py essay --topic 2"],
+   ["২০ মি", "ARG", "আর্গুমেন্ট: Bank merger", "so.py arg 2"],
+   ["৯০ মি", "MATH", "সমীকরণ গঠন + বীজগণিত ১০টি", "materials/03_math/khairul/02_Algebra.pdf, so.py math algebra"],
+   ["১০ মি", "TR", "অনুবাদ ড্রিল ৪–৬", "so.py tr"],
+   ["৩০ মি", "BN", "বাংলা ব্যাকরণ: বানান + বাক্যশুদ্ধি", "docs/09_grammar_quick.md"],
+   ["৩০ মি", "GK", "১৫ পরিভাষা", "so.py terms --quiz 15"]]},
+  {"date": "2026-11-22", "title": "দিন ৩: এলডিসি + রপ্তানি + চক্রবৃদ্ধি/ধারা", "blocks": [
+   ["৬০ মি", "FW", "টপিক ৩ (এলডিসি) + টপিক ৬ (রপ্তানি) নোট", "so.py topic 3; so.py topic 6"],
+   ["১৮+১৮ মি", "FW_BN/FW_EN", "এলডিসি — বাংলা; রপ্তানি বহুমুখীকরণ — ইংরেজি", "so.py essay"],
+   ["২০ মি", "ARG", "আর্গুমেন্ট: LDC deferral a setback?", "so.py arg 3"],
+   ["৯০ মি", "MATH", "চক্রবৃদ্ধি মুনাফা + সমান্তর ধারা", "materials/03_math/topic_sheets/PDF14_Compound_Interest.pdf, materials/03_math/khairul/05_Arithmetic_Progression.pdf"],
+   ["১০ মি", "TR", "অনুবাদ ড্রিল ৭–৯", "so.py tr"],
+   ["৪০ মি", "ENG", "Narration + Transformation", "docs/09_grammar_quick.md"],
+   ["৩০ মি", "GK", "১৫ পরিভাষা", "so.py terms --quiz 15"]]},
+  {"date": "2026-11-23", "title": "দিন ৪: জ্বালানি + রেমিট্যান্স + জ্যামিতি/সময়-কাজ", "blocks": [
+   ["৬০ মি", "FW", "টপিক ৪ (জ্বালানি) + টপিক ৫ (রেমিট্যান্স) নোট", "so.py topic 4; so.py topic 5"],
+   ["১৮+১৮ মি", "FW_BN/FW_EN", "জ্বালানি — বাংলা; রেমিট্যান্স — ইংরেজি", "so.py essay"],
+   ["২০ মি", "ARG", "আর্গুমেন্ট: Fuel subsidy", "so.py arg 4"],
+   ["৯০ মি", "MATH", "জ্যামিতি/ক্ষেত্রফল + সময় ও কাজ", "materials/03_math/topic_sheets/PDF33_Geometry.pdf, materials/03_math/khairul/03_Time_Work.pdf"],
+   ["১০ মি", "TR", "অনুবাদ ড্রিল ১০–১২", "so.py tr"],
+   ["৩০ মি", "BN", "বাংলা: সমাস, সন্ধি, প্রবাদ", "docs/09_grammar_quick.md"],
+   ["৩০ মি", "GK", "১৫ পরিভাষা + সর্বশেষ সংখ্যা মুখস্থ", "so.py facts"]]},
+  {"date": "2026-11-24", "title": "দিন ৫: পূর্ণ মক পরীক্ষা-১ (২ ঘণ্টা) + ডিজিটাল ব্যাংকিং", "blocks": [
+   ["১২০ মি", "MOCK", "সকাল ৯:৩০–১১:৩০ পূর্ণ মক (আসল পরীক্ষার সময়েই)", "so.py mock"],
+   ["৬০ মি", "MOCK", "নিজে খাতা দেখুন: কোন অংশে সময় বেশি গেল, কোথায় নম্বর কাটা যাবে", "docs/11_exam_hall_strategy.md"],
+   ["৬০ মি", "FW", "টপিক ৭ (ডিজিটাল ব্যাংকিং/AI) নোট + ইংরেজি রচনা", "so.py topic 7"],
+   ["৬০ মি", "MATH", "মকে ভুল হওয়া অধ্যায় আবার + সম্ভাবনা/অনুপাত", "so.py math"],
+   ["৩০ মি", "GK", "পরিভাষা", "so.py terms --quiz 15"]]},
+  {"date": "2026-11-25", "title": "দিন ৬: দুর্বলতা মেরামত + জলবায়ু/আর্থিক অন্তর্ভুক্তি", "blocks": [
+   ["৬০ মি", "FW", "টপিক ৮ ও ৯ নোট (শুধু কাঠামো + ৫ তথ্য)", "so.py topic 8; so.py topic 9"],
+   ["১৮+১৮ মি", "FW_BN/FW_EN", "যে টপিকে সবচেয়ে দুর্বল, সেটা আবার", "so.py essay"],
+   ["২০+২০ মি", "ARG", "২টি আর্গুমেন্ট (AI jobs; cashless)", "so.py arg 5; so.py arg 8"],
+   ["৯০ মি", "MATH", "BIBM সাম্প্রতিক লিখিত গণিত — মিশ্র ১০টি", "materials/03_math/question_bank/BIBM_Previous_All_Written_Math_Solution.pdf"],
+   ["২০ মি", "TR", "অনুবাদ ড্রিল ১৩–১৫ + গ্লসারি", "so.py tr"],
+   ["৩০ মি", "ENG/BN", "গ্রামার রিভিশন", "docs/09_grammar_quick.md"]]},
+  {"date": "2026-11-26", "title": "দিন ৭: মক-২ (শুধু লেখা) + হালকা রিভিশন", "blocks": [
+   ["৯০ মি", "MOCK", "সকালে লেখার অংশের মক: ২ রচনা + ১ আর্গুমেন্ট + অনুবাদ", "so.py mock --writing"],
+   ["৬০ মি", "FW", "১০টি টপিক কার্ড এক নজরে + কোটেশন + সংখ্যা", "so.py facts; docs/04_topic_bank.md"],
+   ["৪৫ মি", "MATH", "সূত্রের তালিকা ও ভুলের খাতা — নতুন কিছু নয়", "docs/07_math_playbook.md"],
+   ["৩০ মি", "GK", "সব পরিভাষা দ্রুত", "so.py terms"],
+   ["—", "PREP", "প্রবেশপত্র প্রিন্ট, কেন্দ্র চেনা, ২–৩টি কলম, ঘড়ি; রাত ১১টার মধ্যে ঘুম", "docs/11_exam_hall_strategy.md"]]},
+  {"date": "2026-11-27", "title": "পরীক্ষার দিন", "blocks": [
+   ["—", "EXAM", "সকাল ৯:৩০–১১:৩০। কমপক্ষে ১ ঘণ্টা আগে কেন্দ্রে। docs/11_exam_hall_strategy.md-এর সময় ভাগ মেনে চলুন।", "docs/11_exam_hall_strategy.md"]]}
+ ]
+}

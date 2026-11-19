@@ -1,0 +1,27 @@
+{
+ "_note": "অ্যানালিটিক্যাল/আর্গুমেন্টেটিভ (৪০ নম্বর) অনুশীলনের প্রম্পট। প্রতিটির পক্ষে/বিপক্ষে বীজ-পয়েন্ট আছে; নিজে বাড়িয়ে লিখুন। engine: python3 engine/so.py arg",
+ "template_en": [
+  "1. Introduction (3-4 lines): restate the claim + one fresh data point + your clear position (agree / disagree / partly agree).",
+  "2. Argument 1 + evidence (data / example from Bangladesh).",
+  "3. Argument 2 + evidence.",
+  "4. Argument 3 + evidence.",
+  "5. Counter-argument: 'Critics may argue that ... However, ...' — acknowledge, then rebut.",
+  "6. Recommendations / balanced way forward (3-4 bullet points).",
+  "7. Conclusion (2-3 lines) restating the position in new words."
+ ],
+ "phrases": ["It is often argued that ...", "At first glance, ... ; however, a closer look reveals ...", "This argument rests on the assumption that ...", "The evidence suggests otherwise.", "A case in point is ...", "Admittedly, ...; nevertheless, ...", "Critics may contend that ..., but ...", "It would be an oversimplification to claim that ...", "Taking all these factors into account, ...", "On balance, the claim is only partially valid."],
+ "prompts": [
+  {"claim": "Raising the policy rate is the only effective way to control inflation in Bangladesh.", "pro": ["Higher rates curb demand and credit", "Anchors expectations; global practice", "Inflation fell from 11.66% to ~8%"], "con": ["Inflation is largely cost-push (fuel, taka, syndicates)", "Non-food inflation stayed at 9.89% despite 10% rate", "Hurts investment: private credit growth only 5%"], "verdict": "Partly agree — needs supply-side + fiscal coordination."},
+  {"claim": "Merging weak banks with strong banks is the best solution to the banking crisis.", "pro": ["Protects depositors", "Economies of scale", "Sammilito Islami Bank example"], "con": ["Can infect strong banks", "Rewards bad governance (moral hazard)", "Root causes (political lending) remain"], "verdict": "Merger only with AQR, accountability and fresh governance."},
+  {"claim": "Deferring LDC graduation to 2029 is a setback for Bangladesh.", "pro": ["Delays image boost and credit rating gains", "May signal weakness"], "con": ["Keeps duty-free access (EBA) for 3 more years", "Time to diversify exports and meet GSP+ conditions", "Pharma TRIPS waiver continues"], "verdict": "Disagree — it is a strategic breathing space if used well."},
+  {"claim": "Fuel subsidies should be withdrawn completely.", "pro": ["Fiscal burden; BPC losses", "Market pricing ensures efficiency", "Reduces smuggling"], "con": ["Raises transport, irrigation and food costs", "Hurts the poor; non-food inflation", "Timing during high inflation"], "verdict": "Gradual, formula-based adjustment with targeted support."},
+  {"claim": "Artificial Intelligence will cause massive job losses in the banking sector.", "pro": ["Automation of routine tasks", "Chatbots replace call centres"], "con": ["Creates new jobs (data, cyber, AI governance)", "Human judgement needed in credit and relations", "Productivity gains expand services"], "verdict": "Jobs will change rather than vanish — reskilling is key."},
+  {"claim": "Only fraudulent business syndicates are responsible for the price hike of essential commodities.", "pro": ["Hoarding and market manipulation", "Few importers control markets"], "con": ["Global prices, fuel, taka depreciation", "Floods and crop loss", "Weak market monitoring"], "verdict": "Partly responsible, not the only cause (sample answer in PDF48)."},
+  {"claim": "Remittance, not exports, is the main driver of Bangladesh's economy.", "pro": ["Record inflows, near-balanced current account", "Supports rural consumption"], "con": ["Exports (~$40bn+) earn more and create jobs", "Remittance is volatile and consumption-oriented"], "verdict": "Both are pillars; exports drive productive capacity."},
+  {"claim": "A cashless society is not suitable for Bangladesh now.", "pro": ["Digital illiteracy", "Cyber fraud", "Rural internet gaps"], "con": ["MFS penetration is high", "Bangla QR and IIPS make it interoperable", "Reduces corruption and costs"], "verdict": "A gradual 'less-cash' path, not cash-free overnight."},
+  {"claim": "Not consumers, manufacturers are mainly responsible for environmental pollution.", "pro": ["Industrial effluents, ETP non-use", "Brick kilns"], "con": ["Consumer plastic use and demand", "Weak enforcement by government"], "verdict": "Shared responsibility; producers bear larger share (8 Bank SO question)."},
+  {"claim": "Government borrowing from banks is crowding out the private sector.", "pro": ["Public credit growth 25.9% vs private 5.5%", "Banks prefer risk-free T-bills"], "con": ["Low private demand is due to uncertainty, high rates", "Excess liquidity of Tk 3.28 lakh crore exists"], "verdict": "Partly true — fix revenue mobilisation and investment climate."},
+  {"claim": "Social media does more harm than good to the youth.", "pro": ["Addiction, misinformation, mental health"], "con": ["Freelancing, learning, civic voice"], "verdict": "Regulated and literate use maximises benefits."},
+  {"claim": "Public universities should prioritise job-oriented education over research.", "pro": ["Graduate unemployment", "Skill mismatch"], "con": ["Research drives innovation", "Narrow training becomes obsolete"], "verdict": "Balance — industry linkage plus research funding."}
+ ]
+}

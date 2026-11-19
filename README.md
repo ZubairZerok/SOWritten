@@ -1,24 +1,115 @@
-# Bank Written Preparation (SO / Officer / BB AD)
+# SO Written Intelligence Engine 🎯
 
-A curated collection of study materials, books, sheets, and model tests for Bangladesh Bank (AD), Combined Officer, Senior Officer (SO), and General Banking written exams.
+**সমন্বিত ৯ ব্যাংক ও ২ আর্থিক প্রতিষ্ঠান: সিনিয়র অফিসার (সাধারণ) লিখিত পরীক্ষার প্রস্তুতি**
+পরীক্ষা: **শুক্রবার, ২৭ নভেম্বর ২০২৬, সকাল ৯:৩০–১১:৩০ · ২০০ নম্বর** (নোটিশ ৩৬৩/২০২৬, erecruitment.bb.org.bd-তে মিলিয়ে নিন)
 
-## Contents Overview
+এই রিপোতে ৭২টি PDF (প্রায় ২,৮০০ পৃষ্ঠা) আছে। এগুলো পরীক্ষার অংশ অনুযায়ী সাজানো হয়েছে, OCR করে সার্চযোগ্য করা হয়েছে, আর এগুলোর ওপর একটি কমান্ড-লাইন **প্রস্তুতি ইঞ্জিন** বানানো হয়েছে।
 
-- **Bank Written Math**:
-  - Bank Written Math (1986–2021)
-  - Khairul's Bank Written Math Topic Sheets (Algebra, Arithmetic, Time & Work, Speed & Distance, Boat & Stream, Mixture, Unitary Method, etc.)
-  - BIBM Written Math Solutions
+---
 
-- **Focus Writing & Essays**:
-  - Unique Bank Focus Writing and Essay
-  - Focus Writing by A2B Publications
-  - Recent economic & contemporary issues (Monetary policy, Digital banking, Inflation, LDC graduation, Cashless society, etc.)
+## 🚀 ৩০ সেকেন্ডে শুরু
 
-- **English & Comprehension**:
-  - Class 9-10 English Grammar
-  - Passage comprehension solving techniques
-  - Argumentative writing techniques
+```bash
+python3 engine/so.py
+```
+এতে আজকের কাজ আর কত দিন বাকি, দুটোই দেখাবে। এরপর:
 
-- **General Knowledge & Banking Terminology**:
-  - Banking terminologies & GK sheets for BB AD / Officer
-  - Model tests and question analyses
+```bash
+python3 engine/so.py topic 1          # টপিক কার্ড: কাঠামো, সর্বশেষ সংখ্যা, সমাধান, উৎস PDF
+python3 engine/so.py essay --timer    # র‍্যান্ডম রচনা + ১৮ মিনিটের টাইমার
+python3 engine/so.py arg --timer      # আর্গুমেন্ট প্রম্পট + ২২ মিনিট
+python3 engine/so.py math work -n 5   # বিগত প্রশ্ন থেকে ৫টি অঙ্ক
+python3 engine/so.py tr               # বাংলা→ইংরেজি অনুবাদ ড্রিল
+python3 engine/so.py terms --quiz 15  # ব্যাংকিং পরিভাষার ফ্ল্যাশকার্ড
+python3 engine/so.py facts            # রচনায় বসানোর সর্বশেষ সংখ্যা
+python3 engine/so.py search "খেলাপি ঋণ"   # ২,৮০০ পৃষ্ঠার মধ্যে সার্চ (পৃষ্ঠা নম্বরসহ)
+python3 engine/so.py mock             # নতুন কাঠামোর ২০০ নম্বরের মক প্রশ্নপত্র
+python3 engine/so.py stats            # অগ্রগতি
+```
+শুধু Python 3 লাগবে, বাইরের কোনো প্যাকেজ নয়। ফোনে চালাতে চাইলে Termux, Pydroid বা অনলাইন Python ব্যবহার করতে পারেন। আর সব তথ্য `docs/`-এর Markdown ফাইলেও আছে।
+
+---
+
+## 📊 নম্বর বণ্টন ও ফোকাস
+
+| অংশ | নম্বর | রিপোর "বই" | জোর |
+|---|---|---|---|
+| Focus Writing EN + BN | ৩০ + ৩০ | ফোকাস বান্ডেল | ⭐⭐⭐ |
+| **Analytical / Argumentative** | **৪০** | আর্গুমেন্ট বান্ডেল | ⭐⭐⭐ |
+| বাংলা → ইংরেজি অনুবাদ | ২০ | ফোকাস বান্ডেল + ড্রিল | ⭐⭐ |
+| গণিত | ৩০ | গণিত বান্ডেল (৯৭৮টি প্রশ্ন) | ⭐⭐⭐ (নিশ্চিত নম্বর) |
+| ইংরেজি ভাষা + বাংলা ব্যাকরণ | ২০ + ১০ | গ্রামার শিট | ⭐⭐ |
+| ব্যাংকিং + GK | ১০ + ১০ | পরিভাষা ও তথ্য | ⭐ |
+
+**লেখার অংশেই ১২০ নম্বর।** তাই প্রতিদিন হাতে লিখে অনুশীলন করতে হবে। বিস্তারিত: [০১ · কাঠামো](docs/01_exam_structure.md)
+
+---
+
+## 📚 ডকুমেন্ট (এই ক্রমে পড়ুন)
+
+| # | ফাইল | কী আছে |
+|---|---|---|
+| ০১ | [পরীক্ষার কাঠামো ও সময় ভাগ](docs/01_exam_structure.md) | নম্বর বণ্টন, পুরোনো বনাম নতুন কাঠামো, ১২০ মিনিটের সময় ভাগ, লক্ষ্য নম্বর |
+| ০২ | [৬টি "বই": নম্বর অনুযায়ী র‍্যাংক](docs/02_book_ranking.md) | পুরো সিলেবাস ৬ বান্ডেলে, প্রতিটির ফাইল আর কৌশল |
+| ০৩ | [৮ দিনের রুটিন](docs/03_8_day_plan.md) | দিন ধরে ধরে কাজ, সাথে নির্দিষ্ট ফাইল আর কমান্ড |
+| ০৪ | [টপিক ব্যাংক (১০টি)](docs/04_topic_bank.md) | মূল্যস্ফীতি, খেলাপি ঋণ, এলডিসি ২০২৯, জ্বালানি, রেমিট্যান্স ইত্যাদি, ২০২৬-এর সংখ্যাসহ |
+| ০৫ | [আর্গুমেন্ট প্লেবুক](docs/05_argument_playbook.md) | টেমপ্লেট, ১২টি প্রম্পট (পক্ষে ও বিপক্ষে), বাক্যাংশ |
+| ০৬ | [অনুবাদ](docs/06_translation.md) | কৌশল, ২৫টি পরিভাষা, ১৫টি ড্রিল |
+| ০৭ | [গণিত প্লেবুক](docs/07_math_playbook.md) | অধ্যায়ভিত্তিক ফ্রিকোয়েন্সি, ৭ দিনের পরিকল্পনা, সূত্র, সাম্প্রতিক প্রশ্ন |
+| ০৮ | [ব্যাংকিং পরিভাষা ও তথ্য](docs/08_banking_terms.md) | ৮৬টি পরিভাষা আর ৩৫টি সাম্প্রতিক তথ্য |
+| ০৯ | [গ্রামার কুইক শিট](docs/09_grammar_quick.md) | ইংরেজির ১২টি নিয়ম, বাংলা বানান, বাক্যশুদ্ধি, সমাস, সন্ধি |
+| ১০ | [**যা নেই কিন্তু লাগবে**](docs/10_gap_analysis.md) | রিপোর ঘাটতি আর কোথা থেকে পূরণ করবেন |
+| ১১ | [পরীক্ষার হলের কৌশল](docs/11_exam_hall_strategy.md) | আগের দিনের চেকলিস্ট, সময় ভাগ, উপস্থাপনা |
+| ১২ | [বিগত প্রশ্ন বিশ্লেষণ](docs/12_past_questions.md) | বই থেকে বের করা ট্যাগযুক্ত প্রশ্ন, থিম অনুযায়ী |
+| ১৩ | [রিসোর্স ইনডেক্স](docs/13_resource_index.md) | প্রতিটি PDF: অগ্রাধিকার, অংশ, কৌশল, টেক্সট লিংক |
+
+---
+
+## 🗂️ রিপোর গঠন
+
+```
+README.md                 ← এখান থেকে শুরু
+docs/                     ← বাংলায় সব কৌশল ও পরিকল্পনা (০১–১৩)
+materials/                ← মূল PDF, পরীক্ষার অংশ অনুযায়ী
+  01_focus_writing/       books/ · technique/ · topics_economy/ · topics_banking/ · topics_environment_social/
+  02_argument_writing/
+  03_math/                question_bank/ · khairul/ · topic_sheets/
+  04_english/             NCTB grammar · comprehension_legacy/ (নতুন সিলেবাসে নেই)
+  05_gk_banking/
+  06_question_analysis_model_tests/
+  07_official_reports/    বাংলাদেশ ব্যাংক মুদ্রানীতি বিবৃতি H1FY27
+corpus/                   ← প্রতিটি PDF-এর সার্চযোগ্য টেক্সট (OCR), পৃষ্ঠা চিহ্নসহ + index.json
+data/                     ← ইঞ্জিনের জ্ঞানভান্ডার
+  facts.json              সর্বশেষ সংখ্যা (উৎসসহ)। নতুন খবর এখানে যোগ করুন
+  topics.json             ১০টি সম্ভাব্য টপিক
+  arguments.json          আর্গুমেন্ট প্রম্পট ও টেমপ্লেট
+  translation.json        অনুবাদ ড্রিল ও পরিভাষা
+  terms.json              ৮৬টি ব্যাংকিং পরিভাষা
+  math_bank.json          ৯৭৮টি লিখিত গণিত প্রশ্ন (অধ্যায়, পরীক্ষা, সাল, উৎস পৃষ্ঠা)
+  past_questions.json     বিগত ফোকাস ও আর্গুমেন্ট প্রশ্ন
+  plan.json               ৮ দিনের রুটিন
+engine/
+  so.py                   ← প্রস্তুতি ইঞ্জিন (CLI)
+  catalog.py              প্রতিটি PDF-এর মেটাডেটা (অংশ, অগ্রাধিকার, কৌশল)
+  extract.py              PDF → টেক্সট (pdftotext + Tesseract বাংলা OCR)
+  build_math_bank.py      গণিত প্রশ্নব্যাংক তৈরি
+  mine_past_questions.py  বিগত প্রশ্ন মাইনিং
+  build_docs.py           data/*.json থেকে docs তৈরি
+progress/log.csv          ← আপনার অগ্রগতি (so.py log / stats)
+```
+
+## 🔧 রক্ষণাবেক্ষণ
+
+```bash
+# নতুন PDF যোগ করলে: engine/catalog.py-তে একটি লাইন যোগ করুন, তারপর
+python3 engine/extract.py --only <নামের অংশ>
+python3 engine/build_math_bank.py
+python3 engine/mine_past_questions.py
+python3 engine/build_docs.py
+```
+OCR-এর জন্য লাগবে: `poppler-utils`, `tesseract-ocr`, `tesseract-ocr-ben`।
+
+## ⚠️ সতর্কতা
+- নম্বর বণ্টন এসেছে নোটিশ ৩৪৮/২০২৬-এর উদ্ধৃতি দেওয়া একটি ব্লগ থেকে। মূল নোটিশ এখনো মেলানো হয়নি।
+- `corpus/`-এর টেক্সট স্বয়ংক্রিয় OCR, তাই বানান বা সংখ্যায় ভুল থাকতে পারে। উদ্ধৃতি দেওয়ার আগে মূল PDF দেখে নিন।
+- রিপোর বেশিরভাগ টপিক শিট ২০২৩ সালের। সর্বশেষ সংখ্যা `data/facts.json` থেকে নেবেন।
