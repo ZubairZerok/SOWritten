@@ -62,10 +62,10 @@
   _Diesel accounts for about 66% of fuel oil use, directly raising irrigation and transport costs._ `[NEWS]`
 - পলিসি রেট ৯.৫% (৩০ জুলাই ২০২৬-এ ১০% থেকে কমানো, কার্যকর ২ আগস্ট); SLF ১১%, SDF ৭.৫%; প্রথম ত্রৈমাসিক মুদ্রানীতিতে (অক্টো–ডিসে) অপরিবর্তিত  
   _Bangladesh Bank cut the policy rate from 10% to 9.5% on 30 July 2026 (first cut in six years); SLF 11%, SDF 7.5%; the first quarterly MPS kept it at 9.5%._ `[NEWS: The Daily Star / FE / UNB, Jul–Oct 2026]`
-- বাংলাদেশ ব্যাংকের গভর্নর মো. মোস্তাকুর রহমান (নিয়োগ ২৫ ফেব্রুয়ারি ২০২৬)  
-  _Md Mostaqur Rahman became Governor of Bangladesh Bank on 25 February 2026._ `[NEWS: The Daily Star, 2026]`
-- ডিজেল ১০০ → ১১৫ (১৮ এপ্রিল) → ১৩৫ টাকা (২১ সেপ্টেম্বর ২০২৬); অকটেন ১৬৫, পেট্রোল ১৬০, কেরোসিন ১৫৫  
-  _Diesel rose from Tk 100 to Tk 115 (18 April) and Tk 135 (21 September 2026); octane Tk 165, petrol Tk 160, kerosene Tk 155._ `[NEWS: Dhaka Tribune, Sep 2026]`
+- বাংলাদেশ ব্যাংকের ১৪তম গভর্নর মো. মোস্তাকুর রহমান (২৫ ফেব্রুয়ারি ২০২৬ প্রজ্ঞাপন, মেয়াদ ৪ বছর; পূর্বসূরি ড. আহসান এইচ মনসুর)  
+  _Md. Mostaqur Rahman is the 14th Governor of Bangladesh Bank, appointed by notification on 25 Feb 2026 for four years, succeeding Dr Ahsan H Mansur._ `[Daily Star Bangla 25 Feb 2026; Prothom Alo 26 Feb 2026]`
+- ডিজেল ১০০ → ১১৫ (১৮ এপ্রিল) → ১৩৫ টাকা (২০ সেপ্টেম্বরের প্রজ্ঞাপন, কার্যকর ২১ সেপ্টেম্বর ২০২৬; নভেম্বরেও অপরিবর্তিত); অকটেন ১৬৫, পেট্রোল ১৬০, কেরোসিন ১৫৫  
+  _Diesel rose from Tk 100 to Tk 115 (18 April) and Tk 135 (21 September 2026); octane Tk 165, petrol Tk 160, kerosene Tk 155._ `[Dhaka Tribune Sep 2026; Prothom Alo 30 Oct 2026; Jugantor 29 Oct 2026]`
 - ইরান যুদ্ধে (২৮ ফেব্রুয়ারি ২০২৬ থেকে) হরমুজ প্রণালী কার্যত বন্ধ; কাতার এনার্জির ফোর্স ম্যাজুর, বাংলাদেশে LNG সরবরাহ অর্ধেক; স্পট LNG ২৪–২৮ ডলার/MMBtu  
   _The Iran war since 28 February 2026 largely closed the Strait of Hormuz; QatarEnergy's force majeure halved LNG deliveries to Bangladesh and spot LNG rose to USD 24–28/MMBtu._ `[NEWS: Al Jazeera / bdnews24, 2026]`
 - গ্যাস সরবরাহ ২,৬২৪ mmcfd বনাম চাহিদা ~৩,৮০০; আগস্টে গ্রামে দিনে ৮–১০ ঘণ্টা লোডশেডিং; ব্রেন্ট তেল ৯২ ডলার (১৯ নভে)  
@@ -74,6 +74,12 @@
   _Private-sector credit growth fell to a record-low 4.17% in September 2026, the seventh straight month below 5%._ `[NEWS: Samakal / Ajker Patrika, Oct 2026]`
 - ২১ জুলাই মহেশখালীর ভাসমান LNG টার্মিনালে অগ্নিকাণ্ড; লোডশেডিং ২,৫০০ মেগাওয়াট ছাড়ায়; গ্যাস সংকটে ~২,৫০০ কারখানা ক্ষতিগ্রস্ত; BPC-র লোকসান মার্চ–আগস্টে ২২,৮৭৫ কোটি টাকা  
   _A fire shut the Moheshkhali floating LNG terminal on 21 July; load-shedding exceeded 2,500 MW; about 2,500 factories were hit; BPC lost Tk 22,875 crore in March–August._ `[NEWS: Prothom Alo / Jugantor, Jul–Sep 2026]`
+- মূল্যস্ফীতির ধারা ২০২৬: জুন ৯.১৬% → জুলাই ৮.৩২% → সেপ্টেম্বর ৮.৩৪% → অক্টোবর ৮.২৭%; মজুরি প্রবৃদ্ধি (৭.৬৩%) টানা ৫৭ মাস মূল্যস্ফীতির নিচে  
+  _Inflation trend in 2026: June 9.16%, July 8.32%, September 8.34%, October 8.27%; wage growth (7.63%) has stayed below inflation for 57 consecutive months._ `[BBS via TBS / bdnews24, 9 Nov 2026]`
+- IMF-এর প্রক্ষেপণ: FY27-এ গড় মূল্যস্ফীতি ১০.৯%; বিশ্বব্যাংক ৮.৬%, ADB ৯% — বাজেট লক্ষ্য ৭.৫%-এর অনেক ওপরে  
+  _The IMF projects FY27 average inflation at 10.9% (World Bank 8.6%, ADB 9%), far above the 7.5% budget target._ `[IMF WEO 13 Oct 2026; WB BDU 6 Oct 2026; ADB ADO 23 Sep 2026]`
+- রমজানের আগে বাংলাদেশ ব্যাংক ১১টি নিত্যপণ্য আমদানিতে ৯০ দিনের বাকি সুবিধা দিয়েছে  
+  _Ahead of Ramadan, Bangladesh Bank allowed 90-day deferred payment for imports of 11 essential commodities._ `[Prothom Alo, 10 Nov 2026]`
 
 **সমাধান/সুপারিশ:**
 
@@ -131,18 +137,28 @@
   _Twenty of 35 NBFIs showed financial stress; nine faced severe capital deficits and were put under resolution._ `[MPS H1FY27]`
 - পলিসি রেট ৯.৫% (৩০ জুলাই ২০২৬-এ ১০% থেকে কমানো, কার্যকর ২ আগস্ট); SLF ১১%, SDF ৭.৫%; প্রথম ত্রৈমাসিক মুদ্রানীতিতে (অক্টো–ডিসে) অপরিবর্তিত  
   _Bangladesh Bank cut the policy rate from 10% to 9.5% on 30 July 2026 (first cut in six years); SLF 11%, SDF 7.5%; the first quarterly MPS kept it at 9.5%._ `[NEWS: The Daily Star / FE / UNB, Jul–Oct 2026]`
-- বাংলাদেশ ব্যাংকের গভর্নর মো. মোস্তাকুর রহমান (নিয়োগ ২৫ ফেব্রুয়ারি ২০২৬)  
-  _Md Mostaqur Rahman became Governor of Bangladesh Bank on 25 February 2026._ `[NEWS: The Daily Star, 2026]`
-- খেলাপি ঋণ জুন ২০২৬: ৬.০৭ লাখ কোটি টাকা, মোট ঋণের ৩২.৭৮% — IMF তথ্য অনুযায়ী বিশ্বে সর্বোচ্চ; রাষ্ট্রায়ত্ত ব্যাংকে ৪৩.২%  
-  _Default loans reached Tk 6.07 lakh crore, 32.78% of all loans, in June 2026 — the highest ratio in the world per IMF data; 43.2% in state-owned banks._ `[NEWS: Prothom Alo English / FE, 2026]`
+- বাংলাদেশ ব্যাংকের ১৪তম গভর্নর মো. মোস্তাকুর রহমান (২৫ ফেব্রুয়ারি ২০২৬ প্রজ্ঞাপন, মেয়াদ ৪ বছর; পূর্বসূরি ড. আহসান এইচ মনসুর)  
+  _Md. Mostaqur Rahman is the 14th Governor of Bangladesh Bank, appointed by notification on 25 Feb 2026 for four years, succeeding Dr Ahsan H Mansur._ `[Daily Star Bangla 25 Feb 2026; Prothom Alo 26 Feb 2026]`
+- খেলাপি ঋণ জুন ২০২৬: প্রায় ৬.০৬ লাখ কোটি টাকা, মোট ঋণের ৩২.৭৮% — IMF তথ্য অনুযায়ী বিশ্বে সর্বোচ্চ  
+  _Default loans stood at about Tk 6.06 lakh crore at end-June 2026, 32.78% of total loans — the highest in the world according to IMF data._ `[NEWS: Prothom Alo English / FE, 2026]`
 - সম্মিলিত ইসলামী ব্যাংক: এক্সিম, ফার্স্ট সিকিউরিটি, সোশ্যাল ইসলামী, ইউনিয়ন ও গ্লোবাল ইসলামী ব্যাংক একীভূত (একক ব্যবস্থাপনা ১৬ আগস্ট ২০২৬ থেকে); পাঁচ ব্যাংকের খেলাপি ঋণ ছিল ৮৪.২২%  
   _Sammilito Islami Bank merged Exim, First Security, Social Islami, Union and Global Islami banks (single management from 16 August 2026); their combined default ratio was 84.22%._ `[NEWS: 2026 reports via digest]`
 - ব্যাংক রেজল্যুশন আইনের ১৮ক ধারা (সাবেক মালিকদের ব্যাংক ফেরত পাওয়ার সুযোগ) বাতিল, সেপ্টেম্বর ২০২৬ — IMF ও বিশ্বব্যাংকের আপত্তির পর  
   _Parliament repealed Section 18A of the Bank Resolution Act, which let former owners reclaim troubled banks, in September 2026 after IMF and World Bank objections._ `[NEWS: bdnews24, 2026]`
-- সর্বশেষ সরকারি হিসাব: সেপ্টেম্বর ২০২৬-এ খেলাপি ঋণ ৫,৯৭,১৫৪ কোটি টাকা = ৩২.১৭% (অর্থমন্ত্রী, সংসদে ১৬ নভে); ২০২১-এ ছিল ৭.২৪%  
-  _The latest official figure: default loans were Tk 5,97,154 crore, or 32.17%, in September 2026 (Finance Minister in Parliament, 16 Nov); the ratio was 7.24% in 2021._ `[NEWS: TBS Bangla, 16 Nov 2026]`
+- সর্বশেষ সরকারি হিসাব: সেপ্টেম্বর ২০২৬-এ খেলাপি ঋণ ৫,৯৭,১৫৪.৯৩ কোটি টাকা = মোট ঋণের (১৮,৫৬,১৬৯ কোটি) ৩২.১৭%; মার্চে ছিল ৩২.২৬%, ২০২২-এ ৭.৬৪% (অর্থমন্ত্রী, সংসদে ১৬ নভে)  
+  _Latest official figure: default loans were Tk 5,97,154.93 crore at end-September 2026, 32.17% of Tk 18,56,169 crore total loans (March: 32.26%; 2022: 7.64%), as the Finance Minister told parliament on 16 Nov 2026._ `[Finance Minister in Jatiya Sangsad via Kaler Kantho / Risingbd / TBS Bangla, 16 Nov 2026]`
 - বেসরকারি ঋণ প্রবৃদ্ধি সেপ্টেম্বর ২০২৬-এ ৪.১৭% — রেকর্ড সর্বনিম্ন, টানা সাত মাস ৫%-এর নিচে  
   _Private-sector credit growth fell to a record-low 4.17% in September 2026, the seventh straight month below 5%._ `[NEWS: Samakal / Ajker Patrika, Oct 2026]`
+- খেলাপি ঋণ কমাতে গভর্নরের নেতৃত্বে (NBR-সহ) টাস্কফোর্স; এলডিসি সংস্কার রোডম্যাপে ২০২৯-এর মধ্যে খেলাপি ঋণ ২০%-এর নিচে নামানোর লক্ষ্য  
+  _A Governor-led task force with NBR is pursuing loan recovery and laundered assets; the LDC reform roadmap targets NPLs below 20% by 2029._ `[Risingbd / The Daily Star, Oct–Nov 2026]`
+- আগামী বছর থেকে ঋণ বিতরণের লক্ষ্য: খুচরা ২০%, এসএমই ৩৫%, করপোরেট ৪৫% (গভর্নর, ১৪ নভে ২০২৬)  
+  _From next year the Governor plans a loan-mix target: 20% retail, 35% SME and 45% corporate._ `[Kaler Kantho, 14 Nov 2026]`
+- খেলাপি ঋণ বাড়ার একটি কারণ কঠোর শ্রেণীকরণ: খেলাপি গণনার সময় ২৭০ → ১৮০ দিন (সেপ্টে ২০২৪) → ৯০ দিন (এপ্রিল ২০২৫)  
+  _Part of the NPL jump reflects stricter classification: the overdue period was cut from 270 to 180 days (Sep 2024) and then to 90 days (Apr 2025)._ `[New Age; bdnews24 (BB spokesperson), 2025]`
+- সম্মিলিত ইসলামী ব্যাংক: অনুমোদিত মূলধন ৪০,০০০ কোটি, পরিশোধিত ৩৫,০০০ কোটি (সরকার ২০,০০০ + আমানতকারীর শেয়ার ১৫,০০০); ৭৬ লাখ আমানতকারী, আমানত ১.৪২ লাখ কোটি টাকা; ২৫ আগস্ট হেয়ারকাট বাতিল, ৭ সেপ্টেম্বর থেকে পূর্ণ উত্তোলন  
+  _Sammilito Islami Bank: authorised capital Tk 40,000 crore, paid-up Tk 35,000 crore (government Tk 20,000 crore + depositor shares Tk 15,000 crore); 76 lakh depositors with Tk 1.42 lakh crore; haircut scrapped on 25 Aug 2026 and full withdrawals allowed from 7 Sep._ `[Prothom Alo English 25 Aug & 8 Sep 2026; New Age 25 Aug 2026; TBS Sep 2026]`
+- একীভূত পাঁচ ব্যাংকের ১.৯২ লাখ কোটি টাকার ঋণের ৮৬% খেলাপি; আমানত বিমা তহবিল থেকে ১২,০০০ কোটি টাকা দিয়ে ২ লাখ পর্যন্ত আমানত ফেরত — ২৫ আগস্ট পর্যন্ত ৮.২২ লাখ আমানতকারী পেয়েছেন ৩,৮৮৭ কোটি  
+  _86% of the Tk 1.92 lakh crore loans of the five merged banks are in default; the Deposit Insurance Fund provided Tk 12,000 crore to repay deposits up to Tk 2 lakh, and Tk 3,887 crore had reached 8.22 lakh depositors by 25 Aug 2026._ `[Daily New Nation; New Age, Aug 2026]`
 
 **সমাধান/সুপারিশ:**
 
@@ -189,8 +205,8 @@
   _BB bought a net USD 6.43 billion via auctions in FY26; the exchange rate stayed around Tk 123 per dollar._ `[MPS H1FY27]`
 - চলতি হিসাবের ঘাটতি জুলাই–এপ্রিল FY26: ১.০৭ বিলিয়ন ডলার; সামগ্রিক BoP উদ্বৃত্ত ৩.৭৪ বিলিয়ন  
   _The current account deficit narrowed to USD 1.07 billion and the overall BoP posted a USD 3.74 billion surplus._ `[MPS H1FY27]`
-- জাতিসংঘ সাধারণ পরিষদ বাংলাদেশের এলডিসি উত্তরণ ৩ বছর পিছিয়ে ২৪ নভেম্বর ২০২৯ করেছে (প্রস্তাব গৃহীত অক্টোবর ২০২৬; নেপালও একই সুবিধা)  
-  _The UN General Assembly deferred Bangladesh's LDC graduation by three years to 24 November 2029 (resolution adopted in late October 2026)._ `[NEWS: bdnews24 30 Oct 2026; Prothom Alo English]`
+- জাতিসংঘ সাধারণ পরিষদের প্রস্তাব A/81/L.8 (২৯ অক্টোবর ২০২৬, আপত্তি ছাড়া গৃহীত; G77+চীনের পক্ষে উরুগুয়ে উত্থাপন) অনুযায়ী এলডিসি উত্তরণ ২৪ নভেম্বর ২০২৬ থেকে ২৪ নভেম্বর ২০২৯-এ পিছিয়েছে; নেপালও একই সুবিধা পেয়েছে  
+  _UNGA resolution A/81/L.8, adopted without objection on 29 Oct 2026 (tabled by Uruguay for the G77 and China), moved Bangladesh's LDC graduation from 24 Nov 2026 to 24 Nov 2029; Nepal got the same extension._ `[TBS 30 Oct 2026; Xinhua 30 Oct 2026; The Daily Star]`
 - উত্তরণের পর বছরে ১৭.৫ বিলিয়ন ডলারের বেশি রপ্তানি ঝুঁকিতে পড়তে পারে (জাতিসংঘের মূল্যায়ন)  
   _A UN assessment estimated that Bangladesh could lose over USD 17.5 billion in annual exports after graduation._ `[NEWS]`
 - GDP প্রবৃদ্ধি FY26 (সংশোধিত) ৩.৬৮%; FY27 পূর্বাভাস: IMF ৩.২%, বিশ্বব্যাংক ৩.৪%, ADB ৪.০% — সরকারের লক্ষ্য ৬.৫%  
@@ -201,20 +217,32 @@
   _The World Bank estimates poverty rose to 22.5% in 2026 from 18.7% in 2022._ `[NEWS: World Bank BDU via TBS, Oct 2026]`
 - রেমিট্যান্স FY26: রেকর্ড ৩৫.৫৯ বিলিয়ন ডলার (+১৭.৩%); FY27-এ ১৬ নভে পর্যন্ত ১৩.৪৩ বি. (+১৩.৪%)  
   _Remittances hit a record USD 35.59 billion in FY26 (+17.3%); FY27 inflows reached USD 13.43 billion by 16 November (+13.4%)._ `[NEWS: FE (Jul 2026); UNB (Nov 2026)]`
-- রপ্তানি FY26: ৪৮.০ বিলিয়ন ডলার (−০.৫৮%, লক্ষ্য ছিল ৫৫ বি.), RMG ৩৮.৭০ বি.; জুলাই–অক্টো FY27: ১৭.০৪ বি. (+৬%)  
-  _Exports fell 0.58% to USD 48.0 billion in FY26 (target USD 55 bn), RMG USD 38.70 bn; July–October FY27 exports rose about 6% to USD 17.04 bn._ `[NEWS: TBS / FE (EPB data), 2026]`
-- রিজার্ভ (৬ নভে ২০২৬, ACU পরিশোধের পর): BPM6 ২৯.৯৮ বি., গ্রস ৩৪.৮৫ বি. ডলার  
-  _After the ACU payment, reserves stood at USD 29.98 billion (BPM6) and USD 34.85 billion (gross) on 6 November 2026._ `[NEWS: bdnews24, 6 Nov 2026]`
-- যুক্তরাষ্ট্র ২৪ জুলাই ২০২৬ থেকে বাংলাদেশি পণ্যে ১০% সেকশন ৩০১ শুল্ক আরোপ করেছে (আগের ১৯% পারস্পরিক শুল্ক সুপ্রিম কোর্টে বাতিল)  
-  _Since 24 July 2026 the US applies a 10% Section 301 tariff on Bangladeshi goods, after its Supreme Court struck down the earlier 19% IEEPA-based reciprocal tariff._ `[NEWS: Bonik Barta English, 2026]`
+- রপ্তানি জুলাই–অক্টোবর FY27: ১৭.০৪ বিলিয়ন ডলার (+৬%); এর মধ্যে RMG ১৩.৭৫ বি. (+৫.৮২%, ≈৮০.৭%)। FY26-এ RMG ৩৮.৭০ বি. (−১.৬৪%)  
+  _Exports in July–October FY27 were USD 17.04 billion (+6%), of which RMG was USD 13.75 billion (+5.82%, about 80.7%). FY26 RMG exports were USD 38.70 billion (−1.64%)._ `[EPB via TBS / Financial Express, 7 Jul & 8 Nov 2026 (Verified Fact Pack 20 Nov 2026; FY26 total exports = CONFLICT, so not used)]`
+- রিজার্ভ (১৯ নভেম্বর ২০২৬): গ্রস ৩৪.৩৮ বিলিয়ন ডলার, BPM6 ২৯.৫৭ বিলিয়ন ডলার; ডলারের রেফারেন্স রেট ১২৪.৭০ টাকা  
+  _On 19 Nov 2026 gross reserves were USD 34.38 billion and BPM6 reserves USD 29.57 billion; the reference rate was Tk 124.70 per dollar._ `[BSS citing Bangladesh Bank, 19 Nov 2026; BB reference rate 19 Nov 2026]`
+- যুক্তরাষ্ট্র ২৪ জুলাই ২০২৬ থেকে বাংলাদেশি পণ্যে ১০% সেকশন ৩০১ (জোরপূর্বক শ্রম) শুল্ক আরোপ করেছে; আগের ২০% পারস্পরিক (IEEPA) শুল্ক মার্কিন সুপ্রিম কোর্ট ২০ ফেব্রুয়ারি ২০২৬-এ বাতিল করে  
+  _Since 24 July 2026 the US applies a 10% Section 301 (forced-labour) duty on Bangladeshi goods; the earlier 20% IEEPA reciprocal tariff was struck down by the US Supreme Court on 20 Feb 2026._ `[NEWS: The Daily Star 24 Jul 2026; CPD Nov 2026 (Verified Fact Pack 20 Nov 2026: 19% → 20% CORRECTED)]`
 - EU-এর নতুন GSP নীতি (২০২৬/১৩৯৫) ১ জানুয়ারি ২০২৭ থেকে কার্যকর: পোশাকের সেফগার্ড সীমা ৩৭%, GSP+-এর শর্ত ২৭ থেকে ৩২টি কনভেনশন  
-  _The new EU GSP Regulation 2026/1395 applies from 1 January 2027: the apparel safeguard threshold falls to 37% and GSP+ requires 32 conventions instead of 27._ `[NEWS: The Daily Star, Jun 2026]`
+  _The new EU GSP Regulation 2026/1395 applies from 1 January 2027: the apparel safeguard threshold falls to 37% and GSP+ requires 32 conventions instead of 27._ `[NEWS: The Daily Star, Jun 2026 — একক উৎস; Fact Pack-এ যাচাই হয়নি। পরীক্ষায় শুধু 'নতুন GSP নীতি ২০২৭ থেকে' লিখুন, শতাংশ নয়]`
 - জাপানের সাথে প্রথম অর্থনৈতিক অংশীদারিত্ব চুক্তি (EPA) স্বাক্ষর, ৬ ফেব্রুয়ারি ২০২৬  
   _Bangladesh signed its first Economic Partnership Agreement, with Japan, on 6 February 2026._ `[NEWS: 2026 via digest]`
 - হুন্ডি ও জুয়ার বিরুদ্ধে অভিযানে ৮০ হাজারের বেশি MFS হিসাব জব্দ; সেপ্টেম্বরে ১৪ মাস পর প্রথম ডলার বিক্রি করল বাংলাদেশ ব্যাংক  
   _More than 80,000 MFS accounts were frozen in the crackdown on hundi and online gambling; in September Bangladesh Bank sold dollars for the first time in 14 months._ `[NEWS: Ajker Patrika, Sep–Nov 2026]`
 - প্রতি তিনজন স্নাতকের একজন বেকার (~৯ লাখ); বেসরকারি বিনিয়োগ-GDP অনুপাত ১৪ বছরে সর্বনিম্ন  
   _About one in three graduates (about 9 lakh) is jobless, and private investment as a share of GDP is at a 14-year low._ `[NEWS: Prothom Alo, 30 Jul 2026]`
+- FY27-এর জুলাই–অক্টোবরে রেমিট্যান্স ১১.৪৬৫ বিলিয়ন ডলার (+১৩%); অক্টোবরে ২.৮৭৪ বি. (+১২.১%); FY26-এ শীর্ষ উৎস সৌদি আরব (৫.৮৪ বি.)  
+  _Remittance in July–October FY27 was USD 11.465 billion (+13%), with USD 2.874 billion in October (+12.1%); Saudi Arabia was the top source in FY26 (USD 5.84 billion)._ `[Financial Express/BSS 1 Nov 2026; Daily New Nation 4 Sep 2026]`
+- অর্থ বিভাগের MTMPS: FY27-এ রেমিট্যান্স ৩৮.৭২ বিলিয়ন ডলার প্রক্ষেপণ; তবে মধ্যপ্রাচ্যের যুদ্ধে জুন থেকে টানা ৫ মাস মাসিক রেমিট্যান্স ৩ বিলিয়নের নিচে  
+  _The Finance Division's MTMPS projects FY27 remittance at USD 38.72 billion, but monthly inflows stayed below USD 3 billion for five months from June, mainly due to the Middle East war._ `[The Daily Star, Nov 2026]`
+- যুক্তরাষ্ট্রে RMG রপ্তানি জুলাই–অক্টো FY27: ২.৮৫ বি. ডলার (+১০.১৬%, অংশ ২০.৭৩%); EU-র অংশ ৪৬.৭৯%; মার্কিন বাজারে পোশাকে গড় মোট শুল্ক ২৫.৬২%; বাংলাদেশ ১০% স্তরে, ভিয়েতনাম ও চীন ১২.৫% স্তরে  
+  _RMG exports to the US in July–October FY27 were USD 2.85 billion (+10.16%, a 20.73% share) and the EU share was 46.79%; the average total US tariff on garments is 25.62%, and Bangladesh sits in the 10% tier while Vietnam and China face 12.5%._ `[Daily Waadaa 10 Nov 2026; The Daily Star; Textile Focus, 2026]`
+- সুপ্রিম কোর্টের রায়ের পর ২৪ ফেব্রুয়ারি–২৪ জুলাই ২০২৬ যুক্তরাষ্ট্র সেকশন ১২২-এর অধীনে সাময়িক ১০% শুল্ক নিয়েছিল  
+  _After the Supreme Court ruling, the US applied a temporary 10% Section 122 tariff from 24 Feb to 24 Jul 2026._ `[Airlift USA / tariff trackers via Verified Fact Pack 20 Nov 2026]`
+- FY26-এর শেষ প্রান্তিকে (এপ্রিল–জুন) প্রবৃদ্ধি ৪.৬০%; পুরো বছরের ৩.৬৮% (৭ অক্টোবর প্রকাশ) আগের ৪.১৪% সাময়িক হিসাব প্রতিস্থাপন করেছে  
+  _Growth in Q4 FY26 was 4.60%; the full-year 3.68% (released 7 Oct 2026) replaced the earlier provisional 4.14%._ `[Financial Express / UNB 7 Oct 2026; TBS]`
+- EU জাতিসংঘে বলেছে, এই বাড়তি সময় 'exceptional time-bound' এবং তা 'concrete, measurable domestic actions'-সহ হতে হবে; CPD-র প্রস্তাব: রূপান্তর কৌশলের সমন্বয় প্রধানমন্ত্রীর কার্যালয়ে, জনসাধারণের জন্য অগ্রগতি ড্যাশবোর্ড  
+  _At the UN, the EU called the extension an 'exceptional time-bound' measure that must be 'accompanied by concrete, measurable domestic actions'; CPD proposes coordinating the transition strategy from the Prime Minister's Office with a public progress dashboard._ `[The Daily Star; Daily Sun, Oct–Nov 2026]`
 
 **সমাধান/সুপারিশ:**
 
@@ -273,14 +301,14 @@
   _Diesel accounts for about 66% of fuel oil use, directly raising irrigation and transport costs._ `[NEWS]`
 - রেমিট্যান্স FY26: রেকর্ড ৩৫.৫৯ বিলিয়ন ডলার (+১৭.৩%); FY27-এ ১৬ নভে পর্যন্ত ১৩.৪৩ বি. (+১৩.৪%)  
   _Remittances hit a record USD 35.59 billion in FY26 (+17.3%); FY27 inflows reached USD 13.43 billion by 16 November (+13.4%)._ `[NEWS: FE (Jul 2026); UNB (Nov 2026)]`
-- রপ্তানি FY26: ৪৮.০ বিলিয়ন ডলার (−০.৫৮%, লক্ষ্য ছিল ৫৫ বি.), RMG ৩৮.৭০ বি.; জুলাই–অক্টো FY27: ১৭.০৪ বি. (+৬%)  
-  _Exports fell 0.58% to USD 48.0 billion in FY26 (target USD 55 bn), RMG USD 38.70 bn; July–October FY27 exports rose about 6% to USD 17.04 bn._ `[NEWS: TBS / FE (EPB data), 2026]`
-- রিজার্ভ (৬ নভে ২০২৬, ACU পরিশোধের পর): BPM6 ২৯.৯৮ বি., গ্রস ৩৪.৮৫ বি. ডলার  
-  _After the ACU payment, reserves stood at USD 29.98 billion (BPM6) and USD 34.85 billion (gross) on 6 November 2026._ `[NEWS: bdnews24, 6 Nov 2026]`
-- যুক্তরাষ্ট্র ২৪ জুলাই ২০২৬ থেকে বাংলাদেশি পণ্যে ১০% সেকশন ৩০১ শুল্ক আরোপ করেছে (আগের ১৯% পারস্পরিক শুল্ক সুপ্রিম কোর্টে বাতিল)  
-  _Since 24 July 2026 the US applies a 10% Section 301 tariff on Bangladeshi goods, after its Supreme Court struck down the earlier 19% IEEPA-based reciprocal tariff._ `[NEWS: Bonik Barta English, 2026]`
-- ডিজেল ১০০ → ১১৫ (১৮ এপ্রিল) → ১৩৫ টাকা (২১ সেপ্টেম্বর ২০২৬); অকটেন ১৬৫, পেট্রোল ১৬০, কেরোসিন ১৫৫  
-  _Diesel rose from Tk 100 to Tk 115 (18 April) and Tk 135 (21 September 2026); octane Tk 165, petrol Tk 160, kerosene Tk 155._ `[NEWS: Dhaka Tribune, Sep 2026]`
+- রপ্তানি জুলাই–অক্টোবর FY27: ১৭.০৪ বিলিয়ন ডলার (+৬%); এর মধ্যে RMG ১৩.৭৫ বি. (+৫.৮২%, ≈৮০.৭%)। FY26-এ RMG ৩৮.৭০ বি. (−১.৬৪%)  
+  _Exports in July–October FY27 were USD 17.04 billion (+6%), of which RMG was USD 13.75 billion (+5.82%, about 80.7%). FY26 RMG exports were USD 38.70 billion (−1.64%)._ `[EPB via TBS / Financial Express, 7 Jul & 8 Nov 2026 (Verified Fact Pack 20 Nov 2026; FY26 total exports = CONFLICT, so not used)]`
+- রিজার্ভ (১৯ নভেম্বর ২০২৬): গ্রস ৩৪.৩৮ বিলিয়ন ডলার, BPM6 ২৯.৫৭ বিলিয়ন ডলার; ডলারের রেফারেন্স রেট ১২৪.৭০ টাকা  
+  _On 19 Nov 2026 gross reserves were USD 34.38 billion and BPM6 reserves USD 29.57 billion; the reference rate was Tk 124.70 per dollar._ `[BSS citing Bangladesh Bank, 19 Nov 2026; BB reference rate 19 Nov 2026]`
+- যুক্তরাষ্ট্র ২৪ জুলাই ২০২৬ থেকে বাংলাদেশি পণ্যে ১০% সেকশন ৩০১ (জোরপূর্বক শ্রম) শুল্ক আরোপ করেছে; আগের ২০% পারস্পরিক (IEEPA) শুল্ক মার্কিন সুপ্রিম কোর্ট ২০ ফেব্রুয়ারি ২০২৬-এ বাতিল করে  
+  _Since 24 July 2026 the US applies a 10% Section 301 (forced-labour) duty on Bangladeshi goods; the earlier 20% IEEPA reciprocal tariff was struck down by the US Supreme Court on 20 Feb 2026._ `[NEWS: The Daily Star 24 Jul 2026; CPD Nov 2026 (Verified Fact Pack 20 Nov 2026: 19% → 20% CORRECTED)]`
+- ডিজেল ১০০ → ১১৫ (১৮ এপ্রিল) → ১৩৫ টাকা (২০ সেপ্টেম্বরের প্রজ্ঞাপন, কার্যকর ২১ সেপ্টেম্বর ২০২৬; নভেম্বরেও অপরিবর্তিত); অকটেন ১৬৫, পেট্রোল ১৬০, কেরোসিন ১৫৫  
+  _Diesel rose from Tk 100 to Tk 115 (18 April) and Tk 135 (21 September 2026); octane Tk 165, petrol Tk 160, kerosene Tk 155._ `[Dhaka Tribune Sep 2026; Prothom Alo 30 Oct 2026; Jugantor 29 Oct 2026]`
 - ইরান যুদ্ধে (২৮ ফেব্রুয়ারি ২০২৬ থেকে) হরমুজ প্রণালী কার্যত বন্ধ; কাতার এনার্জির ফোর্স ম্যাজুর, বাংলাদেশে LNG সরবরাহ অর্ধেক; স্পট LNG ২৪–২৮ ডলার/MMBtu  
   _The Iran war since 28 February 2026 largely closed the Strait of Hormuz; QatarEnergy's force majeure halved LNG deliveries to Bangladesh and spot LNG rose to USD 24–28/MMBtu._ `[NEWS: Al Jazeera / bdnews24, 2026]`
 - গ্যাস সরবরাহ ২,৬২৪ mmcfd বনাম চাহিদা ~৩,৮০০; আগস্টে গ্রামে দিনে ৮–১০ ঘণ্টা লোডশেডিং; ব্রেন্ট তেল ৯২ ডলার (১৯ নভে)  
@@ -289,6 +317,20 @@
   _A fire shut the Moheshkhali floating LNG terminal on 21 July; load-shedding exceeded 2,500 MW; about 2,500 factories were hit; BPC lost Tk 22,875 crore in March–August._ `[NEWS: Prothom Alo / Jugantor, Jul–Sep 2026]`
 - হুন্ডি ও জুয়ার বিরুদ্ধে অভিযানে ৮০ হাজারের বেশি MFS হিসাব জব্দ; সেপ্টেম্বরে ১৪ মাস পর প্রথম ডলার বিক্রি করল বাংলাদেশ ব্যাংক  
   _More than 80,000 MFS accounts were frozen in the crackdown on hundi and online gambling; in September Bangladesh Bank sold dollars for the first time in 14 months._ `[NEWS: Ajker Patrika, Sep–Nov 2026]`
+- মূল্যস্ফীতির ধারা ২০২৬: জুন ৯.১৬% → জুলাই ৮.৩২% → সেপ্টেম্বর ৮.৩৪% → অক্টোবর ৮.২৭%; মজুরি প্রবৃদ্ধি (৭.৬৩%) টানা ৫৭ মাস মূল্যস্ফীতির নিচে  
+  _Inflation trend in 2026: June 9.16%, July 8.32%, September 8.34%, October 8.27%; wage growth (7.63%) has stayed below inflation for 57 consecutive months._ `[BBS via TBS / bdnews24, 9 Nov 2026]`
+- IMF-এর প্রক্ষেপণ: FY27-এ গড় মূল্যস্ফীতি ১০.৯%; বিশ্বব্যাংক ৮.৬%, ADB ৯% — বাজেট লক্ষ্য ৭.৫%-এর অনেক ওপরে  
+  _The IMF projects FY27 average inflation at 10.9% (World Bank 8.6%, ADB 9%), far above the 7.5% budget target._ `[IMF WEO 13 Oct 2026; WB BDU 6 Oct 2026; ADB ADO 23 Sep 2026]`
+- রমজানের আগে বাংলাদেশ ব্যাংক ১১টি নিত্যপণ্য আমদানিতে ৯০ দিনের বাকি সুবিধা দিয়েছে  
+  _Ahead of Ramadan, Bangladesh Bank allowed 90-day deferred payment for imports of 11 essential commodities._ `[Prothom Alo, 10 Nov 2026]`
+- FY27-এর জুলাই–অক্টোবরে রেমিট্যান্স ১১.৪৬৫ বিলিয়ন ডলার (+১৩%); অক্টোবরে ২.৮৭৪ বি. (+১২.১%); FY26-এ শীর্ষ উৎস সৌদি আরব (৫.৮৪ বি.)  
+  _Remittance in July–October FY27 was USD 11.465 billion (+13%), with USD 2.874 billion in October (+12.1%); Saudi Arabia was the top source in FY26 (USD 5.84 billion)._ `[Financial Express/BSS 1 Nov 2026; Daily New Nation 4 Sep 2026]`
+- অর্থ বিভাগের MTMPS: FY27-এ রেমিট্যান্স ৩৮.৭২ বিলিয়ন ডলার প্রক্ষেপণ; তবে মধ্যপ্রাচ্যের যুদ্ধে জুন থেকে টানা ৫ মাস মাসিক রেমিট্যান্স ৩ বিলিয়নের নিচে  
+  _The Finance Division's MTMPS projects FY27 remittance at USD 38.72 billion, but monthly inflows stayed below USD 3 billion for five months from June, mainly due to the Middle East war._ `[The Daily Star, Nov 2026]`
+- যুক্তরাষ্ট্রে RMG রপ্তানি জুলাই–অক্টো FY27: ২.৮৫ বি. ডলার (+১০.১৬%, অংশ ২০.৭৩%); EU-র অংশ ৪৬.৭৯%; মার্কিন বাজারে পোশাকে গড় মোট শুল্ক ২৫.৬২%; বাংলাদেশ ১০% স্তরে, ভিয়েতনাম ও চীন ১২.৫% স্তরে  
+  _RMG exports to the US in July–October FY27 were USD 2.85 billion (+10.16%, a 20.73% share) and the EU share was 46.79%; the average total US tariff on garments is 25.62%, and Bangladesh sits in the 10% tier while Vietnam and China face 12.5%._ `[Daily Waadaa 10 Nov 2026; The Daily Star; Textile Focus, 2026]`
+- সুপ্রিম কোর্টের রায়ের পর ২৪ ফেব্রুয়ারি–২৪ জুলাই ২০২৬ যুক্তরাষ্ট্র সেকশন ১২২-এর অধীনে সাময়িক ১০% শুল্ক নিয়েছিল  
+  _After the Supreme Court ruling, the US applied a temporary 10% Section 122 tariff from 24 Feb to 24 Jul 2026._ `[Airlift USA / tariff trackers via Verified Fact Pack 20 Nov 2026]`
 
 **সমাধান/সুপারিশ:**
 
@@ -316,7 +358,7 @@
 |---|---|
 | ভূমিকা | Introduction |
 | রেমিট্যান্সের সর্বশেষ প্রবাহ (রেকর্ড FY26, FY27-এ +১৩.৪%) | Recent remittance trends |
-| রিজার্ভের চিত্র (৩১.৭৪ বি. → ACU পরিশোধে ৩০-এর নিচে) | Reserve position |
+| রিজার্ভের চিত্র (১৯ নভে ২০২৬: গ্রস ৩৪.৩৮ বি., BPM6 ২৯.৫৭ বি.) | Reserve position |
 | হুন্ডির কারণ: বিনিময় হারের পার্থক্য, ব্যাংকিং জটিলতা, অর্থপাচার | Why hundi persists |
 | বাজারভিত্তিক বিনিময় হার ও কঠোর নজরদারির ফল | Impact of the market-based exchange rate |
 | ব্যাংকের ভূমিকা: রেমিট্যান্স হাউস, MFS, প্রণোদনা, দ্রুত সেবা | Role of banks and MFS |
@@ -337,14 +379,22 @@
   _The current account deficit narrowed to USD 1.07 billion and the overall BoP posted a USD 3.74 billion surplus._ `[MPS H1FY27]`
 - রেমিট্যান্স FY26: রেকর্ড ৩৫.৫৯ বিলিয়ন ডলার (+১৭.৩%); FY27-এ ১৬ নভে পর্যন্ত ১৩.৪৩ বি. (+১৩.৪%)  
   _Remittances hit a record USD 35.59 billion in FY26 (+17.3%); FY27 inflows reached USD 13.43 billion by 16 November (+13.4%)._ `[NEWS: FE (Jul 2026); UNB (Nov 2026)]`
-- রপ্তানি FY26: ৪৮.০ বিলিয়ন ডলার (−০.৫৮%, লক্ষ্য ছিল ৫৫ বি.), RMG ৩৮.৭০ বি.; জুলাই–অক্টো FY27: ১৭.০৪ বি. (+৬%)  
-  _Exports fell 0.58% to USD 48.0 billion in FY26 (target USD 55 bn), RMG USD 38.70 bn; July–October FY27 exports rose about 6% to USD 17.04 bn._ `[NEWS: TBS / FE (EPB data), 2026]`
-- রিজার্ভ (৬ নভে ২০২৬, ACU পরিশোধের পর): BPM6 ২৯.৯৮ বি., গ্রস ৩৪.৮৫ বি. ডলার  
-  _After the ACU payment, reserves stood at USD 29.98 billion (BPM6) and USD 34.85 billion (gross) on 6 November 2026._ `[NEWS: bdnews24, 6 Nov 2026]`
-- যুক্তরাষ্ট্র ২৪ জুলাই ২০২৬ থেকে বাংলাদেশি পণ্যে ১০% সেকশন ৩০১ শুল্ক আরোপ করেছে (আগের ১৯% পারস্পরিক শুল্ক সুপ্রিম কোর্টে বাতিল)  
-  _Since 24 July 2026 the US applies a 10% Section 301 tariff on Bangladeshi goods, after its Supreme Court struck down the earlier 19% IEEPA-based reciprocal tariff._ `[NEWS: Bonik Barta English, 2026]`
+- রপ্তানি জুলাই–অক্টোবর FY27: ১৭.০৪ বিলিয়ন ডলার (+৬%); এর মধ্যে RMG ১৩.৭৫ বি. (+৫.৮২%, ≈৮০.৭%)। FY26-এ RMG ৩৮.৭০ বি. (−১.৬৪%)  
+  _Exports in July–October FY27 were USD 17.04 billion (+6%), of which RMG was USD 13.75 billion (+5.82%, about 80.7%). FY26 RMG exports were USD 38.70 billion (−1.64%)._ `[EPB via TBS / Financial Express, 7 Jul & 8 Nov 2026 (Verified Fact Pack 20 Nov 2026; FY26 total exports = CONFLICT, so not used)]`
+- রিজার্ভ (১৯ নভেম্বর ২০২৬): গ্রস ৩৪.৩৮ বিলিয়ন ডলার, BPM6 ২৯.৫৭ বিলিয়ন ডলার; ডলারের রেফারেন্স রেট ১২৪.৭০ টাকা  
+  _On 19 Nov 2026 gross reserves were USD 34.38 billion and BPM6 reserves USD 29.57 billion; the reference rate was Tk 124.70 per dollar._ `[BSS citing Bangladesh Bank, 19 Nov 2026; BB reference rate 19 Nov 2026]`
+- যুক্তরাষ্ট্র ২৪ জুলাই ২০২৬ থেকে বাংলাদেশি পণ্যে ১০% সেকশন ৩০১ (জোরপূর্বক শ্রম) শুল্ক আরোপ করেছে; আগের ২০% পারস্পরিক (IEEPA) শুল্ক মার্কিন সুপ্রিম কোর্ট ২০ ফেব্রুয়ারি ২০২৬-এ বাতিল করে  
+  _Since 24 July 2026 the US applies a 10% Section 301 (forced-labour) duty on Bangladeshi goods; the earlier 20% IEEPA reciprocal tariff was struck down by the US Supreme Court on 20 Feb 2026._ `[NEWS: The Daily Star 24 Jul 2026; CPD Nov 2026 (Verified Fact Pack 20 Nov 2026: 19% → 20% CORRECTED)]`
 - হুন্ডি ও জুয়ার বিরুদ্ধে অভিযানে ৮০ হাজারের বেশি MFS হিসাব জব্দ; সেপ্টেম্বরে ১৪ মাস পর প্রথম ডলার বিক্রি করল বাংলাদেশ ব্যাংক  
   _More than 80,000 MFS accounts were frozen in the crackdown on hundi and online gambling; in September Bangladesh Bank sold dollars for the first time in 14 months._ `[NEWS: Ajker Patrika, Sep–Nov 2026]`
+- FY27-এর জুলাই–অক্টোবরে রেমিট্যান্স ১১.৪৬৫ বিলিয়ন ডলার (+১৩%); অক্টোবরে ২.৮৭৪ বি. (+১২.১%); FY26-এ শীর্ষ উৎস সৌদি আরব (৫.৮৪ বি.)  
+  _Remittance in July–October FY27 was USD 11.465 billion (+13%), with USD 2.874 billion in October (+12.1%); Saudi Arabia was the top source in FY26 (USD 5.84 billion)._ `[Financial Express/BSS 1 Nov 2026; Daily New Nation 4 Sep 2026]`
+- অর্থ বিভাগের MTMPS: FY27-এ রেমিট্যান্স ৩৮.৭২ বিলিয়ন ডলার প্রক্ষেপণ; তবে মধ্যপ্রাচ্যের যুদ্ধে জুন থেকে টানা ৫ মাস মাসিক রেমিট্যান্স ৩ বিলিয়নের নিচে  
+  _The Finance Division's MTMPS projects FY27 remittance at USD 38.72 billion, but monthly inflows stayed below USD 3 billion for five months from June, mainly due to the Middle East war._ `[The Daily Star, Nov 2026]`
+- যুক্তরাষ্ট্রে RMG রপ্তানি জুলাই–অক্টো FY27: ২.৮৫ বি. ডলার (+১০.১৬%, অংশ ২০.৭৩%); EU-র অংশ ৪৬.৭৯%; মার্কিন বাজারে পোশাকে গড় মোট শুল্ক ২৫.৬২%; বাংলাদেশ ১০% স্তরে, ভিয়েতনাম ও চীন ১২.৫% স্তরে  
+  _RMG exports to the US in July–October FY27 were USD 2.85 billion (+10.16%, a 20.73% share) and the EU share was 46.79%; the average total US tariff on garments is 25.62%, and Bangladesh sits in the 10% tier while Vietnam and China face 12.5%._ `[Daily Waadaa 10 Nov 2026; The Daily Star; Textile Focus, 2026]`
+- সুপ্রিম কোর্টের রায়ের পর ২৪ ফেব্রুয়ারি–২৪ জুলাই ২০২৬ যুক্তরাষ্ট্র সেকশন ১২২-এর অধীনে সাময়িক ১০% শুল্ক নিয়েছিল  
+  _After the Supreme Court ruling, the US applied a temporary 10% Section 122 tariff from 24 Feb to 24 Jul 2026._ `[Airlift USA / tariff trackers via Verified Fact Pack 20 Nov 2026]`
 
 **সমাধান/সুপারিশ:**
 
@@ -393,24 +443,34 @@
   _BB bought a net USD 6.43 billion via auctions in FY26; the exchange rate stayed around Tk 123 per dollar._ `[MPS H1FY27]`
 - চলতি হিসাবের ঘাটতি জুলাই–এপ্রিল FY26: ১.০৭ বিলিয়ন ডলার; সামগ্রিক BoP উদ্বৃত্ত ৩.৭৪ বিলিয়ন  
   _The current account deficit narrowed to USD 1.07 billion and the overall BoP posted a USD 3.74 billion surplus._ `[MPS H1FY27]`
-- জাতিসংঘ সাধারণ পরিষদ বাংলাদেশের এলডিসি উত্তরণ ৩ বছর পিছিয়ে ২৪ নভেম্বর ২০২৯ করেছে (প্রস্তাব গৃহীত অক্টোবর ২০২৬; নেপালও একই সুবিধা)  
-  _The UN General Assembly deferred Bangladesh's LDC graduation by three years to 24 November 2029 (resolution adopted in late October 2026)._ `[NEWS: bdnews24 30 Oct 2026; Prothom Alo English]`
+- জাতিসংঘ সাধারণ পরিষদের প্রস্তাব A/81/L.8 (২৯ অক্টোবর ২০২৬, আপত্তি ছাড়া গৃহীত; G77+চীনের পক্ষে উরুগুয়ে উত্থাপন) অনুযায়ী এলডিসি উত্তরণ ২৪ নভেম্বর ২০২৬ থেকে ২৪ নভেম্বর ২০২৯-এ পিছিয়েছে; নেপালও একই সুবিধা পেয়েছে  
+  _UNGA resolution A/81/L.8, adopted without objection on 29 Oct 2026 (tabled by Uruguay for the G77 and China), moved Bangladesh's LDC graduation from 24 Nov 2026 to 24 Nov 2029; Nepal got the same extension._ `[TBS 30 Oct 2026; Xinhua 30 Oct 2026; The Daily Star]`
 - উত্তরণের পর বছরে ১৭.৫ বিলিয়ন ডলারের বেশি রপ্তানি ঝুঁকিতে পড়তে পারে (জাতিসংঘের মূল্যায়ন)  
   _A UN assessment estimated that Bangladesh could lose over USD 17.5 billion in annual exports after graduation._ `[NEWS]`
 - রেমিট্যান্স FY26: রেকর্ড ৩৫.৫৯ বিলিয়ন ডলার (+১৭.৩%); FY27-এ ১৬ নভে পর্যন্ত ১৩.৪৩ বি. (+১৩.৪%)  
   _Remittances hit a record USD 35.59 billion in FY26 (+17.3%); FY27 inflows reached USD 13.43 billion by 16 November (+13.4%)._ `[NEWS: FE (Jul 2026); UNB (Nov 2026)]`
-- রপ্তানি FY26: ৪৮.০ বিলিয়ন ডলার (−০.৫৮%, লক্ষ্য ছিল ৫৫ বি.), RMG ৩৮.৭০ বি.; জুলাই–অক্টো FY27: ১৭.০৪ বি. (+৬%)  
-  _Exports fell 0.58% to USD 48.0 billion in FY26 (target USD 55 bn), RMG USD 38.70 bn; July–October FY27 exports rose about 6% to USD 17.04 bn._ `[NEWS: TBS / FE (EPB data), 2026]`
-- রিজার্ভ (৬ নভে ২০২৬, ACU পরিশোধের পর): BPM6 ২৯.৯৮ বি., গ্রস ৩৪.৮৫ বি. ডলার  
-  _After the ACU payment, reserves stood at USD 29.98 billion (BPM6) and USD 34.85 billion (gross) on 6 November 2026._ `[NEWS: bdnews24, 6 Nov 2026]`
-- যুক্তরাষ্ট্র ২৪ জুলাই ২০২৬ থেকে বাংলাদেশি পণ্যে ১০% সেকশন ৩০১ শুল্ক আরোপ করেছে (আগের ১৯% পারস্পরিক শুল্ক সুপ্রিম কোর্টে বাতিল)  
-  _Since 24 July 2026 the US applies a 10% Section 301 tariff on Bangladeshi goods, after its Supreme Court struck down the earlier 19% IEEPA-based reciprocal tariff._ `[NEWS: Bonik Barta English, 2026]`
+- রপ্তানি জুলাই–অক্টোবর FY27: ১৭.০৪ বিলিয়ন ডলার (+৬%); এর মধ্যে RMG ১৩.৭৫ বি. (+৫.৮২%, ≈৮০.৭%)। FY26-এ RMG ৩৮.৭০ বি. (−১.৬৪%)  
+  _Exports in July–October FY27 were USD 17.04 billion (+6%), of which RMG was USD 13.75 billion (+5.82%, about 80.7%). FY26 RMG exports were USD 38.70 billion (−1.64%)._ `[EPB via TBS / Financial Express, 7 Jul & 8 Nov 2026 (Verified Fact Pack 20 Nov 2026; FY26 total exports = CONFLICT, so not used)]`
+- রিজার্ভ (১৯ নভেম্বর ২০২৬): গ্রস ৩৪.৩৮ বিলিয়ন ডলার, BPM6 ২৯.৫৭ বিলিয়ন ডলার; ডলারের রেফারেন্স রেট ১২৪.৭০ টাকা  
+  _On 19 Nov 2026 gross reserves were USD 34.38 billion and BPM6 reserves USD 29.57 billion; the reference rate was Tk 124.70 per dollar._ `[BSS citing Bangladesh Bank, 19 Nov 2026; BB reference rate 19 Nov 2026]`
+- যুক্তরাষ্ট্র ২৪ জুলাই ২০২৬ থেকে বাংলাদেশি পণ্যে ১০% সেকশন ৩০১ (জোরপূর্বক শ্রম) শুল্ক আরোপ করেছে; আগের ২০% পারস্পরিক (IEEPA) শুল্ক মার্কিন সুপ্রিম কোর্ট ২০ ফেব্রুয়ারি ২০২৬-এ বাতিল করে  
+  _Since 24 July 2026 the US applies a 10% Section 301 (forced-labour) duty on Bangladeshi goods; the earlier 20% IEEPA reciprocal tariff was struck down by the US Supreme Court on 20 Feb 2026._ `[NEWS: The Daily Star 24 Jul 2026; CPD Nov 2026 (Verified Fact Pack 20 Nov 2026: 19% → 20% CORRECTED)]`
 - EU-এর নতুন GSP নীতি (২০২৬/১৩৯৫) ১ জানুয়ারি ২০২৭ থেকে কার্যকর: পোশাকের সেফগার্ড সীমা ৩৭%, GSP+-এর শর্ত ২৭ থেকে ৩২টি কনভেনশন  
-  _The new EU GSP Regulation 2026/1395 applies from 1 January 2027: the apparel safeguard threshold falls to 37% and GSP+ requires 32 conventions instead of 27._ `[NEWS: The Daily Star, Jun 2026]`
+  _The new EU GSP Regulation 2026/1395 applies from 1 January 2027: the apparel safeguard threshold falls to 37% and GSP+ requires 32 conventions instead of 27._ `[NEWS: The Daily Star, Jun 2026 — একক উৎস; Fact Pack-এ যাচাই হয়নি। পরীক্ষায় শুধু 'নতুন GSP নীতি ২০২৭ থেকে' লিখুন, শতাংশ নয়]`
 - জাপানের সাথে প্রথম অর্থনৈতিক অংশীদারিত্ব চুক্তি (EPA) স্বাক্ষর, ৬ ফেব্রুয়ারি ২০২৬  
   _Bangladesh signed its first Economic Partnership Agreement, with Japan, on 6 February 2026._ `[NEWS: 2026 via digest]`
 - হুন্ডি ও জুয়ার বিরুদ্ধে অভিযানে ৮০ হাজারের বেশি MFS হিসাব জব্দ; সেপ্টেম্বরে ১৪ মাস পর প্রথম ডলার বিক্রি করল বাংলাদেশ ব্যাংক  
   _More than 80,000 MFS accounts were frozen in the crackdown on hundi and online gambling; in September Bangladesh Bank sold dollars for the first time in 14 months._ `[NEWS: Ajker Patrika, Sep–Nov 2026]`
+- FY27-এর জুলাই–অক্টোবরে রেমিট্যান্স ১১.৪৬৫ বিলিয়ন ডলার (+১৩%); অক্টোবরে ২.৮৭৪ বি. (+১২.১%); FY26-এ শীর্ষ উৎস সৌদি আরব (৫.৮৪ বি.)  
+  _Remittance in July–October FY27 was USD 11.465 billion (+13%), with USD 2.874 billion in October (+12.1%); Saudi Arabia was the top source in FY26 (USD 5.84 billion)._ `[Financial Express/BSS 1 Nov 2026; Daily New Nation 4 Sep 2026]`
+- অর্থ বিভাগের MTMPS: FY27-এ রেমিট্যান্স ৩৮.৭২ বিলিয়ন ডলার প্রক্ষেপণ; তবে মধ্যপ্রাচ্যের যুদ্ধে জুন থেকে টানা ৫ মাস মাসিক রেমিট্যান্স ৩ বিলিয়নের নিচে  
+  _The Finance Division's MTMPS projects FY27 remittance at USD 38.72 billion, but monthly inflows stayed below USD 3 billion for five months from June, mainly due to the Middle East war._ `[The Daily Star, Nov 2026]`
+- যুক্তরাষ্ট্রে RMG রপ্তানি জুলাই–অক্টো FY27: ২.৮৫ বি. ডলার (+১০.১৬%, অংশ ২০.৭৩%); EU-র অংশ ৪৬.৭৯%; মার্কিন বাজারে পোশাকে গড় মোট শুল্ক ২৫.৬২%; বাংলাদেশ ১০% স্তরে, ভিয়েতনাম ও চীন ১২.৫% স্তরে  
+  _RMG exports to the US in July–October FY27 were USD 2.85 billion (+10.16%, a 20.73% share) and the EU share was 46.79%; the average total US tariff on garments is 25.62%, and Bangladesh sits in the 10% tier while Vietnam and China face 12.5%._ `[Daily Waadaa 10 Nov 2026; The Daily Star; Textile Focus, 2026]`
+- সুপ্রিম কোর্টের রায়ের পর ২৪ ফেব্রুয়ারি–২৪ জুলাই ২০২৬ যুক্তরাষ্ট্র সেকশন ১২২-এর অধীনে সাময়িক ১০% শুল্ক নিয়েছিল  
+  _After the Supreme Court ruling, the US applied a temporary 10% Section 122 tariff from 24 Feb to 24 Jul 2026._ `[Airlift USA / tariff trackers via Verified Fact Pack 20 Nov 2026]`
+- EU জাতিসংঘে বলেছে, এই বাড়তি সময় 'exceptional time-bound' এবং তা 'concrete, measurable domestic actions'-সহ হতে হবে; CPD-র প্রস্তাব: রূপান্তর কৌশলের সমন্বয় প্রধানমন্ত্রীর কার্যালয়ে, জনসাধারণের জন্য অগ্রগতি ড্যাশবোর্ড  
+  _At the UN, the EU called the extension an 'exceptional time-bound' measure that must be 'accompanied by concrete, measurable domestic actions'; CPD proposes coordinating the transition strategy from the Prime Minister's Office with a public progress dashboard._ `[The Daily Star; Daily Sun, Oct–Nov 2026]`
 
 **সমাধান/সুপারিশ:**
 
@@ -436,7 +496,7 @@
 | বাংলা উপশিরোনাম | English sub-heading |
 |---|---|
 | ভূমিকা | Introduction |
-| বর্তমান অবস্থা: MFS, এজেন্ট ব্যাংকিং, ইন্টারনেট ব্যাংকিং, বাংলা QR, IIPS (জুন ২০২৭) | Current landscape: MFS, agent banking, Bangla QR, IIPS |
+| বর্তমান অবস্থা: MFS, এজেন্ট ব্যাংকিং, ইন্টারনেট ব্যাংকিং, বাংলা QR, IIPS (জুলাই ২০২৭) | Current landscape: MFS, agent banking, Bangla QR, IIPS |
 | ডিজিটাল ব্যাংক নীতিমালা | Digital bank licensing |
 | AI-এর ব্যবহার: চ্যাটবট, ক্রেডিট স্কোরিং, জালিয়াতি শনাক্তকরণ, e-KYC | AI applications in banking |
 | সুবিধা: আর্থিক অন্তর্ভুক্তি, খরচ কমা, স্বচ্ছতা | Benefits |
@@ -450,14 +510,16 @@
 
 - 'বাংলা QR' — জাতীয় ইন্টারঅপারেবল QR মান; সব ক্লোজড-লুপ QR ৩০ জুন ২০২৬-এর মধ্যে বাংলা QR-এ রূপান্তর বাধ্যতামূলক  
   _Bangla QR, the national interoperable QR standard, replaced all closed-loop merchant QR codes by 30 June 2026._ `[MPS H1FY27, Sec 4.6]`
-- গেটস ফাউন্ডেশনের সাথে MoU: Instant Interoperable Payment System (IIPS) চালু লক্ষ্য জুন ২০২৭; CBDC পর্যবেক্ষণে  
-  _BB signed an MoU with the Gates Foundation to launch an Instant Interoperable Payment System by June 2027._ `[MPS H1FY27]`
+- গেটস ফাউন্ডেশনের Mojaloop উদ্যোগের কারিগরি সহায়তায় Inclusive Instant Payment System (IIPS) চালুর লক্ষ্য জুলাই ২০২৭; CBDC পর্যবেক্ষণে  
+  _Bangladesh Bank targets July 2027 to launch the Inclusive Instant Payment System (IIPS), with technical support from the Gates Foundation's open-source Mojaloop initiative._ `[NEWS: Dhaka Tribune 9 Nov 2026; Ittefaq English/BSS, Nov 2026 (Verified Fact Pack 20 Nov 2026: CORRECTED)]`
 - স্টুডেন্ট ব্যাংকিং নীতিমালা ফেব্রুয়ারি ২০২৬ (২৫ বছর পর্যন্ত); ডিজিটাল ন্যানো লোন স্কিম জুন ২০২৮ পর্যন্ত  
   _Updated Student Banking Guidelines (Feb 2026) cover youths up to 25; the Digital Nano Loan scheme runs till June 2028._ `[MPS H1FY27]`
 - ২০২৫-এ ৫,৫৩১টি আর্থিক সাক্ষরতা প্রশিক্ষণ, ২.৮৫ লাখ মানুষ; ২০২৬ লক্ষ্য ৫,৮১৮টি  
   _Banks ran 5,531 financial literacy programmes reaching 2.85 lakh people in 2025._ `[MPS H1FY27]`
 - বাংলা QR ১ জুলাই ২০২৬ থেকে সব মার্চেন্টে বাধ্যতামূলক; ১ অক্টোবর থেকে ইন্টারচেঞ্জ ফি শূন্য  
   _Bangla QR became the mandatory single merchant QR from 1 July 2026, with zero interchange fee from 1 October._ `[NEWS: 2026 via digest]`
+- বাংলাদেশ ব্যাংক রপ্তানিকারকদের সাইবার প্রতারণার ঝুঁকি নিয়ে সতর্ক করেছে (নভেম্বর ২০২৬)  
+  _Bangladesh Bank warned exporters about cyber-fraud risks in November 2026._ `[Prothom Alo, 16 Nov 2026]`
 
 **সমাধান/সুপারিশ:**
 
@@ -540,8 +602,8 @@
   _BB unveiled a Tk 60,000 crore stimulus (Tk 41,000 crore refinance + Tk 19,000 crore own funds) expected to create about 2.5 million jobs._ `[MPS H1FY27]`
 - 'বাংলা QR' — জাতীয় ইন্টারঅপারেবল QR মান; সব ক্লোজড-লুপ QR ৩০ জুন ২০২৬-এর মধ্যে বাংলা QR-এ রূপান্তর বাধ্যতামূলক  
   _Bangla QR, the national interoperable QR standard, replaced all closed-loop merchant QR codes by 30 June 2026._ `[MPS H1FY27, Sec 4.6]`
-- গেটস ফাউন্ডেশনের সাথে MoU: Instant Interoperable Payment System (IIPS) চালু লক্ষ্য জুন ২০২৭; CBDC পর্যবেক্ষণে  
-  _BB signed an MoU with the Gates Foundation to launch an Instant Interoperable Payment System by June 2027._ `[MPS H1FY27]`
+- গেটস ফাউন্ডেশনের Mojaloop উদ্যোগের কারিগরি সহায়তায় Inclusive Instant Payment System (IIPS) চালুর লক্ষ্য জুলাই ২০২৭; CBDC পর্যবেক্ষণে  
+  _Bangladesh Bank targets July 2027 to launch the Inclusive Instant Payment System (IIPS), with technical support from the Gates Foundation's open-source Mojaloop initiative._ `[NEWS: Dhaka Tribune 9 Nov 2026; Ittefaq English/BSS, Nov 2026 (Verified Fact Pack 20 Nov 2026: CORRECTED)]`
 - স্টুডেন্ট ব্যাংকিং নীতিমালা ফেব্রুয়ারি ২০২৬ (২৫ বছর পর্যন্ত); ডিজিটাল ন্যানো লোন স্কিম জুন ২০২৮ পর্যন্ত  
   _Updated Student Banking Guidelines (Feb 2026) cover youths up to 25; the Digital Nano Loan scheme runs till June 2028._ `[MPS H1FY27]`
 - ২০২৫-এ ৫,৫৩১টি আর্থিক সাক্ষরতা প্রশিক্ষণ, ২.৮৫ লাখ মানুষ; ২০২৬ লক্ষ্য ৫,৮১৮টি  
@@ -554,6 +616,8 @@
   _Bangla QR became the mandatory single merchant QR from 1 July 2026, with zero interchange fee from 1 October._ `[NEWS: 2026 via digest]`
 - ফ্যামিলি কার্ড: মাসে ২,৫০০ টাকা; FY27-এ ৪১ লাখ নারীর জন্য ১৪,৫০০ কোটি টাকা; নবম জাতীয় বেতনস্কেল অনুমোদন ৩১ আগস্ট ২০২৬  
   _Family cards pay Tk 2,500 a month; FY27 allocates Tk 14,500 crore for 41 lakh women; the 9th national pay scale was approved on 31 August 2026._ `[NEWS: TBS Bangla / Ittefaq, 2026]`
+- বাংলাদেশ ব্যাংক রপ্তানিকারকদের সাইবার প্রতারণার ঝুঁকি নিয়ে সতর্ক করেছে (নভেম্বর ২০২৬)  
+  _Bangladesh Bank warned exporters about cyber-fraud risks in November 2026._ `[Prothom Alo, 16 Nov 2026]`
 
 **সমাধান/সুপারিশ:**
 
@@ -604,8 +668,8 @@
   _The FY27 budget's 3R Strategy: Recovery and Stabilization, Restoration, and Reconstruction for Acceleration._ `[MPS H1FY27, Sec 2.2]`
 - পলিসি রেট ৯.৫% (৩০ জুলাই ২০২৬-এ ১০% থেকে কমানো, কার্যকর ২ আগস্ট); SLF ১১%, SDF ৭.৫%; প্রথম ত্রৈমাসিক মুদ্রানীতিতে (অক্টো–ডিসে) অপরিবর্তিত  
   _Bangladesh Bank cut the policy rate from 10% to 9.5% on 30 July 2026 (first cut in six years); SLF 11%, SDF 7.5%; the first quarterly MPS kept it at 9.5%._ `[NEWS: The Daily Star / FE / UNB, Jul–Oct 2026]`
-- বাংলাদেশ ব্যাংকের গভর্নর মো. মোস্তাকুর রহমান (নিয়োগ ২৫ ফেব্রুয়ারি ২০২৬)  
-  _Md Mostaqur Rahman became Governor of Bangladesh Bank on 25 February 2026._ `[NEWS: The Daily Star, 2026]`
+- বাংলাদেশ ব্যাংকের ১৪তম গভর্নর মো. মোস্তাকুর রহমান (২৫ ফেব্রুয়ারি ২০২৬ প্রজ্ঞাপন, মেয়াদ ৪ বছর; পূর্বসূরি ড. আহসান এইচ মনসুর)  
+  _Md. Mostaqur Rahman is the 14th Governor of Bangladesh Bank, appointed by notification on 25 Feb 2026 for four years, succeeding Dr Ahsan H Mansur._ `[Daily Star Bangla 25 Feb 2026; Prothom Alo 26 Feb 2026]`
 - GDP প্রবৃদ্ধি FY26 (সংশোধিত) ৩.৬৮%; FY27 পূর্বাভাস: IMF ৩.২%, বিশ্বব্যাংক ৩.৪%, ADB ৪.০% — সরকারের লক্ষ্য ৬.৫%  
   _FY26 growth was revised to 3.68%; for FY27 the IMF projects 3.2%, the World Bank 3.4% and ADB 4.0%, against a 6.5% target._ `[NEWS: BBS via UNB (7 Oct); IMF WEO (13 Oct); WB BDU (6 Oct); ADB ADO (23 Sep) 2026]`
 - অর্থনীতির আকার ৫০০ বিলিয়ন ডলার ছাড়িয়েছে (প্রায় ৫০১ বি.); মাথাপিছু আয় ৩,০২০ ডলার  
@@ -628,6 +692,12 @@
   _FY27 budget: revenue target Tk 6.95 lakh crore (NBR Tk 6.04 lakh crore), ADP Tk 3 lakh crore, social safety net Tk 1,44,338 crore, tax-free income threshold Tk 4 lakh._ `[NEWS: Prothom Alo, 30 Jun 2026]`
 - প্রতি তিনজন স্নাতকের একজন বেকার (~৯ লাখ); বেসরকারি বিনিয়োগ-GDP অনুপাত ১৪ বছরে সর্বনিম্ন  
   _About one in three graduates (about 9 lakh) is jobless, and private investment as a share of GDP is at a 14-year low._ `[NEWS: Prothom Alo, 30 Jul 2026]`
+- FY27 বাজেট ৯.৩৮ লাখ কোটি = GDP-র ১৩.৭%; রাজস্ব ৬.৯৫ লাখ কোটি (GDP-র ১০.২%), NBR লক্ষ্য ৬.০৪ লাখ কোটি (≈৮.৮৪%); ঘাটতি ২.৪৩ লাখ কোটি (৩.৬%); প্রাক্কলিত GDP ৬৮.৩০ লাখ কোটি টাকা  
+  _The FY27 budget of Tk 9.38 lakh crore equals 13.7% of GDP; revenue Tk 6.95 lakh crore (10.2% of GDP), NBR target Tk 6.04 lakh crore (about 8.84%), deficit Tk 2.43 lakh crore (3.6%), projected GDP Tk 68.30 lakh crore._ `[BSS 11 Jun 2026; The Bangladesh Today; Jagonews24]`
+- অর্থমন্ত্রী আমীর খসরু মাহমুদ চৌধুরী; বাণিজ্যমন্ত্রী খন্দকার আব্দুল মুক্তাদির (বিএনপি সরকার, ১২ ফেব্রুয়ারি ২০২৬ নির্বাচন)  
+  _Finance Minister: Amir Khosru Mahmud Chowdhury; Commerce Minister: Khandaker Abdul Muktadir (BNP government elected on 12 Feb 2026)._ `[Banglapost; BSS, 2026]`
+- FY26-এর শেষ প্রান্তিকে (এপ্রিল–জুন) প্রবৃদ্ধি ৪.৬০%; পুরো বছরের ৩.৬৮% (৭ অক্টোবর প্রকাশ) আগের ৪.১৪% সাময়িক হিসাব প্রতিস্থাপন করেছে  
+  _Growth in Q4 FY26 was 4.60%; the full-year 3.68% (released 7 Oct 2026) replaced the earlier provisional 4.14%._ `[Financial Express / UNB 7 Oct 2026; TBS]`
 
 **সমাধান/সুপারিশ:**
 

@@ -41,7 +41,7 @@
   ["BACH", "Bangladesh Automated Clearing House", "চেক (BACPS) ও BEFTN-এর স্বয়ংক্রিয় ক্লিয়ারিং ব্যবস্থা।"],
   ["Bangla QR", "Bangla QR", "জাতীয় ইন্টারঅপারেবল QR পেমেন্ট মান; ব্যাংক-MFS সব অ্যাপে চলে।"],
   ["Taka Pay", "Taka Pay", "দেশীয় কার্ড স্কিম (NPSB-ভিত্তিক), ভিসা/মাস্টারকার্ড নির্ভরতা কমাতে।"],
-  ["IIPS", "Instant Interoperable Payment System", "সব ব্যাংক-MFS-এর মধ্যে তাৎক্ষণিক লেনদেন ব্যবস্থা; লক্ষ্য জুন ২০২৭।"],
+  ["IIPS", "Inclusive Instant Payment System", "সব ব্যাংক-MFS-এর মধ্যে তাৎক্ষণিক লেনদেন ব্যবস্থা; লক্ষ্য জুলাই ২০২৭।"],
   ["MFS", "Mobile Financial Service", "মোবাইলভিত্তিক আর্থিক সেবা (বিকাশ, নগদ, রকেট)।"],
   ["CBDC", "Central Bank Digital Currency", "কেন্দ্রীয় ব্যাংক ইস্যুকৃত ডিজিটাল মুদ্রা।"],
   ["Digital Bank", "Digital Bank", "শাখাবিহীন, সম্পূর্ণ অনলাইনভিত্তিক ব্যাংক (BB নীতিমালা ২০২৩)।"],

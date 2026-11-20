@@ -18,13 +18,13 @@ Tip: Structure that scores: title → quotation → introduction with one fresh 
 > "A bank is only as strong as the trust of its depositors."
 
 **Introduction**
-Banks are the heart of an economy: they collect savings and pump credit into business. In Bangladesh that heart is weak. In June 2026, defaulted loans reached Tk 6.07 lakh crore, or 32.78 percent of all loans, which IMF data show is the highest ratio in the world. Restoring the health of banks is now the most urgent economic reform.
+Banks are the heart of an economy: they collect savings and pump credit into business. In Bangladesh that heart is weak. In June 2026, defaulted loans reached about Tk 6.06 lakh crore, or 32.78 percent of all loans, which IMF data show is the highest ratio in the world. The Governor himself said in November 2026 that about one-third of the sector's money had been "stolen". Restoring the health of banks is now the most urgent economic reform.
 
 **The magnitude of the problem**
 
 | Indicator | Figure | Source |
 |---|---|---|
-| Default loans, June 2026 | Tk 6.07 lakh crore (32.78%) | Bangladesh Bank via Prothom Alo |
+| Default loans, June 2026 | about Tk 6.06 lakh crore (32.78%) | Bangladesh Bank via Prothom Alo |
 | Default loans, Sept 2026 (latest) | Tk 5.97 lakh crore (32.17%) | Finance Minister in Parliament, 16 Nov 2026 |
 | Private credit growth, Sept 2026 | 4.17% (record low) | Bangladesh Bank via Samakal |
 | Default ratio, state-owned banks | 43.2% | Financial Express |
@@ -67,7 +67,7 @@ Bangladesh cannot reach its growth targets with a banking system in which one ta
 > "Graduation is not the end of the journey; it is the start of a new one."
 
 **Introduction**
-On 29 October 2026 the UN General Assembly deferred Bangladesh's graduation from the Least Developed Country (LDC) category from 24 November 2026 to 24 November 2029, granting the request of the new government. Nepal received the same extension. The decision gives Bangladesh three more years of trade preferences, but also three fewer excuses.
+On 29 October 2026 the UN General Assembly, through resolution A/81/L.8 adopted without objection, deferred Bangladesh's graduation from the Least Developed Country (LDC) category from 24 November 2026 to 24 November 2029, granting the request of the new government. Nepal received the same extension. The decision gives Bangladesh three more years of trade preferences, but also three fewer excuses.
 
 **Background**
 Bangladesh met all three graduation criteria (per-capita income, human assets and economic vulnerability) in the 2018 and 2021 reviews. The government argued that the preparatory period was disrupted by the pandemic, the 2024 political transition and global shocks such as the Middle East war.
@@ -80,7 +80,8 @@ Bangladesh met all three graduation criteria (per-capita income, human assets an
 
 **Challenges that remain**
 - Exports are concentrated: about 80 percent comes from RMG.
-- The new EU GSP Regulation, from 1 January 2027, lowers the apparel safeguard threshold to 37 percent, while Bangladesh's share is about 50 percent. GSP+ will require 32 conventions.
+- The new EU GSP rules expected from 2027 tighten the safeguard on apparel, where Bangladesh's share is very large, and GSP+ will demand more international conventions.
+- The EU called the extension an "exceptional time-bound" measure that must be "accompanied by concrete, measurable domestic actions" (UN General Assembly, October 2026).
 - The US now charges a 10 percent Section 301 tariff on Bangladeshi goods.
 - A UN assessment estimated export losses of more than USD 17.5 billion a year after graduation without preferences.
 - Low revenue (about 7 percent of GDP) limits investment in skills and infrastructure.
@@ -166,7 +167,7 @@ Artificial intelligence (AI) is changing how banks lend, serve customers and fig
 | Initiative | Status (2026) | Source |
 |---|---|---|
 | Bangla QR | Mandatory single merchant QR since 1 Jul 2026; zero interchange fee from 1 Oct | Bangladesh Bank |
-| Instant Interoperable Payment System | Targeted for June 2027 | Bangladesh Bank, MPS H1FY27 |
+| Inclusive Instant Payment System (IIPS) | Targeted for July 2027 (Gates Foundation's Mojaloop support) | Bangladesh Bank via Dhaka Tribune, Nov 2026 |
 | Digital nano-loans | Refinance scheme extended to June 2028 | Bangladesh Bank, MPS H1FY27 |
 | Digital bank licences | No final decision yet | 2026 reports |
 
@@ -202,11 +203,13 @@ More than a crore of Bangladeshis work abroad, and the money they send home has 
 |---|---|---|
 | Remittance, FY26 | USD 35.59 bn (+17.3%), record | Bangladesh Bank via FE |
 | Remittance, FY27 to 16 Nov | USD 13.43 bn (+13.4%) | Bangladesh Bank via UNB |
-| Exports, FY26 | USD 48.0 bn (−0.58%) | EPB via TBS |
-| Gross reserves, 6 Nov 2026 | USD 34.85 bn (BPM6: 29.98 bn) | Bangladesh Bank via bdnews24 |
+| Exports, Jul–Oct FY27 | USD 17.04 bn (+6%) | EPB via TBS, Nov 2026 |
+| Top source country, FY26 | Saudi Arabia (USD 5.84 bn) | Bangladesh Bank |
+| Gross reserves, 19 Nov 2026 | USD 34.38 bn (BPM6: 29.57 bn) | Bangladesh Bank via BSS |
+| FY27 projection | USD 38.72 bn | Finance Division MTMPS |
 
 **Why remittance matters**
-1. **Reserves and exchange rate:** remittances financed the trade gap and stabilised the taka around Tk 122–123 per dollar.
+1. **Reserves and exchange rate:** remittances financed the trade gap and stabilised the taka around Tk 122–125 per dollar (Tk 124.70 on 19 November 2026).
 2. **Rural consumption and poverty reduction:** families spend on food, education, health and housing.
 3. **Investment:** some remittance goes into small businesses, land and savings instruments.
 

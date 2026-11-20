@@ -36,7 +36,7 @@ order: 4
 
 | Rank | Topic family | Estimated chance that one of the two focus questions comes from it | Why |
 |---|---|---|---|
-| 1 | **Banking sector: default loans, mergers, Bank Resolution Act, governance** | **High (about 45–55%)** | Top story in both news passes; a banking exam; 32.17% default ratio; Sammilito Islami Bank; Section 18A repeal |
+| 1 | **Banking sector: default loans, mergers, Bank Resolution Act, governance** | **High (about 45–55%)** | Top story in both news passes; a banking exam; 32.17% default ratio told to parliament on 16 Nov; Governor's "one-third stolen" remark on 14 Nov; Sammilito Islami Bank; Section 18A repeal |
 | 2 | **Inflation, stagflation and monetary/fiscal policy (policy-rate cut, budget, IMF)** | **High (about 40–50%)** | Monthly headline; growth forecasts 3.2–4.0%; first rate cut in six years |
 | 3 | **External sector: remittance record, reserves, exports, US tariff, LDC 2029, EU GSP** | **High (about 40–50%)** | LDC deferral decided 29 Oct; remittance record USD 35.59 bn; 10% US tariff |
 | 4 | **Energy security and the Middle East war** | **Medium (about 25–35%)** | Most-covered story in the Bangla press; but fuel prices were already asked in June 2026 SO |

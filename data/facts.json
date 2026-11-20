@@ -1,5 +1,5 @@
 {
- "_note": "রচনা/আর্গুমেন্টে ব্যবহারের জন্য সর্বশেষ সংখ্যা। src: MPS = Bangladesh Bank Monetary Policy Statement H1FY27 (রিপোতে আছে: materials/07_official_reports/), NEWS = পত্রিকা (১৯ নভেম্বর ২০২৬ পর্যন্ত, ১৫+ উৎস যাচাই)। পরীক্ষার আগে নতুন খবর এলে এখানে হালনাগাদ করুন।",
+ "_note": "রচনা/আর্গুমেন্টে ব্যবহারের জন্য সর্বশেষ সংখ্যা। src: MPS = Bangladesh Bank Monetary Policy Statement H1FY27 (রিপোতে আছে: materials/07_official_reports/), NEWS = পত্রিকা (১৯ নভেম্বর ২০২৬ পর্যন্ত, ১৫+ উৎস যাচাই)। পরীক্ষার আগে নতুন খবর এলে এখানে হালনাগাদ করুন। | Fact Pack (20 Nov 2026) দিয়ে যাচাই ও সংশোধিত: research/2026-11-20_verified_fact_pack.pdf",
  "facts": [
   {
    "topic": "inflation",
@@ -111,9 +111,9 @@
   },
   {
    "topic": "ldc",
-   "bn": "জাতিসংঘ সাধারণ পরিষদ বাংলাদেশের এলডিসি উত্তরণ ৩ বছর পিছিয়ে ২৪ নভেম্বর ২০২৯ করেছে (প্রস্তাব গৃহীত অক্টোবর ২০২৬; নেপালও একই সুবিধা)",
-   "en": "The UN General Assembly deferred Bangladesh's LDC graduation by three years to 24 November 2029 (resolution adopted in late October 2026).",
-   "src": "NEWS: bdnews24 30 Oct 2026; Prothom Alo English"
+   "bn": "জাতিসংঘ সাধারণ পরিষদের প্রস্তাব A/81/L.8 (২৯ অক্টোবর ২০২৬, আপত্তি ছাড়া গৃহীত; G77+চীনের পক্ষে উরুগুয়ে উত্থাপন) অনুযায়ী এলডিসি উত্তরণ ২৪ নভেম্বর ২০২৬ থেকে ২৪ নভেম্বর ২০২৯-এ পিছিয়েছে; নেপালও একই সুবিধা পেয়েছে",
+   "en": "UNGA resolution A/81/L.8, adopted without objection on 29 Oct 2026 (tabled by Uruguay for the G77 and China), moved Bangladesh's LDC graduation from 24 Nov 2026 to 24 Nov 2029; Nepal got the same extension.",
+   "src": "TBS 30 Oct 2026; Xinhua 30 Oct 2026; The Daily Star"
   },
   {
    "topic": "ldc",
@@ -135,9 +135,9 @@
   },
   {
    "topic": "digital",
-   "bn": "গেটস ফাউন্ডেশনের সাথে MoU: Instant Interoperable Payment System (IIPS) চালু লক্ষ্য জুন ২০২৭; CBDC পর্যবেক্ষণে",
-   "en": "BB signed an MoU with the Gates Foundation to launch an Instant Interoperable Payment System by June 2027.",
-   "src": "MPS H1FY27"
+   "bn": "গেটস ফাউন্ডেশনের Mojaloop উদ্যোগের কারিগরি সহায়তায় Inclusive Instant Payment System (IIPS) চালুর লক্ষ্য জুলাই ২০২৭; CBDC পর্যবেক্ষণে",
+   "en": "Bangladesh Bank targets July 2027 to launch the Inclusive Instant Payment System (IIPS), with technical support from the Gates Foundation's open-source Mojaloop initiative.",
+   "src": "NEWS: Dhaka Tribune 9 Nov 2026; Ittefaq English/BSS, Nov 2026 (Verified Fact Pack 20 Nov 2026: CORRECTED)"
   },
   {
    "topic": "digital",
@@ -171,9 +171,9 @@
   },
   {
    "topic": "monetary",
-   "bn": "বাংলাদেশ ব্যাংকের গভর্নর মো. মোস্তাকুর রহমান (নিয়োগ ২৫ ফেব্রুয়ারি ২০২৬)",
-   "en": "Md Mostaqur Rahman became Governor of Bangladesh Bank on 25 February 2026.",
-   "src": "NEWS: The Daily Star, 2026"
+   "bn": "বাংলাদেশ ব্যাংকের ১৪তম গভর্নর মো. মোস্তাকুর রহমান (২৫ ফেব্রুয়ারি ২০২৬ প্রজ্ঞাপন, মেয়াদ ৪ বছর; পূর্বসূরি ড. আহসান এইচ মনসুর)",
+   "en": "Md. Mostaqur Rahman is the 14th Governor of Bangladesh Bank, appointed by notification on 25 Feb 2026 for four years, succeeding Dr Ahsan H Mansur.",
+   "src": "Daily Star Bangla 25 Feb 2026; Prothom Alo 26 Feb 2026"
   },
   {
    "topic": "growth",
@@ -207,8 +207,8 @@
   },
   {
    "topic": "npl",
-   "bn": "খেলাপি ঋণ জুন ২০২৬: ৬.০৭ লাখ কোটি টাকা, মোট ঋণের ৩২.৭৮% — IMF তথ্য অনুযায়ী বিশ্বে সর্বোচ্চ; রাষ্ট্রায়ত্ত ব্যাংকে ৪৩.২%",
-   "en": "Default loans reached Tk 6.07 lakh crore, 32.78% of all loans, in June 2026 — the highest ratio in the world per IMF data; 43.2% in state-owned banks.",
+   "bn": "খেলাপি ঋণ জুন ২০২৬: প্রায় ৬.০৬ লাখ কোটি টাকা, মোট ঋণের ৩২.৭৮% — IMF তথ্য অনুযায়ী বিশ্বে সর্বোচ্চ",
+   "en": "Default loans stood at about Tk 6.06 lakh crore at end-June 2026, 32.78% of total loans — the highest in the world according to IMF data.",
    "src": "NEWS: Prothom Alo English / FE, 2026"
   },
   {
@@ -231,27 +231,27 @@
   },
   {
    "topic": "external",
-   "bn": "রপ্তানি FY26: ৪৮.০ বিলিয়ন ডলার (−০.৫৮%, লক্ষ্য ছিল ৫৫ বি.), RMG ৩৮.৭০ বি.; জুলাই–অক্টো FY27: ১৭.০৪ বি. (+৬%)",
-   "en": "Exports fell 0.58% to USD 48.0 billion in FY26 (target USD 55 bn), RMG USD 38.70 bn; July–October FY27 exports rose about 6% to USD 17.04 bn.",
-   "src": "NEWS: TBS / FE (EPB data), 2026"
+   "bn": "রপ্তানি জুলাই–অক্টোবর FY27: ১৭.০৪ বিলিয়ন ডলার (+৬%); এর মধ্যে RMG ১৩.৭৫ বি. (+৫.৮২%, ≈৮০.৭%)। FY26-এ RMG ৩৮.৭০ বি. (−১.৬৪%)",
+   "en": "Exports in July–October FY27 were USD 17.04 billion (+6%), of which RMG was USD 13.75 billion (+5.82%, about 80.7%). FY26 RMG exports were USD 38.70 billion (−1.64%).",
+   "src": "EPB via TBS / Financial Express, 7 Jul & 8 Nov 2026 (Verified Fact Pack 20 Nov 2026; FY26 total exports = CONFLICT, so not used)"
   },
   {
    "topic": "external",
-   "bn": "রিজার্ভ (৬ নভে ২০২৬, ACU পরিশোধের পর): BPM6 ২৯.৯৮ বি., গ্রস ৩৪.৮৫ বি. ডলার",
-   "en": "After the ACU payment, reserves stood at USD 29.98 billion (BPM6) and USD 34.85 billion (gross) on 6 November 2026.",
-   "src": "NEWS: bdnews24, 6 Nov 2026"
+   "bn": "রিজার্ভ (১৯ নভেম্বর ২০২৬): গ্রস ৩৪.৩৮ বিলিয়ন ডলার, BPM6 ২৯.৫৭ বিলিয়ন ডলার; ডলারের রেফারেন্স রেট ১২৪.৭০ টাকা",
+   "en": "On 19 Nov 2026 gross reserves were USD 34.38 billion and BPM6 reserves USD 29.57 billion; the reference rate was Tk 124.70 per dollar.",
+   "src": "BSS citing Bangladesh Bank, 19 Nov 2026; BB reference rate 19 Nov 2026"
   },
   {
    "topic": "external",
-   "bn": "যুক্তরাষ্ট্র ২৪ জুলাই ২০২৬ থেকে বাংলাদেশি পণ্যে ১০% সেকশন ৩০১ শুল্ক আরোপ করেছে (আগের ১৯% পারস্পরিক শুল্ক সুপ্রিম কোর্টে বাতিল)",
-   "en": "Since 24 July 2026 the US applies a 10% Section 301 tariff on Bangladeshi goods, after its Supreme Court struck down the earlier 19% IEEPA-based reciprocal tariff.",
-   "src": "NEWS: Bonik Barta English, 2026"
+   "bn": "যুক্তরাষ্ট্র ২৪ জুলাই ২০২৬ থেকে বাংলাদেশি পণ্যে ১০% সেকশন ৩০১ (জোরপূর্বক শ্রম) শুল্ক আরোপ করেছে; আগের ২০% পারস্পরিক (IEEPA) শুল্ক মার্কিন সুপ্রিম কোর্ট ২০ ফেব্রুয়ারি ২০২৬-এ বাতিল করে",
+   "en": "Since 24 July 2026 the US applies a 10% Section 301 (forced-labour) duty on Bangladeshi goods; the earlier 20% IEEPA reciprocal tariff was struck down by the US Supreme Court on 20 Feb 2026.",
+   "src": "NEWS: The Daily Star 24 Jul 2026; CPD Nov 2026 (Verified Fact Pack 20 Nov 2026: 19% → 20% CORRECTED)"
   },
   {
    "topic": "ldc",
    "bn": "EU-এর নতুন GSP নীতি (২০২৬/১৩৯৫) ১ জানুয়ারি ২০২৭ থেকে কার্যকর: পোশাকের সেফগার্ড সীমা ৩৭%, GSP+-এর শর্ত ২৭ থেকে ৩২টি কনভেনশন",
    "en": "The new EU GSP Regulation 2026/1395 applies from 1 January 2027: the apparel safeguard threshold falls to 37% and GSP+ requires 32 conventions instead of 27.",
-   "src": "NEWS: The Daily Star, Jun 2026"
+   "src": "NEWS: The Daily Star, Jun 2026 — একক উৎস; Fact Pack-এ যাচাই হয়নি। পরীক্ষায় শুধু 'নতুন GSP নীতি ২০২৭ থেকে' লিখুন, শতাংশ নয়"
   },
   {
    "topic": "ldc",
@@ -261,9 +261,9 @@
   },
   {
    "topic": "energy",
-   "bn": "ডিজেল ১০০ → ১১৫ (১৮ এপ্রিল) → ১৩৫ টাকা (২১ সেপ্টেম্বর ২০২৬); অকটেন ১৬৫, পেট্রোল ১৬০, কেরোসিন ১৫৫",
+   "bn": "ডিজেল ১০০ → ১১৫ (১৮ এপ্রিল) → ১৩৫ টাকা (২০ সেপ্টেম্বরের প্রজ্ঞাপন, কার্যকর ২১ সেপ্টেম্বর ২০২৬; নভেম্বরেও অপরিবর্তিত); অকটেন ১৬৫, পেট্রোল ১৬০, কেরোসিন ১৫৫",
    "en": "Diesel rose from Tk 100 to Tk 115 (18 April) and Tk 135 (21 September 2026); octane Tk 165, petrol Tk 160, kerosene Tk 155.",
-   "src": "NEWS: Dhaka Tribune, Sep 2026"
+   "src": "Dhaka Tribune Sep 2026; Prothom Alo 30 Oct 2026; Jugantor 29 Oct 2026"
   },
   {
    "topic": "energy",
@@ -315,9 +315,9 @@
   },
   {
    "topic": "npl",
-   "bn": "সর্বশেষ সরকারি হিসাব: সেপ্টেম্বর ২০২৬-এ খেলাপি ঋণ ৫,৯৭,১৫৪ কোটি টাকা = ৩২.১৭% (অর্থমন্ত্রী, সংসদে ১৬ নভে); ২০২১-এ ছিল ৭.২৪%",
-   "en": "The latest official figure: default loans were Tk 5,97,154 crore, or 32.17%, in September 2026 (Finance Minister in Parliament, 16 Nov); the ratio was 7.24% in 2021.",
-   "src": "NEWS: TBS Bangla, 16 Nov 2026"
+   "bn": "সর্বশেষ সরকারি হিসাব: সেপ্টেম্বর ২০২৬-এ খেলাপি ঋণ ৫,৯৭,১৫৪.৯৩ কোটি টাকা = মোট ঋণের (১৮,৫৬,১৬৯ কোটি) ৩২.১৭%; মার্চে ছিল ৩২.২৬%, ২০২২-এ ৭.৬৪% (অর্থমন্ত্রী, সংসদে ১৬ নভে)",
+   "en": "Latest official figure: default loans were Tk 5,97,154.93 crore at end-September 2026, 32.17% of Tk 18,56,169 crore total loans (March: 32.26%; 2022: 7.64%), as the Finance Minister told parliament on 16 Nov 2026.",
+   "src": "Finance Minister in Jatiya Sangsad via Kaler Kantho / Risingbd / TBS Bangla, 16 Nov 2026"
   },
   {
    "topic": "monetary",
@@ -360,6 +360,108 @@
    "bn": "প্রতি তিনজন স্নাতকের একজন বেকার (~৯ লাখ); বেসরকারি বিনিয়োগ-GDP অনুপাত ১৪ বছরে সর্বনিম্ন",
    "en": "About one in three graduates (about 9 lakh) is jobless, and private investment as a share of GDP is at a 14-year low.",
    "src": "NEWS: Prothom Alo, 30 Jul 2026"
+  },
+  {
+   "topic": "inflation",
+   "bn": "মূল্যস্ফীতির ধারা ২০২৬: জুন ৯.১৬% → জুলাই ৮.৩২% → সেপ্টেম্বর ৮.৩৪% → অক্টোবর ৮.২৭%; মজুরি প্রবৃদ্ধি (৭.৬৩%) টানা ৫৭ মাস মূল্যস্ফীতির নিচে",
+   "en": "Inflation trend in 2026: June 9.16%, July 8.32%, September 8.34%, October 8.27%; wage growth (7.63%) has stayed below inflation for 57 consecutive months.",
+   "src": "BBS via TBS / bdnews24, 9 Nov 2026"
+  },
+  {
+   "topic": "inflation",
+   "bn": "IMF-এর প্রক্ষেপণ: FY27-এ গড় মূল্যস্ফীতি ১০.৯%; বিশ্বব্যাংক ৮.৬%, ADB ৯% — বাজেট লক্ষ্য ৭.৫%-এর অনেক ওপরে",
+   "en": "The IMF projects FY27 average inflation at 10.9% (World Bank 8.6%, ADB 9%), far above the 7.5% budget target.",
+   "src": "IMF WEO 13 Oct 2026; WB BDU 6 Oct 2026; ADB ADO 23 Sep 2026"
+  },
+  {
+   "topic": "inflation",
+   "bn": "রমজানের আগে বাংলাদেশ ব্যাংক ১১টি নিত্যপণ্য আমদানিতে ৯০ দিনের বাকি সুবিধা দিয়েছে",
+   "en": "Ahead of Ramadan, Bangladesh Bank allowed 90-day deferred payment for imports of 11 essential commodities.",
+   "src": "Prothom Alo, 10 Nov 2026"
+  },
+  {
+   "topic": "npl",
+   "bn": "খেলাপি ঋণ কমাতে গভর্নরের নেতৃত্বে (NBR-সহ) টাস্কফোর্স; এলডিসি সংস্কার রোডম্যাপে ২০২৯-এর মধ্যে খেলাপি ঋণ ২০%-এর নিচে নামানোর লক্ষ্য",
+   "en": "A Governor-led task force with NBR is pursuing loan recovery and laundered assets; the LDC reform roadmap targets NPLs below 20% by 2029.",
+   "src": "Risingbd / The Daily Star, Oct–Nov 2026"
+  },
+  {
+   "topic": "npl",
+   "bn": "আগামী বছর থেকে ঋণ বিতরণের লক্ষ্য: খুচরা ২০%, এসএমই ৩৫%, করপোরেট ৪৫% (গভর্নর, ১৪ নভে ২০২৬)",
+   "en": "From next year the Governor plans a loan-mix target: 20% retail, 35% SME and 45% corporate.",
+   "src": "Kaler Kantho, 14 Nov 2026"
+  },
+  {
+   "topic": "npl",
+   "bn": "খেলাপি ঋণ বাড়ার একটি কারণ কঠোর শ্রেণীকরণ: খেলাপি গণনার সময় ২৭০ → ১৮০ দিন (সেপ্টে ২০২৪) → ৯০ দিন (এপ্রিল ২০২৫)",
+   "en": "Part of the NPL jump reflects stricter classification: the overdue period was cut from 270 to 180 days (Sep 2024) and then to 90 days (Apr 2025).",
+   "src": "New Age; bdnews24 (BB spokesperson), 2025"
+  },
+  {
+   "topic": "merger",
+   "bn": "সম্মিলিত ইসলামী ব্যাংক: অনুমোদিত মূলধন ৪০,০০০ কোটি, পরিশোধিত ৩৫,০০০ কোটি (সরকার ২০,০০০ + আমানতকারীর শেয়ার ১৫,০০০); ৭৬ লাখ আমানতকারী, আমানত ১.৪২ লাখ কোটি টাকা; ২৫ আগস্ট হেয়ারকাট বাতিল, ৭ সেপ্টেম্বর থেকে পূর্ণ উত্তোলন",
+   "en": "Sammilito Islami Bank: authorised capital Tk 40,000 crore, paid-up Tk 35,000 crore (government Tk 20,000 crore + depositor shares Tk 15,000 crore); 76 lakh depositors with Tk 1.42 lakh crore; haircut scrapped on 25 Aug 2026 and full withdrawals allowed from 7 Sep.",
+   "src": "Prothom Alo English 25 Aug & 8 Sep 2026; New Age 25 Aug 2026; TBS Sep 2026"
+  },
+  {
+   "topic": "merger",
+   "bn": "একীভূত পাঁচ ব্যাংকের ১.৯২ লাখ কোটি টাকার ঋণের ৮৬% খেলাপি; আমানত বিমা তহবিল থেকে ১২,০০০ কোটি টাকা দিয়ে ২ লাখ পর্যন্ত আমানত ফেরত — ২৫ আগস্ট পর্যন্ত ৮.২২ লাখ আমানতকারী পেয়েছেন ৩,৮৮৭ কোটি",
+   "en": "86% of the Tk 1.92 lakh crore loans of the five merged banks are in default; the Deposit Insurance Fund provided Tk 12,000 crore to repay deposits up to Tk 2 lakh, and Tk 3,887 crore had reached 8.22 lakh depositors by 25 Aug 2026.",
+   "src": "Daily New Nation; New Age, Aug 2026"
+  },
+  {
+   "topic": "external",
+   "bn": "FY27-এর জুলাই–অক্টোবরে রেমিট্যান্স ১১.৪৬৫ বিলিয়ন ডলার (+১৩%); অক্টোবরে ২.৮৭৪ বি. (+১২.১%); FY26-এ শীর্ষ উৎস সৌদি আরব (৫.৮৪ বি.)",
+   "en": "Remittance in July–October FY27 was USD 11.465 billion (+13%), with USD 2.874 billion in October (+12.1%); Saudi Arabia was the top source in FY26 (USD 5.84 billion).",
+   "src": "Financial Express/BSS 1 Nov 2026; Daily New Nation 4 Sep 2026"
+  },
+  {
+   "topic": "external",
+   "bn": "অর্থ বিভাগের MTMPS: FY27-এ রেমিট্যান্স ৩৮.৭২ বিলিয়ন ডলার প্রক্ষেপণ; তবে মধ্যপ্রাচ্যের যুদ্ধে জুন থেকে টানা ৫ মাস মাসিক রেমিট্যান্স ৩ বিলিয়নের নিচে",
+   "en": "The Finance Division's MTMPS projects FY27 remittance at USD 38.72 billion, but monthly inflows stayed below USD 3 billion for five months from June, mainly due to the Middle East war.",
+   "src": "The Daily Star, Nov 2026"
+  },
+  {
+   "topic": "external",
+   "bn": "যুক্তরাষ্ট্রে RMG রপ্তানি জুলাই–অক্টো FY27: ২.৮৫ বি. ডলার (+১০.১৬%, অংশ ২০.৭৩%); EU-র অংশ ৪৬.৭৯%; মার্কিন বাজারে পোশাকে গড় মোট শুল্ক ২৫.৬২%; বাংলাদেশ ১০% স্তরে, ভিয়েতনাম ও চীন ১২.৫% স্তরে",
+   "en": "RMG exports to the US in July–October FY27 were USD 2.85 billion (+10.16%, a 20.73% share) and the EU share was 46.79%; the average total US tariff on garments is 25.62%, and Bangladesh sits in the 10% tier while Vietnam and China face 12.5%.",
+   "src": "Daily Waadaa 10 Nov 2026; The Daily Star; Textile Focus, 2026"
+  },
+  {
+   "topic": "external",
+   "bn": "সুপ্রিম কোর্টের রায়ের পর ২৪ ফেব্রুয়ারি–২৪ জুলাই ২০২৬ যুক্তরাষ্ট্র সেকশন ১২২-এর অধীনে সাময়িক ১০% শুল্ক নিয়েছিল",
+   "en": "After the Supreme Court ruling, the US applied a temporary 10% Section 122 tariff from 24 Feb to 24 Jul 2026.",
+   "src": "Airlift USA / tariff trackers via Verified Fact Pack 20 Nov 2026"
+  },
+  {
+   "topic": "policy",
+   "bn": "FY27 বাজেট ৯.৩৮ লাখ কোটি = GDP-র ১৩.৭%; রাজস্ব ৬.৯৫ লাখ কোটি (GDP-র ১০.২%), NBR লক্ষ্য ৬.০৪ লাখ কোটি (≈৮.৮৪%); ঘাটতি ২.৪৩ লাখ কোটি (৩.৬%); প্রাক্কলিত GDP ৬৮.৩০ লাখ কোটি টাকা",
+   "en": "The FY27 budget of Tk 9.38 lakh crore equals 13.7% of GDP; revenue Tk 6.95 lakh crore (10.2% of GDP), NBR target Tk 6.04 lakh crore (about 8.84%), deficit Tk 2.43 lakh crore (3.6%), projected GDP Tk 68.30 lakh crore.",
+   "src": "BSS 11 Jun 2026; The Bangladesh Today; Jagonews24"
+  },
+  {
+   "topic": "policy",
+   "bn": "অর্থমন্ত্রী আমীর খসরু মাহমুদ চৌধুরী; বাণিজ্যমন্ত্রী খন্দকার আব্দুল মুক্তাদির (বিএনপি সরকার, ১২ ফেব্রুয়ারি ২০২৬ নির্বাচন)",
+   "en": "Finance Minister: Amir Khosru Mahmud Chowdhury; Commerce Minister: Khandaker Abdul Muktadir (BNP government elected on 12 Feb 2026).",
+   "src": "Banglapost; BSS, 2026"
+  },
+  {
+   "topic": "growth",
+   "bn": "FY26-এর শেষ প্রান্তিকে (এপ্রিল–জুন) প্রবৃদ্ধি ৪.৬০%; পুরো বছরের ৩.৬৮% (৭ অক্টোবর প্রকাশ) আগের ৪.১৪% সাময়িক হিসাব প্রতিস্থাপন করেছে",
+   "en": "Growth in Q4 FY26 was 4.60%; the full-year 3.68% (released 7 Oct 2026) replaced the earlier provisional 4.14%.",
+   "src": "Financial Express / UNB 7 Oct 2026; TBS"
+  },
+  {
+   "topic": "ldc",
+   "bn": "EU জাতিসংঘে বলেছে, এই বাড়তি সময় 'exceptional time-bound' এবং তা 'concrete, measurable domestic actions'-সহ হতে হবে; CPD-র প্রস্তাব: রূপান্তর কৌশলের সমন্বয় প্রধানমন্ত্রীর কার্যালয়ে, জনসাধারণের জন্য অগ্রগতি ড্যাশবোর্ড",
+   "en": "At the UN, the EU called the extension an 'exceptional time-bound' measure that must be 'accompanied by concrete, measurable domestic actions'; CPD proposes coordinating the transition strategy from the Prime Minister's Office with a public progress dashboard.",
+   "src": "The Daily Star; Daily Sun, Oct–Nov 2026"
+  },
+  {
+   "topic": "digital",
+   "bn": "বাংলাদেশ ব্যাংক রপ্তানিকারকদের সাইবার প্রতারণার ঝুঁকি নিয়ে সতর্ক করেছে (নভেম্বর ২০২৬)",
+   "en": "Bangladesh Bank warned exporters about cyber-fraud risks in November 2026.",
+   "src": "Prothom Alo, 16 Nov 2026"
   }
  ]
 }

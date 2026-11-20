@@ -69,11 +69,17 @@ cur = [f for f in facts if f["topic"] == "monetary" and "পলিসি রে�
 ok(cur and all("৯.৫" in f["bn"] for f in cur), "policy-rate fact says 9.5%")
 
 # stale-number guard across all human-readable text
-for p_ in glob.glob("docs/*.md") + glob.glob("answers/*.md") + ["README.md", "webapp/app.html"]:
+for p_ in [x for x in glob.glob("docs/*.md") if not re.search(r"docs/1[56]_", x)] + glob.glob("answers/*.md") + ["README.md", "webapp/app.html"]:  # 15/16 quote old values on purpose
     t_ = open(p_, encoding="utf-8").read()
-    for bad in ("৩৫টি সর্বশেষ", "৩২.২৬", "32.26%"):
+    for bad in ("৩৫টি সর্বশেষ", "Instant Interoperable", "১৯% পারস্পরিক", "19% IEEPA", "6.07 lakh", "৬.০৭ লাখ", "৩৪.৮৫", "34.85 bn", "জুন ২০২৭"):
         ok(bad not in t_, f"{p_} has no stale figure", bad)
-ok(len(facts) >= 60, "facts ≥60", len(facts))
+ok(len(facts) >= 77, "facts ≥77", len(facts))
+# Fact Pack (20 Nov 2026) corrections stay applied in the data files too
+blob = open("data/facts.json", encoding="utf-8").read() + open("data/quiz.json", encoding="utf-8").read() + open("data/terms.json", encoding="utf-8").read()
+for bad in ("Instant Interoperable", "১৯% পারস্পরিক", "19% IEEPA", "৩৪.৮৫"):
+    ok(bad not in blob, "data has no superseded figure", bad)
+for good in ("Inclusive Instant Payment System", "জুলাই ২০২৭", "৩৪.৩৮", "A/81/L.8", "১৪তম গভর্নর", "৩২.১৭%"):
+    ok(good in blob, "data has Fact-Pack figure", good)
 
 # ── 4. terms, topics, arguments, translation, plan ─────────────
 terms = load("data/terms.json")["terms"]
