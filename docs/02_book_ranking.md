@@ -47,7 +47,7 @@
 
 | ক্রম | ফাইল | কাজ |
 |---|---|---|
-| ১ | `materials/03_math/khairul/01–05` (শতকরা, বীজগণিত, সময়-কাজ, গতি, ধারা) | অধ্যায়ের কৌশল শিখুন |
+| ১ | `materials/03_math/khairul/` (01–05: শতকরা, বীজগণিত, সময়-কাজ, গতি, ধারা) | অধ্যায়ের কৌশল শিখুন |
 | ২ | `materials/03_math/topic_sheets/PDF45, PDF16, PDF14, PDF33` (লাভ-ক্ষতি, সমীকরণ, চক্রবৃদ্ধি, জ্যামিতি) | অধ্যায় ধরে অনুশীলন |
 | ৩ | `materials/03_math/question_bank/BIBM_Previous_All_Written_Math_Solution.pdf` | **সাম্প্রতিক BIBM প্রশ্ন।** আগে নিজে করুন, পরে মিলিয়ে নিন |
 | ৪ | `materials/03_math/question_bank/Bank_Written_Math_1986-2021.pdf` (৫৭৭ পৃ.) | প্রশ্নব্যাংক। `so.py math <অধ্যায়>` দিয়ে র‍্যান্ডম ড্রিল |
