@@ -6,7 +6,7 @@
 <style>
 /* Layout: an exam answer-script — ruled paper, red margin rule, navy ink; one sticky header with the countdown */
 :root {
-  --paper: #f5f7fb;
+  --paper: #ffffff;
   --sheet: #ffffff;
   --ink: #17233d;
   --ink-2: #4a5878;
@@ -216,6 +216,7 @@ td.n, th.n { text-align: right; font-family: var(--f-mono); font-variant-numeric
 "use strict";
 /* ═════════════════════════ constants ═════════════════════════ */
 const EXAM_MS = Date.parse("2026-11-27T09:30:00+06:00");
+const COUNT_MS = EXAM_MS - 14 * 3600e3; /* কাউন্টডাউন ১৪ ঘণ্টা আগে শেষ হয় (ব্যবহারকারীর অনুরোধ) */
 const DAYS = ["2026-11-20", "2026-11-21", "2026-11-22", "2026-11-23", "2026-11-24", "2026-11-25", "2026-11-26"];
 const STORE_KEY = "so-sprint-v1";
 const SCHEMA = 1;
@@ -641,7 +642,7 @@ function render() {
 }
 function tickCount() {
   const el = $("#count"); if (!el) return;
-  const diff = EXAM_MS - Date.now();
+  const diff = COUNT_MS - Date.now();
   if (diff <= 0) { el.replaceChildren(h("span", { class: "pill acc" }, diff > -2 * 3600e3 ? "পরীক্ষা চলছে" : "পরীক্ষা শেষ")); return; }
   const d = Math.floor(diff / 864e5), hh = Math.floor((diff % 864e5) / 36e5), mm = Math.floor((diff % 36e5) / 6e4);
   const key = d + ":" + hh + ":" + mm; if (el.dataset.k === key) return; el.dataset.k = key;
