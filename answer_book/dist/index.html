@@ -1,0 +1,1887 @@
+<title>SO Model Answer Script</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>/* Layout: an exam answer script on a desk — printed cover and question papers in a serif face,
+   answers in black ballpoint handwriting with blue-ink headings and a pencil-drawn left margin.
+   A deliberate single (light, paper) theme. */
+@font-face { font-family: "Kalam"; font-weight: 400; src: url("fonts/Kalam-400.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "Kalam"; font-weight: 700; src: url("fonts/Kalam-700.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "Atma"; font-weight: 400; src: url("fonts/Atma-400.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "Atma"; font-weight: 600; src: url("fonts/Atma-600.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "Tinos"; font-weight: 400; src: url("fonts/Tinos-400.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "Tinos"; font-weight: 700; src: url("fonts/Tinos-700.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "Tiro Bangla"; font-weight: 400; src: url("fonts/TiroBangla-400.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "Caveat"; font-weight: 500; src: url("fonts/Caveat-500.ttf") format("truetype"); font-display: swap; }
+
+:root {
+  --desk: #cfc9bb;
+  --paper: #fdfcf7;
+  --ink: #17191f;          /* black ballpoint */
+  --blue: #1d3c9b;         /* blue ballpoint */
+  --pencil: #6d6a64;       /* graphite */
+  --print: #111111;        /* printed text */
+  --rule: #2b2b2b;
+  --stamp: #b3261e;
+  --hand: "Kalam", "Atma", "Segoe Print", "Comic Sans MS", cursive;
+  --hand-bn: "Atma", "Kalam", "Hind Siliguri", "Nirmala UI", sans-serif;
+  --pencil-font: "Caveat", "Kalam", cursive;
+  --serif: "Tinos", "Tiro Bangla", "Times New Roman", "Nirmala UI", serif;
+  --margin-x: 30mm;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { background: var(--desk); color: var(--ink); margin: 0; }
+body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+/* screen navigation */
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; display: flex; gap: 12px; align-items: center; flex-wrap: wrap;
+  background: #2a2925; color: #f3efe6; font-family: var(--serif); padding-block: 8px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: #2a2925; }
+.bar b { font-size: 1rem; letter-spacing: .02em; }
+.bar select { font: inherit; font-size: .9rem; max-width: 100%; min-width: 0; flex: 1 1 220px; padding: 6px 8px; border-radius: 6px; border: 1px solid #6b665c; background: #3a3832; color: #f3efe6; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+.desk { padding-block: 24px 60px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; justify-items: center; gap: 28px; }
+.sheet { background: var(--paper); width: min(210mm, 100%); min-width: 0; box-shadow: 0 2px 4px rgba(0,0,0,.18), 0 14px 30px rgba(0,0,0,.18);
+  padding: 18mm 16mm 20mm; position: relative; scroll-margin-top: 60px; overflow-wrap: anywhere; }
+
+/* ---------- printed matter (cover, question papers, analysis) ---------- */
+.printed, .cover { font-family: var(--serif); color: var(--print); font-size: 11.5pt; line-height: 1.5; }
+.printed h1 { font-size: 17pt; text-align: center; margin: 0 0 10px; text-wrap: balance; }
+.printed h2 { font-size: 13pt; margin: 18px 0 6px; border-bottom: 1px solid var(--rule); padding-bottom: 2px; }
+.printed h3 { font-size: 12pt; margin: 14px 0 4px; }
+.printed p, .printed li { margin: 0 0 6px; }
+.printed blockquote { margin: 8px 0; padding: 8px 12px; border: 1px solid var(--rule); background: #f4f2ea; }
+.printed table { border-collapse: collapse; width: 100%; margin: 8px 0 12px; font-size: 10pt; display: block; overflow-x: auto; }
+.printed th, .printed td { border: 1px solid var(--rule); padding: 4px 6px; text-align: left; vertical-align: top; }
+.printed th { background: #ece9df; }
+.printed hr { border: 0; border-top: 1px dashed #888; margin: 14px 0; }
+.toc-list a { color: var(--print); }
+.pencil-inline { font-family: var(--pencil-font); color: var(--pencil); font-size: 1.25em; }
+
+/* question paper */
+.qp-head { text-align: center; border-bottom: 2px solid var(--rule); padding-bottom: 8px; margin-bottom: 12px; }
+.qp-org { font-size: 10.5pt; letter-spacing: .06em; text-transform: uppercase; }
+.qp-title { font-size: 19pt; font-weight: 700; letter-spacing: .18em; margin: 4px 0; }
+.qp-sub { font-size: 12pt; font-weight: 700; }
+.qp-meta { display: flex; justify-content: space-between; font-weight: 700; margin-top: 8px; }
+.qp-note { font-style: italic; font-size: 10pt; margin-top: 4px; }
+.qp-body p { margin: 0 0 9px; }
+.qp-body em { font-style: normal; font-weight: 700; float: right; margin-left: 8px; }
+
+/* ---------- cover ---------- */
+.cover { min-height: 297mm; }
+.cv-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 10mm; flex-wrap: wrap; }
+.cv-head { text-align: center; margin: 5mm 0 5mm; }
+.cv-1 { font-size: 12pt; letter-spacing: .08em; text-transform: uppercase; }
+.cv-2 { font-size: 14pt; font-weight: 700; margin-top: 2px; }
+.cv-3 { font-size: 27pt; font-weight: 700; letter-spacing: .3em; margin-top: 3mm; border-top: 3px double var(--rule); border-bottom: 3px double var(--rule); padding: 4px 0; }
+.cv-4 { font-family: "Tiro Bangla", var(--serif); font-size: 18pt; margin-top: 4px; }
+.stamp { margin: 4mm 0 0 2mm; transform: rotate(-6deg); border: 3px solid var(--stamp); color: var(--stamp); font-weight: 700;
+  font-size: 10pt; letter-spacing: .08em; padding: 4px 10px; text-align: center; opacity: .85; line-height: 1.25; }
+.stamp small { font-weight: 400; letter-spacing: 0; font-size: 8pt; }
+.code-box { border: 1.5px solid var(--rule); width: 46mm; padding: 4px 6px; text-align: center; font-size: 9.5pt; }
+.code-blank { height: 12mm; border-top: 1px solid var(--rule); margin-top: 4px; }
+.code-box small { font-size: 7pt; line-height: 1.2; display: block; }
+.fields { width: 100%; border-collapse: collapse; margin-bottom: 6mm; }
+.fields th { width: 42%; text-align: left; font-weight: 400; padding: 5px 6px 2px 0; vertical-align: bottom; white-space: nowrap; }
+.fields td { border-bottom: 1px dotted var(--rule); padding: 6px 4px 2px; }
+.hand { font-family: var(--hand); color: var(--blue); font-size: 14pt; line-height: 1; }
+.sig { font-style: italic; font-size: 16pt; }
+.roll { display: inline-flex; gap: 0; }
+.roll .box { width: 9mm; height: 9mm; border: 1.3px solid var(--rule); margin-right: -1.3px; display: inline-block; }
+.cv-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 8mm; }
+.cv-grid > * { min-width: 0; }
+.box-h { font-weight: 700; text-transform: uppercase; letter-spacing: .05em; font-size: 10pt; border-bottom: 1.5px solid var(--rule); margin-bottom: 6px; padding-bottom: 2px; }
+.instr { border: 1.5px solid var(--rule); padding: 8px 10px; font-size: 9.5pt; line-height: 1.4; }
+.instr ol { margin: 0; padding-left: 18px; }
+.exam { border: 1.5px solid var(--rule); padding: 8px 10px; }
+.marks { width: 100%; border-collapse: collapse; font-size: 9.5pt; }
+.marks th, .marks td { border: 1px solid var(--rule); padding: 3px 4px; text-align: center; }
+.marks th { font-size: 8.5pt; white-space: nowrap; }
+.marks td.l { text-align: left; }
+.marks .tot td { font-weight: 700; }
+.target { text-align: right; margin-top: 8px; transform: rotate(-3deg); }
+.cv-foot { font-size: 8pt; color: #444; margin-top: 5mm; border-top: 1px solid #999; padding-top: 4px; }
+
+/* ---------- handwritten answer script ---------- */
+.script { font-family: var(--hand); font-size: 15.5px; line-height: 1.78; color: var(--ink); padding-left: var(--margin-x);
+  background-image: linear-gradient(to right, transparent calc(var(--margin-x) - 7mm), rgba(109,106,100,.6) calc(var(--margin-x) - 7mm), rgba(109,106,100,.6) calc(var(--margin-x) - 7mm + .7px), transparent calc(var(--margin-x) - 7mm + .7px)); }
+.script :lang(bn), .script .bn { font-family: var(--hand-bn); }
+.strip { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; font-family: var(--serif); font-size: 8.5pt; color: #555;
+  border-bottom: 1px solid #bbb; margin: -8mm 0 6mm calc(-1 * var(--margin-x) + 16mm); padding-bottom: 3px; letter-spacing: .04em; }
+.script-title { font-family: var(--serif); font-size: 13pt; text-align: center; color: var(--print); margin: 0 0 4mm; text-wrap: balance; }
+.script h2.ans { font-family: var(--hand); font-weight: 700; font-size: 17px; color: var(--blue); margin: 10mm 0 3mm;
+  padding-top: 5mm; border-top: .7px solid rgba(109,106,100,.6); text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 4px; }
+.script h3 { font-family: var(--hand); font-weight: 700; font-size: 18px; text-align: center; color: var(--ink); margin: 4mm 0 3mm;
+  text-decoration: underline double var(--blue); text-underline-offset: 5px; text-wrap: balance; }
+.script p { margin: 0 0 3mm; }
+.script ol, .script ul { margin: 0 0 3mm; padding-left: 22px; }
+.script li { margin-bottom: 1.5mm; }
+.script strong { font-weight: 700; text-decoration: underline; text-decoration-color: var(--blue); text-decoration-thickness: 1.3px; text-underline-offset: 3px; }
+.script em { color: var(--ink); }
+.script blockquote { margin: 3mm 0 4mm; padding: 0 6mm; color: var(--blue); text-align: center; font-size: 16.5px; }
+.script blockquote p { margin: 0; }
+.script table { border-collapse: collapse; margin: 3mm 0 4mm; font-size: 14px; line-height: 1.4; display: block; overflow-x: auto; max-width: 100%; }
+.script th, .script td { border: 1.2px solid var(--blue); padding: 4px 7px; vertical-align: top; text-align: left; }
+.script th { color: var(--blue); font-weight: 700; }
+.pencil { display: block; font-family: var(--pencil-font); font-size: 19px; line-height: 1.35; color: var(--pencil); margin: 2mm 0 4mm -6mm;
+  padding: 2mm 3mm 2mm 7mm; border-left: 2px solid rgba(109,106,100,.55); border-radius: 2px; position: relative; }
+.pencil .pmark { position: absolute; left: -1px; top: 1mm; font-size: 14px; transform: translateX(-130%); }
+
+/* phones */
+@media (max-width: 600px) {
+  :root { --margin-x: 14mm; }
+  .sheet { padding: 12mm 6mm 14mm; }
+  .script { padding-left: var(--margin-x); }
+  .strip { margin-left: 0; }
+  .cv-grid { grid-template-columns: 1fr; }
+  .cv-top { justify-content: center; }
+  .stamp { transform: none; margin: 0; }
+  .fields th { white-space: normal; width: 45%; }
+  .cv-3 { font-size: 22pt; letter-spacing: .15em; }
+  .roll .box { width: 7mm; height: 7mm; }
+}
+
+/* print / PDF */
+@page { size: A4; margin: 14mm 12mm 16mm 12mm; }
+@media print {
+  html, body, .desk { background: var(--paper); }
+  .bar { display: none; }
+  .desk { display: block; padding: 0; }
+  .sheet { box-shadow: none; width: auto; padding: 0 0 0 0; margin: 0; break-before: page; }
+  .sheet:first-child { break-before: auto; }
+  .script { padding-left: var(--margin-x); }
+  .cover { min-height: 0; padding: 0; }
+  .script h2.ans { break-before: page; margin-top: 0; }
+  .script h1 + h2.ans, .script .strip + h1 + h2.ans { break-before: auto; }
+  .script table, .pencil, .printed table, .printed blockquote { break-inside: avoid; }
+  .script h2, .script h3, .printed h2 { break-after: avoid; }
+  .strip { margin-top: 0; }
+}
+</style>
+<nav class="bar" aria-label="Sections">
+  <b>SO Model Answer Script</b>
+  <label class="sr" for="jump">Go to section</label>
+  <select id="jump" onchange="if(this.value)location.hash=this.value"><option value="cover">Cover page</option><option value="contents">How to use · Contents</option><option value="prediction">Topic prediction for 27 Nov 2026</option><option value="paperA-q">Paper A · 5 June 2026 (blueprint) — question paper</option><option value="paperA">Paper A · 5 June 2026 (blueprint) — model answers</option><option value="predfocus">Predicted focus writing — model answers</option><option value="predother">Practice set (Analytical, Translation, Grammar, Banking, GK, Math)</option><option value="paperB-q">Paper B · 24 December 2025 — question paper</option><option value="paperB">Paper B · 24 December 2025 — model answers</option><option value="paperC-q">Paper C · 20 June 2025 — question paper</option><option value="paperC">Paper C · 20 June 2025 — model answers</option><option value="older">2021–2024 papers — answer pointers</option><option value="qbank">Appendix · Question bank 2014–2026</option></select>
+</nav>
+<main class="desk">
+
+<article class="sheet cover" id="cover">
+  <div class="cv-top">
+    <div class="stamp">PRACTICE COPY · MODEL ANSWERS<br><small>not an official document</small></div>
+    <div class="code-box"><div>Code No.</div><div class="code-blank"></div><small>(for office use — candidate will not write here)</small></div>
+  </div>
+  <div class="cv-head">
+    <div class="cv-1">Combined Bank Recruitment Examination</div>
+    <div class="cv-2">Senior Officer (General) — Written Test</div>
+    <div class="cv-3">ANSWER SCRIPT</div>
+    <div class="cv-4">উত্তরপত্র</div>
+  </div>
+  <table class="fields">
+    <tr><th>Name of the Candidate</th><td><span class="hand">Model Answer Book</span></td></tr>
+    <tr><th>Father's Name</th><td></td></tr>
+    <tr><th>Mother's Name</th><td></td></tr>
+    <tr><th>Roll No.</th><td><div class="roll"><span class='box'></span><span class='box'></span><span class='box'></span><span class='box'></span><span class='box'></span><span class='box'></span><span class='box'></span><span class='box'></span></div></td></tr>
+    <tr><th>Name of the Post</th><td><span class="hand">Senior Officer (General)</span></td></tr>
+    <tr><th>Date of Examination</th><td><span class="hand">27 / 11 / 2026 &nbsp;·&nbsp; 9:30 a.m. – 11:30 a.m.</span></td></tr>
+    <tr><th>Signature of the Candidate</th><td><span class="hand sig">Model</span></td></tr>
+    <tr><th>Signature of the Invigilator</th><td></td></tr>
+  </table>
+  <div class="cv-grid">
+    <div class="instr">
+      <div class="box-h">Instructions to the Candidate</div>
+      <ol>
+        <li>Write your name, roll number and signature only in the spaces provided on this page. Do not write your name anywhere inside the script.</li>
+        <li>Use a black ink ball-point pen only. Pencil may be used only for graphs and drawings.</li>
+        <li>Use of correction fluid anywhere in the answer script is strictly prohibited.</li>
+        <li>Write the question number clearly at the start of every answer, and begin each answer on a new page.</li>
+        <li>Use the last page for rough work and cross it out.</li>
+        <li>No additional sheet will be supplied; plan the space before you write.</li>
+      </ol>
+    </div>
+    <div class="exam">
+      <div class="box-h">For Examiner's Use Only</div>
+      <table class="marks"><thead><tr><th>Q.</th><th>Section</th><th>FM</th><th>Obt.</th><th>Sign</th></tr></thead>
+      <tbody><tr><td>1</td><td class='l'>Focus Writing (English)</td><td>30</td><td></td><td></td></tr><tr><td>2</td><td class='l'>Focus Writing (Bangla)</td><td>30</td><td></td><td></td></tr><tr><td>3</td><td class='l'>General Knowledge</td><td>10</td><td></td><td></td></tr><tr><td>4</td><td class='l'>Mathematics</td><td>30</td><td></td><td></td></tr><tr><td>5</td><td class='l'>Translation (B→E)</td><td>20</td><td></td><td></td></tr><tr><td>6</td><td class='l'>Analytical / Argumentative</td><td>40</td><td></td><td></td></tr><tr><td>7</td><td class='l'>বাংলা ব্যাকরণ</td><td>10</td><td></td><td></td></tr><tr><td>8</td><td class='l'>English Proficiency</td><td>20</td><td></td><td></td></tr><tr><td>9</td><td class='l'>Banking Knowledge</td><td>10</td><td></td><td></td></tr><tr class="tot"><td colspan="2">Total</td><td>200</td><td></td><td></td></tr></tbody></table>
+      <div class="target hand">Target: 128 / 200</div>
+    </div>
+  </div>
+</article>
+<article class="sheet printed" id="contents">
+  <h1>How to use this answer book</h1>
+  <p>This book has three layers, in the order you should study them:</p>
+  <ol>
+    <li><b>The blueprint paper (5 June 2026)</b> — the only Senior Officer paper already set on the confirmed 200-mark syllabus. Its question paper is followed by a complete model answer script.</li>
+    <li><b>Predicted topics for 27 November 2026</b> — eight full focus-writing answers and a complete practice set in the June 2026 format (Analytical 40, Translation, Grammar, Banking, GK, Math).</li>
+    <li><b>Earlier papers (Dec 2025, Jun 2025, 2021–2024)</b> — more practice with full or pointer answers.</li>
+  </ol>
+  <p>Answers are written the way a strong script looks in the hall: black ink, headings underlined in blue, one data box with its source, recommendations and a short conclusion. <span class="pencil-inline">Pencil notes</span> are coaching tips, not part of the answer.</p>
+  <p><b>Language:</b> all model answers are in English, as requested. Questions that must be answered in Bangla in the exam carry a pencil note with the Bangla sub-headings to use.</p>
+  <p><b>Figures</b> are current to 19–20 November 2026 and carry their sources. Key ones: policy rate 9.5% (cut on 30 July 2026); inflation 8.27% (Oct 2026); default loans 32.17% (Sept 2026); remittance USD 35.59 bn in FY26 (record); LDC graduation 24 Nov 2029; US tariff 10% (Section 301).</p>
+  <p class="cv-foot"><b>About the layout:</b> Layout reconstructed from candidates' published descriptions of bank written-test answer scripts (cover fields, office code, black ink, self-drawn margins); no official specimen is publicly available. Contents prepared from the SOWritten repository, past papers (Satt Academy) and 15+ news sources, 19–20 November 2026.</p>
+  <h2>Contents</h2>
+  <ul class="toc-list"><li><a href="#prediction">Topic prediction for 27 Nov 2026</a></li><li><a href="#paperA-q">Paper A · 5 June 2026 (blueprint) — question paper</a></li><li><a href="#paperA">Paper A · 5 June 2026 (blueprint) — model answers</a></li><li><a href="#predfocus">Predicted focus writing — model answers</a></li><li><a href="#predother">Practice set (Analytical, Translation, Grammar, Banking, GK, Math)</a></li><li><a href="#paperB-q">Paper B · 24 December 2025 — question paper</a></li><li><a href="#paperB">Paper B · 24 December 2025 — model answers</a></li><li><a href="#paperC-q">Paper C · 20 June 2025 — question paper</a></li><li><a href="#paperC">Paper C · 20 June 2025 — model answers</a></li><li><a href="#older">2021–2024 papers — answer pointers</a></li><li><a href="#qbank">Appendix · Question bank 2014–2026</a></li></ul></article>
+<article class="sheet printed analysis" id="prediction"><h1>Topic Prediction for 27 November 2026</h1>
+<blockquote>
+<p><strong>Read this first:</strong> nobody can predict an exact essay title with 80 percent certainty, and anyone who claims to is guessing. What the evidence <em>can</em> support is the <strong>topic family</strong> a question will come from. The likelihoods below are estimates built from the past papers and six months of news, not guarantees.</p>
+</blockquote>
+<h2>1. Evidence used</h2>
+<p><strong>A. Past Senior Officer papers (Satt Academy scrape, 19 Nov 2026).</strong> Focus-writing topics in the last seven SO papers:</p>
+<table>
+<thead>
+<tr>
+<th>Paper</th>
+<th>English focus</th>
+<th>Bangla focus</th>
+<th>Family</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jun 2026 SO</td>
+<td>Export diversification</td>
+<td>Fuel price hike and the economy</td>
+<td>Economy · Energy</td>
+</tr>
+<tr>
+<td>May 2026 SO (IT)</td>
+<td>E-governance</td>
+<td>Ukraine–Iran tension and Bangladesh's strategy</td>
+<td>Technology · Global</td>
+</tr>
+<tr>
+<td>Dec 2025 SO</td>
+<td>Digital economy and development</td>
+<td>Climate change and productivity</td>
+<td>Economy/Tech · Climate</td>
+</tr>
+<tr>
+<td>Jun 2025 SO</td>
+<td>Microcredit and poverty</td>
+<td>Democratic movements and youth</td>
+<td>Banking · Social</td>
+</tr>
+<tr>
+<td>May 2024 SO (IT)</td>
+<td>Technology and student achievement</td>
+<td>Heatwave and environment</td>
+<td>Technology · Climate</td>
+</tr>
+<tr>
+<td>Jan 2022 SO</td>
+<td>50 years of banking management</td>
+<td>Women's struggle under climate change</td>
+<td>Banking · Climate</td>
+</tr>
+<tr>
+<td>Nov 2021 SO</td>
+<td>Banking for e-commerce</td>
+<td>COP26 and Bangladesh</td>
+<td>Banking/Tech · Climate</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Findings</strong><br />
+- <strong>7 of 7</strong> papers had at least one focus topic from <strong>economy, banking or technology</strong>.<br />
+- <strong>5 of 7</strong> had a <strong>climate, environment or energy</strong> topic, and the June 2026 Analytical question (d) was also environment versus growth.<br />
+- Topics are <strong>current</strong>: COP26 in 2021, heatwave in 2024, Ukraine–Iran and fuel prices in 2026.<br />
+- Exact titles <strong>rarely repeat</strong> within a year. Export diversification and fuel prices were asked in June 2026, so expect a <em>different angle</em> on the same families.</p>
+<p><strong>B. 2026 papers set by the same committee for other posts.</strong> Officer, Cash and IT papers in 2025–26 asked about: remittance's impact; the need for foreign-exchange reserves; eco-tourism and banks; institutional reform for democratic transition; youth and a corruption-free country; the fifth industrial revolution; agriculture; arguments on LDC graduation, trade liberalisation and LDC duty-free market access; and the socio-economic outcomes of hosting the FIFA World Cup.</p>
+<p><strong>C. News intensity, mid-May to mid-November 2026.</strong> Two research passes covered 14 Bangla dailies and portals (Prothom Alo, bdnews24, Ittefaq, Manab Zamin, Ajker Patrika, Bangladesh Pratidin, Bangla Tribune, Desh Rupantor, Jugantor, Kaler Kantho, Samakal, Daily Star Bangla, TBS Bangla, Bonik Barta) and international and English sources (IMF, World Bank, ADB, WTO, UNCTAD, BIS, US Fed, UN News, AP, Al Jazeera, Nikkei Asia, Bloomberg headlines, The Daily Star, Financial Express, TBS, Dhaka Tribune, UNB). Reuters, FT, The Economist and BBC Bangla could not be fetched.</p>
+<h2>2. Likelihood by topic family (focus writing, English or Bangla)</h2>
+<table>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Topic family</th>
+<th>Estimated chance that one of the two focus questions comes from it</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Banking sector: default loans, mergers, Bank Resolution Act, governance</strong></td>
+<td><strong>High (about 45–55%)</strong></td>
+<td>Top story in both news passes; a banking exam; 32.17% default ratio; Sammilito Islami Bank; Section 18A repeal</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Inflation, stagflation and monetary/fiscal policy (policy-rate cut, budget, IMF)</strong></td>
+<td><strong>High (about 40–50%)</strong></td>
+<td>Monthly headline; growth forecasts 3.2–4.0%; first rate cut in six years</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>External sector: remittance record, reserves, exports, US tariff, LDC 2029, EU GSP</strong></td>
+<td><strong>High (about 40–50%)</strong></td>
+<td>LDC deferral decided 29 Oct; remittance record USD 35.59 bn; 10% US tariff</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Energy security and the Middle East war</strong></td>
+<td><strong>Medium (about 25–35%)</strong></td>
+<td>Most-covered story in the Bangla press; but fuel prices were already asked in June 2026 SO</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Climate change, COP31 and green finance</strong></td>
+<td><strong>Medium (about 25–35%)</strong></td>
+<td>5 of 7 SO papers; COP31 ends 20 Nov, a week before the exam</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Digital finance, AI, cyber security</strong></td>
+<td><strong>Medium (about 25–30%)</strong></td>
+<td>Technology appeared in 4 of 7 SO papers; Bangla QR; AI and jobs</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Youth, jobs, education and skills</strong></td>
+<td>Medium-low (about 15–20%)</td>
+<td>Social topics appear in about 1 of 4 papers</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Governance and reform, corruption, democracy</strong></td>
+<td>Medium-low (about 15–20%)</td>
+<td>Asked in June 2025 SO and 2026 Officer papers</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Rohingya, regional geopolitics</td>
+<td>Low (about 10%)</td>
+<td>Perennial but less current</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Combined estimate:</strong> the chance that <strong>at least one</strong> of the two focus questions comes from families 1–3 is high, <strong>roughly 80–90 percent</strong>. This rests on 7 of 7 past SO papers having an economy or banking topic and on the dominance of these stories in the news. The chance for any <em>single specific title</em> is far lower, so prepare the families, not titles.</p>
+<h2>3. Where each family is answered in this book</h2>
+<table>
+<thead>
+<tr>
+<th>Family</th>
+<th>Full model answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Banking sector</td>
+<td>Predicted: <em>Non-Performing Loans and Banking Sector Reform</em></td>
+</tr>
+<tr>
+<td>Inflation and policy</td>
+<td>Predicted: <em>Stagflation Risk</em></td>
+</tr>
+<tr>
+<td>External sector</td>
+<td>Predicted: <em>LDC Graduation Deferred to 2029</em>, <em>Remittance and Hundi</em>; June 2026: <em>Export Diversification</em></td>
+</tr>
+<tr>
+<td>Energy</td>
+<td>Predicted: <em>Energy Security amid the Middle East Crisis</em>; June 2026: <em>Fuel Price Hike</em></td>
+</tr>
+<tr>
+<td>Climate</td>
+<td>Predicted: <em>Climate Finance and COP31</em>; Dec 2025: <em>Climate Change and Productivity</em></td>
+</tr>
+<tr>
+<td>Digital / AI</td>
+<td>Predicted: <em>AI and the Future of Banking</em>; Dec 2025: <em>Digital Economy</em></td>
+</tr>
+<tr>
+<td>Youth and jobs</td>
+<td>Predicted: <em>Youth Unemployment and Skills</em></td>
+</tr>
+<tr>
+<td>Poverty and finance</td>
+<td>June 2025: <em>Microcredit and Poverty Alleviation</em></td>
+</tr>
+</tbody>
+</table>
+<h2>4. Quick outlines for the remaining likely topics</h2>
+<p><strong>Revenue mobilisation and the new IMF programme</strong><br />
+Tax-GDP about 7%, among the lowest in the world · FY27 revenue target Tk 6.95 lakh crore (NBR Tk 6.04 lakh crore) · causes: narrow tax base, exemptions, informality, weak digital administration · the new IMF programme of USD 4.5–5 bn under negotiation (old programme exited in May 2026) · reforms: separate tax policy from administration, digital VAT, cut exemptions, a property tax, widen the income-tax net · conclusion: without revenue, no development budget is sustainable.</p>
+<p><strong>Institutional reform and democratic governance</strong><br />
+2024 uprising → February 2026 election → constitutional reform committee formed 13 July 2026 · independent Election Commission, judiciary, ACC, central bank and public service · checks and balances, local government · role of youth and media · conclusion: elections are necessary but not sufficient; institutions make democracy last.</p>
+<p><strong>Global economy and its impact on Bangladesh</strong><br />
+IMF: world growth 3.1% and inflation 4.7% in 2026 · oil about USD 92 after peaking above USD 120 · US tariffs and trade realignment · AI-driven trade boom (WTO 3.9% trade growth) · effects on Bangladesh: imported inflation, export demand, remittance from the Gulf · policy: diversify markets, energy security, reserve buffers.</p>
+<p><strong>Rohingya crisis</strong><br />
+About 1.2 million refugees · 2026 Joint Response Plan USD 710.5 m (26% lower) · food rations cut to USD 6 for some · Arakan Army controls about 90% of Rakhine · Bangladesh holds the UNGA presidency, a diplomatic opportunity · solution: safe, voluntary, dignified return; burden-sharing; accountability at the ICJ.</p>
+<h2>5. The Analytical section (40): what to expect</h2>
+<p>Based on the June 2026 paper, expect four parts: (a) a scheduling or ranking puzzle; (b) critique a business decision (averages, correlation vs causation, capacity, sampling); (c) find the hidden assumption or what weakens or strengthens an argument; (d) arguments for and against a statement. Likely statements for (d): <em>IMF loan with strict conditions</em>, <em>bank mergers</em>, <em>AI and jobs</em>, <em>environment vs growth</em>, <em>subsidy removal</em>, <em>LDC graduation timing</em>, <em>cashless society</em>. Two complete practice sets are answered in this book.</p>
+<h2>6. Sources</h2>
+<p>Past papers: sattacademy.com/job-solution/combined-bank and the per-paper written-question pages (scraped 19 Nov 2026). News facts: see <code>data/facts.json</code>; every figure there carries its source and date.</p></article>
+<article class="sheet printed qpaper" id="paperA-q">
+  <div class="qp-head">
+    <div class="qp-org">Combined Bank Recruitment · Senior Officer (General) · Written Test</div>
+    <div class="qp-title">QUESTION PAPER</div>
+    <div class="qp-sub">Paper A · Combined Banks Senior Officer — 05 June 2026 · 2 hours · 200 marks  BLUEPRINT</div>
+    <div class="qp-meta"><span>Time: 2 Hours</span><span>Full Marks: 200</span></div>
+    <div class="qp-note">[Answer all questions. Figures in the right margin indicate full marks.]</div>
+  </div>
+  <div class="qp-body"><p><strong>Q1.</strong> Write an essay on "Export Diversification in Bangladesh". <em>(30)</em></p>
+<p><strong>Q2.</strong> "বাংলাদেশের অর্থনীতিতে জ্বালানি তেলের মূল্য বৃদ্ধির প্রভাব" বিষয়ে একটি নিবন্ধ বাংলায় লিখুন। <em>(30)</em></p>
+<p><strong>Q3.</strong> General Knowledge — write the answers in English. <em>(10)</em><br />
+(a) What is the distance of a standard marathon in kilometers (rounded to one decimal)?<br />
+(b) In Soccer, what is the maximum number of substitutions allowed per team in a standard competitive match?<br />
+(c) What is the name of the index used to measure the degree of income inequality in a population?<br />
+(d) What new venture capital platform was launched by 39 Bangladeshi banks in May 2026?<br />
+(e) Which autonomous territory is the world's largest island that is not a continent?</p>
+<p><strong>Q4.</strong> Mathematics — write the answers in English. <em>(30)</em><br />
+(a) A street vendor sells oranges throughout the year. During the off-seasons, he sells each orange for Tk 8 but his cost price is Tk 11 per orange. During the on-seasons, his cost price drops to Tk 6 per orange and he sells each one for Tk 10. His fixed monthly overhead costs are Tk 3,000. In a particular year, he sells 1,800 oranges during the 4 off-season months and must sell enough oranges during the remaining 8 on-season months to end the year with an overall profit of at least Tk 5,000. What is the minimum number of oranges he must sell during on-season to achieve this?<br />
+(b) The speed of a boat in still water is 10 km per hour. If it can travel 24 km downstream and 14 km upstream in equal time, calculate the speed of the flow of stream.<br />
+(c) A wedding organizer distributed bonuses equally among his staff. If 5 more staff had been present, each person would have received Tk 50 less. But if 5 fewer staff had shown up, each person would have received Tk 75 more. How many staff members actually worked at the wedding?<br />
+(d) If 7 is added to the sum of digits of a two-digit number, the summation will be three times the tens digit. If 18 is subtracted from the original number, its digits are reversed. Find the number.<br />
+(e) There are 3 doors and 6 windows in a house. Each of the doors is 2 meters long and 1.25 meters wide and each of the windows is 1 meter long and 1.25 meters wide. How many pieces of 5 meters long and 0.60 meters wide wood are required to make the doors and windows?</p>
+<p><strong>Q5.</strong> Translate the following sentences into English. <em>(20)</em><br />
+(a) বাংলাদেশের ব্যাংকিং খাতে সাইবার নিরাপত্তা জোরদার করার জন্য কেন্দ্রীয় ব্যাংক বাণিজ্যিক ব্যাংকগুলোকে আধুনিক প্রযুক্তি ব্যবহারের নির্দেশনা দিয়েছে।<br />
+(b) দেশীয় শিল্পকে আন্তর্জাতিক বাজারে প্রতিযোগিতামূলক অবস্থানে নিয়ে যেতে হলে উৎপাদন ব্যয় কমানোর পাশাপাশি পণ্যের গুণগত মানও উন্নত করতে হবে।<br />
+(c) সরকারি ও বেসরকারি খাতের সমন্বিত উদ্যোগের মাধ্যমে টেকসই কর্মসংস্থান সৃষ্টি করা দেশের দীর্ঘমেয়াদি অর্থনৈতিক উন্নয়নের জন্য অপরিহার্য।<br />
+(d) চতুর্থ শিল্প বিপ্লবের চ্যালেঞ্জ মোকাবিলায় দক্ষ ও আধুনিক প্রযুক্তিনির্ভর মানবসম্পদ তৈরিতে কারিগরি ও বৃত্তিমূলক শিক্ষার মানোন্নয়ন করা জরুরি।<br />
+(e) বাজেট ঘাটতি মোকাবিলায় সরকারি ব্যয় হ্রাস করা জরুরি, কারণ এটি অর্থনৈতিক ভারসাম্য বজায় রাখতে, ঋণ নির্ভরতা কমাতে এবং অর্থনৈতিক নিরাপত্তা নিশ্চিত করতে সহায়তা করে।</p>
+<p><strong>Q6.</strong> Analytical Reasoning, Critical Thinking and Argumentative Writing. <em>(40)</em><br />
+(a) Five candidates — A, B, C, D, and E — are to be interviewed, one at a time, from Monday to Friday based on the following conditions: A must be interviewed before C. B cannot be interviewed on Monday or Friday. D must be interviewed immediately after B. E cannot be interviewed before A. C must be interviewed on Friday. E must be interviewed on Tuesday. Determine the interview schedule.<br />
+(b) A logistics company operates two distinct warehouses (Warehouse North and Warehouse South). The CEO wants to evaluate shipping efficiency based on the "average delivery time of orders". (i) Warehouse North has an average delivery time of 2 days. (ii) Warehouse South has an average delivery time of 4 days. The CEO concludes: "Warehouse North is objectively twice as efficient as Warehouse South. We should shift 80% of our total order volume to North to optimize efficiency." Critique the CEO's decision using reasoning.<br />
+(c) Bank depositors in a country are all financially protected against bank failure because the government insures all individuals' bank deposits. An economist argues that this insurance is partly responsible for the high rate of bank failures, since it removes from depositors any financial incentive to find out whether the bank that holds their money is secure against failure. If depositors were more selective, then banks would need to be secure in order to compete for depositors' money. What is the implied assumption of the economist's argument?<br />
+(d) Provide arguments for and against: "Is environmental protection more important than economic growth?"</p>
+<p><strong>Q7.</strong> বাংলা ব্যাকরণ <em>(10)</em><br />
+(ক) "অগস্ত্য যাত্রা" বাগধারাটির অর্থ কী?<br />
+(খ) "তোমাকে দিয়ে এ সমস্যার সমাধান হবে, এটা আশা করা যায় না" — এটি কোন বাচ্য?<br />
+(গ) "কুহক"-এর স্ত্রীবাচক শব্দ কী?<br />
+(ঘ) "তিলে তৈল হয়" — এটি কোন কারক?<br />
+(ঙ) "চক্রপাণি" সমাসবদ্ধ পদটির ব্যাসবাক্য লিখুন।</p>
+<p><strong>Q8.</strong> English Language Proficiency <em>(20)</em><br />
+(a) "Over-exercise affected his health" — Substitute the single verb of this sentence with a group verb.<br />
+(b) "The sun set, and the stars appeared, while we sat by the fire" — What type of sentence is this?<br />
+(c) Explain the meaning of the idiom: The nail on the head.<br />
+(d) Transform the following sentence from the active voice to the passive voice: They will announce the results tomorrow.<br />
+(e) Explain the meaning of the idiom: Burning the midnight oil.</p>
+<p><strong>Q9.</strong> Financial and Banking Knowledge <em>(10)</em><br />
+(a) What is the full name of SOFR in banking?<br />
+(b) Write the full name of SWIFT.<br />
+(c) Define cash reserve ratio in a single sentence.<br />
+(d) Define fiscal policy in a single sentence.<br />
+(e) What is the name of the process where a bank sells its loans to a third party, who then bundles them into a tradable financial instrument?</p>
+<hr /></div></article>
+
+<article class="sheet script" id="paperA">
+  <header class="strip"><span>ANSWER SCRIPT · Continuation</span><span>Combined Banks Senior Officer — 05 June 2026 · Full marks 200 · Time 2 hours</span></header>
+  <h1 class="script-title">Model Answer Script — 05 June 2026 Paper</h1>
+  <blockquote>
+<p>This is the only Senior Officer paper already set on your exact syllabus (confirmed 200-mark distribution). Every answer below is written the way a top script is written: heading → quotation or data → sub-headings → a data box with source → recommendations → conclusion. Figures are updated to November 2026 so that you can reuse them on 27 November.</p>
+</blockquote>
+<aside class="pencil"><span class="pmark">✎</span>Recommended order in the hall: Q4 Math → Q6 Analytical → Q1 → Q2 → Q5 → Q8 → Q7 → Q9 → Q3. Write the question number at the top of each new page.</aside>
+<h2 class="ans" id="paperA-ans-to-the-q-no-1-export-diversification-in-bangladesh">Ans. to the Q. No. 1 — Export Diversification in Bangladesh</h2>
+<h3>Export Diversification in Bangladesh: Moving Beyond a One-Product Economy</h3>
+<blockquote>
+<p>"Don't put all your eggs in one basket." — an old proverb that now describes Bangladesh's biggest export risk.</p>
+</blockquote>
+<p><strong>Introduction</strong><br />
+Bangladesh has become the world's second-largest garment exporter, but this success hides a structural weakness: readymade garments (RMG) earn about 80 percent of total export receipts. When the European Union, which buys the largest share of our garments, slows down, or when a price war breaks out among Asian suppliers, the whole economy feels the shock. With graduation from the LDC group now deferred to 24 November 2029, the next three years are a narrow window to build a broader export basket.</p>
+<p><strong>Current picture of exports</strong></p>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Latest figure</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total exports, FY26</td>
+<td>USD 48.0 billion (−0.58%; target USD 55 bn)</td>
+<td>EPB via TBS, Jul 2026</td>
+</tr>
+<tr>
+<td>Share of RMG in exports</td>
+<td>about 80%</td>
+<td>Bangladesh Bank, MPS H1FY27</td>
+</tr>
+<tr>
+<td>RMG exports, FY26</td>
+<td>USD 38.70 billion (−1.64%)</td>
+<td>EPB via TBS, Jul 2026</td>
+</tr>
+<tr>
+<td>Exports, Jul–Oct FY27</td>
+<td>USD 17.04 billion (about +6%)</td>
+<td>EPB via FE, Nov 2026</td>
+</tr>
+<tr>
+<td>US tariff on Bangladeshi goods</td>
+<td>10% (Section 301, since 24 Jul 2026)</td>
+<td>Bonik Barta, 2026</td>
+</tr>
+<tr>
+<td>Import payments, Jul–Apr FY26</td>
+<td>USD 61.62 billion (+5.92%)</td>
+<td>Bangladesh Bank, MPS H1FY27</td>
+</tr>
+<tr>
+<td>LDC graduation</td>
+<td>deferred to 24 Nov 2029</td>
+<td>UN General Assembly, Oct 2026</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Why diversification is urgent</strong><br />
+1. <strong>Concentration risk:</strong> one product and two markets mean any shock hits 80 percent of earnings at once. The EU and the USA take 67.5 percent of RMG exports, and since July 2026 the US charges a 10 percent Section 301 tariff on Bangladeshi goods.<br />
+2. <strong>Loss of preferences after 2029:</strong> duty-free access under EU "Everything But Arms" ends after graduation. Under the new EU GSP Regulation applying from 1 January 2027, the apparel safeguard threshold falls to 37 percent, and GSP+ will require 32 international conventions instead of 27.<br />
+3. <strong>Stagnant export growth:</strong> FY26 exports of USD 48.0 billion fell short of the USD 55 billion target, while record remittances (USD 35.59 billion) rather than exports kept the external account stable.<br />
+4. <strong>Jobs for the youth:</strong> RMG is automating; new sectors are needed to absorb about two million new job seekers every year.</p>
+<p><strong>Promising sectors beyond RMG</strong><br />
+- <strong>Leather and footwear:</strong> raw material is domestic; the Savar tannery estate needs a working central effluent treatment plant to win buyer certification.<br />
+- <strong>Pharmaceuticals:</strong> already export to more than 150 countries; the TRIPS waiver continues until graduation.<br />
+- <strong>Light engineering, bicycles and electronics:</strong> strong SME base and growing demand in Europe.<br />
+- <strong>Agro-processing and frozen food:</strong> jute goods, shrimp, vegetables and processed foods.<br />
+- <strong>ICT and freelancing services:</strong> low capital need, high value added.<br />
+- <strong>Shipbuilding:</strong> small ocean-going vessels for Europe and Africa.</p>
+<p><strong>Main obstacles</strong><br />
+- Bonded-warehouse and cash-incentive facilities are designed mainly for RMG.<br />
+- Energy shortages and higher fuel prices raise production costs.<br />
+- Port congestion, long lead time and weak testing and certification facilities.<br />
+- Limited access to long-term finance for new exporters, and high interest rates (the policy rate was 10 percent until July 2026 and is now 9.5 percent).<br />
+- Weak branding and few trade agreements: the first EPA, with Japan, was signed only in February 2026, and none exists yet with the EU or ASEAN.</p>
+<p><strong>Role of the banking sector</strong><br />
+Banks can lead diversification by: extending bonded-warehouse-style back-to-back LC facilities to non-RMG sectors; using Bangladesh Bank's Tk 3,000 crore window for non-traditional exports and the export development fund; offering export credit guarantees for first-time exporters; and financing compliance upgrades such as effluent treatment and green factories.</p>
+<p><strong>Recommendations</strong><br />
+1. Give every export sector the same bonded-warehouse and duty-drawback facilities as RMG.<br />
+2. Ratify and use the Japan EPA quickly, and negotiate FTAs/CEPAs with ASEAN, India and the Gulf before 2029.<br />
+3. Meet the 32 GSP+ conventions on labour rights, human rights, environment and governance.<br />
+4. Build product-testing labs and international certification centres.<br />
+5. Ensure gas and electricity supply to economic zones.<br />
+6. Create a "Brand Bangladesh" campaign for non-garment products.</p>
+<p><strong>Conclusion</strong><br />
+Export diversification is no longer a choice but a condition for sustaining growth after LDC graduation. If policy support, bank finance and infrastructure move together, Bangladesh can turn its manufacturing strength into a broad, resilient export economy.</p>
+<h2 class="ans" id="paperA-ans-to-the-q-no-2-impact-of-fuel-price-hikes-on-the-economy-">Ans. to the Q. No. 2 — Impact of Fuel Price Hikes on the Economy of Bangladesh</h2>
+<aside class="pencil"><span class="pmark">✎</span>In the exam this answer must be written in Bangla. Use these Bangla sub-headings: ভূমিকা · জ্বালানি তেলের দাম বাড়ার প্রেক্ষাপট · সাম্প্রতিক মূল্য সমন্বয় (তথ্য-ছক) · কৃষি, শিল্প ও পরিবহনে প্রভাব · মূল্যস্ফীতি ও সাধারণ মানুষের জীবনযাত্রা · বৈদেশিক মুদ্রার রিজার্ভ ও আমদানি ব্যয় · করণীয় · উপসংহার</aside>
+<h3>Impact of Fuel Price Hikes on the Economy of Bangladesh</h3>
+<blockquote>
+<p>"Energy is the golden thread that connects economic growth, social equity and environmental sustainability." — Ban Ki-moon</p>
+</blockquote>
+<p><strong>Introduction</strong><br />
+Fuel oil is the lifeblood of transport, irrigation and power generation in Bangladesh. Because the country imports almost all of its petroleum, every rise in world oil prices quickly reaches the farmer's irrigation pump, the bus fare and the market price of rice. In 2026 the war in the Middle East and disruption in the Strait of Hormuz pushed global energy prices up, and the government adjusted domestic prices twice.</p>
+<p><strong>Recent price adjustments</strong></p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Diesel (Tk/litre)</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Before April 2026</td>
+<td>100</td>
+<td>—</td>
+</tr>
+<tr>
+<td>April 2026</td>
+<td>115</td>
+<td>+Tk 15, linked to global crude prices</td>
+</tr>
+<tr>
+<td>September 2026</td>
+<td>135</td>
+<td>+Tk 20 for all four fuels; petrol Tk 160</td>
+</tr>
+</tbody>
+</table>
+<p>Source: Energy Division announcements reported by Dhaka Tribune and bdnews24, 2026. Diesel is about 66 percent of total fuel-oil use.</p>
+<p><strong>Impact on the economy</strong><br />
+1. <strong>Inflation:</strong> transport and production costs pass into prices. Non-food inflation rose to 9.89 percent in October 2026, a 41-month high (BBS), even as food inflation eased.<br />
+2. <strong>Agriculture:</strong> diesel runs irrigation pumps and power tillers; higher costs reduce farm profit and can lower Boro rice output.<br />
+3. <strong>Transport:</strong> bus and truck fares rise, raising the cost of moving goods from farm to market.<br />
+4. <strong>Industry and exports:</strong> factories that use diesel generators face higher costs, making our exports less competitive.<br />
+5. <strong>External sector:</strong> import payments jumped 21.42 percent in April 2026 because of petroleum, LNG and fertiliser bills, putting pressure on foreign exchange reserves.<br />
+6. <strong>Poverty:</strong> fixed-income and poor households suffer most, because wage growth (7.63 percent) is lower than inflation.</p>
+<p><strong>Positive side</strong><br />
+Price adjustment reduces the subsidy burden on the budget and the losses of the Bangladesh Petroleum Corporation, which was losing about Tk 89 per litre of diesel, and it discourages smuggling to neighbouring countries.</p>
+<p><strong>Way forward</strong><br />
+- Introduce a transparent automatic pricing formula linked to world prices.<br />
+- Give targeted diesel subsidy to farmers during the irrigation season.<br />
+- Expand domestic gas exploration and long-term LNG contracts.<br />
+- Invest in solar irrigation pumps, rooftop solar and electric public transport.<br />
+- Monitor markets to stop traders from raising prices more than costs justify.</p>
+<p><strong>Conclusion</strong><br />
+Fuel prices cannot be kept artificially low forever, but sudden hikes hurt growth and the poor. A gradual, formula-based pricing policy, protection for vulnerable groups and a faster shift to renewable energy are the keys to energy security.</p>
+<h2 class="ans" id="paperA-ans-to-the-q-no-3-general-knowledge">Ans. to the Q. No. 3 — General Knowledge</h2>
+<p>(a) A standard marathon is <strong>42.195 km</strong>, i.e. <strong>42.2 km</strong> rounded to one decimal.<br />
+(b) <strong>Five (5) substitutions</strong> per team in a standard competitive match (IFAB Laws of the Game), made in no more than three stoppages plus half-time.<br />
+(c) The <strong>Gini coefficient (Gini index)</strong>.<br />
+(d) <strong>Bangladesh Startup Investment Company PLC (BSIC)</strong> — source: Satt Academy community answer; verify before relying on it.<br />
+(e) <strong>Greenland</strong> (an autonomous territory of Denmark).</p>
+<h2 class="ans" id="paperA-ans-to-the-q-no-4-mathematics">Ans. to the Q. No. 4 — Mathematics</h2>
+<p><strong>(a) Minimum on-season sale of oranges</strong><br />
+Loss in off-season = 1,800 × (11 − 8) = Tk 5,400<br />
+Overhead for 12 months = 12 × 3,000 = Tk 36,000<br />
+Profit per on-season orange = 10 − 6 = Tk 4<br />
+Let n = oranges sold in on-season. Overall profit ≥ 5,000:<br />
+4n − 5,400 − 36,000 ≥ 5,000<br />
+4n ≥ 46,400 ⇒ n ≥ 11,600<br />
+<strong>Answer: at least 11,600 oranges.</strong></p>
+<p><strong>(b) Speed of the stream</strong><br />
+Let stream speed = s km/h. Downstream speed = 10 + s, upstream = 10 − s.<br />
+Time is equal: 24/(10 + s) = 14/(10 − s)<br />
+240 − 24s = 140 + 14s ⇒ 38s = 100 ⇒ s = 50/19<br />
+<strong>Answer: 50/19 ≈ 2.63 km/h.</strong></p>
+<p><strong>(c) Number of staff</strong><br />
+Let staff = n and each bonus = x, so total = nx.<br />
+(n + 5)(x − 50) = nx ⇒ 5x − 50n = 250 ⇒ x − 10n = 50 … (i)<br />
+(n − 5)(x + 75) = nx ⇒ 75n − 5x = 375 ⇒ 15n − x = 75 … (ii)<br />
+Adding (i) and (ii): 5n = 125 ⇒ n = 25 (and x = Tk 300).<br />
+<strong>Answer: 25 staff members.</strong></p>
+<p><strong>(d) The two-digit number</strong><br />
+Let the number be 10a + b.<br />
+a + b + 7 = 3a ⇒ b = 2a − 7 … (i)<br />
+(10a + b) − 18 = 10b + a ⇒ a − b = 2 … (ii)<br />
+From (i) and (ii): a − (2a − 7) = 2 ⇒ a = 5, b = 3<br />
+Check: 5 + 3 + 7 = 15 = 3 × 5 ✓; 53 − 18 = 35 ✓<br />
+<strong>Answer: 53.</strong></p>
+<p><strong>(e) Pieces of wood</strong><br />
+Area of doors = 3 × 2 × 1.25 = 7.5 m²<br />
+Area of windows = 6 × 1 × 1.25 = 7.5 m²<br />
+Total = 15 m²; area of one piece = 5 × 0.60 = 3 m²<br />
+Pieces = 15 ÷ 3 = 5<br />
+<strong>Answer: 5 pieces.</strong></p>
+<h2 class="ans" id="paperA-ans-to-the-q-no-5-translation-bangla-to-english">Ans. to the Q. No. 5 — Translation (Bangla to English)</h2>
+<p>(a) To strengthen cyber security in the banking sector of Bangladesh, the central bank has directed commercial banks to use modern technology.<br />
+(b) To make domestic industries competitive in the international market, the quality of products must be improved along with reducing production costs.<br />
+(c) Creating sustainable employment through coordinated initiatives of the public and private sectors is essential for the country's long-term economic development.<br />
+(d) To meet the challenges of the Fourth Industrial Revolution, it is urgent to improve the quality of technical and vocational education so as to build a skilled and technology-based workforce.<br />
+(e) Reducing public expenditure is essential to tackle the budget deficit, as it helps maintain economic balance, reduce dependence on borrowing and ensure economic security.</p>
+<h2 class="ans" id="paperA-ans-to-the-q-no-6-analytical-reasoning-critical-thinking-and">Ans. to the Q. No. 6 — Analytical Reasoning, Critical Thinking and Argumentative Writing</h2>
+<p><strong>(a) Interview schedule</strong><br />
+1. C must be on <strong>Friday</strong> and E on <strong>Tuesday</strong> (given).<br />
+2. E cannot be before A, so A must come before Tuesday ⇒ A is on <strong>Monday</strong>.<br />
+3. B cannot be on Monday or Friday, and D must be immediately after B. The only free consecutive days are Wednesday and Thursday ⇒ B on <strong>Wednesday</strong>, D on <strong>Thursday</strong>.<br />
+4. Check: A (Mon) is before C (Fri) ✓.</p>
+<table>
+<thead>
+<tr>
+<th>Monday</th>
+<th>Tuesday</th>
+<th>Wednesday</th>
+<th>Thursday</th>
+<th>Friday</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>E</td>
+<td>B</td>
+<td>D</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<p><strong>(b) Critique of the CEO's decision</strong><br />
+The CEO's conclusion is weak because it rests on one average and several hidden assumptions.<br />
+1. <strong>Average delivery time is not efficiency.</strong> It ignores cost per order, on-time rate, damage rate and customer satisfaction.<br />
+2. <strong>Different conditions.</strong> North may serve nearby urban customers while South serves remote areas; the 2-day vs 4-day gap may reflect distance, not performance.<br />
+3. <strong>Averages hide variation.</strong> South may deliver most orders in 2 days with a few very late ones that pull the average up.<br />
+4. <strong>Capacity constraint.</strong> Shifting 80 percent of volume to North may overload its staff, trucks and storage, so its delivery time will rise, possibly above 4 days.<br />
+5. <strong>"Twice as efficient" is a misuse of ratio.</strong> Halving time does not double efficiency in cost or quality terms.<br />
+6. <strong>Geography.</strong> Customers near South would face longer distances if served from North.</p>
+<p><strong>Better decision:</strong> compare cost per delivery, on-time percentage and capacity utilisation for similar customer zones; find why South is slower; then improve South or shift volume gradually through a pilot while monitoring results.</p>
+<p><strong>(c) Implied assumption</strong><br />
+The economist assumes that <strong>if deposits were not insured, depositors would be able to judge (and would actually take the trouble to judge) how secure a bank is, and would move their money accordingly</strong>, so that this market discipline would force banks to be safer. In short, bank failures are at least partly caused by risky behaviour that depositor scrutiny could prevent.</p>
+<p><strong>(d) Environmental protection vs economic growth</strong></p>
+<p><em>Arguments that environmental protection is more important</em><br />
+1. Growth that destroys rivers, forests and air reduces future growth; environmental damage costs Bangladesh a large share of GDP through floods, salinity and pollution.<br />
+2. Bangladesh is among the most climate-vulnerable countries; protection is a matter of survival.<br />
+3. Health costs of pollution reduce labour productivity.<br />
+4. Global buyers and lenders now demand green compliance; protection keeps export markets open.</p>
+<p><em>Arguments that economic growth is more important</em><br />
+1. A lower-middle-income country must create jobs for millions of young people and reduce poverty first.<br />
+2. Growth provides the revenue and technology needed to protect the environment later.<br />
+3. Strict rules may raise costs and drive away investment.</p>
+<p><em>Rebuttal and position</em><br />
+The choice is false. Countries that grew first and cleaned up later paid a far higher cost, while green growth (renewable energy, green factories, sustainable finance) now creates jobs itself. Bangladesh already has more than 200 LEED-certified green garment factories, showing that environmental standards and export growth can go together.<br />
+<strong>Position: Environmental protection should not be sacrificed for growth; the goal is green and sustainable growth</strong>, supported by green banking, carbon pricing over time and enforcement of the Environment Conservation Act.</p>
+<h2 class="ans" id="paperA-ans-to-the-q-no-7">Ans. to the Q. No. 7 — বাংলা ব্যাকরণ</h2>
+<p>(ক) "অগস্ত্য যাত্রা" অর্থ <strong>চিরদিনের জন্য প্রস্থান / শেষ যাত্রা</strong> (যে যাত্রা থেকে আর ফেরা হয় না)।<br />
+(খ) <strong>ভাববাচ্য</strong> — বাক্যের মূল ক্রিয়া "আশা করা যায় না"-তে ক্রিয়ার ভাবই প্রধান।<br />
+(গ) <strong>কুহকিনী</strong>।<br />
+(ঘ) <strong>অপাদান কারকে সপ্তমী (৭মী) বিভক্তি</strong> — তিল থেকে তেল উৎপন্ন হয়।<br />
+(ঙ) <strong>চক্র পাণিতে যার</strong> — বহুব্রীহি সমাস।</p>
+<h2 class="ans" id="paperA-ans-to-the-q-no-8-english-language-proficiency">Ans. to the Q. No. 8 — English Language Proficiency</h2>
+<p>(a) Over-exercise <strong>told upon</strong> his health.<br />
+(b) It is a <strong>compound-complex sentence</strong>: two independent clauses ("The sun set", "the stars appeared") joined by <em>and</em>, plus a dependent clause ("while we sat by the fire").<br />
+(c) <strong>To hit the nail on the head</strong> means to describe exactly what is causing a problem, or to say precisely the right thing. <em>Example: The governor hit the nail on the head when he blamed weak governance for bad loans.</em><br />
+(d) <strong>The results will be announced (by them) tomorrow.</strong><br />
+(e) <strong>To burn the midnight oil</strong> means to work or study late into the night. <em>Example: Candidates burn the midnight oil before the bank exam.</em></p>
+<h2 class="ans" id="paperA-ans-to-the-q-no-9-financial-and-banking-knowledge">Ans. to the Q. No. 9 — Financial and Banking Knowledge</h2>
+<p>(a) <strong>SOFR — Secured Overnight Financing Rate</strong>, the benchmark US-dollar interest rate that replaced LIBOR.<br />
+(b) <strong>SWIFT — Society for Worldwide Interbank Financial Telecommunication.</strong><br />
+(c) <strong>Cash reserve ratio (CRR)</strong> is the minimum percentage of a bank's total deposits that it must keep as cash balance with the central bank.<br />
+(d) <strong>Fiscal policy</strong> is the government's use of taxation and public expenditure to influence economic activity, growth and stability.<br />
+(e) <strong>Securitisation</strong> (loan securitisation).</p>
+</article>
+
+<article class="sheet script" id="predfocus">
+  <header class="strip"><span>ANSWER SCRIPT · Continuation</span><span>Predicted topics · Focus Writing in English (30) and in Bangla (30)</span></header>
+  <h1 class="script-title">Likely Focus Writing Topics — Model Answers</h1>
+  <blockquote>
+<p>Each essay is about 500–600 words, about what you can write in 18 minutes. All figures are as of 19 November 2026, with sources. Memorise the data box and the sub-headings; the sentences can be your own.</p>
+</blockquote>
+<aside class="pencil"><span class="pmark">✎</span>Structure that scores: title → quotation → introduction with one fresh number → 5–7 sub-headings → one data box with source → recommendations → hopeful conclusion.</aside>
+<h2 class="ans" id="predfocus-ans-to-the-predicted-q-non-performing-loans-and-banking-sect">Ans. to the Predicted Q. — Non-Performing Loans and Banking Sector Reform in Bangladesh</h2>
+<h3>Default Loans and the Road to Banking Sector Reform</h3>
+<blockquote>
+<p>"A bank is only as strong as the trust of its depositors."</p>
+</blockquote>
+<p><strong>Introduction</strong><br />
+Banks are the heart of an economy: they collect savings and pump credit into business. In Bangladesh that heart is weak. In June 2026, defaulted loans reached Tk 6.07 lakh crore, or 32.78 percent of all loans, which IMF data show is the highest ratio in the world. Restoring the health of banks is now the most urgent economic reform.</p>
+<p><strong>The magnitude of the problem</strong></p>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Figure</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default loans, June 2026</td>
+<td>Tk 6.07 lakh crore (32.78%)</td>
+<td>Bangladesh Bank via Prothom Alo</td>
+</tr>
+<tr>
+<td>Default loans, Sept 2026 (latest)</td>
+<td>Tk 5.97 lakh crore (32.17%)</td>
+<td>Finance Minister in Parliament, 16 Nov 2026</td>
+</tr>
+<tr>
+<td>Private credit growth, Sept 2026</td>
+<td>4.17% (record low)</td>
+<td>Bangladesh Bank via Samakal</td>
+</tr>
+<tr>
+<td>Default ratio, state-owned banks</td>
+<td>43.2%</td>
+<td>Financial Express</td>
+</tr>
+<tr>
+<td>Default ratio, Dec 2024</td>
+<td>20.20%</td>
+<td>Bangladesh Bank, MPS H1FY27</td>
+</tr>
+<tr>
+<td>Five merged Islamic banks</td>
+<td>84.22% of loans in default</td>
+<td>2026 reports</td>
+</tr>
+<tr>
+<td>Money stuck in money loan courts</td>
+<td>about Tk 6.48 lakh crore</td>
+<td>Daily Sun, Sep 2026</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Causes</strong><br />
+1. <strong>Political and insider lending:</strong> loans approved on influence, not on business merit; some groups captured whole banks.<br />
+2. <strong>Wilful default:</strong> a culture where large borrowers expect rescheduling and write-offs.<br />
+3. <strong>Weak supervision:</strong> regulatory forbearance and repeated relaxation of loan-classification rules hid the real picture for years.<br />
+4. <strong>Slow legal process:</strong> money loan court cases drag on for years.<br />
+5. <strong>Board-level governance failure:</strong> directors interfering in credit decisions.</p>
+<p><strong>Consequences</strong><br />
+Capital shortfalls and liquidity crises in weak banks; loss of depositor confidence; private-sector credit growth falling to a record-low 4.17 percent in September 2026; higher lending rates for honest borrowers; and pressure on the budget for recapitalisation (Tk 36,706 crore set aside in FY27 for bank restructuring).</p>
+<p><strong>Reforms under way</strong><br />
+- <strong>Bank Resolution Act 2026:</strong> a legal framework to merge, restructure or close failing banks. Section 18A, which allowed former owners to reclaim banks, was repealed in September 2026.<br />
+- <strong>Sammilito Islami Bank:</strong> five troubled Shariah banks merged into one state-owned bank with Tk 20,000 crore government capital.<br />
+- <strong>Deposit Protection Act 2026:</strong> insurance coverage doubled from Tk 1 lakh to Tk 2 lakh per depositor.<br />
+- <strong>Asset Quality Reviews</strong> and a move to <strong>Expected Credit Loss (IFRS 9)</strong> provisioning by 2027.<br />
+- Recovery of laundered money: about Tk 70,446 crore of assets frozen or attached at home and abroad.</p>
+<p><strong>Recommendations</strong><br />
+1. Publish a list of wilful defaulters and bar them from new credit, foreign travel and company directorships.<br />
+2. Set up special benches to settle large money-loan cases within a fixed time.<br />
+3. Pass the Distressed Asset Management Act to create an asset management company for bad loans.<br />
+4. Apply "fit and proper" tests to bank directors and limit family control of boards.<br />
+5. Give Bangladesh Bank full operational independence in supervision.<br />
+6. Merge banks only after independent asset-quality reviews and with fresh management, so that mergers do not spread the infection.</p>
+<p><strong>Conclusion</strong><br />
+Bangladesh cannot reach its growth targets with a banking system in which one taka in every three lent is not being repaid. The new laws are a start, but their success depends on consistent enforcement, regardless of who the defaulter is.</p>
+<h2 class="ans" id="predfocus-ans-to-the-predicted-q-ldc-graduation-deferred-to-2029-oppor">Ans. to the Predicted Q. — LDC Graduation Deferred to 2029: Opportunities and Challenges</h2>
+<h3>Using the Extra Three Years: Bangladesh's LDC Graduation Strategy</h3>
+<blockquote>
+<p>"Graduation is not the end of the journey; it is the start of a new one."</p>
+</blockquote>
+<p><strong>Introduction</strong><br />
+On 29 October 2026 the UN General Assembly deferred Bangladesh's graduation from the Least Developed Country (LDC) category from 24 November 2026 to 24 November 2029, granting the request of the new government. Nepal received the same extension. The decision gives Bangladesh three more years of trade preferences, but also three fewer excuses.</p>
+<p><strong>Background</strong><br />
+Bangladesh met all three graduation criteria (per-capita income, human assets and economic vulnerability) in the 2018 and 2021 reviews. The government argued that the preparatory period was disrupted by the pandemic, the 2024 political transition and global shocks such as the Middle East war.</p>
+<p><strong>Why the deferral helps</strong><br />
+1. <strong>Preferences continue:</strong> duty-free, quota-free access to the EU under "Everything But Arms" and preferential treatment in other markets remain until 2029.<br />
+2. <strong>Pharmaceutical patents:</strong> the TRIPS waiver lets local firms keep producing generic medicines.<br />
+3. <strong>Concessional finance:</strong> access to cheaper loans continues.<br />
+4. <strong>Time to reform:</strong> the economy is weak (FY27 growth forecasts 3.2–4.0 percent) and the banking sector is stressed. Graduating now could have added a fresh shock.</p>
+<p><strong>Challenges that remain</strong><br />
+- Exports are concentrated: about 80 percent comes from RMG.<br />
+- The new EU GSP Regulation, from 1 January 2027, lowers the apparel safeguard threshold to 37 percent, while Bangladesh's share is about 50 percent. GSP+ will require 32 conventions.<br />
+- The US now charges a 10 percent Section 301 tariff on Bangladeshi goods.<br />
+- A UN assessment estimated export losses of more than USD 17.5 billion a year after graduation without preferences.<br />
+- Low revenue (about 7 percent of GDP) limits investment in skills and infrastructure.</p>
+<p><strong>Opportunities to seize</strong><br />
+Better credit rating and branding as a graduating economy; more FDI (USD 1.78 billion in 2025, up 45 percent, according to UNCTAD); and a chance to negotiate new trade deals. The EPA with Japan, signed in February 2026, is the first such deal.</p>
+<p><strong>What must be done before 2029</strong><br />
+1. Prepare to qualify for EU GSP+ by implementing labour, environment and human-rights conventions.<br />
+2. Sign FTAs or CEPAs with ASEAN, India, China and the Gulf, and ratify the Japan EPA.<br />
+3. Diversify exports: leather, pharmaceuticals, light engineering, agro-processing and ICT services.<br />
+4. Raise revenue through tax reform and digital tax administration.<br />
+5. Upgrade ports, power supply and logistics to cut lead time.<br />
+6. Upskill workers for higher-value manufacturing.</p>
+<p><strong>Conclusion</strong><br />
+The deferral is a breathing space, not a holiday. If Bangladesh uses these three years for real reform, it will graduate in 2029 as a confident, competitive economy rather than a vulnerable one.</p>
+<h2 class="ans" id="predfocus-ans-to-the-predicted-q-stagflation-risk-high-inflation-slowi">Ans. to the Predicted Q. — Stagflation Risk: High Inflation, Slowing Growth and the Policy Response</h2>
+<h3>Between Inflation and Stagnation: Bangladesh's Policy Dilemma</h3>
+<blockquote>
+<p>"Inflation is taxation without legislation." — Milton Friedman</p>
+</blockquote>
+<p><strong>Introduction</strong><br />
+Bangladesh faces an uncomfortable mix: inflation has stayed above 8 percent for more than two years, while growth has slowed to its weakest level in decades. This combination of high prices and low growth, called stagflation, squeezes household incomes and discourages investment.</p>
+<p><strong>The picture in numbers</strong></p>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Figure</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inflation, October 2026</td>
+<td>8.27% (food 6.40%, non-food 9.89%)</td>
+<td>BBS</td>
+</tr>
+<tr>
+<td>Wage growth, October 2026</td>
+<td>7.63% (below inflation)</td>
+<td>BBS</td>
+</tr>
+<tr>
+<td>GDP growth, FY26 (revised)</td>
+<td>3.68%</td>
+<td>BBS</td>
+</tr>
+<tr>
+<td>FY27 growth forecasts</td>
+<td>IMF 3.2%, World Bank 3.4%, ADB 4.0%</td>
+<td>IMF, World Bank, ADB</td>
+</tr>
+<tr>
+<td>Policy rate</td>
+<td>9.5% (cut from 10% in July 2026)</td>
+<td>Bangladesh Bank</td>
+</tr>
+<tr>
+<td>Poverty rate, 2026</td>
+<td>22.5% (18.7% in 2022)</td>
+<td>World Bank</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Causes</strong><br />
+1. <strong>Cost-push factors:</strong> fuel price hikes (diesel up from Tk 100 to Tk 135 in 2026), LNG shortages and costly imports after the Iran war closed the Strait of Hormuz.<br />
+2. <strong>Exchange-rate pass-through:</strong> the taka's depreciation since 2022 raised import costs.<br />
+3. <strong>Market syndicates and supply-chain weaknesses</strong> in essential commodities.<br />
+4. <strong>Investment drought:</strong> high interest rates, weak banks, energy shortages and political uncertainty kept private credit growth near 5 percent.<br />
+5. <strong>Government borrowing</strong> from banks crowded out private credit.</p>
+<p><strong>Policy response</strong><br />
+- <strong>Monetary policy:</strong> Bangladesh Bank kept the policy rate at 10 percent for almost two years. With food inflation falling, it cut the rate to 9.5 percent in July 2026 to revive credit, while holding it there in the first quarterly MPS.<br />
+- <strong>Fiscal policy:</strong> the FY27 budget (Tk 9.38 lakh crore) cut duties on essentials, introduced family and farmer cards, and kept the deficit at 3.6 percent of GDP.<br />
+- <strong>Stimulus:</strong> a Tk 60,000 crore refinance and pre-finance package targets CMSMEs, agriculture and closed factories, aiming at about 25 lakh jobs.<br />
+- <strong>IMF talks:</strong> a new USD 4.5–5 billion programme is being negotiated.</p>
+<p><strong>Why tight money alone is not enough</strong><br />
+Most of today's inflation comes from costs and supply, not excess demand. Raising rates further would hurt investment without bringing down fuel, freight or food prices. Monetary and fiscal policy must act together.</p>
+<p><strong>Recommendations</strong><br />
+1. Coordinate monetary and fiscal policy; avoid financing deficits through bank borrowing.<br />
+2. Break market syndicates through competition law and more importers.<br />
+3. Protect the poor with targeted cash transfers rather than blanket subsidies.<br />
+4. Restore energy supply through long-term LNG deals and renewables.<br />
+5. Clean up banks so that lower policy rates actually reach productive borrowers.</p>
+<p><strong>Conclusion</strong><br />
+Escaping stagflation needs patience and coordination: steady disinflation through supply-side fixes, combined with targeted support to restart investment and jobs.</p>
+<h2 class="ans" id="predfocus-ans-to-the-predicted-q-artificial-intelligence-and-the-futur">Ans. to the Predicted Q. — Artificial Intelligence and the Future of Banking in Bangladesh</h2>
+<h3>AI in Banking: Opportunity, Risk and Responsibility</h3>
+<blockquote>
+<p>"Banking is no longer somewhere you go, but something you do." — Brett King</p>
+</blockquote>
+<p><strong>Introduction</strong><br />
+Artificial intelligence (AI) is changing how banks lend, serve customers and fight fraud. The IMF chief called AI "a slow-moving tsunami" that could affect about 40 percent of jobs worldwide. For Bangladeshi banks, AI is both a tool for efficiency and inclusion and a source of new risks.</p>
+<p><strong>Uses of AI in banking</strong><br />
+1. <strong>Credit scoring:</strong> using transaction and mobile data to lend to farmers and small entrepreneurs who have no collateral or credit history.<br />
+2. <strong>Fraud detection and AML:</strong> machine learning flags suspicious transactions faster than manual checks, supporting BFIU's work against money laundering.<br />
+3. <strong>Customer service:</strong> chatbots and voice assistants in Bangla serve customers 24/7.<br />
+4. <strong>e-KYC:</strong> facial recognition with NID makes account opening quick.<br />
+5. <strong>Risk management:</strong> early-warning systems can predict loan default, which is vital when default loans exceed 32 percent.</p>
+<p><strong>Bangladesh's digital foundation</strong></p>
+<table>
+<thead>
+<tr>
+<th>Initiative</th>
+<th>Status (2026)</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bangla QR</td>
+<td>Mandatory single merchant QR since 1 Jul 2026; zero interchange fee from 1 Oct</td>
+<td>Bangladesh Bank</td>
+</tr>
+<tr>
+<td>Instant Interoperable Payment System</td>
+<td>Targeted for June 2027</td>
+<td>Bangladesh Bank, MPS H1FY27</td>
+</tr>
+<tr>
+<td>Digital nano-loans</td>
+<td>Refinance scheme extended to June 2028</td>
+<td>Bangladesh Bank, MPS H1FY27</td>
+</tr>
+<tr>
+<td>Digital bank licences</td>
+<td>No final decision yet</td>
+<td>2026 reports</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Risks and challenges</strong><br />
+- <strong>Cyber security:</strong> AI can also be used by criminals for deepfake fraud and phishing. The 2016 reserve heist shows the cost of weak security.<br />
+- <strong>Bias and fairness:</strong> algorithms trained on biased data may exclude women or rural borrowers.<br />
+- <strong>Data privacy:</strong> Bangladesh still needs a strong data-protection law.<br />
+- <strong>Jobs:</strong> routine back-office and teller jobs may decline. Global banks are cutting junior analyst intake, though S&amp;P Global sees no near-term mass layoffs.<br />
+- <strong>Skills gap:</strong> few bankers are trained in data science.</p>
+<p><strong>Recommendations</strong><br />
+1. Bangladesh Bank should issue AI governance guidelines on explainability, fairness and human oversight.<br />
+2. Enact a data-protection law and strengthen bank cyber-security standards.<br />
+3. Retrain staff for relationship management, data analysis and cyber security.<br />
+4. Use AI first for inclusion (credit for CMSMEs) and anti-fraud, not only for cost-cutting.<br />
+5. Use regulatory sandboxes, through the Regulatory FinTech Facilitation Office, to test innovations safely.</p>
+<p><strong>Conclusion</strong><br />
+AI will not replace bankers, but bankers who use AI will replace those who do not. With sound regulation and training, AI can make Bangladesh's banks safer, faster and more inclusive.</p>
+<h2 class="ans" id="predfocus-ans-to-the-predicted-q-remittance-lifeline-of-the-economy-an">Ans. to the Predicted Q. — Remittance: Lifeline of the Economy and the Fight Against Hundi</h2>
+<h3>Record Remittances and the Fight Against Hundi</h3>
+<blockquote>
+<p>"Remittance is the silent engine of Bangladesh's economy."</p>
+</blockquote>
+<p><strong>Introduction</strong><br />
+More than a crore of Bangladeshis work abroad, and the money they send home has become the strongest pillar of the external sector. In FY26 remittances reached a record USD 35.59 billion, up 17.3 percent, while export earnings stagnated.</p>
+<p><strong>Data box</strong></p>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Figure</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Remittance, FY26</td>
+<td>USD 35.59 bn (+17.3%), record</td>
+<td>Bangladesh Bank via FE</td>
+</tr>
+<tr>
+<td>Remittance, FY27 to 16 Nov</td>
+<td>USD 13.43 bn (+13.4%)</td>
+<td>Bangladesh Bank via UNB</td>
+</tr>
+<tr>
+<td>Exports, FY26</td>
+<td>USD 48.0 bn (−0.58%)</td>
+<td>EPB via TBS</td>
+</tr>
+<tr>
+<td>Gross reserves, 6 Nov 2026</td>
+<td>USD 34.85 bn (BPM6: 29.98 bn)</td>
+<td>Bangladesh Bank via bdnews24</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Why remittance matters</strong><br />
+1. <strong>Reserves and exchange rate:</strong> remittances financed the trade gap and stabilised the taka around Tk 122–123 per dollar.<br />
+2. <strong>Rural consumption and poverty reduction:</strong> families spend on food, education, health and housing.<br />
+3. <strong>Investment:</strong> some remittance goes into small businesses, land and savings instruments.</p>
+<p><strong>Why the surge happened</strong><br />
+A market-based exchange rate narrowed the gap between official and hundi rates. Stricter action against money laundering after 2024 and easier digital channels also helped.</p>
+<p><strong>The hundi problem</strong><br />
+Hundi is an informal transfer system: the worker pays an agent abroad and the family receives taka at home, but no dollars enter the country. It drains reserves and is linked to money laundering and capital flight. A white paper estimated USD 234 billion was laundered from Bangladesh between 2009 and 2023.</p>
+<p><strong>Challenges</strong><br />
+High migration costs, unskilled migrants earning low wages, dependence on the Gulf (now affected by war), and the risk that inflows slow down after the recent surge.</p>
+<p><strong>Recommendations</strong><br />
+1. Keep the exchange rate market-based so that formal channels stay competitive.<br />
+2. Expand digital remittance through MFS and bank apps, with instant credit to family accounts.<br />
+3. Cut migration costs and fight fraudulent recruiting agents.<br />
+4. Send skilled workers (nurses, technicians, IT) to new markets such as Japan and Europe.<br />
+5. Offer remittance bonds and investment schemes for expatriates.<br />
+6. Let BFIU continue strict action against hundi networks.</p>
+<p><strong>Conclusion</strong><br />
+Remittance has carried the economy through a difficult period. Making the formal channel the easiest and cheapest choice, and sending more skilled workers, will keep this lifeline strong.</p>
+<h2 class="ans" id="predfocus-ans-to-the-predicted-q-bangla-focus-climate-finance-cop31-an">Ans. to the Predicted Q. (Bangla focus) — Climate Finance, COP31 and Bangladesh</h2>
+<aside class="pencil"><span class="pmark">✎</span>Write this in Bangla in the exam. Bangla sub-headings: ভূমিকা · বাংলাদেশের জলবায়ু ঝুঁকি · COP31 ও বাংলাদেশের দাবি · লস অ্যান্ড ড্যামেজ তহবিল: প্রতিশ্রুতি বনাম বাস্তবতা · ঋণ নয়, অনুদান · গ্রিন ব্যাংকিং ও টেকসই অর্থায়ন · করণীয় · উপসংহার</aside>
+<h3>Climate Finance and Bangladesh: Expectations from COP31</h3>
+<p><strong>Introduction</strong><br />
+Bangladesh emits less than 0.5 percent of global greenhouse gases, yet it is among the countries hit hardest by climate change. At COP31 in Antalya, Türkiye (9–20 November 2026), Bangladesh's delegation, led by the Prime Minister, demanded fair and accessible climate finance.</p>
+<p><strong>Bangladesh's climate burden</strong><br />
+Bangladesh estimates its annual climate losses at about USD 15.2 billion, from floods, cyclones, salinity, river erosion and heatwaves. Flash floods in 2026 damaged crops and pushed food prices up.</p>
+<p><strong>Promise vs reality</strong></p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Figure</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Loss and Damage Fund</td>
+<td>about USD 600 m received vs USD 2.8 bn requested by 119 countries</td>
+<td>Climate Action Network, 15 Nov 2026</td>
+</tr>
+<tr>
+<td>Adaptation Fund pledges at COP31</td>
+<td>USD 50 m vs USD 300 m annual floor</td>
+<td>Climate Action Network, 18 Nov 2026</td>
+</tr>
+<tr>
+<td>Global climate finance gap</td>
+<td>up to USD 840 bn a year short of the USD 1.3 trn goal</td>
+<td>UN News, 13 Nov 2026</td>
+</tr>
+<tr>
+<td>Renewable-energy climate finance to Bangladesh</td>
+<td>90.4% given as loans</td>
+<td>UNB, Nov 2026</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bangladesh's key demands</strong><br />
+1. Grants, not loans, for adaptation and loss and damage. Loans add debt to victims.<br />
+2. Simple, direct access to funds for vulnerable countries and local communities.<br />
+3. More finance for adaptation, not only mitigation.<br />
+4. Technology transfer for renewable energy.</p>
+<p><strong>Role of banks: green banking</strong><br />
+Bangladesh Bank's sustainable finance policy requires banks to finance green projects (solar, energy-efficient factories, effluent treatment). Banks can issue green bonds and sukuk, price climate risk into lending, and expand refinance for solar irrigation.</p>
+<p><strong>What Bangladesh must do at home</strong><br />
+Implement the National Adaptation Plan; build climate-resilient infrastructure; scale up renewable energy to reduce dependence on imported fuel; and improve transparency so that climate funds reach the people who need them.</p>
+<p><strong>Conclusion</strong><br />
+Climate justice means the polluters pay. Bangladesh must keep pressing for grant-based finance while showing, through strong domestic action, that every dollar received is used well.</p>
+<h2 class="ans" id="predfocus-ans-to-the-predicted-q-bangla-focus-energy-security-of-bangl">Ans. to the Predicted Q. (Bangla focus) — Energy Security of Bangladesh amid the Middle East Crisis</h2>
+<aside class="pencil"><span class="pmark">✎</span>Write this in Bangla in the exam. Bangla sub-headings: ভূমিকা · মধ্যপ্রাচ্য যুদ্ধ ও হরমুজ প্রণালী · আমদানিনির্ভর জ্বালানি খাত · গ্যাস ও বিদ্যুৎ সংকট (তথ্য-ছক) · অর্থনীতিতে প্রভাব · নবায়নযোগ্য জ্বালানির সম্ভাবনা · করণীয় · উপসংহার</aside>
+<h3>Energy Security of Bangladesh amid the Middle East Crisis</h3>
+<p><strong>Introduction</strong><br />
+Energy security means a reliable supply of energy at an affordable price. The war that began with US and Israeli strikes on Iran on 28 February 2026, and the near-closure of the Strait of Hormuz, has shown how fragile Bangladesh's import-dependent energy system is.</p>
+<p><strong>The shock in numbers</strong></p>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Figure</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brent crude, 19 Nov 2026</td>
+<td>about USD 92/barrel (above USD 100 at the peak)</td>
+<td>oilprice.com</td>
+</tr>
+<tr>
+<td>Spot LNG price</td>
+<td>USD 24–28/MMBtu (about USD 10 before the war)</td>
+<td>bdnews24</td>
+</tr>
+<tr>
+<td>Gas supply vs demand</td>
+<td>2,624 vs about 3,800 mmcfd</td>
+<td>bdnews24</td>
+</tr>
+<tr>
+<td>Rural load-shedding, August 2026</td>
+<td>8–10 hours a day</td>
+<td>2026 reports</td>
+</tr>
+<tr>
+<td>Diesel price</td>
+<td>Tk 100 → Tk 135 per litre in 2026</td>
+<td>Dhaka Tribune</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Impact</strong><br />
+A fire at the Moheshkhali floating LNG terminal on 21 July pushed load-shedding above 2,500 MW and hit about 2,500 factories. Irrigation costs rose, fuel and transport costs pushed non-food inflation near 10 percent, and the import bill strained reserves. QatarEnergy's force majeure halved LNG deliveries.</p>
+<p><strong>Root causes of vulnerability</strong><br />
+Declining domestic gas fields, slow exploration, over-reliance on imported LNG and oil, and a slow shift to renewables.</p>
+<p><strong>Way forward</strong><br />
+1. Intensify domestic gas exploration, onshore and offshore, through BAPEX and international partners.<br />
+2. Diversify LNG sources through long-term contracts with several suppliers.<br />
+3. Scale up solar (rooftop, irrigation, utility-scale) and wind.<br />
+4. Improve energy efficiency in industry and buildings.<br />
+5. Build strategic oil reserves for at least 60 days.<br />
+6. Use a transparent fuel-pricing formula with targeted support for farmers.</p>
+<p><strong>Conclusion</strong><br />
+Energy security is national security. Bangladesh must turn this crisis into a push for domestic gas and renewable energy, so that the next global shock does not switch off its factories.</p>
+<h2 class="ans" id="predfocus-ans-to-the-predicted-q-bangla-focus-youth-unemployment-and-s">Ans. to the Predicted Q. (Bangla focus) — Youth Unemployment and Skills Development</h2>
+<aside class="pencil"><span class="pmark">✎</span>Write this in Bangla in the exam. Bangla sub-headings: ভূমিকা · তরুণ জনগোষ্ঠী: সম্ভাবনা ও ঝুঁকি · শিক্ষিত বেকারত্বের কারণ · চতুর্থ শিল্পবিপ্লব ও দক্ষতার ঘাটতি · কর্মসংস্থান সৃষ্টিতে ব্যাংকের ভূমিকা · করণীয় · উপসংহার</aside>
+<h3>Youth Unemployment and Skills Development in Bangladesh</h3>
+<p><strong>Introduction</strong><br />
+About two million young people enter Bangladesh's labour market every year. With growth slowing (FY26: 3.68 percent) and private investment weak, many educated youths cannot find suitable jobs. This is a "demographic dividend" at risk of becoming a burden.</p>
+<p><strong>Causes</strong><br />
+1. <strong>Skills mismatch:</strong> degrees do not match what employers need, such as technical, digital and language skills.<br />
+2. <strong>Slow job creation:</strong> weak investment, energy shortages and the banking crisis limit new factories.<br />
+3. <strong>Automation</strong> in garments and services.<br />
+4. <strong>Weak technical and vocational education (TVET).</strong><br />
+5. <strong>Limited access to finance</strong> for young entrepreneurs.</p>
+<p><strong>Opportunities</strong><br />
+IT and freelancing, the care economy, agro-processing, light engineering, overseas employment of skilled workers, and the green economy (solar installation, recycling).</p>
+<p><strong>Role of banks</strong><br />
+Collateral-free start-up loans; Bangladesh Bank's Tk 60,000 crore stimulus, which includes windows for youth employment and CMSMEs; the new venture-capital platform launched by banks (reported as Bangladesh Startup Investment Company); and digital nano-loans.</p>
+<p><strong>Recommendations</strong><br />
+1. Reform the curriculum with industry participation; expand apprenticeships.<br />
+2. Make TVET attractive and of high quality.<br />
+3. Create a national job-matching platform.<br />
+4. Support start-ups through venture capital, incubators and easy registration.<br />
+5. Train youth in languages and certified skills for overseas jobs.</p>
+<p><strong>Conclusion</strong><br />
+The youth led Bangladesh's political change in 2024; now they need an economy that can use their talent. Skills, finance and investment together can turn a jobless generation into the engine of growth.</p>
+</article>
+
+<article class="sheet script" id="predother">
+  <header class="strip"><span>ANSWER SCRIPT · Continuation</span><span>Practice set in the exact 05 June 2026 format · Q6 Analytical (40) · Q5 Translation (20) · Q7 Bangla (10) · Q8 English (20) · Q9 Banking (10) · Q3 GK (10) · Q4 Math (30)</span></header>
+  <h1 class="script-title">Practice Set in the June 2026 Format — Questions and Model Answers</h1>
+  <blockquote>
+<p>The June 2026 Analytical question had four parts: (a) a logic or scheduling puzzle, (b) critique a decision, (c) find the hidden assumption, (d) arguments for and against. Expect the same four types on 27 November. Both puzzles below have been checked by computer to have exactly one solution.</p>
+</blockquote>
+<h2 class="ans" id="predother-ans-to-the-practice-q-no-6-set-1-analytical-reasoning-40">Ans. to the Practice Q. No. 6 (Set 1) — Analytical Reasoning (40)</h2>
+<p><strong>(a) Question:</strong> Six loan files — P, Q, R, S, T and U — are reviewed one per day from Monday to Saturday. S is reviewed on Wednesday. P is reviewed before S, but not on Monday. T is reviewed after S. Q is reviewed on the day immediately after T. U is reviewed after Q. R is not reviewed on Saturday. Determine the schedule.</p>
+<p><strong>Answer:</strong><br />
+1. S is on Wednesday, and P is before S but not on Monday, so P is on <strong>Tuesday</strong>.<br />
+2. T is after S, Q immediately follows T, and U comes after Q. The only three days after Wednesday are Thursday, Friday and Saturday, so <strong>T = Thursday, Q = Friday, U = Saturday</strong>.<br />
+3. Only Monday is left, so <strong>R = Monday</strong>. R is not on Saturday ✓.</p>
+<table>
+<thead>
+<tr>
+<th>Mon</th>
+<th>Tue</th>
+<th>Wed</th>
+<th>Thu</th>
+<th>Fri</th>
+<th>Sat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R</td>
+<td>P</td>
+<td>S</td>
+<td>T</td>
+<td>Q</td>
+<td>U</td>
+</tr>
+</tbody>
+</table>
+<p><strong>(b) Question:</strong> A bank's marketing head reports that branches which ran a television advertisement grew deposits by 15 percent last year, while branches without the advertisement grew by only 5 percent. He concludes that the advertisement caused the extra growth and proposes tripling the advertising budget. Critique this decision.</p>
+<p><strong>Answer:</strong> The conclusion confuses correlation with causation.<br />
+1. <strong>Selection bias:</strong> the advertised branches may be in cities where income and remittance inflows are already higher.<br />
+2. <strong>Other causes:</strong> a higher deposit rate, new products or a new branch manager may explain the growth.<br />
+3. <strong>Timing:</strong> a festival season or remittance surge (FY26 remittances +17.3 percent) may have lifted all deposits.<br />
+4. <strong>Diminishing returns:</strong> tripling the budget will not triple the effect; the same customers see the same advertisement.<br />
+5. <strong>Cost-benefit:</strong> the decision ignores whether the extra deposits are worth the cost of advertising.</p>
+<p><strong>Better approach:</strong> run a controlled test in similar branches, compare like with like, and measure cost per taka of new deposits before scaling up.</p>
+<p><strong>(c) Question:</strong> "Bangladesh Bank has cut the policy rate from 10 percent to 9.5 percent. Private investment will therefore rise, because businesses borrow more when credit is cheaper." What is the implied assumption?</p>
+<p><strong>Answer:</strong> The argument assumes that <strong>the main reason businesses are not investing is the high cost of credit</strong>, and that banks will pass the lower rate on to borrowers. If the real obstacles are energy shortages, political uncertainty or weak banks unwilling to lend, the rate cut will not raise investment. Private credit growth was a record-low 4.17 percent in September 2026, even after the cut.</p>
+<p><strong>(d) Question:</strong> Provide arguments for and against: "Bangladesh should accept a new IMF loan programme even with strict conditions."</p>
+<p><strong>Answer:</strong><br />
+<em>For:</em><br />
+1. It provides USD 4.5–5 billion in budget and reserve support at low cost when reserves are under pressure (BPM6 about USD 30 billion).<br />
+2. An IMF programme signals credibility and unlocks financing from the World Bank, ADB and Japan.<br />
+3. The conditions push reforms that Bangladesh needs anyway: banking clean-up, revenue (tax-GDP only about 7 percent) and a flexible exchange rate.</p>
+<p><em>Against:</em><br />
+1. Conditions such as subsidy cuts and higher fuel prices can hurt the poor during high inflation.<br />
+2. Reforms imposed from outside may lack national ownership and be reversed.<br />
+3. The previous programme (USD 4.7 billion, raised to USD 5.5 billion) stalled, and its targets, such as cutting default loans to 10 percent, were missed. Signing a programme is not the same as reforming.</p>
+<p><em>Position:</em> <strong>Accept the programme, but negotiate the sequencing.</strong> Protect social spending, phase energy-price adjustments, and own the reform agenda so that the programme supports national priorities rather than dictating them.</p>
+<h2 class="ans" id="predother-ans-to-the-practice-q-no-6-set-2-analytical-reasoning-40">Ans. to the Practice Q. No. 6 (Set 2) — Analytical Reasoning (40)</h2>
+<p><strong>(a) Question:</strong> Five officers — Rafi, Sumi, Tanvir, Nila and Omar — are ranked from 1 (highest sales) to 5. Nila ranks higher than Rafi, and Rafi ranks higher than Sumi. Omar ranks third. Tanvir is neither first nor last. Rafi is not second. Find the ranking.</p>
+<p><strong>Answer:</strong><br />
+1. Omar is 3rd. Tanvir is not 1st or 5th, so Tanvir is 2nd or 4th.<br />
+2. Nila &gt; Rafi &gt; Sumi, and Rafi is not 2nd, so Rafi must be 4th (3rd is taken). Then Sumi is 5th.<br />
+3. Tanvir must be 2nd (4th is taken), so Nila is 1st.</p>
+<p><strong>Ranking: 1 Nila, 2 Tanvir, 3 Omar, 4 Rafi, 5 Sumi.</strong></p>
+<p><strong>(b) Question:</strong> After 100 CCTV cameras were installed in a market area, reported crimes rose by 20 percent. A councillor concludes that the cameras increased crime and should be removed. Critique the conclusion.</p>
+<p><strong>Answer:</strong> Cameras increase <strong>detection and reporting</strong>, not necessarily crime. Victims report more when evidence exists, and police record more incidents. Other factors such as population growth, economic hardship or a new reporting system may also explain the rise. The correct measures are conviction rates, serious-crime trends and comparison with similar areas without cameras. Removing the cameras on this evidence would be a mistake.</p>
+<p><strong>(c) Question:</strong> "Mobile financial service accounts in Bangladesh now outnumber adults, so financial inclusion of the poor has been achieved." Which fact would most <strong>weaken</strong> this argument?</p>
+<p><strong>Answer:</strong> The argument is weakened if <strong>many accounts are inactive or duplicates</strong>, for example one person holding several accounts, or accounts used only to receive transfers and immediately cash out. In that case account numbers overstate real inclusion, which means regular saving, borrowing and insurance by poor people. The freezing of more than 80,000 MFS accounts used for hundi and gambling in 2026 shows that account counts alone can mislead.</p>
+<p><strong>(d) Question:</strong> Provide arguments for and against: "Merging weak banks with stronger banks is the best solution to Bangladesh's banking crisis."</p>
+<p><strong>Answer:</strong><br />
+<em>For:</em> it protects depositors quickly; achieves economies of scale; and avoids the panic of a bank closure. Sammilito Islami Bank, formed from five banks in 2026, began repaying depositors in September.<br />
+<em>Against:</em> it can spread bad loans to healthy banks; rewards the owners who looted banks (moral hazard); and does not fix the root cause, which is political lending and weak supervision. The five merged banks had about 84 percent of their loans in default.<br />
+<em>Position:</em> <strong>Merger is a tool, not the solution.</strong> It must follow an independent asset-quality review, remove the old owners, bring in new management, and be combined with legal action to recover stolen money.</p>
+<h2 class="ans" id="predother-ans-to-the-practice-q-no-5-translation-bangla-to-english-20">Ans. to the Practice Q. No. 5 — Translation, Bangla to English (20)</h2>
+<p><strong>Set 1 (banking and economy)</strong><br />
+(a) মূল্যস্ফীতি নিয়ন্ত্রণে কেন্দ্রীয় ব্যাংক নীতি সুদহার কমালেও বেসরকারি খাতে ঋণপ্রবাহ বাড়েনি।<br />
+→ Although the central bank cut the policy rate to control inflation, credit flow to the private sector did not increase.<br />
+(b) খেলাপি ঋণ আদায়ে ব্যর্থ হলে ব্যাংকের প্রতি আমানতকারীদের আস্থা কমে যায়।<br />
+→ If default loans are not recovered, depositors lose confidence in banks.<br />
+(c) প্রবাসী আয় দেশের বৈদেশিক মুদ্রার রিজার্ভ স্থিতিশীল রাখতে গুরুত্বপূর্ণ ভূমিকা পালন করছে।<br />
+→ Remittance is playing an important role in keeping the country's foreign exchange reserves stable.<br />
+(d) স্বল্পোন্নত দেশ থেকে উত্তরণের আগে রপ্তানি পণ্যের বহুমুখীকরণ নিশ্চিত করতে হবে।<br />
+→ Export diversification must be ensured before graduating from the least developed country category.<br />
+(e) জ্বালানি সংকটের কারণে অনেক কারখানা পূর্ণ সক্ষমতায় উৎপাদন করতে পারছে না।<br />
+→ Because of the energy crisis, many factories cannot produce at full capacity.</p>
+<p><strong>Set 2 (society and technology)</strong><br />
+(a) কৃত্রিম বুদ্ধিমত্তা ব্যাংকিং সেবাকে দ্রুত ও সাশ্রয়ী করলেও সাইবার ঝুঁকিও বাড়াচ্ছে।<br />
+→ Although artificial intelligence is making banking services faster and cheaper, it is also increasing cyber risks.<br />
+(b) জলবায়ু পরিবর্তনের ক্ষতি মোকাবিলায় উন্নত দেশগুলোর ঋণ নয়, অনুদান দেওয়া উচিত।<br />
+→ To address the losses caused by climate change, developed countries should provide grants, not loans.<br />
+(c) দক্ষ জনশক্তি তৈরি না করলে জনমিতিক লভ্যাংশের সুফল পাওয়া সম্ভব নয়।<br />
+→ Without building a skilled workforce, it is not possible to reap the benefits of the demographic dividend.<br />
+(d) সুশাসন ছাড়া টেকসই অর্থনৈতিক উন্নয়ন কল্পনাও করা যায় না।<br />
+→ Sustainable economic development cannot even be imagined without good governance.<br />
+(e) রাজস্ব আহরণ বাড়াতে কর ব্যবস্থাকে সহজ ও ডিজিটাল করতে হবে।<br />
+→ To increase revenue collection, the tax system must be made simple and digital.</p>
+<aside class="pencil"><span class="pmark">✎</span>Translate the meaning, not word by word. Keep tense consistent, use "although … , …" (never "although … but"), and check articles at the end.</aside>
+<h2 class="ans" id="predother-ans-to-the-practice-q-no-8-english-language-proficiency-20">Ans. to the Practice Q. No. 8 — English Language Proficiency (20)</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Question</th>
+<th>Model answer</th>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>Replace the verb with a group verb: "The meeting was <strong>postponed</strong>."</td>
+<td>The meeting was <strong>put off</strong>.</td>
+<td>group verb</td>
+</tr>
+<tr>
+<td>b</td>
+<td>Sentence type: "Although prices fell, people did not feel relief because wages stayed low."</td>
+<td><strong>Complex</strong> sentence (one main clause + two subordinate clauses)</td>
+<td>sentence structure</td>
+</tr>
+<tr>
+<td>c</td>
+<td>Meaning of "a blessing in disguise"</td>
+<td>Something that seems bad at first but turns out to be good.</td>
+<td>idiom</td>
+</tr>
+<tr>
+<td>d</td>
+<td>Passive: "The bank will open a new branch next month."</td>
+<td>A new branch <strong>will be opened</strong> by the bank next month.</td>
+<td>voice</td>
+</tr>
+<tr>
+<td>e</td>
+<td>Indirect speech: He said to me, "Have you submitted the form?"</td>
+<td>He <strong>asked me if I had submitted</strong> the form.</td>
+<td>speech</td>
+</tr>
+<tr>
+<td>f</td>
+<td>Identify the non-finite verb: "She wants <strong>to join</strong> a bank."</td>
+<td>"to join" (infinitive)</td>
+<td>finite / non-finite</td>
+</tr>
+<tr>
+<td>g</td>
+<td>Correct the error: "Each of the officers have a laptop."</td>
+<td>Each of the officers <strong>has</strong> a laptop.</td>
+<td>subject-verb agreement</td>
+</tr>
+<tr>
+<td>h</td>
+<td>Right form: "It is high time we (take) action."</td>
+<td>It is high time we <strong>took</strong> action.</td>
+<td>right form of verb</td>
+</tr>
+<tr>
+<td>i</td>
+<td>Identify the clause: "I know <strong>that he is honest</strong>."</td>
+<td>Noun clause (object of "know")</td>
+<td>clause &amp; phrase</td>
+</tr>
+<tr>
+<td>j</td>
+<td>Meaning of "to burn the candle at both ends"</td>
+<td>To work too hard, from early morning till late night, and exhaust oneself.</td>
+<td>idiom</td>
+</tr>
+</tbody>
+</table>
+<h2 class="ans" id="predother-ans-to-the-practice-q-no-7-10">Ans. to the Practice Q. No. 7 — বাংলা ব্যাকরণ (10)</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>প্রশ্ন</th>
+<th>উত্তর</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ক</td>
+<td>"অকালকুষ্মাণ্ড" বাগধারার অর্থ কী?</td>
+<td>অপদার্থ, অকেজো</td>
+</tr>
+<tr>
+<td>খ</td>
+<td>"আমার যাওয়া হবে না" — কোন বাচ্য?</td>
+<td>ভাববাচ্য</td>
+</tr>
+<tr>
+<td>গ</td>
+<td>"বিদ্বান"-এর স্ত্রীবাচক শব্দ কী?</td>
+<td>বিদুষী</td>
+</tr>
+<tr>
+<td>ঘ</td>
+<td>"মেঘ থেকে বৃষ্টি পড়ে" — "মেঘ থেকে" কোন কারক?</td>
+<td>অপাদান কারক (৫মী)</td>
+</tr>
+<tr>
+<td>ঙ</td>
+<td>"পীতাম্বর" — ব্যাসবাক্য ও সমাস</td>
+<td>পীত অম্বর যার — বহুব্রীহি সমাস</td>
+</tr>
+<tr>
+<td>চ</td>
+<td>"যা কষ্টে জয় করা যায়" — এক কথায়</td>
+<td>দুর্জয়</td>
+</tr>
+<tr>
+<td>ছ</td>
+<td>শুদ্ধ বানান: মুহূর্ত / মুহুর্ত</td>
+<td>মুহূর্ত</td>
+</tr>
+<tr>
+<td>জ</td>
+<td>শুদ্ধ করুন: "দারিদ্রতা দূর করতে হবে।"</td>
+<td>দারিদ্র্য দূর করতে হবে।</td>
+</tr>
+<tr>
+<td>ঝ</td>
+<td>"কুল" ও "কূল" — অর্থের পার্থক্য</td>
+<td>কুল = বংশ; কূল = তীর</td>
+</tr>
+<tr>
+<td>ঞ</td>
+<td>"উদ্ধার"-এর সন্ধিবিচ্ছেদ</td>
+<td>উৎ + হার</td>
+</tr>
+</tbody>
+</table>
+<h2 class="ans" id="predother-ans-to-the-practice-q-no-9-financial-and-banking-knowledge-1">Ans. to the Practice Q. No. 9 — Financial and Banking Knowledge (10)</h2>
+<p>(a) <strong>SLR (Statutory Liquidity Ratio):</strong> the share of a bank's deposits that must be held in liquid assets such as cash, gold and government securities.<br />
+(b) <strong>Repo:</strong> a short-term loan from the central bank to a bank against government securities; its rate is the policy rate, now 9.5 percent in Bangladesh.<br />
+(c) <strong>NPL (non-performing loan):</strong> a loan whose principal or interest is overdue beyond the classification period (generally 90 days). Bangladesh's ratio was 32.17 percent in September 2026.<br />
+(d) <strong>CRAR under Basel III:</strong> the minimum capital to risk-weighted assets ratio of 10 percent plus a 2.5 percent conservation buffer, i.e. 12.5 percent.<br />
+(e) <strong>Letter of credit (LC):</strong> a bank's written undertaking to pay the exporter on behalf of the importer when documents conform to the LC terms (governed by UCP 600).<br />
+(f) <strong>KYC:</strong> "Know Your Customer", the process of verifying a customer's identity and risk profile when opening and running an account.<br />
+(g) <strong>BFIU:</strong> Bangladesh Financial Intelligence Unit, which receives suspicious transaction reports and fights money laundering and terrorist financing.<br />
+(h) <strong>Deposit insurance:</strong> under the Deposit Protection Act 2026, each depositor is protected up to Tk 2 lakh if a bank fails.<br />
+(i) <strong>Bancassurance:</strong> selling insurance products through a bank's branches and customer base.<br />
+(j) <strong>Expected credit loss (ECL):</strong> IFRS 9 provisioning that requires banks to set aside money for expected future loan losses, not just losses that have already occurred.</p>
+<h2 class="ans" id="predother-ans-to-the-practice-q-no-3-general-knowledge-10">Ans. to the Practice Q. No. 3 — General Knowledge (10)</h2>
+<p>(a) <strong>Governor of Bangladesh Bank:</strong> Md Mostaqur Rahman (since 25 Feb 2026).<br />
+(b) <strong>New LDC graduation date:</strong> 24 November 2029 (UN General Assembly, 29 Oct 2026).<br />
+(c) <strong>COP31 venue:</strong> Antalya, Türkiye (9–20 Nov 2026).<br />
+(d) <strong>President of the 81st UN General Assembly:</strong> Khalilur Rahman, Foreign Minister of Bangladesh.<br />
+(e) <strong>Gini coefficient</strong> measures income inequality; 0 = perfect equality, 1 = perfect inequality.<br />
+(f) <strong>Strait of Hormuz</strong> connects the Persian Gulf with the Gulf of Oman. About one-fifth of world oil passed through it before its closure in 2026.<br />
+(g) <strong>Bangladesh's first Economic Partnership Agreement:</strong> with Japan, signed 6 Feb 2026.<br />
+(h) <strong>US tariff on Bangladeshi goods since 24 July 2026:</strong> 10 percent (Section 301).<br />
+(i) <strong>IMF's 2026 world growth forecast (October WEO):</strong> 3.1 percent.<br />
+(j) <strong>Record remittance in FY26:</strong> USD 35.59 billion.</p>
+<h2 class="ans" id="predother-ans-to-the-practice-q-no-4-mathematics-30-past-senior-office">Ans. to the Practice Q. No. 4 — Mathematics (30): Past Senior Officer Questions with Full Solutions</h2>
+<p><strong>(a) Sonali Bank SO 2019.</strong> A and B are two stations 390 km apart. A train starts from A at 10 a.m. at 65 km/h towards B; another starts from B at 11 a.m. at 35 km/h towards A. When do they meet?<br />
+By 11 a.m. the first train covers 65 km; remaining = 325 km. Relative speed = 65 + 35 = 100 km/h. Time = 3.25 h = 3 h 15 min after 11 a.m.<br />
+<strong>Answer: 2:15 p.m.</strong></p>
+<p><strong>(b) Combined 8 Bank SO 2019.</strong> A can contains liquids A and B in the ratio 7 : 5. When 9 litres of mixture are drawn off and the can is filled with B, the ratio becomes 7 : 9. How much A was there initially?<br />
+Let the mixture be 12k litres (A = 7k, B = 5k). The 9 litres drawn contain A = 21/4 and B = 15/4.<br />
+(7k − 21/4) : (5k − 15/4 + 9) = 7 : 9<br />
+9(7k − 21/4) = 7(5k + 21/4) ⇒ 63k − 189/4 = 35k + 147/4 ⇒ 28k = 84 ⇒ k = 3<br />
+<strong>Answer: A = 7 × 3 = 21 litres.</strong></p>
+<p><strong>(c) Combined 6 Banks &amp; 2 FIs SO 2019.</strong> At a certain compound rate a sum becomes 8 times in 3 years. In how many years will it become 16 times?<br />
+(1 + r)³ = 8 = 2³ ⇒ 1 + r = 2. Then (1 + r)ⁿ = 16 = 2⁴ ⇒ <strong>n = 4 years.</strong></p>
+<p><strong>(d) Combined 6 Banks &amp; 2 FIs SO 2019.</strong> A 15 km road is to be built in 300 days by 45 men. After 100 days, 2.5 km is complete. How many extra men are needed to finish on time?<br />
+Man-days per km = (45 × 100) ÷ 2.5 = 1,800. Remaining 12.5 km needs 12.5 × 1,800 = 22,500 man-days in 200 days ⇒ 112.5 men, i.e. 113 men.<br />
+<strong>Answer: 113 − 45 = 68 extra men.</strong></p>
+<p><strong>(e) Rupali Bank SO 2019.</strong> A and B together can do a work in 30 days. A works 16 days, then B finishes the rest in 44 days. How long will B alone take?<br />
+30A + 30B = 16A + 44B ⇒ 14A = 14B ⇒ A = B. Together they take 30 days, so each alone takes 60 days.<br />
+<strong>Answer: 60 days.</strong></p>
+</article>
+<article class="sheet printed qpaper" id="paperB-q">
+  <div class="qp-head">
+    <div class="qp-org">Combined Bank Recruitment · Senior Officer (General) · Written Test</div>
+    <div class="qp-title">QUESTION PAPER</div>
+    <div class="qp-sub">Paper B · Combined 8 Banks &amp; 1 FI Senior Officer — 24 December 2025 · 2 hours · 200 marks</div>
+    <div class="qp-meta"><span>Time: 2 Hours</span><span>Full Marks: 200</span></div>
+    <div class="qp-note">[Answer all questions. Figures in the right margin indicate full marks.]</div>
+  </div>
+  <div class="qp-body"><p><strong>Q1.</strong> Write an essay in English on "The role of digital economy in economic development". <em>(35)</em></p>
+<p><strong>Q2.</strong> "জলবায়ু পরিবর্তন ও বাংলাদেশের উৎপাদনশীলতা" বিষয়ে একটি নিবন্ধ বাংলায় লিখুন। <em>(35)</em></p>
+<p><strong>Q3.</strong> নিম্নলিখিত প্রশ্নসমূহের উত্তর দিন। <em>(30)</em><br />
+(ক) কত গ্রামে এক ভরি? (খ) বিশ্ব ব্যাংকের কোন শাখা শুধুমাত্র উন্নয়নশীল দেশগুলোর জন্য স্বল্পসুদে ঋণ প্রদান করে? (গ) বাংলাদেশ ১৯৭২ সাল হতে কতবার আইএমএফ-এর কাছে ঋণ সুবিধা নিয়েছে? (ঘ) CDBL-এর পূর্ণরূপ কী? (ঙ) Basel Accords কোন কমিটির মাধ্যমে পরিচালিত হয়? (চ) যখন ব্যাংকের গ্রাহক লিজ সময়ের পরে ব্যাংক হতে ঐ সম্পদ কিনে নেয়, ইসলামী ব্যাংকিং-এ এমন সেবাকে কী বলা হয়? (ছ) বাংলাদেশে বিদেশি ব্যাংকের সংখ্যা কয়টি? (জ) সেন্ট মার্টিন কোন ধরনের দ্বীপ? (ঝ) একটি দেশের আঞ্চলিক (টেরিটোরিয়াল) জলসীমা কত নটিক্যাল মাইল পর্যন্ত বিবেচিত হয়? (ঞ) কোন দেশ আফ্রিকা এবং এশিয়া দুই মহাদেশেই অবস্থিত? (ট) প্রযুক্তির মাধ্যমে আর্থিক পরিষেবা প্রদানের উদ্ভাবকদের সুযোগ করে দেয়ার পক্ষে বাংলাদেশ ব্যাংকের কোন অফিস কাজ করে? (ঠ) বিশ্বের প্রথম মোবাইল আর্থিক পরিষেবা (MFS) কোনটি? (ড) ভূমিকম্প কত দূরে সংঘটিত হয়েছে এটি কোন যন্ত্রের মাধ্যমে জানা যায়? (ঢ) ২০২৪ সালের প্যারিস অলিম্পিকে কোন খেলাটি প্রথমবারের মতো আনুষ্ঠানিকভাবে অন্তর্ভুক্ত করা হয়েছে? (ণ) মাতারবাড়ী গভীর সমুদ্রবন্দরের পরিকল্পিত সর্বোচ্চ গভীরতা কত মিটার?</p>
+<p><strong>Q4.</strong> Read the passage and answer the questions. <em>(30)</em> — Passage on Adam Smith vs Joseph Schumpeter, "creative destruction" and the entrepreneur (full text in Satt Academy).<br />
+(a) What would be an appropriate title for the passage? (b) How is Adam Smith's interpretation of 'capitalism' different from that of Schumpeter's? (c) Why may entrepreneurs become rare in future? (d) According to Schumpeter's view, how would capitalism become weak? (e) Why did Schumpeter refer to a true entrepreneur as a 'reformist of religion'? (f) Why did Schumpeter introduce the term 'creative destruction'?</p>
+<p><strong>Q5.</strong> নিম্নলিখিত প্রশ্নের উত্তর দিন। <em>(30)</em><br />
+(ক) একতা এক্সপ্রেস সকাল ৯টায় স্টেশন ছেড়ে যায় এবং ২ ঘণ্টা পরে একই স্টেশন থেকে উপবন এক্সপ্রেস সমান্তরাল রেললাইন দিয়ে একই দিকে যাত্রা করল। একতার গড় গতিবেগ ঘণ্টায় ৬০ কিমি এবং উপবনের ৭৫ কিমি হলে বেলা কত ঘটিকায় উপবন একতাকে অতিক্রম করবে?<br />
+(খ) একটি নির্দিষ্ট পরিমাণ টাকা কিছু লোকের মধ্যে এমনভাবে ভাগ করা হলো যে, ৪ জন লোক বেশি হলে প্রত্যেকে ১৬ টাকা কম পেত, আর ৪ জন কম হলে প্রত্যেকে ২৪ টাকা বেশি পেত। লোকের সংখ্যা কত?<br />
+(গ) একজন বিক্রয় প্রতিনিধির মাসিক বেতন ৫,০০০ টাকা। ৬০,০০০ টাকার বেশি বিক্রয়ের উপর ৮% এবং ৬০,০০০ টাকা পর্যন্ত বিক্রয়ে ৫% কমিশন পান। মাসিক বিক্রয় ১,০০,০০০ টাকা অতিক্রম করলে ১,০০০ টাকা বোনাস পান। কোনো মাসে মোট আয় ১০,৪০০ টাকা হলে মোট বিক্রয় কত?<br />
+(ঘ) একটি ঝুড়িতে ৪টি লাল, ৫টি নীল এবং ৩টি সবুজ বল আছে। প্রতিস্থাপন ছাড়া দুটি বল তোলা হলো। বল দুটি ভিন্ন রঙের হওয়ার সম্ভাবনা কত?<br />
+(ঙ) একটি আয়তক্ষেত্রের পরিসীমা ৬৬ সেমি। এর দৈর্ঘ্য প্রস্থের দ্বিগুণের চেয়ে ৬ সেমি বেশি। দৈর্ঘ্য নির্ণয় করো।</p>
+<p><em>Q6–Q7 (argumentative writing / translation): (locked)</em></p>
+<hr /></div></article>
+
+<article class="sheet script" id="paperB">
+  <header class="strip"><span>ANSWER SCRIPT · Continuation</span><span>Combined 8 Banks &amp; 1 FI Senior Officer — 24 December 2025 · Full marks 200 · Time 2 hours</span></header>
+  <h1 class="script-title">Model Answer Script — 24 December 2025 Paper</h1>
+  <blockquote>
+<p>Old-pattern paper (35-mark focus writing, 30-mark GK, comprehension). Practise the essays and math here; the GK and comprehension formats are no longer on your syllabus but the facts are still useful.</p>
+</blockquote>
+<h2 class="ans" id="paperB-ans-to-the-q-no-1-the-role-of-digital-economy-in-economic-de">Ans. to the Q. No. 1 — The Role of Digital Economy in Economic Development</h2>
+<h3>Digital Economy: The New Engine of Bangladesh's Development</h3>
+<blockquote>
+<p>"The digital economy is the economy." — Don Tapscott (paraphrased)</p>
+</blockquote>
+<p><strong>Introduction</strong><br />
+A digital economy is the part of economic activity that runs on digital technology: online payments, e-commerce, mobile financial services, software exports, platform work and digital public services. For a populous, young country like Bangladesh, it can cut transaction costs, include the unbanked and create jobs that do not need large capital.</p>
+<p><strong>Bangladesh's digital economy at a glance</strong></p>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Status</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>National interoperable QR</td>
+<td>"Bangla QR" mandatory; closed-loop QR phased out by 30 June 2026</td>
+<td>Bangladesh Bank, MPS H1FY27</td>
+</tr>
+<tr>
+<td>Instant interoperable payments</td>
+<td>IIPS targeted by June 2027 (MoU with Gates Foundation)</td>
+<td>Bangladesh Bank, MPS H1FY27</td>
+</tr>
+<tr>
+<td>Digital nano-loans</td>
+<td>Refinance scheme extended to June 2028</td>
+<td>Bangladesh Bank, MPS H1FY27</td>
+</tr>
+<tr>
+<td>Financial literacy</td>
+<td>5,531 programmes reached 2.85 lakh people in 2025</td>
+<td>Bangladesh Bank, MPS H1FY27</td>
+</tr>
+</tbody>
+</table>
+<p><strong>How the digital economy drives development</strong><br />
+1. <strong>Financial inclusion:</strong> mobile financial services and agent banking bring rural people, women and small traders into the formal system; digital nano-loans give collateral-free credit.<br />
+2. <strong>Productivity:</strong> digital payments, e-procurement and online tax filing reduce time, cost and leakage.<br />
+3. <strong>Employment:</strong> software firms, IT-enabled services and online freelancing employ hundreds of thousands of young people and earn foreign exchange.<br />
+4. <strong>Market access for SMEs:</strong> e-commerce and social commerce let small producers sell nationwide and abroad.<br />
+5. <strong>Transparency and governance:</strong> digital trails reduce corruption in public services and social safety-net payments.<br />
+6. <strong>Remittances:</strong> digital channels make formal remittance faster and cheaper than hundi.</p>
+<p><strong>Challenges</strong><br />
+- Digital divide between urban and rural areas and between men and women.<br />
+- Cyber-attacks and fraud; the 2016 reserve heist remains a warning.<br />
+- Weak data-protection law and consumer protection in e-commerce.<br />
+- High internet cost and unstable connectivity outside cities.<br />
+- Shortage of skilled ICT workforce.</p>
+<p><strong>Role of banks</strong><br />
+Banks must lead with secure digital banking, interoperable payments (Bangla QR, IIPS), cyber-security investment, e-KYC for easy account opening, and credit scoring based on digital transaction data for SMEs.</p>
+<p><strong>Recommendations</strong><br />
+1. Enact and enforce a comprehensive data-protection law.<br />
+2. Reduce internet cost and expand rural broadband.<br />
+3. Train youth in AI, data analytics and cyber security.<br />
+4. Make all government payments and services digital end-to-end.<br />
+5. Build a national cyber-security response team for the financial sector.</p>
+<p><strong>Conclusion</strong><br />
+The digital economy can help Bangladesh move from a low-cost manufacturing economy to a knowledge-based, inclusive one. Success depends on trust: secure systems, protected data and digitally skilled people.</p>
+<h2 class="ans" id="paperB-ans-to-the-q-no-2-climate-change-and-the-productivity-of-ban">Ans. to the Q. No. 2 — Climate Change and the Productivity of Bangladesh</h2>
+<aside class="pencil"><span class="pmark">✎</span>Write this in Bangla in the exam. Bangla sub-headings: ভূমিকা · জলবায়ু পরিবর্তনের বাস্তবতা · কৃষি উৎপাদনশীলতায় প্রভাব · শ্রম উৎপাদনশীলতা ও তাপপ্রবাহ · শিল্প ও অবকাঠামো · স্বাস্থ্য ও অভিবাসন · করণীয় (অভিযোজন, সবুজ অর্থায়ন) · উপসংহার</aside>
+<h3>Climate Change and the Productivity of Bangladesh</h3>
+<blockquote>
+<p>"We are the first generation to feel the effect of climate change and the last generation who can do something about it." — Barack Obama</p>
+</blockquote>
+<p><strong>Introduction</strong><br />
+Bangladesh contributes very little to global emissions but is one of the countries most exposed to climate change. Rising temperature, erratic rainfall, salinity, floods and cyclones are already reducing the productivity of land, labour and capital.</p>
+<p><strong>Impact on productivity</strong><br />
+1. <strong>Agriculture:</strong> salinity in the coastal belt, untimely rain and flash floods damage Boro and Aman crops. In 2026, crop losses from flash floods added to food prices (Bangladesh Bank, MPS H1FY27).<br />
+2. <strong>Labour productivity:</strong> heatwaves reduce working hours for farmers, construction workers and garment workers; heat stress lowers output per hour.<br />
+3. <strong>Industry and infrastructure:</strong> floods and waterlogging damage roads, factories and power supply, raising production costs.<br />
+4. <strong>Health:</strong> dengue, diarrhoea and heat-related illness reduce workdays.<br />
+5. <strong>Migration:</strong> river erosion and salinity push people into urban slums, where they become low-productivity informal workers.</p>
+<p><strong>What needs to be done</strong><br />
+- <strong>Adaptation:</strong> saline- and flood-tolerant rice varieties, raised homesteads, embankments and early-warning systems.<br />
+- <strong>Green finance:</strong> Bangladesh Bank's sustainable finance policy should direct more credit to solar irrigation, energy-efficient factories and climate-resilient housing.<br />
+- <strong>Heat action plans:</strong> shaded workplaces, flexible working hours and urban greening.<br />
+- <strong>Climate diplomacy:</strong> demand fair access to the Loss and Damage Fund and adaptation finance from developed countries.</p>
+<p><strong>Conclusion</strong><br />
+Climate change is not only an environmental issue but a productivity issue. Investing in adaptation today protects tomorrow's growth.</p>
+<h2 class="ans" id="paperB-ans-to-the-q-no-3-general-knowledge">Ans. to the Q. No. 3 — General Knowledge</h2>
+<p>(ক) <strong>1 bhori = 11.664 grams.</strong><br />
+(খ) <strong>International Development Association (IDA).</strong><br />
+(গ) Satt Academy gives <strong>13 times</strong>, the latest being the USD 4.7 billion ECF/EFF/RSF programme approved on 30 January 2023. Different sources count these facilities differently, so verify the number.<br />
+(ঘ) <strong>Central Depository Bangladesh Limited.</strong><br />
+(ঙ) The <strong>Basel Committee on Banking Supervision (BCBS)</strong>, hosted by the Bank for International Settlements.<br />
+(চ) <strong>Hire Purchase under Shirkatul Melk (HPSM)</strong>, also called <em>Ijarah Muntahia Bittamleek</em>.<br />
+(ছ) <strong>Nine (9)</strong> foreign commercial banks.<br />
+(জ) A <strong>coral island</strong>, Bangladesh's only one.<br />
+(ঝ) <strong>12 nautical miles.</strong><br />
+(ঞ) <strong>Egypt</strong> (the Sinai Peninsula lies in Asia).<br />
+(ট) The <strong>Regulatory FinTech Facilitation Office (RFFO)</strong>, set up in 2019 under the Payment Systems Department of Bangladesh Bank.<br />
+(ঠ) <strong>Smart Money</strong> (Philippines, 2001) is generally cited as the first; <strong>M-Pesa</strong> (Kenya, 2007) is the most famous early MFS.<br />
+(ড) <strong>Seismograph.</strong><br />
+(ঢ) <strong>Breaking (breakdancing).</strong><br />
+(ণ) About <strong>18.5 metres</strong> (planned berth depth of Matarbari deep-sea port).</p>
+<h2 class="ans" id="paperB-ans-to-the-q-no-4-reading-comprehension">Ans. to the Q. No. 4 — Reading Comprehension</h2>
+<p>(a) <strong>Title:</strong> "Schumpeter's Entrepreneur and the Creative Destruction of Capitalism."<br />
+(b) Adam Smith saw capitalism as an abstract, faceless force driven by "animal spirit". Schumpeter gave capitalism a human face: the entrepreneur, whose innovations drive change.<br />
+(c) Economic progress is becoming de-personalised. Change no longer needs an individual leader on the battlefield; organisations and the industrial bourgeoisie are replacing individual entrepreneurs.<br />
+(d) Schumpeter believed capitalism would weaken gradually by itself, not through revolution, because invention and innovation have their own limits.<br />
+(e) A true entrepreneur breaks old rules: redefining industry boundaries, extending the production possibility curve and creating new markets. Like a religious reformer, he challenges established beliefs and practices.<br />
+(f) He used "creative destruction" to describe how new technologies and firms destroy old ones and create a more efficient economic structure, for example power plants replacing water-wheels and airplanes replacing mail coaches.</p>
+<h2 class="ans" id="paperB-ans-to-the-q-no-5-mathematics">Ans. to the Q. No. 5 — Mathematics</h2>
+<p><strong>(ক)</strong> Ekota leaves at 9 a.m. at 60 km/h. By 11 a.m. it is 2 × 60 = 120 km ahead.<br />
+Relative speed = 75 − 60 = 15 km/h. Time to overtake = 120 ÷ 15 = 8 hours.<br />
+<strong>Answer: Upaban overtakes Ekota at 7 p.m.</strong></p>
+<p><strong>(খ)</strong> Let there be n persons, each getting x taka; total = nx.<br />
+(n + 4)(x − 16) = nx ⇒ x − 4n = 16 … (i)<br />
+(n − 4)(x + 24) = nx ⇒ 6n − x = 24 … (ii)<br />
+Adding: 2n = 40 ⇒ n = 20 (x = Tk 96).<br />
+<strong>Answer: 20 persons.</strong></p>
+<p><strong>(গ)</strong> Commission earned = 10,400 − 5,000 = Tk 5,400.<br />
+If sales were ≤ Tk 60,000, maximum commission = 5% of 60,000 = Tk 3,000 &lt; 5,400. So sales &gt; Tk 60,000.<br />
+Without bonus: 3,000 + 8% of (S − 60,000) = 5,400 ⇒ S − 60,000 = 30,000 ⇒ S = 90,000 (≤ 1,00,000, so no bonus ✓).<br />
+With bonus the result would be S = 77,500, which is below 1,00,000, so that case is impossible.<br />
+<strong>Answer: Total sales = Tk 90,000.</strong></p>
+<p><strong>(ঘ)</strong> Total ways to pick 2 of 12 balls = ¹²C₂ = 66.<br />
+Same colour: ⁴C₂ + ⁵C₂ + ³C₂ = 6 + 10 + 3 = 19.<br />
+P(different colours) = 1 − 19/66 = <strong>47/66.</strong></p>
+<p><strong>(ঙ)</strong> 2(L + W) = 66 ⇒ L + W = 33; L = 2W + 6.<br />
+3W + 6 = 33 ⇒ W = 9 cm, L = 24 cm.<br />
+<strong>Answer: Length = 24 cm.</strong></p>
+</article>
+<article class="sheet printed qpaper" id="paperC-q">
+  <div class="qp-head">
+    <div class="qp-org">Combined Bank Recruitment · Senior Officer (General) · Written Test</div>
+    <div class="qp-title">QUESTION PAPER</div>
+    <div class="qp-sub">Paper C · Combined 8 Banks &amp; 1 FI Senior Officer — 20 June 2025 · 2 hours · 200 marks</div>
+    <div class="qp-meta"><span>Time: 2 Hours</span><span>Full Marks: 200</span></div>
+    <div class="qp-note">[Answer all questions. Figures in the right margin indicate full marks.]</div>
+  </div>
+  <div class="qp-body"><p><strong>Q1.</strong> Write an essay in English on "The role of microcredit in poverty alleviation". <em>(35)</em><br />
+<strong>Q2.</strong> Write an essay in Bangla on "বাংলাদেশের গণতান্ত্রিক আন্দোলন ও তরুণ সমাজ"। <em>(35)</em><br />
+<strong>Q3.</strong> General Knowledge (15 × 2) <em>(30)</em>: (i) জাতিসংঘের নামকরণ করেন কে? (ii) ১৯৪৭ সালে ভারতীয় উপমহাদেশের কোন দুটি প্রদেশ ভাগ হয়েছিল? (iii) 'সোয়াচ অব নো গ্রাউন্ড' কী এবং কোথায় অবস্থিত? (iv) ইউরোস্টার কী? (v) সম্প্রতি মুদ্রিত ১০০০ টাকার নোটের সামনে ও পেছনে কিসের ছবি রয়েছে? (vi) ক্লাউড কম্পিউটিং কী? (vii) 'Little Red Book' কী? (viii) ইসরায়েলের আকাশ সুরক্ষায় আয়রন ডোমের পরিপূরক নতুন সিস্টেমটির নাম কী এবং এটি কীভাবে কাজ করে? (ix) চতুর্থ শিল্পবিপ্লবের মূল চালিকাশক্তি কোন প্রযুক্তি? (x) পারমাণবিক ক্লাবের তালিকায় বিশ্বের কততম দেশ হিসেবে বাংলাদেশ যুক্ত হয়? (xi) দক্ষিণ এশিয়ার প্রথম রেলওয়ে ওভারপাস কোন দেশে? (xii) সংবিধানের ষোড়শ সংশোধনীর মূল বিষয়বস্তু কী ছিল? (xiii) 'Sunshine Policy'-এর সাথে কোন দুটি দেশ সম্পর্কিত? (xiv) যুক্তরাষ্ট্রের নির্বাচনে যেসব রাজ্য সবসময় নির্দিষ্ট দলের অনুকূলে থাকে না সেগুলো কী নামে পরিচিত? (xv) কোন ঘটনার পর ভারতীয় উপমহাদেশে ইস্ট ইন্ডিয়া কোম্পানির পরিবর্তে ব্রিটিশ রাজকীয় শাসন প্রতিষ্ঠিত হয়?<br />
+<strong>Q4.</strong> Reading comprehension (passage on narrow AI vs AGI, King Midas) <em>(30)</em>: (a) What is narrow AI, and how does it differ from the potential AGI mentioned in the passage? (b) Why might machines in the future surpass human intelligence? (c) What are some of the physical limitations of human intelligence that machines don't face? (d) Why is it important to specify AI's goals carefully as it is becoming more powerful? (e) What lesson does the story of King Midas illustrate in the context of AI development? (f) Summarize the main message of the passage in your own words.<br />
+<strong>Q5.</strong> গাণিতিক সমস্যা <em>(30)</em>: (a) ১০০ জন শিক্ষার্থীর ৩০ জন গণিত, ৪০ জন ইংরেজি এবং ১৫ জন উভয় বিষয় নিয়েছে; কতজন গণিত বা ইংরেজি নিয়েছে এবং কতজন কোনোটিই নেয়নি? (b) ২০% নম্বর পেয়ে একজন ৩০ নম্বরের জন্য এবং ৩০% পেয়ে আরেকজন ১০ নম্বরের জন্য ফেল করে; মোট নম্বর ও পাস নম্বর কত? (c) সমাধান করুন: 3/(3x+2) + 10/(5x+1) = 21/(7x+2) (d) একটি ফার্মের লভ্যাংশ P(x) = 5x/4 − 300; (i) ১৫০ টাকা লাভের জন্য কত ইউনিট? (ii) কত ইউনিটে লাভ শূন্য? (e) সমদ্বিবাহু ত্রিভুজের ভূমি ৬০ সেমি, ক্ষেত্রফল ১২০০ বর্গসেমি; সমান বাহুর দৈর্ঘ্য কত?<br />
+<strong>Q6.</strong> Translate the following passage into Bangla: "In an age dominated by digital media and instant information, traditional reading habits are facing an existential crisis…" <em>(10)</em><br />
+<strong>Q7.</strong> Argumentative writing in English: Should auto-rickshaws be banned from the major roads of Dhaka? Why or why not? <em>(30)</em></p>
+<hr /></div></article>
+
+<article class="sheet script" id="paperC">
+  <header class="strip"><span>ANSWER SCRIPT · Continuation</span><span>Combined 8 Banks &amp; 1 FI Senior Officer — 20 June 2025 · Full marks 200 · Time 2 hours</span></header>
+  <h1 class="script-title">Model Answer Script — 20 June 2025 Paper</h1>
+  <h2 class="ans" id="paperC-ans-to-the-q-no-1-the-role-of-microcredit-in-poverty-allevia">Ans. to the Q. No. 1 — The Role of Microcredit in Poverty Alleviation</h2>
+<h3>Microcredit: Small Loans, Big Changes</h3>
+<blockquote>
+<p>"Poverty is not created by poor people. It is created by the system we have built." — Muhammad Yunus</p>
+</blockquote>
+<p><strong>Introduction</strong><br />
+Microcredit means small, collateral-free loans given mainly to poor women to start or expand income-generating activities. Bangladesh is the birthplace of modern microcredit through Grameen Bank, BRAC and ASA, and it remains a key tool for reducing poverty.</p>
+<p><strong>How microcredit reduces poverty</strong><br />
+1. <strong>Self-employment:</strong> small loans finance cows, poultry, small shops, tailoring and handicrafts.<br />
+2. <strong>Women empowerment:</strong> most borrowers are women. Their income raises their say in family decisions and their children's schooling.<br />
+3. <strong>Consumption smoothing:</strong> poor households can survive illness, floods and crop failure without selling assets.<br />
+4. <strong>Savings habit:</strong> group-based savings build household resilience.<br />
+5. <strong>Rural economy:</strong> small enterprises create jobs in villages and reduce migration to cities.</p>
+<p><strong>The sector at a glance</strong></p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Bangladesh</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Regulator</td>
+<td>Microcredit Regulatory Authority (MRA)</td>
+</tr>
+<tr>
+<td>Major providers</td>
+<td>Grameen Bank, BRAC, ASA, PKSF partner organisations</td>
+</tr>
+<tr>
+<td>Main clients</td>
+<td>Rural women, landless households, micro-entrepreneurs</td>
+</tr>
+<tr>
+<td>New frontier</td>
+<td>Digital nano-loans through banks and MFS (Bangladesh Bank refinance scheme, extended to June 2028)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Limitations</strong><br />
+- High effective interest rates can push some borrowers into debt traps through multiple borrowing.<br />
+- Weekly repayment from the first week does not suit agriculture and long-gestation projects.<br />
+- Microcredit alone cannot lift the extreme poor who lack skills and assets.<br />
+- Over-concentration in trading activities limits productive growth.</p>
+<p><strong>Way forward</strong><br />
+1. Link microcredit with skills training and market access.<br />
+2. Graduate successful borrowers to SME loans from banks.<br />
+3. Use digital lending to cut costs and interest rates.<br />
+4. Use a credit information system to prevent over-indebtedness.<br />
+5. Design flexible products for farmers and climate-affected households.</p>
+<p><strong>Conclusion</strong><br />
+Microcredit is not a magic bullet, but combined with skills, markets and digital finance, it remains one of the most effective ladders out of poverty.</p>
+<h2 class="ans" id="paperC-ans-to-the-q-no-2-democratic-movements-of-bangladesh-and-the">Ans. to the Q. No. 2 — Democratic Movements of Bangladesh and the Youth</h2>
+<aside class="pencil"><span class="pmark">✎</span>Write this in Bangla in the exam. Bangla sub-headings: ভূমিকা · ভাষা আন্দোলন থেকে মুক্তিযুদ্ধ · নব্বইয়ের গণঅভ্যুত্থান · ২০২৪ সালের ছাত্র-জনতার অভ্যুত্থান · গণতন্ত্রে তরুণদের ভূমিকা · চ্যালেঞ্জ · করণীয় · উপসংহার</aside>
+<h3>Democratic Movements of Bangladesh and the Youth</h3>
+<p><strong>Introduction</strong><br />
+Every turning point in the history of Bangladesh has been led by its young people. From the streets of 1952 to the uprising of 2024, the youth have been the conscience and the driving force of the nation's democratic journey.</p>
+<p><strong>Youth in the major movements</strong><br />
+1. <strong>Language Movement, 1952:</strong> students broke Section 144 to defend Bangla as a state language.<br />
+2. <strong>Six-point movement and 1969 mass uprising:</strong> students led the demand for autonomy and democracy.<br />
+3. <strong>Liberation War, 1971:</strong> young freedom fighters formed the core of the resistance.<br />
+4. <strong>1990 mass uprising:</strong> student alliances ended military rule and restored parliamentary democracy.<br />
+5. <strong>2024 student-people uprising:</strong> the quota-reform movement grew into a nationwide uprising in July–August 2024 that brought political change and a reform agenda. A general election followed in February 2026.</p>
+<p><strong>Role of youth in strengthening democracy</strong><br />
+- Voting and political participation.<br />
+- Demanding accountability through social media and civic movements.<br />
+- Volunteering, fighting misinformation and promoting tolerance.</p>
+<p><strong>Challenges</strong><br />
+Unemployment, frustration, political polarisation, misinformation and pressure to join violent politics.</p>
+<p><strong>Recommendations</strong><br />
+Ensure student-union elections and democratic practice on campuses, create jobs and entrepreneurship support, teach civic education, and protect freedom of expression.</p>
+<p><strong>Conclusion</strong><br />
+Democracy survives only when the youth stay engaged. Channelling their energy into institutions, not just protests, is the challenge for the coming decade.</p>
+<h2 class="ans" id="paperC-ans-to-the-q-no-3-general-knowledge">Ans. to the Q. No. 3 — General Knowledge</h2>
+<p>(i) <strong>Franklin D. Roosevelt</strong>, US President, coined the name "United Nations" in 1942.<br />
+(ii) <strong>Bengal and Punjab.</strong><br />
+(iii) A deep <strong>submarine canyon in the Bay of Bengal</strong>, south of the Sundarbans, declared a marine protected area. It is known for dolphins and whales.<br />
+(iv) A <strong>high-speed passenger train service</strong> linking London with Paris, Brussels and Amsterdam through the Channel Tunnel.<br />
+(v) <strong>Front:</strong> National Martyrs' Memorial (Jatiyo Smriti Soudho), Savar. <strong>Back:</strong> National Parliament House (Jatiyo Sangsad Bhaban).<br />
+(vi) Delivering computing services (servers, storage, databases, software) <strong>over the internet on demand</strong>, paying only for what is used.<br />
+(vii) "<strong>Quotations from Chairman Mao Tse-tung</strong>", the collection of Mao Zedong's sayings, first published in 1964.<br />
+(viii) <strong>Iron Beam</strong>, a high-energy <strong>laser</strong> air-defence system. It destroys rockets, mortars and drones by heating them with a laser beam, at very low cost per shot.<br />
+(ix) <strong>Artificial intelligence</strong>, together with IoT, robotics and big data.<br />
+(x) The <strong>33rd</strong> country (Rooppur nuclear power plant).<br />
+(xi) <strong>Bangladesh.</strong> The best-documented match is the elephant overpass at Chunati on the Dohazari–Cox's Bazar railway, reported as South Asia's first. Verify this one.<br />
+(xii) It returned the <strong>power to remove Supreme Court judges to Parliament</strong> (2014). The Supreme Court later declared it void.<br />
+(xiii) <strong>South Korea and North Korea.</strong><br />
+(xiv) <strong>Swing states</strong> (battleground states).<br />
+(xv) The <strong>Sepoy Mutiny of 1857</strong>. The Government of India Act 1858 transferred power to the British Crown.</p>
+<h2 class="ans" id="paperC-ans-to-the-q-no-4-reading-comprehension-ai-passage">Ans. to the Q. No. 4 — Reading Comprehension (AI passage)</h2>
+<p>(a) <strong>Narrow AI</strong> performs highly specialised tasks, such as playing chess. <strong>Artificial general intelligence (AGI)</strong> would match human-level performance across the full range of tasks humans can do.<br />
+(b) Machines are free of the physical limits of the human brain. Once they become better than us at designing smarter machines, progress could accelerate rapidly.<br />
+(c) The human brain runs at slow biochemical speeds on the power of a light bulb, and its size is limited by the dimensions of the human birth canal.<br />
+(d) A very powerful AI will pursue exactly the goal it is given. If the goal is badly specified, it may achieve it in ways that harm humans, so goals must match human values.<br />
+(e) King Midas wished that everything he touched would turn to gold. He got exactly what he asked for, including his food, and suffered. AI may likewise fulfil a literal instruction with disastrous side effects.<br />
+(f) <strong>Summary:</strong> AI is advancing quickly from narrow to possibly general intelligence. It may surpass humans because it is not bound by our physical limits. This offers great benefits, but its goals must be specified carefully so that it remains safe and beneficial.</p>
+<h2 class="ans" id="paperC-ans-to-the-q-no-5-mathematics">Ans. to the Q. No. 5 — Mathematics</h2>
+<p><strong>(a)</strong> n(M ∪ E) = 30 + 40 − 15 = <strong>55</strong> took Math or English; neither = 100 − 55 = <strong>45</strong>.</p>
+<p><strong>(b)</strong> Let total marks = T. Pass mark = 0.20T + 30 = 0.30T + 10 ⇒ 0.10T = 20 ⇒ <strong>T = 200</strong>; pass mark = 40 + 30 = <strong>70</strong>.</p>
+<p><strong>(c)</strong> 3/(3x+2) + 10/(5x+1) = 21/(7x+2)<br />
+Multiplying out: 3(5x+1)(7x+2) + 10(3x+2)(7x+2) = 21(3x+2)(5x+1)<br />
+315x² + 291x + 46 = 315x² + 273x + 42<br />
+18x = −4 ⇒ x = −2/9 ✗ — check the expansion carefully:<br />
+LHS = 3(35x² + 17x + 2) + 10(21x² + 20x + 4) = 105x² + 51x + 6 + 210x² + 200x + 40 = 315x² + 251x + 46<br />
+RHS = 21(15x² + 13x + 2) = 315x² + 273x + 42<br />
+251x + 46 = 273x + 42 ⇒ 22x = 4 ⇒ <strong>x = 2/11</strong><br />
+Check: 3/(28/11) + 10/(21/11) = 33/28 + 110/21 = 539/84 = 231/36 = 21/(36/11) ✓</p>
+<p><strong>(d)</strong> P(x) = 5x/4 − 300.<br />
+(i) 5x/4 − 300 = 150 ⇒ 5x/4 = 450 ⇒ <strong>x = 360 units</strong>.<br />
+(ii) Zero profit: 5x/4 = 300 ⇒ <strong>x = 240 units</strong>.</p>
+<p><strong>(e)</strong> Area = ½ × base × height ⇒ 1200 = ½ × 60 × h ⇒ h = 40 cm.<br />
+Equal side = √(30² + 40²) = <strong>50 cm</strong> (the area should read 1200 cm²).</p>
+<h2 class="ans" id="paperC-ans-to-the-q-no-6-translation-into-bangla">Ans. to the Q. No. 6 — Translation into Bangla</h2>
+<p>ডিজিটাল মিডিয়া ও তাৎক্ষণিক তথ্যের এই যুগে প্রচলিত পড়ার অভ্যাস অস্তিত্ব সংকটের মুখে পড়েছে। উপন্যাস, প্রবন্ধ, এমনকি গভীর অনুসন্ধানী সাংবাদিকতার মতো দীর্ঘ লেখা এখন অনেক কম মানুষ, বিশেষত তরুণ প্রজন্ম, পড়ছে। এর বদলে সংক্ষিপ্ত তথ্যখণ্ড, ভাইরাল ভিডিও আর সামাজিক মাধ্যমের দ্রুত আপডেটই এখন স্বাভাবিক হয়ে উঠেছে। সমালোচকদের মতে, এই প্রবণতা বিশ্লেষণী চিন্তা, গভীর ভাবনা ও দীর্ঘ মনোযোগের সক্ষমতাকে দুর্বল করছে। অন্যদিকে ডিজিটাল মিডিয়ার সমর্থকেরা বলেন, পড়া ও শেখার নতুন ধরন তৈরি হচ্ছে, যা পারস্পরিক সংযোগ, দৃশ্যমান অংশগ্রহণ ও বৈশ্বিক যোগাযোগকে অগ্রাধিকার দেয়। প্রশ্ন থেকেই যায়: ডিজিটাল যুগে দীর্ঘ পাঠ ও বিশ্লেষণী সম্পৃক্ততা কি টিকে থাকতে পারবে?</p>
+<h2 class="ans" id="paperC-ans-to-the-q-no-7-should-auto-rickshaws-be-banned-from-the-m">Ans. to the Q. No. 7 — Should Auto-Rickshaws Be Banned from the Major Roads of Dhaka?</h2>
+<p><strong>Position: I partly agree.</strong> Battery-run auto-rickshaws should be banned from Dhaka's major arterial roads and highways, but regulated and allowed on feeder and residential roads until a better alternative is available.</p>
+<p><strong>Arguments for a ban on major roads</strong><br />
+1. <strong>Safety:</strong> these vehicles are slow, unstable and often driven by untrained drivers. On fast roads they cause accidents.<br />
+2. <strong>Congestion:</strong> mixing slow three-wheelers with buses and cars on main roads reduces average speed for everyone.<br />
+3. <strong>Illegality and electricity theft:</strong> most are unregistered and many are charged with illegal power connections.<br />
+4. <strong>Urban planning:</strong> major roads should be reserved for mass transit such as buses, BRT and metro feeders.</p>
+<p><strong>Arguments against a total ban</strong><br />
+1. <strong>Livelihoods:</strong> hundreds of thousands of low-income drivers depend on them.<br />
+2. <strong>Last-mile connectivity:</strong> they serve areas where buses do not go, and are cheap for the poor, women and the elderly.<br />
+3. <strong>Cleaner than fuel vehicles:</strong> they produce no tailpipe emissions.</p>
+<p><strong>Rebuttal</strong><br />
+The livelihood and last-mile arguments are valid for feeder roads, not for arterial roads where they endanger lives. A ban without alternatives would simply push drivers into unemployment, so it must be paired with registration and retraining.</p>
+<p><strong>Recommendations</strong><br />
+- Ban them on arterial roads and highways; allow registered vehicles on designated feeder routes.<br />
+- Register, license and train drivers; set vehicle safety standards.<br />
+- Build legal solar or grid charging stations.<br />
+- Expand bus-route rationalisation and metro feeder services.<br />
+- Offer soft loans to help drivers shift to legal, safer vehicles.</p>
+<p><strong>Conclusion</strong><br />
+A blanket ban is unjust and a free-for-all is unsafe. A zoned, regulated approach protects both lives and livelihoods.</p>
+</article>
+
+<article class="sheet script" id="older">
+  <header class="strip"><span>ANSWER SCRIPT · Continuation</span><span>Combined Bank Senior Officer — 2021, 2022, 2023, 2024 (IT) · old pattern</span></header>
+  <h1 class="script-title">Answer Pointers — Older Senior Officer Papers (2021–2024)</h1>
+  <blockquote>
+<p>These papers follow the old pattern. Full essays are given above for the newer papers; here you get complete math solutions and essay skeletons that you can expand with the latest data box.</p>
+</blockquote>
+<h2 class="ans" id="older-ans-november-2021-mathematics">Ans. — November 2021 Mathematics</h2>
+<p><strong>(a)</strong> The stock must be a multiple of LCM(6, 7, 8) = 168. The next multiple after 264 is 336, so add 336 − 264 = <strong>72 oranges</strong>.</p>
+<p><strong>(b)</strong> Quarterly rate = 5% ÷ 4 = 1.25%; number of quarters = 12.<br />
+A = 15,000 × (1.0125)¹² = <strong>Tk 17,411.32</strong> (approximately).</p>
+<p><strong>(c)</strong> x⁴ + 1/x⁴ = 119 ⇒ (x² + 1/x²)² − 2 = 119 ⇒ x² + 1/x² = 11.<br />
+(x − 1/x)² = x² + 1/x² − 2 = 9 ⇒ x − 1/x = 3 (taking the positive root).<br />
+x³ − 1/x³ = (x − 1/x)³ + 3(x − 1/x) = 27 + 9 = <strong>36</strong> (proved).</p>
+<p><strong>(d)</strong> (2x − 6)² = (x + 2)² + x² ⇒ 4x² − 24x + 36 = 2x² + 4x + 4 ⇒ x² − 14x + 16 = 0<br />
+x = 7 ± √33. Since the hypotenuse 2x − 6 must be positive, <strong>x = 7 + √33 ≈ 12.74</strong>. The data as printed give an irrational answer; check the original paper for a misprint.</p>
+<h2 class="ans" id="older-ans-january-2022-mathematics">Ans. — January 2022 Mathematics</h2>
+<p><strong>(a)</strong> Area of the two roads = 50 × 1.5 + 40 × 1.5 − 1.5 × 1.5 (the overlap is counted twice) = 75 + 60 − 2.25 = <strong>132.75 m²</strong>.</p>
+<p><strong>(b)</strong> Let the height be h and the first distance x. tan 60° = h/x ⇒ h = x√3; tan 45° = h/(x + 18) ⇒ h = x + 18.<br />
+x√3 = x + 18 ⇒ x = 18/(√3 − 1) = 9(√3 + 1)<br />
+h = 9(√3 + 1) + 18 = 27 + 9√3 ≈ <strong>42.59 m</strong>.</p>
+<h2 class="ans" id="older-essay-skeletons-old-papers">Essay skeletons (old papers)</h2>
+<p><strong>50 Years of Bangladesh's Banking Management System: A Critical Evaluation (2022)</strong><br />
+Nationalisation (1972) → denationalisation and private banks (1980s) → Financial Sector Reform Programme (1990s) → Basel, digital banking, MFS (2010s) → crisis of governance and default loans (32.17%, Sept 2026) and the Bank Resolution Act 2026. <em>Achievements:</em> outreach, inclusion, MFS leadership, remittance channel. <em>Failures:</em> political lending, weak supervision, too many banks (61). <em>Way forward:</em> independent central bank, consolidation, fit-and-proper directors, ECL provisioning.</p>
+<p><strong>The Role of the Banking Sector for Sustainable E-Commerce (2021)</strong><br />
+Payment gateways, Bangla QR, escrow services for consumer protection, SME credit for online sellers, cyber security, cross-border payments for freelancers, consumer trust after e-commerce scams.</p>
+<p><strong>COP26 and Bangladesh's Partnership / Women's Struggle under Climate Change (2021–2022)</strong><br />
+Use the COP31 data box from the predicted climate essay. Add for women: salinity and drinking water, health, migration, unpaid care work; women-led adaptation and microfinance.</p>
+<p><strong>Paper Recognition vs Real Economic Empowerment of Women (2023)</strong><br />
+Laws and policies exist; reality shows low female labour participation, the wage gap, limited land and asset ownership and few women in bank management; family card (Tk 2,500 a month) and women entrepreneurs' credit as positive steps; need childcare, safe transport and digital finance.</p>
+<p><strong>Heatwave Reduction and Environmental Protection (2024)</strong><br />
+Urban heat islands, loss of trees and water bodies, heat stress for workers; responses: urban greening, wetland protection, heat action plans, green building codes, green finance.</p>
+<p><strong>Modern Technology and Students' Academic Achievement (2024)</strong><br />
+Benefits: e-learning, access to information, AI tutors. Harms: distraction, social-media addiction, plagiarism. Balanced use, digital literacy and teacher training.</p>
+<p><strong>Why you are fit to be a Senior Officer (2023 personal question)</strong><br />
+Structure: quantitative skills (numeracy for credit appraisal), English and Bangla proficiency (customer communication, reporting), cultural awareness (serving diverse customers), politeness (customer service and complaint handling), integrity and willingness to learn. Write in first person, with one example each.</p>
+</article>
+<article class="sheet printed analysis" id="qbank"><h1>Senior Officer Written Question Bank (2014–2026)</h1>
+<p>Sources: Satt Academy written question bank (sattacademy.com/job-solution/combined-bank, pages scraped 19 Nov 2026), and the repo's own PDFs (A2B Focus Writing, Unique Focus Writing, Bank Written Math 1986–2021, BIBM Previous Written Math). Questions are verbatim where the source showed them in full; items marked <em>(locked)</em> were behind the site's login and are not available.</p>
+<p><strong>How the paper has changed</strong></p>
+<table>
+<thead>
+<tr>
+<th>Exam</th>
+<th>Focus EN</th>
+<th>Focus BN</th>
+<th>Argument / Analytical</th>
+<th>Translation</th>
+<th>Math</th>
+<th>GK / Banking</th>
+<th>Grammar</th>
+<th>Comprehension</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2021–2023 SO</td>
+<td>35</td>
+<td>35</td>
+<td>30</td>
+<td>E→B 10–20</td>
+<td>30</td>
+<td>30</td>
+<td>—</td>
+<td>20–30</td>
+</tr>
+<tr>
+<td>Jun 2025 SO</td>
+<td>35</td>
+<td>35</td>
+<td>30</td>
+<td>E→B 10</td>
+<td>30</td>
+<td>30</td>
+<td>—</td>
+<td>30</td>
+</tr>
+<tr>
+<td>Dec 2025 SO</td>
+<td>35</td>
+<td>35</td>
+<td><em>(locked)</em></td>
+<td><em>(locked)</em></td>
+<td>30</td>
+<td>30</td>
+<td>—</td>
+<td>30</td>
+</tr>
+<tr>
+<td><strong>Jun 2026 SO (new syllabus)</strong></td>
+<td><strong>30</strong></td>
+<td><strong>30</strong></td>
+<td><strong>40</strong></td>
+<td><strong>B→E 20</strong></td>
+<td><strong>30</strong></td>
+<td><strong>10 + 10</strong></td>
+<td><strong>10 + 20</strong></td>
+<td><strong>—</strong></td>
+</tr>
+<tr>
+<td><strong>27 Nov 2026 SO (your exam)</strong></td>
+<td>30</td>
+<td>30</td>
+<td>40</td>
+<td>B→E 20</td>
+<td>30</td>
+<td>10 + 10</td>
+<td>10 + 20</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The 5 June 2026 paper is the only one already set on your exact syllabus. Treat it as the blueprint.</strong></p>
+<hr />
+<h2>Paper D · Combined Banks Senior Officer (IT) — 22 May 2026 <em>(general parts)</em></h2>
+<p>Q1. Write an essay in English: The impact of e-governance in Bangladesh. <em>(20)</em> · Q2. Write an essay in Bangla: ইউক্রেন-ইরান উত্তেজনা ও বাংলাদেশের নতুন কৌশল। <em>(20)</em> · Q3. Translate into English: a passage on ICT turning the world into a global village, its use in education, health, agriculture and banking, and the risk of cyber crime and data leaks. <em>(10)</em> · Q4. Translate into Bangla: "Studying abroad can feel very different at first…" <em>(10)</em></p>
+<h2>Paper E · Combined Banks Senior Officer (IT) — 17 May 2024 <em>(general parts)</em></h2>
+<p>Focus Bangla: 'তীব্র তাপপ্রবাহ হ্রাসে পরিবেশ সুরক্ষার গুরুত্ব' (১৫০ শব্দ) · Focus English: 'Modern Technology and Its Effect on Student Academic Achievements' (150 words) · Bangla→English: a passage on rooftop solar panels in Bangladesh · English→Bangla: a passage on Earth Day and sustainable finance · GK: Padma Shri Award; BIMSTEC; International Mother's Day; host of T20 World Cup 2024; first Governor of Bangladesh Bank.</p>
+<h2>Paper F · Combined Banks Senior Officer — 08 December 2023</h2>
+<p>Q2. Write your views as to "Why do you think that your quantitative skills, English and Bangla proficiency, cultural realia and politeness are fit for appointing yourself to the post of Senior Officer of a bank?" <em>(10)</em> · Q3. "বাংলাদেশে নারীর অর্থনৈতিক ক্ষমতায়নের কাগুজে স্বীকৃতির বাস্তব প্রতিফলন" — বাংলায় রচনা (২৫০ শব্দ ± ১০%) <em>(25)</em> · Q4. ভাবসম্প্রসারণ: "বার্ধক্য তাহাই যাহা পুরাতনকে, মিথ্যাকে, মৃত্যুকে আঁকড়িয়া পড়িয়া থাকে" <em>(10)</em> · Q5. How many times has the constitution of Bangladesh so far been amended? · Q1 (English, 25) was an image and is not readable; remaining items <em>(locked)</em>.</p>
+<h2>Paper G · Combined 7 Banks &amp; 1 FI Senior Officer — 14 January 2022</h2>
+<p>Q1. Write an essay in English on: 50 Years of Bangladeshi Banking Management System: A Critical Evaluation · Q2. বাংলায় সংক্ষিপ্ত নিবন্ধ: জলবায়ু পরিবর্তনে নারীর জীবনসংগ্রাম: বাংলাদেশ প্রেক্ষাপট · Q3. Short notes: (a) Classified loans (b) A start-up agribusiness (c) Dhaka Elevated Expressway (d) Best practice of demographic dividend (e) Health-care banking · Q4. Comprehension on Bangladesh, IORA and the Indo-Pacific (five questions) · Q5. (a) There are two crosswise roads just in the middle of a field of length 50 m and breadth 40 m. The breadth of each road is 1.5 m. Find the area covered by the two roads. (b) The angle of elevation of a watch tower at a point on the ground is 60°. If moved back 18 m, the angle of elevation becomes 45°. What is the height of the watch tower?</p>
+<h2>Paper H · Combined 7 Banks &amp; FI Senior Officer — 19 November 2021</h2>
+<p>Q1. Write an essay in English: The Role of Banking Sector for Sustainable E-Commerce Management in Bangladesh · Q2. বাংলায় সংক্ষিপ্ত নিবন্ধ: কপ ২৬ সম্মেলন ও বাংলাদেশের অংশীদারিত্ব · Q3. ক্রেডিট কার্ড গ্রাহকদের নিরাপত্তায় উদ্ভাবনী প্রস্তাব দিয়ে বাংলাদেশ ব্যাংকের কাছে পত্র (বাংলায়) · Q4. Comprehension on Bangladesh's robust growth (IMF 6.5%, ADB 6.8%, USD 500 bn by 2025) · Q5. (a) What is the minimum number of oranges that must be added to a stock of 264 so that it can be equally distributed among 6, 7 or 8 persons? (b) Tk 15,000 in a 3-year fixed deposit at 5% p.a. compounded quarterly — maturity value? (c) If x⁴ + 1/x⁴ = 119, prove that x³ − 1/x³ = 36. (d) A right triangle has hypotenuse 2x − 6 and other sides x + 2 and x; find x.</p>
+<h2>Paper I · Senior Officer papers 2014–2019 <em>(from the repo's PDFs and Satt Academy)</em></h2>
+<p><strong>Focus / essay topics:</strong> Combined 3 Bank SO 2018: রেমিট্যান্স ও আমাদের সামাজিক জীবন; Role of Commercial Banks in SME · Sonali Bank SO 2018: জীবন ও স্বাস্থ্য সুরক্ষায় নিরাপদ খাদ্য; A Self-Reliant Economy: Concept &amp; Reality · Agrani Bank SO 2018: স্বাধীনতার সুবর্ণজয়ন্তী ও আমাদের প্রত্যাশা · Agrani Bank SO 2017: Role of Opposition in Democracy · BHBFC SO 2017: রোহিঙ্গা সমস্যা ও বৈশ্বিক প্রতিক্রিয়া; Green Economy: A Solution for Future Dhaka · BDBL SO 2018: বৈশ্বিক উষ্ণায়ন: সমস্যা ও প্রতিবিধান · 8 Bank SO 2019: Globalization &amp; Bangladesh · SO (IT) 2018: Stock Market in Bangladesh: The Present Situation; তথ্যপ্রযুক্তি ও বাংলাদেশের ব্যাংকিং ব্যবস্থা; বিশ্বায়ন ও ব্যাংকিং: সমস্যা ও সম্ভাবনা · SO (IT) 2019: ইন্টারনেট: বিশ্বের সেতুবন্ধন; Positive and negative effects of WhatsApp · Sonali Bank SO 2014: Impact of IT in Banking.</p>
+<p><strong>Math (Senior Officer tagged, verbatim):</strong><br />
+- Rupali Bank SO 2019: A and B together can do a piece of work in 30 days. A having worked for 16 days, B finishes the remaining work alone in 44 days. In how many days shall B finish the whole work alone? <em>(Ans: 60 days)</em><br />
+- Sonali Bank SO 2019: A and B are two stations 390 km apart. A train starts from A at 10 a.m. and travels towards B at 65 kmph. Another train starts from B at 11 a.m. and travels towards A at 35 kmph. At what time do they meet? <em>(Ans: 2:15 p.m.)</em><br />
+- Combined 8 Bank SO 2019: A can contains a mixture of two liquids A and B in the ratio 7 : 5. When 9 litres of mixture are drawn off and the can is filled with B, the ratio becomes 7 : 9. How many litres of liquid A was contained in the can initially? <em>(Ans: 21 litres)</em><br />
+- Combined 6 Banks &amp; 2 FIs SO 2019: A finance company declares that, at a certain compound interest rate, a sum of money deposited will become 8 times in 3 years. In how many years will it become 16 times? <em>(Ans: 4 years)</em><br />
+- Combined 6 Banks &amp; 2 FIs SO 2019: An engineer undertakes to build a road 15 km long in 300 days and employs 45 men. After 100 days, 2.5 km is complete. Find the number of extra men he must employ to finish the work in time. <em>(Ans: 68 extra men)</em><br />
+- BSC Combined SO (8 Banks &amp; FIs) 2018: A container contains milk and water in the ratio 3 : 1. How much mixture should be taken out and replaced with milk so that the container contains milk and water in the ratio 15 : 4? <em>(Ans: 3/19 of the mixture)</em><br />
+- SO (IT) 2018: In a restaurant, the cost of an identical three-item lunch for five people was Tk 900. The main item cost thrice as much as the dessert and the dessert cost twice as much as the starter. How much did the main item cost for each person?<br />
+- Agrani Bank SO 2017: A dishonest merchant makes a 15% profit at the time of buying and a 10% loss at the time of selling the goods he trades. If the merchant makes Tk 3,500 on selling the particular goods, what was the real cost of the goods? <em>(source text partly illegible)</em></p>
+<p><em>More than 1,500 further past written math questions, tagged by chapter and year, are in <code>data/math_bank.json</code> and drillable in the web app.</em></p></article>
+</main>
+<script>
+(function () {
+  var sel = document.getElementById("jump");
+  function sync() { var h = location.hash.slice(1); if (h && sel.querySelector('option[value="' + h + '"]')) sel.value = h; }
+  window.addEventListener("hashchange", sync); sync();
+})();
+</script>

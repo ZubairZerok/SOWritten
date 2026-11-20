@@ -35,8 +35,8 @@
 ## অনুশীলনের প্রম্পট (`so.py arg N --timer`)
 
 ### 1. "Raising the policy rate is the only effective way to control inflation in Bangladesh."
-- **পক্ষে:** Higher rates curb demand and credit; Anchors expectations; global practice; Inflation fell from 11.66% to ~8%
-- **বিপক্ষে:** Inflation is largely cost-push (fuel, taka, syndicates); Non-food inflation stayed at 9.89% despite 10% rate; Hurts investment: private credit growth only 5%
+- **পক্ষে:** Higher rates curb demand and credit; Anchors expectations; global practice; Inflation fell from 11.66% (Jul 2024) to 8.27% (Oct 2026)
+- **বিপক্ষে:** Inflation is largely cost-push (fuel, taka, syndicates); Non-food inflation reached 9.89% even with a 9.5–10% policy rate; Hurts investment: private credit growth only 5%
 - **সম্ভাব্য অবস্থান:** Partly agree — needs supply-side + fiscal coordination.
 
 ### 2. "Merging weak banks with strong banks is the best solution to the banking crisis."

@@ -1,0 +1,161 @@
+/* Layout: an exam answer script on a desk — printed cover and question papers in a serif face,
+   answers in black ballpoint handwriting with blue-ink headings and a pencil-drawn left margin.
+   A deliberate single (light, paper) theme. */
+@font-face { font-family: "Kalam"; font-weight: 400; src: url("fonts/Kalam-400.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "Kalam"; font-weight: 700; src: url("fonts/Kalam-700.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "Atma"; font-weight: 400; src: url("fonts/Atma-400.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "Atma"; font-weight: 600; src: url("fonts/Atma-600.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "Tinos"; font-weight: 400; src: url("fonts/Tinos-400.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "Tinos"; font-weight: 700; src: url("fonts/Tinos-700.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "Tiro Bangla"; font-weight: 400; src: url("fonts/TiroBangla-400.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "Caveat"; font-weight: 500; src: url("fonts/Caveat-500.ttf") format("truetype"); font-display: swap; }
+
+:root {
+  --desk: #cfc9bb;
+  --paper: #fdfcf7;
+  --ink: #17191f;          /* black ballpoint */
+  --blue: #1d3c9b;         /* blue ballpoint */
+  --pencil: #6d6a64;       /* graphite */
+  --print: #111111;        /* printed text */
+  --rule: #2b2b2b;
+  --stamp: #b3261e;
+  --hand: "Kalam", "Atma", "Segoe Print", "Comic Sans MS", cursive;
+  --hand-bn: "Atma", "Kalam", "Hind Siliguri", "Nirmala UI", sans-serif;
+  --pencil-font: "Caveat", "Kalam", cursive;
+  --serif: "Tinos", "Tiro Bangla", "Times New Roman", "Nirmala UI", serif;
+  --margin-x: 30mm;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { background: var(--desk); color: var(--ink); margin: 0; }
+body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+/* screen navigation */
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; display: flex; gap: 12px; align-items: center; flex-wrap: wrap;
+  background: #2a2925; color: #f3efe6; font-family: var(--serif); padding-block: 8px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: #2a2925; }
+.bar b { font-size: 1rem; letter-spacing: .02em; }
+.bar select { font: inherit; font-size: .9rem; max-width: 100%; min-width: 0; flex: 1 1 220px; padding: 6px 8px; border-radius: 6px; border: 1px solid #6b665c; background: #3a3832; color: #f3efe6; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+.desk { padding-block: 24px 60px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; justify-items: center; gap: 28px; }
+.sheet { background: var(--paper); width: min(210mm, 100%); min-width: 0; box-shadow: 0 2px 4px rgba(0,0,0,.18), 0 14px 30px rgba(0,0,0,.18);
+  padding: 18mm 16mm 20mm; position: relative; scroll-margin-top: 60px; overflow-wrap: anywhere; }
+
+/* ---------- printed matter (cover, question papers, analysis) ---------- */
+.printed, .cover { font-family: var(--serif); color: var(--print); font-size: 11.5pt; line-height: 1.5; }
+.printed h1 { font-size: 17pt; text-align: center; margin: 0 0 10px; text-wrap: balance; }
+.printed h2 { font-size: 13pt; margin: 18px 0 6px; border-bottom: 1px solid var(--rule); padding-bottom: 2px; }
+.printed h3 { font-size: 12pt; margin: 14px 0 4px; }
+.printed p, .printed li { margin: 0 0 6px; }
+.printed blockquote { margin: 8px 0; padding: 8px 12px; border: 1px solid var(--rule); background: #f4f2ea; }
+.printed table { border-collapse: collapse; width: 100%; margin: 8px 0 12px; font-size: 10pt; display: block; overflow-x: auto; }
+.printed th, .printed td { border: 1px solid var(--rule); padding: 4px 6px; text-align: left; vertical-align: top; }
+.printed th { background: #ece9df; }
+.printed hr { border: 0; border-top: 1px dashed #888; margin: 14px 0; }
+.toc-list a { color: var(--print); }
+.pencil-inline { font-family: var(--pencil-font); color: var(--pencil); font-size: 1.25em; }
+
+/* question paper */
+.qp-head { text-align: center; border-bottom: 2px solid var(--rule); padding-bottom: 8px; margin-bottom: 12px; }
+.qp-org { font-size: 10.5pt; letter-spacing: .06em; text-transform: uppercase; }
+.qp-title { font-size: 19pt; font-weight: 700; letter-spacing: .18em; margin: 4px 0; }
+.qp-sub { font-size: 12pt; font-weight: 700; }
+.qp-meta { display: flex; justify-content: space-between; font-weight: 700; margin-top: 8px; }
+.qp-note { font-style: italic; font-size: 10pt; margin-top: 4px; }
+.qp-body p { margin: 0 0 9px; }
+.qp-body em { font-style: normal; font-weight: 700; float: right; margin-left: 8px; }
+
+/* ---------- cover ---------- */
+.cover { min-height: 297mm; }
+.cv-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 10mm; flex-wrap: wrap; }
+.cv-head { text-align: center; margin: 5mm 0 5mm; }
+.cv-1 { font-size: 12pt; letter-spacing: .08em; text-transform: uppercase; }
+.cv-2 { font-size: 14pt; font-weight: 700; margin-top: 2px; }
+.cv-3 { font-size: 27pt; font-weight: 700; letter-spacing: .3em; margin-top: 3mm; border-top: 3px double var(--rule); border-bottom: 3px double var(--rule); padding: 4px 0; }
+.cv-4 { font-family: "Tiro Bangla", var(--serif); font-size: 18pt; margin-top: 4px; }
+.stamp { margin: 4mm 0 0 2mm; transform: rotate(-6deg); border: 3px solid var(--stamp); color: var(--stamp); font-weight: 700;
+  font-size: 10pt; letter-spacing: .08em; padding: 4px 10px; text-align: center; opacity: .85; line-height: 1.25; }
+.stamp small { font-weight: 400; letter-spacing: 0; font-size: 8pt; }
+.code-box { border: 1.5px solid var(--rule); width: 46mm; padding: 4px 6px; text-align: center; font-size: 9.5pt; }
+.code-blank { height: 12mm; border-top: 1px solid var(--rule); margin-top: 4px; }
+.code-box small { font-size: 7pt; line-height: 1.2; display: block; }
+.fields { width: 100%; border-collapse: collapse; margin-bottom: 6mm; }
+.fields th { width: 42%; text-align: left; font-weight: 400; padding: 5px 6px 2px 0; vertical-align: bottom; white-space: nowrap; }
+.fields td { border-bottom: 1px dotted var(--rule); padding: 6px 4px 2px; }
+.hand { font-family: var(--hand); color: var(--blue); font-size: 14pt; line-height: 1; }
+.sig { font-style: italic; font-size: 16pt; }
+.roll { display: inline-flex; gap: 0; }
+.roll .box { width: 9mm; height: 9mm; border: 1.3px solid var(--rule); margin-right: -1.3px; display: inline-block; }
+.cv-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 8mm; }
+.cv-grid > * { min-width: 0; }
+.box-h { font-weight: 700; text-transform: uppercase; letter-spacing: .05em; font-size: 10pt; border-bottom: 1.5px solid var(--rule); margin-bottom: 6px; padding-bottom: 2px; }
+.instr { border: 1.5px solid var(--rule); padding: 8px 10px; font-size: 9.5pt; line-height: 1.4; }
+.instr ol { margin: 0; padding-left: 18px; }
+.exam { border: 1.5px solid var(--rule); padding: 8px 10px; }
+.marks { width: 100%; border-collapse: collapse; font-size: 9.5pt; }
+.marks th, .marks td { border: 1px solid var(--rule); padding: 3px 4px; text-align: center; }
+.marks th { font-size: 8.5pt; white-space: nowrap; }
+.marks td.l { text-align: left; }
+.marks .tot td { font-weight: 700; }
+.target { text-align: right; margin-top: 8px; transform: rotate(-3deg); }
+.cv-foot { font-size: 8pt; color: #444; margin-top: 5mm; border-top: 1px solid #999; padding-top: 4px; }
+
+/* ---------- handwritten answer script ---------- */
+.script { font-family: var(--hand); font-size: 15.5px; line-height: 1.78; color: var(--ink); padding-left: var(--margin-x);
+  background-image: linear-gradient(to right, transparent calc(var(--margin-x) - 7mm), rgba(109,106,100,.6) calc(var(--margin-x) - 7mm), rgba(109,106,100,.6) calc(var(--margin-x) - 7mm + .7px), transparent calc(var(--margin-x) - 7mm + .7px)); }
+.script :lang(bn), .script .bn { font-family: var(--hand-bn); }
+.strip { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; font-family: var(--serif); font-size: 8.5pt; color: #555;
+  border-bottom: 1px solid #bbb; margin: -8mm 0 6mm calc(-1 * var(--margin-x) + 16mm); padding-bottom: 3px; letter-spacing: .04em; }
+.script-title { font-family: var(--serif); font-size: 13pt; text-align: center; color: var(--print); margin: 0 0 4mm; text-wrap: balance; }
+.script h2.ans { font-family: var(--hand); font-weight: 700; font-size: 17px; color: var(--blue); margin: 10mm 0 3mm;
+  padding-top: 5mm; border-top: .7px solid rgba(109,106,100,.6); text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 4px; }
+.script h3 { font-family: var(--hand); font-weight: 700; font-size: 18px; text-align: center; color: var(--ink); margin: 4mm 0 3mm;
+  text-decoration: underline double var(--blue); text-underline-offset: 5px; text-wrap: balance; }
+.script p { margin: 0 0 3mm; }
+.script ol, .script ul { margin: 0 0 3mm; padding-left: 22px; }
+.script li { margin-bottom: 1.5mm; }
+.script strong { font-weight: 700; text-decoration: underline; text-decoration-color: var(--blue); text-decoration-thickness: 1.3px; text-underline-offset: 3px; }
+.script em { color: var(--ink); }
+.script blockquote { margin: 3mm 0 4mm; padding: 0 6mm; color: var(--blue); text-align: center; font-size: 16.5px; }
+.script blockquote p { margin: 0; }
+.script table { border-collapse: collapse; margin: 3mm 0 4mm; font-size: 14px; line-height: 1.4; display: block; overflow-x: auto; max-width: 100%; }
+.script th, .script td { border: 1.2px solid var(--blue); padding: 4px 7px; vertical-align: top; text-align: left; }
+.script th { color: var(--blue); font-weight: 700; }
+.pencil { display: block; font-family: var(--pencil-font); font-size: 19px; line-height: 1.35; color: var(--pencil); margin: 2mm 0 4mm -6mm;
+  padding: 2mm 3mm 2mm 7mm; border-left: 2px solid rgba(109,106,100,.55); border-radius: 2px; position: relative; }
+.pencil .pmark { position: absolute; left: -1px; top: 1mm; font-size: 14px; transform: translateX(-130%); }
+
+/* phones */
+@media (max-width: 600px) {
+  :root { --margin-x: 14mm; }
+  .sheet { padding: 12mm 6mm 14mm; }
+  .script { padding-left: var(--margin-x); }
+  .strip { margin-left: 0; }
+  .cv-grid { grid-template-columns: 1fr; }
+  .cv-top { justify-content: center; }
+  .stamp { transform: none; margin: 0; }
+  .fields th { white-space: normal; width: 45%; }
+  .cv-3 { font-size: 22pt; letter-spacing: .15em; }
+  .roll .box { width: 7mm; height: 7mm; }
+}
+
+/* print / PDF */
+@page { size: A4; margin: 14mm 12mm 16mm 12mm; }
+@media print {
+  html, body, .desk { background: var(--paper); }
+  .bar { display: none; }
+  .desk { display: block; padding: 0; }
+  .sheet { box-shadow: none; width: auto; padding: 0 0 0 0; margin: 0; break-before: page; }
+  .sheet:first-child { break-before: auto; }
+  .script { padding-left: var(--margin-x); }
+  .cover { min-height: 0; padding: 0; }
+  .script h2.ans { break-before: page; margin-top: 0; }
+  .script h1 + h2.ans, .script .strip + h1 + h2.ans { break-before: auto; }
+  .script table, .pencil, .printed table, .printed blockquote { break-inside: avoid; }
+  .script h2, .script h3, .printed h2 { break-after: avoid; }
+  .strip { margin-top: 0; }
+}
