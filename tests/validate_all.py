@@ -164,6 +164,14 @@ for sid in re.findall(r'href="#([\w-]+)"', html):
     ok(f'id="{sid}"' in html, "answer-book anchor exists", sid)
 ok(len(re.findall(r'class="ans"', html)) >= 40, "answer book has ≥40 answer sections", len(re.findall(r'class="ans"', html)))
 
+# ── 11. no API key / secret is ever committed ─────────────────
+tracked = subprocess.run(["git", "ls-files"], capture_output=True, text=True).stdout.split()
+for f_ in tracked + [x for x in glob.glob("webapp/**/*.html", recursive=True)]:
+    if not f_.endswith((".md", ".json", ".html", ".js", ".py", ".css", ".txt", ".csv")) or not os.path.exists(f_):
+        continue
+    t_ = open(f_, encoding="utf-8", errors="ignore").read()
+    ok(not re.search(r"\bsk-[A-Za-z0-9]{24,}", t_), "no API key in " + f_)
+
 print("\n".join(FAILS[:60]))
 print(f"\nমোট: {P} পাস, {F} ফেল")
 sys.exit(1 if F else 0)

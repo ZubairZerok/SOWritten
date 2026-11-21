@@ -55,7 +55,7 @@ const noHScroll = (page) => page.evaluate(() => document.documentElement.scrollW
   results.push("১. সব ভিউ · ডেস্কটপ/ফোন · লাইট/ডার্ক");
   for (const vp of [{ width: 1280, height: 900 }, { width: 375, height: 760 }]) for (const dark of [false, true]) {
     const { ctx, page, errors } = await newPage(browser, { viewport: vp, dark, time: "2026-11-21T10:00:00+06:00" });
-    const views = ["today", "plan", "practice-essay", "practice-arg", "practice-tr", "practice-math", "practice-terms", "practice-quiz-eng", "practice-quiz-bn", "practice-quiz-gk", "assess", "mock", "library", "backup"];
+    const views = ["today", "plan", "practice-essay", "practice-arg", "practice-tr", "practice-math", "practice-terms", "practice-quiz-eng", "practice-quiz-bn", "practice-quiz-gk", "ai", "ai-history", "ai-settings", "assess", "mock", "library", "backup"];
     let bad = [];
     for (const v of views) {
       await page.evaluate((h) => (location.hash = h), v);
@@ -369,6 +369,293 @@ const noHScroll = (page) => page.evaluate(() => document.documentElement.scrollW
     ok(sum, "অংশের লক্ষ্য যোগফল = ১২৮, পূর্ণ নম্বর যোগফল = ২০০");
     ok(errors.length === 0, "কোনো JS error নেই", errors.join(","));
     await ctx.close();
+  }
+
+
+  /* 12. AI পরীক্ষক: ছবি → ট্রান্সক্রিপশন → ২ পরীক্ষক → কোড-যাচাই; ত্রুটি; নিজের API */
+  results.push("১২. AI পরীক্ষক (সিমুলেটেড Claude ও API)");
+  {
+    const SENT = "মূল্যস্ফীতি নিয়ন্ত্রণে বাংলাদেশ ব্যাংক নীতি সুদহার ৯.৫% রেখেছে এবং বাজার তদারকি জোরদার করতে হবে যাতে সাধারণ মানুষ স্বস্তি পায়।";
+    const TRANSCRIPT = "=== পৃষ্ঠা 1 ===\nমূল্যস্ফীতি: কারণ ও প্রতিকার\nভূমিকা\nঅক্টোবর ২০২৬-এ মূল্যস্ফীতি ৮.২৭% যা সাধারণ মানুষের জীবন কঠিন করেছে। মূল্যস্ফিতি এখন বড় সমস্যা।\n" +
+      Array.from({ length: 14 }, () => SENT).join(" ") + "\nমজুরি বাড়ছে কম, দাম বাড়ছে বেশি।\n<img src=x onerror=\"window.__xss=1\">\nউপসংহার\nসমন্বিত উদ্যোগেই সমাধান সম্ভব।";
+    const makeResp = (p, T) => {
+      const task = (p.match(/TASK: (\w+)/) || [])[1];
+      if (task === "TRANSCRIBE_HANDWRITTEN_ANSWER") return T + "\nLEGIBILITY: 82";
+      if (task === "COACH_REPORT") return "১. এখনকার অবস্থা: ফোকাস বাংলায় ৭৫%। ২. সমস্যা: বানান। ৩. পরিকল্পনা: সকাল ৯টায় GK। ৪. সতর্কতা: সময়।";
+      if (p.includes("ITEMS (number")) {
+        return JSON.stringify({ items: [
+          { n: 1, answer: "৭.৫%", verdict: "correct", award: 2, correct: "৭.৫%", note: "ঠিক" },
+          { n: 2, answer: "৩৫.৫৯", verdict: "correct", award: 1, correct: "৩৫.৫৯ বি.", note: "ঠিক" },
+          { n: 3, answer: "আহসান মনসুর", verdict: "wrong", award: 2, correct: "মো. মোস্তাকুর রহমান", note: "পুরোনো তথ্য" },
+          { n: 4, answer: "৩২%", verdict: "partial", award: 5, correct: "৩২.১৭%", note: "আংশিক" } ],
+          errors: [{ type: "fact", wrong: "আহসান মনসুর", right: "মো. মোস্তাকুর রহমান", why: "গভর্নর বদলেছে" }], strengths: ["দ্রুত"], fixes: ["গভর্নরের নাম মুখস্থ"], verdict: "চলনসই", confidence: 0.8, total: 99 });
+      }
+      const ev = { rel: "মূল্যস্ফীতি: কারণ ও প্রতিকার", intro: "অক্টোবর ২০২৬-এ মূল্যস্ফীতি ৮.২৭%", content: "মজুরি বাড়ছে কম", data: "এই কথাটা উত্তরে কোথাও লেখা হয়নি একদম", struct: "ভূমিকা", sol: "বাজার তদারকি জোরদার করতে হবে", lang: "", concl: "সমন্বিত উদ্যোগেই সমাধান সম্ভব" };
+      const mod = task === "MODERATE";
+      const aw = { rel: 4, intro: 3, content: mod ? 5 : 9, data: 5, struct: 3, sol: 2, lang: 2, concl: 1 };
+      return JSON.stringify({ criteria: Object.keys(aw).map((id) => ({ id, award: aw[id], evidence: ev[id], comment: "মন্তব্য " + id })),
+        errors: [{ type: "spelling", wrong: "মূল্যস্ফিতি", right: "মূল্যস্ফীতি", why: "ঈ-কার হবে" }], facts: [{ claim: "মূল্যস্ফীতি ৮.২৭%", status: "correct", fix: "" }],
+        strengths: ["সংখ্যা আছে"], fixes: ["ডেটা বক্স দিন", "উপশিরোনাম বাড়ান", "বানান"], improved: "উন্নত ভূমিকা…", verdict: "ভালো, তবে ডেটা বক্স নেই", confidence: 0.7, total: 30,
+        moderation: mod ? [{ id: "content", from: 7, to: 5, why: "গভীরতা কম" }] : undefined });
+    };
+    const fakeClaude = (maxCount) => `
+      window.__calls = []; window.__fail = []; window.__delay = 0; const T = ${JSON.stringify(TRANSCRIPT)};
+      const makeResp = ${makeResp.toString()};
+      const respond = async (input, opts) => {
+        const p = typeof input === "string" ? input : input.map((x) => x.content).join("\\n");
+        window.__calls.push({ task: (p.match(/TASK: (\\w+)/) || [])[1], len: new TextEncoder().encode(p).length, images: opts && opts.images ? opts.images.length : 0, imgTypes: opts && opts.images ? [...opts.images].map((b) => b.type) : [], tier: opts && opts.modelTier, cache: opts && opts.cache, prompt: p });
+        if (window.__delay) await new Promise((res, rej) => { const t = setTimeout(res, window.__delay); opts && opts.signal && opts.signal.addEventListener("abort", () => { clearTimeout(t); rej({ code: "cancelled" }); }); });
+        const f = window.__fail.shift(); if (f) throw f;
+        return makeResp(p, window.__T || T);
+      };
+      const sample = async (input, opts) => { const r = await respond(input, opts); opts && opts.onText && opts.onText({ text: r, delta: r }); return { text: r, truncated: false, modelTierApplied: "complex" }; };
+      sample.json = async (input, opts) => { const r = await respond(input, opts); opts && opts.onText && opts.onText({ text: r, delta: r }); return JSON.parse(r); };
+      sample.limits = async () => ({ maxPromptBytes: 262144, images: { maxCount: ${maxCount}, maxInputBytes: 20e6, mediaTypes: ["image/jpeg", "image/png", "image/webp"] } });
+      window.__dbWrites = [];
+      window.claude = { use: async (n) => n === "sample" ? sample : n === "user" ? { id: async () => "u_ai" } : n === "db" ? { doc: () => ({ set: async (d) => { window.__dbWrites.push(JSON.stringify(d).length); }, onSnapshot: (next) => { setTimeout(() => next({ exists: false, metadata: { fromCache: false } }), 30); return () => {}; } }) } : null };`;
+    const tall = await (async () => { const { ctx, page } = await newPage(browser, { viewport: { width: 400, height: 900 } }); const b = await page.screenshot({ clip: { x: 0, y: 0, width: 300, height: 620 } }); await ctx.close(); return b; })();
+    const wide = await (async () => { const { ctx, page } = await newPage(browser, { viewport: { width: 900, height: 600 } }); const b = await page.screenshot({ clip: { x: 0, y: 0, width: 640, height: 300 } }); await ctx.close(); return b; })();
+    const focusBtn = (page, name) => page.locator(".qbox", { hasText: name }).getByRole("button", { name: "প্রশ্ন তৈরি করুন" });
+
+    /* A. ছবি → পড়া → ২ পরীক্ষক → ফল (ফোনের মাপে) */
+    {
+      const { ctx, page, errors } = await newPage(browser, { url: DIST, init: fakeClaude(4), viewport: { width: 390, height: 820 }, time: "2026-11-21T10:00:00+06:00" });
+      await page.evaluate(() => (location.hash = "ai"));
+      await page.waitForSelector("text=মূল্যায়ক: Claude");
+      ok(await page.locator(".qbox", { hasText: "ফোকাস রাইটিং (বাংলা)" }).count() === 1 && await page.locator(".qbox", { hasText: "সাধারণ জ্ঞান" }).count() >= 1, "আজকের ফোকাস কার্ড: GK, ব্যাংকিং, বাংলা, অনুবাদ, ফোকাস বাংলা");
+      const fc = await page.evaluate(() => [...document.querySelectorAll("main .qbox b")].map((b) => b.textContent));
+      ok(["সাধারণ জ্ঞান", "ব্যাংকিং ও আর্থিক জ্ঞান", "বাংলা ব্যাকরণ", "বাংলা→ইংরেজি অনুবাদ", "ফোকাস রাইটিং (বাংলা)"].every((x) => fc.includes(x)), "৫টি ফোকাস অংশই আছে", fc.join(","));
+      await focusBtn(page, "ফোকাস রাইটিং (বাংলা)").click();
+      ok(await page.locator("text=৩০ নম্বর · ১৮ মিনিট").count() === 1, "প্রশ্ন: ৩০ নম্বর · ১৮ মিনিট");
+      await page.setInputFiles("#ai-files", [{ name: "p1.png", mimeType: "image/png", buffer: tall }, { name: "p2.png", mimeType: "image/png", buffer: wide }, { name: "note.pdf", mimeType: "application/pdf", buffer: Buffer.from("%PDF-1.4") }]);
+      ok(await page.locator(".thumb").count() === 2, "২টি ছবি নেয়, PDF বাদ দেয়");
+      await page.locator(".thumb").nth(1).getByRole("button", { name: "ঘোরান" }).click();
+      await page.locator(".thumb").nth(1).getByRole("button", { name: "আগে নিন" }).click();
+      ok((await page.locator(".thumb img").first().getAttribute("style")).includes("rotate(90deg)"), "ঘোরানো ও ক্রম বদল কাজ করে");
+      ok(await noHScroll(page), "ফোনে ছবির তালিকায় পাশে স্ক্রল নেই");
+      await page.getByRole("button", { name: "১. হাতের লেখা পড়ান" }).click();
+      await page.waitForSelector("#ai-tr");
+      const c0 = (await page.evaluate(() => window.__calls))[0];
+      ok(c0.task === "TRANSCRIBE_HANDWRITTEN_ANSWER" && c0.images === 4 && c0.tier === "complex" && c0.imgTypes.every((t) => t === "image/jpeg"), "ট্রান্সক্রিপশন: লম্বা পৃষ্ঠা দুই ভাগ, ঘোরানো পৃষ্ঠাও ভাগ → ৪টি JPEG, complex মডেল", JSON.stringify({ i: c0.images, t: c0.tier, ty: c0.imgTypes }));
+      ok(c0.prompt.includes("Do NOT correct spelling") && c0.prompt.includes("[অস্পষ্ট]") && c0.prompt.includes("top half"), "ট্রান্সক্রিপশন নির্দেশ: ভুল শুধরাবে না, অস্পষ্ট চিহ্ন, অর্ধেক পৃষ্ঠা");
+      ok(await page.locator("text=হাতের লেখা পড়ার সুবিধা ৮২/১০০").count() === 1, "হাতের লেখার মান (৮২) দেখায়");
+      await page.locator("#ai-tr").fill(TRANSCRIPT.replace("=== পৃষ্ঠা 1 ===\n", "=== পৃষ্ঠা 1 ===\n") + "\nশেষ।");
+      ok((await state(page)).aiDraft.transcript.endsWith("শেষ।"), "পড়ার ভুল ঠিক করলে সংরক্ষিত হয় (রিলোডেও থাকবে)");
+      await page.getByRole("button", { name: /২\. নম্বর দিন \(২ জন পরীক্ষক\)/ }).click();
+      await page.waitForSelector("text=মানদণ্ড অনুযায়ী নম্বর");
+      const calls = await page.evaluate(() => window.__calls);
+      const g1 = calls.find((c) => c.task === "GRADE_V1"), g2 = calls.find((c) => c.task === "MODERATE");
+      ok(g1 && g2 && g1.tier === "complex" && g2.tier === "complex", "২ জন পরীক্ষক: GRADE_V1 → MODERATE");
+      ok(["MARKING SCHEME", 'id "data" (max 5)', "VERIFIED FACTS AS OF 20 NOVEMBER 2026", "SECURITY:", "<<<ANSWER", "মজুরি বাড়ছে কম", "গুরুচণ্ডালী", "computed word count", "MODEL OUTLINE"].every((x) => g1.prompt.includes(x)), "গ্রেডিং প্রম্পটে রুব্রিক, যাচাই করা তথ্য, নিরাপত্তা, মডেল আউটলাইন, শব্দসংখ্যা");
+      ok(g2.prompt.includes("EXAMINER 1'S MARKING") && g2.prompt.includes("Lower an award"), "মডারেশন প্রম্পটে পরীক্ষক ১-এর নম্বর ও যাচাইয়ের নির্দেশ");
+      ok(g1.len < 262144 && g2.len < 262144, "প্রম্পট ২৫৬ KB সীমার নিচে (" + Math.round(g2.len / 1024) + " KB)");
+      const ev = (await state(page)).evals[0];
+      ok(ev && ev.total === 22.5 && ev.first === 24.5 && ev.max === 30, "কোডে যোগফল: অতিরিক্ত নম্বর কাটা, প্রমাণহীন নম্বর অর্ধেক, মডারেশন → ২২.৫ (পরীক্ষক ১: ২৪.৫)", JSON.stringify(ev && { t: ev.total, f: ev.first }));
+      ok(ev.criteria.find((c) => c.id === "content").award === 5 && ev.criteria.find((c) => c.id === "data").award === 2.5 && ev.criteria.find((c) => c.id === "data").unproven, "AI-র দেওয়া মোট (৩০) উপেক্ষা; প্রমাণ না মেলায় ডেটা ৫ → ২.৫");
+      const evt = (await state(page)).events.slice(-1)[0];
+      ok(evt.k === "essay" && evt.lang === "bn" && evt.ai && evt.s === 0.75 && evt.evalId === ev.id, "লগ: রচনা (বাংলা), AI, ৭৫% → প্রজেকশনে যোগ হয়");
+      const body = await page.locator("main").innerText();
+      ok(body.includes("২২.৫/৩০") && body.includes("পরীক্ষক ১: ২৪.৫") && body.includes("প্রমাণ মেলেনি") && body.includes("ডেটা বক্স দিন"), "ফলাফলে নম্বর, পরীক্ষক ১ বনাম চূড়ান্ত, প্রমাণ-সতর্কতা, ৩টি করণীয়");
+      await page.getByText("আপনার খাতা (ভুল চিহ্নিত)").click();
+      ok(await page.locator(".transcript mark.err").count() >= 1, "খাতার লেখায় ভুল শব্দ লাল দাগে চিহ্নিত");
+      ok(await page.evaluate(() => !window.__xss && !document.querySelector(".transcript img")), "খাতার লেখায় HTML/স্ক্রিপ্ট চলে না (XSS নিরাপদ)");
+      ok(await noHScroll(page), "ফোনে ফলাফল পাতায় পাশে স্ক্রল নেই");
+      await page.evaluate(() => (location.hash = "assess"));
+      ok((await page.locator("main").innerText()).includes("AI পরীক্ষকের নম্বর"), "মূল্যায়ন ট্যাবে AI নম্বরের সারাংশ");
+      /* B. GK টাইপ করা উত্তর, প্রশ্নভিত্তিক */
+      await page.evaluate(() => (location.hash = "ai"));
+      await focusBtn(page, "সাধারণ জ্ঞান").click();
+      await page.getByRole("button", { name: "⌨️ টাইপ করা উত্তর" }).click();
+      await page.locator("#ai-typed").fill("১. ৭.৫%\n২. ৩৫.৫৯\n৩. আহসান মনসুর\n৪. ৩২%");
+      await page.getByRole("button", { name: /নম্বর দিন/ }).click();
+      await page.waitForSelector("text=প্রশ্নভিত্তিক নম্বর");
+      const gk = (await state(page)).evals.slice(-1)[0];
+      ok(gk.sec === "GK" && gk.total === 5.5 && gk.items.length === 5 && gk.items[1].award === 2 && gk.items[2].award === 0 && gk.items[3].award === 1.5 && gk.items[4].verdict === "blank", "GK: সঠিক=পূর্ণ, ভুল=০, আংশিক সীমিত, বাদ পড়া=খালি → ৫.৫/১০", JSON.stringify(gk.items.map((i) => i.award)));
+      ok(gk.flags.some((f) => f.includes("সব প্রশ্নের ফল দেয়নি")), "AI কোনো প্রশ্ন বাদ দিলে সতর্কতা");
+      const gkEv = (await state(page)).events.slice(-1)[0];
+      ok(gkEv.k === "gk" && gkEv.n === 5 && Math.abs(gkEv.s - 0.55) < 1e-9, "লগ: GK ৫টি প্রশ্ন, ৫৫%");
+      /* C. ইতিহাস, স্পার্কলাইন, বারবার ভুল, কোচ */
+      await page.evaluate(() => (location.hash = "ai-history"));
+      const ht = await page.locator("main").innerText();
+      ok(ht.includes("AI নম্বরের হিসাব") && ht.includes("মূল্যস্ফিতি → মূল্যস্ফীতি") && await page.locator("svg.spark polyline").count() >= 2, "ইতিহাস: অংশভিত্তিক টেবিল, ধারা-রেখা, বারবার ভুলের তালিকা");
+      await page.getByRole("button", { name: "রিপোর্ট তৈরি করুন" }).click();
+      await page.waitForSelector("text=এখনকার অবস্থা");
+      const cc = (await page.evaluate(() => window.__calls)).find((c) => c.task === "COACH_REPORT");
+      ok(cc && cc.cache === false && cc.prompt.includes("ফোকাস বাংলা") === false && cc.prompt.includes("AI-MARKED PRACTICE SCRIPTS"), "কোচ রিপোর্ট: সব নম্বর পাঠিয়ে নতুন রিপোর্ট (ক্যাশ ছাড়া)");
+      ok((await state(page)).coach && (await state(page)).coach.text.includes("পরিকল্পনা"), "কোচ রিপোর্ট সংরক্ষিত");
+      /* D. আবার মূল্যায়ন ও মুছুন */
+      await page.getByRole("button", { name: "দেখুন" }).last().click();
+      await page.waitForSelector("text=মানদণ্ড অনুযায়ী নম্বর");
+      const nCalls = (await page.evaluate(() => window.__calls)).length;
+      await page.getByRole("button", { name: "আবার মূল্যায়ন" }).click();
+      await page.getByRole("button", { name: "আবার মূল্যায়ন" }).last().click();
+      await page.waitForFunction((n) => window.__calls.length >= n + 2 && location.hash === "#ai-result", nCalls);
+      await page.waitForTimeout(150);
+      const st2 = await state(page);
+      const re = (await page.evaluate(() => window.__calls)).slice(nCalls);
+      ok(st2.evals.length === 2 && st2.evals.filter((e) => e.sec === "FW_BN").length === 1 && re.every((c) => c.cache === false), "আবার মূল্যায়ন: নতুন করে (ক্যাশ ছাড়া), পুরোনোটি প্রতিস্থাপিত");
+      ok(st2.events.filter((e) => e.ai).length === 2, "আগের মূল্যায়নের লগ মুছে নতুন লগ");
+      await page.getByRole("button", { name: "মুছুন" }).first().click();
+      await page.getByRole("button", { name: "মুছুন" }).last().click();
+      await page.waitForTimeout(100);
+      const st3 = await state(page);
+      ok(st3.evals.length === 1 && st3.events.filter((e) => e.ai).length === 1, "মূল্যায়ন মুছলে তার নম্বরও লগ থেকে মোছে");
+      ok(!JSON.stringify(st3).includes("sk-"), "অ্যাপের ডেটায় কোনো key নেই");
+      ok(errors.length === 0, "পুরো ফ্লোতে কোনো JS error নেই", errors.join(","));
+      await ctx.close();
+    }
+
+    /* E. ব্যাচ: প্রতি বারে ২টি ছবি সীমা → ২ বার পড়া, লেখা জোড়া লাগে */
+    {
+      const { ctx, page, errors } = await newPage(browser, { url: DIST, init: fakeClaude(2), time: "2026-11-21T10:00:00+06:00" });
+      await page.evaluate(() => (location.hash = "ai")); await page.waitForSelector("text=মূল্যায়ক: Claude");
+      await focusBtn(page, "বাংলা→ইংরেজি অনুবাদ").click();
+      await page.setInputFiles("#ai-files", [{ name: "a.png", mimeType: "image/png", buffer: tall }, { name: "b.png", mimeType: "image/png", buffer: tall }]);
+      await page.getByRole("button", { name: "১. হাতের লেখা পড়ান" }).click();
+      await page.waitForSelector("#ai-tr");
+      const cs = await page.evaluate(() => window.__calls);
+      ok(cs.length === 2 && cs.every((c) => c.images === 2) && cs[1].prompt.includes("page 2 (top half)"), "সীমা ২ হলে ২ ব্যাচে পড়ে, এক পৃষ্ঠার দুই ভাগ একসাথে থাকে", JSON.stringify(cs.map((c) => c.images)));
+      ok((await page.locator("#ai-tr").inputValue()).split("=== পৃষ্ঠা").length - 1 === 2, "২ ব্যাচের লেখা জোড়া লাগে");
+      /* ত্রুটি: rate_limited, invalid_json, stop */
+      await page.evaluate(() => { window.__fail = [{ code: "rate_limited", message: "x" }]; });
+      await page.getByRole("button", { name: /নম্বর দিন/ }).click();
+      await page.waitForSelector("text=ব্যবহারসীমা");
+      ok((await state(page)).evals.length === 0 && await page.getByRole("button", { name: /নম্বর দিন/ }).isEnabled(), "rate_limited: বার্তা দেখায়, কিছু সংরক্ষণ করে না, আবার চেষ্টা করা যায়");
+      await page.evaluate(() => { window.__fail = [{ code: "invalid_json", message: "x", text: "আমি JSON দিতে পারছি না" }]; });
+      await page.getByRole("button", { name: /নম্বর দিন/ }).click();
+      await page.waitForSelector("text=ঠিক ফরম্যাটে আসেনি");
+      ok(await page.locator("text=AI-এর কাঁচা উত্তর").count() === 1, "invalid_json: বার্তা ও কাঁচা উত্তর দেখায়");
+      await page.evaluate(() => { window.__delay = 4000; });
+      await page.getByRole("button", { name: /নম্বর দিন/ }).click();
+      await page.getByRole("button", { name: "থামান" }).click();
+      await page.waitForSelector("text=থামানো হয়েছে");
+      ok((await state(page)).evals.length === 0 && await page.getByRole("button", { name: /নম্বর দিন/ }).isEnabled(), "থামান: চলমান মূল্যায়ন বাতিল, কিছু সংরক্ষণ হয় না");
+      await page.evaluate(() => { window.__delay = 0; window.__fail = [{ code: "not_granted", message: "no" }]; });
+      await page.getByRole("button", { name: /নম্বর দিন/ }).click();
+      await page.waitForSelector("text=অনুমতি দেননি");
+      ok(await page.locator("text=AI মূল্যায়ক চালু নেই").count() >= 1, "not_granted: AI বন্ধ দেখায়, আর অনুরোধ পাঠায় না");
+      ok(errors.length === 0, "ত্রুটির পথেও কোনো JS error নেই", errors.join(","));
+      await ctx.close();
+    }
+
+    /* F. টাইমার → AI, মক প্রশ্নপত্র → AI, রুব্রিক থেকে AI, আজকের কার্ড */
+    {
+      const { ctx, page, errors } = await newPage(browser, { url: DIST, init: fakeClaude(4), time: "2026-11-21T10:00:00+06:00" });
+      ok((await page.locator("main").innerText()).includes("খাতা লিখে AI দিয়ে দেখান"), "আজ ট্যাবে AI কার্ড ও ফোকাস বোতাম");
+      await page.evaluate(() => (location.hash = "ai")); await page.waitForSelector("text=মূল্যায়ক: Claude");
+      await focusBtn(page, "ব্যাংকিং ও আর্থিক জ্ঞান").click();
+      await page.getByRole("button", { name: /৫ মিনিট টাইমার/ }).click();
+      await page.clock.fastForward("05:30");
+      await page.getByRole("button", { name: "ফলাফল দিন" }).click();
+      await page.waitForTimeout(150);
+      ok((await page.evaluate(() => location.hash)) === "#ai" && (await state(page)).aiDraft.minutes > 5, "টাইমার শেষে AI পাতায় ফেরে, সময় লেখা থাকে");
+      await page.getByRole("button", { name: "বাতিল", exact: true }).click(); await page.getByRole("button", { name: "বাতিল করুন" }).click();
+      await page.evaluate(() => (location.hash = "mock"));
+      await page.getByRole("button", { name: "পূর্ণ মক শুরু (১২০ মি)" }).click();
+      const mockGk = await page.evaluate(() => S.timer.ctx.paper.gk);
+      await page.getByRole("button", { name: "📷 GK" }).click();
+      const set = (await state(page)).aiDraft.set;
+      ok(set.sec === "GK" && set.items.length === 5 && set.items.every((it, i) => it.ref === "gk:" + mockGk[i]), "মক প্রশ্নপত্রের GK খাতা হুবহু একই প্রশ্নে AI-তে যায়");
+      await page.evaluate(() => { cancelTimer(); location.hash = "practice-essay"; });
+      await page.getByRole("button", { name: "টাইমার ছাড়া লিখেছি: মূল্যায়ন" }).click();
+      await page.getByRole("button", { name: "📷 AI দিয়ে দেখান" }).click();
+      const s2 = (await state(page)).aiDraft.set;
+      ok(s2.sec === "FW_BN" || s2.sec === "FW_EN", "রুব্রিক থেকে এক ক্লিকে AI খাতা দেখা (রচনা)");
+      for (const v of ["practice-arg", "practice-tr"]) { await page.evaluate((x) => (location.hash = x), v); ok(await page.getByRole("button", { name: "📷 AI দিয়ে খাতা দেখান" }).count() === 1, v + ": AI বোতাম আছে"); }
+      await page.evaluate(() => (location.hash = "ai"));
+      await page.getByRole("button", { name: "বাতিল", exact: true }).click(); await page.getByRole("button", { name: "বাতিল করুন" }).click();
+      await page.getByText("নিজের প্রশ্ন (বই, মডেল টেস্ট বা বিগত প্রশ্ন থেকে)").click();
+      await page.selectOption("#ai-csec", "BN");
+      await page.locator("#ai-cq").fill("সন্ধি বিচ্ছেদ করুন: বিদ্যালয়\nশুদ্ধ করুন: সরকারী\nসমাস নির্ণয়: দশানন");
+      await page.getByRole("button", { name: "এই প্রশ্নে খাতা দেখান" }).click();
+      const cs = (await state(page)).aiDraft.set;
+      ok(cs.custom && cs.items.length === 3 && Math.abs(cs.max - 10) < 0.05, "নিজের প্রশ্ন: ৩টি প্রশ্ন, মোট ১০ নম্বর ভাগ");
+      await page.evaluate(() => (location.hash = "ai-settings"));
+      await page.locator("#ai-strict").uncheck();
+      await page.evaluate(() => (location.hash = "ai"));
+      ok(await page.getByRole("button", { name: /নম্বর দিন \(দ্রুত\)/ }).count() === 1 && (await state(page)).settings.aiStrict === false, "দ্রুত মোড (১ পরীক্ষক) বেছে নেওয়া যায়");
+      ok(errors.length === 0, "কোনো JS error নেই", errors.join(","));
+      await ctx.close();
+    }
+
+    /* G. ক্লাউড আকার সীমা: ৩০টি বড় মূল্যায়ন */
+    {
+      const big = "ক".repeat(9000);
+      const init = fakeClaude(4) + `;(() => { const ev = []; for (let i = 0; i < 34; i++) ev.push({ id: "v" + i, t: Date.now() - i * 1e5, sec: "FW_BN", total: 15, max: 30, transcript: "${big}", improved: "${big.slice(0, 3000)}", question: "q", criteria: [], items: [], errors: [] });
+        localStorage.setItem("so-sprint-v1", JSON.stringify({ v: 1, updatedAt: 5, settings: { mult: 5 }, events: [], evals: ev })); })();`;
+      const { ctx, page, errors } = await newPage(browser, { url: DIST, init, time: "2026-11-21T10:00:00+06:00" });
+      await page.waitForTimeout(400);
+      const n = await page.evaluate(() => S.evals.length);
+      await page.evaluate(() => { logEvent("news", { n: 1 }); save(); });
+      await page.waitForTimeout(1800);
+      const w = await page.evaluate(() => window.__dbWrites);
+      ok(n === 30, "সর্বোচ্চ ৩০টি মূল্যায়ন রাখে (" + n + ")");
+      ok(w.length >= 1 && w[w.length - 1] <= 240000, "ক্লাউডে লেখার আকার ২৪০ KB-এর নিচে (" + Math.round(w[w.length - 1] / 1024) + " KB)");
+      ok(errors.length === 0, "কোনো JS error নেই", errors.join(","));
+      await ctx.close();
+    }
+
+    /* H. নিজের API (OpenAI-compatible), claude.ai-র বাইরে */
+    {
+      const { ctx, page, errors } = await newPage(browser, { time: "2026-11-21T10:00:00+06:00" });
+      const reqs = [];
+      await page.route("https://router.test/v1/**", async (route) => {
+        const req = route.request(); const url = req.url();
+        reqs.push({ url, auth: req.headers()["authorization"], body: req.postData() });
+        if (url.endsWith("/models")) return route.fulfill({ json: { data: [{ id: "vision-x" }, { id: "grader-y" }] } });
+        const b = JSON.parse(req.postData()); const c = b.messages[0].content; const p = typeof c === "string" ? c : c[0].text;
+        if (page.__mode === "401") return route.fulfill({ status: 401, json: { error: "bad key" } });
+        if (page.__mode === "abort") return route.abort();
+        if (page.__mode === "html") return route.fulfill({ status: 200, contentType: "text/html", body: "<html>captcha</html>" });
+        const text = p.startsWith("Reply with only this JSON") ? '{"ok":true}' : "<think>ভাবছি</think>```json\n" + makeResp(p, TRANSCRIPT) + "\n```";
+        return route.fulfill({ json: { choices: [{ message: { content: makeResp(p, TRANSCRIPT).startsWith("{") ? text : makeResp(p, TRANSCRIPT) }, finish_reason: "stop" }] } });
+      });
+      await page.evaluate(() => (location.hash = "ai-settings"));
+      await page.locator("#ai-base").fill("https://router.test/v1");
+      await page.locator("#ai-key").fill("sk-secret-123");
+      await page.getByRole("button", { name: "মডেল তালিকা আনুন" }).click();
+      await page.waitForSelector("text=২টি মডেল পাওয়া গেছে");
+      ok(reqs[0].auth === "Bearer sk-secret-123", "মডেল তালিকা: key Authorization হেডারে যায়");
+      await page.locator("#ai-vmodel").fill("vision-x"); await page.locator("#ai-gmodel").fill("grader-y");
+      await page.getByRole("button", { name: "সংরক্ষণ" }).click();
+      await page.getByRole("button", { name: "সংযোগ পরীক্ষা" }).click();
+      await page.waitForSelector("text=সংযোগ ঠিক আছে");
+      const cfg = await page.evaluate(() => JSON.parse(localStorage.getItem("so-ai-cfg")));
+      ok(cfg.key === "sk-secret-123" && cfg.gradeModel === "grader-y", "key শুধু এই ব্রাউজারের আলাদা জায়গায় (so-ai-cfg)");
+      await page.evaluate(() => (location.hash = "ai"));
+      await page.waitForSelector("text=মূল্যায়ক: API · grader-y");
+      await focusBtn(page, "সাধারণ জ্ঞান").click();
+      await page.getByRole("button", { name: "⌨️ টাইপ করা উত্তর" }).click();
+      await page.locator("#ai-typed").fill("১. ৭.৫%\n২. ৩৫.৫৯");
+      await page.getByRole("button", { name: /নম্বর দিন/ }).click();
+      await page.waitForSelector("text=প্রশ্নভিত্তিক নম্বর");
+      const chat = reqs.filter((r) => r.url.endsWith("/chat/completions"));
+      const b0 = JSON.parse(chat[chat.length - 1].body);
+      ok(b0.model === "grader-y" && b0.temperature === 0 && (await state(page)).evals[0].total === 5.5, "নিজের API দিয়ে GK মূল্যায়ন: temperature 0, <think> ও ``` বাদ দিয়ে JSON পড়ে → ৫.৫");
+      await page.evaluate(() => (location.hash = "ai"));
+      await focusBtn(page, "ফোকাস রাইটিং (বাংলা)").click();
+      await page.getByRole("button", { name: "📷 খাতার ছবি" }).click();
+      await page.setInputFiles("#ai-files", [{ name: "p.png", mimeType: "image/png", buffer: wide }]);
+      await page.getByRole("button", { name: "১. হাতের লেখা পড়ান" }).click();
+      await page.waitForSelector("#ai-tr");
+      const vb = JSON.parse(reqs.filter((r) => r.url.endsWith("/chat/completions")).slice(-1)[0].body);
+      ok(vb.model === "vision-x" && Array.isArray(vb.messages[0].content) && vb.messages[0].content[1].image_url.url.startsWith("data:image/jpeg;base64,"), "ছবি পড়তে ভিশন মডেল, ছবি data URL হিসেবে যায়");
+      page.__mode = "401"; await page.getByRole("button", { name: /নম্বর দিন/ }).click(); await page.waitForSelector("text=API key ভুল");
+      ok(true, "401: 'API key ভুল' বার্তা");
+      page.__mode = "html"; await page.getByRole("button", { name: /নম্বর দিন/ }).click(); await page.waitForSelector("text=ফায়ারওয়াল/ক্যাপচা");
+      ok(true, "HTML/ক্যাপচা পেজ এলে স্পষ্ট বার্তা");
+      page.__mode = "abort"; await page.getByRole("button", { name: /নম্বর দিন/ }).click(); await page.waitForSelector("text=API-তে পৌঁছানো যায়নি");
+      ok(true, "নেটওয়ার্ক/CORS ব্লক হলে স্পষ্ট বার্তা");
+      const st = await state(page);
+      await page.evaluate(() => (location.hash = "backup"));
+      const bk = await page.locator("#bk-out").inputValue();
+      ok(!JSON.stringify(st).includes("sk-secret-123") && !bk.includes("sk-secret-123"), "key অ্যাপের ডেটা, ক্লাউড বা ব্যাকআপে যায় না");
+      await page.evaluate(() => (location.hash = "ai-settings"));
+      await page.getByRole("button", { name: "key মুছুন" }).click(); await page.getByRole("button", { name: "মুছুন", exact: true }).click();
+      ok(await page.evaluate(() => localStorage.getItem("so-ai-cfg")) === null, "key মুছে ফেলা যায়");
+      ok(errors.length === 0, "কোনো JS error নেই", errors.join(","));
+      await ctx.close();
+    }
   }
 
   srv.close();
