@@ -113,6 +113,7 @@ node webapp/tests/stress.test.js     # ১৬৭টি স্ট্রেস ট
 | ১৪ | [ভোকাবুলারি (যাচাই করা)](docs/14_vocabulary_checked.md) | A2B পৃ. ১৫–২১: ভুল সংশোধন, গুরুত্ব অনুযায়ী ৫ স্তর |
 | ১৫ | [Deep Research Prompt](docs/15_deep_research_prompt.md) | শেষ ফাঁক পূরণ: পরীক্ষার নোটিশ, ২০টি সন্দেহজনক তথ্য যাচাই, পুরোনো PDF-এর আপডেট |
 | ১৬ | [যাচাই করা তথ্য (Fact Pack)](docs/16_verified_fact_pack.md) | পরীক্ষার তথ্য, ৬টি সংশোধন, নিরাপদ উদ্ধৃতি, যা লিখবেন না |
+| ১৭ | [Analytical ও Argument (৪০) পূর্ণ গাইড](docs/17_analytical_40_marks.md) · [PDF](docs/Analytical_40_Marks_Guide.pdf) | ৪ ধরনের প্রশ্নের পদ্ধতি, আসল প্রশ্নের সমাধান, যাচাই করা পাজল, মডেল উত্তর, ৪ দিনের প্ল্যান |
 
 ---
 

@@ -164,6 +164,10 @@ for sid in re.findall(r'href="#([\w-]+)"', html):
     ok(f'id="{sid}"' in html, "answer-book anchor exists", sid)
 ok(len(re.findall(r'class="ans"', html)) >= 40, "answer book has ≥40 answer sections", len(re.findall(r'class="ans"', html)))
 
+# ── 10b. puzzles in docs/17 have exactly one solution ─────────
+r = subprocess.run([sys.executable, "tests/verify_puzzles.py"], capture_output=True, text=True)
+ok(r.returncode == 0, "docs/17 puzzles each have exactly one solution", r.stdout[-300:])
+
 # ── 11. no API key / secret is ever committed ─────────────────
 tracked = subprocess.run(["git", "ls-files"], capture_output=True, text=True).stdout.split()
 for f_ in tracked + [x for x in glob.glob("webapp/**/*.html", recursive=True)]:
