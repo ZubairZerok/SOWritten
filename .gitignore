@@ -3,3 +3,8 @@ __pycache__/
 *.pyc
 progress/*.local.*
 docs/Analytical_40_Marks_Guide.html
+
+scratch/
+desktop.ini
+
+Focus Writting A2B Publications *.pdf
