@@ -142,7 +142,7 @@
    ],
    "a": 0,
    "x": "university-র উচ্চারণ 'ইউ' → a",
-   "tp": "rfv"
+   "tp": "structure"
   },
   {
    "q": "The loan must ___ repaid within a year.",
@@ -153,7 +153,7 @@
    ],
    "a": 0,
    "x": "modal + be + V3",
-   "tp": "sva"
+   "tp": "voice"
   },
   {
    "q": "Neither the manager nor the clerks ___ present.",
@@ -175,7 +175,7 @@
    ],
    "a": 0,
    "x": "Each of → singular",
-   "tp": "speech"
+   "tp": "sva"
   },
   {
    "q": "He said, \"I am busy.\" → He said that he ___ busy.",
@@ -186,7 +186,7 @@
    ],
    "a": 0,
    "x": "reporting verb past → tense এক ধাপ পেছায়",
-   "tp": "groupverb"
+   "tp": "speech"
   },
   {
    "q": "Bank officers must comply ___ the rules.",
@@ -197,7 +197,7 @@
    ],
    "a": 0,
    "x": "comply with",
-   "tp": "groupverb"
+   "tp": "structure"
   },
   {
    "q": "He was accused ___ fraud.",
@@ -208,7 +208,7 @@
    ],
    "a": 0,
    "x": "accused of / charged with",
-   "tp": "groupverb"
+   "tp": "structure"
   },
   {
    "q": "She insisted ___ paying the bill.",
@@ -759,6 +759,138 @@
    "a": 0,
    "x": "",
    "tp": "transformation"
+  },
+  {
+   "q": "Passive of “Who signed this cheque?”",
+   "o": [
+    "By whom was this cheque signed?",
+    "Who was this cheque signed by him?",
+    "By whom this cheque was signed?"
+   ],
+   "a": 0,
+   "x": "Wh-question → By whom + was + object + V3",
+   "tp": "voice"
+  },
+  {
+   "q": "Passive of “They will announce the results tomorrow.”",
+   "o": [
+    "The results will be announced tomorrow.",
+    "The results will announced tomorrow.",
+    "The results would be announced tomorrow."
+   ],
+   "a": 0,
+   "x": "will + be + V3",
+   "tp": "voice"
+  },
+  {
+   "q": "Passive of “Open the account.”",
+   "o": [
+    "Let the account be opened.",
+    "The account is opened.",
+    "Let the account opened."
+   ],
+   "a": 0,
+   "x": "Imperative → Let + object + be + V3",
+   "tp": "voice"
+  },
+  {
+   "q": "Passive of “They laughed at him.”",
+   "o": [
+    "He was laughed at.",
+    "He was laughed.",
+    "He was laughed by them at."
+   ],
+   "a": 0,
+   "x": "Prepositional verb: keep the preposition",
+   "tp": "voice"
+  },
+  {
+   "q": "“Over-exercise affected his health adversely.” Group verb for “affected adversely”:",
+   "o": [
+    "told upon",
+    "told off",
+    "took after"
+   ],
+   "a": 0,
+   "x": "tell upon = affect adversely (05 Jun 2026 paper)",
+   "tp": "groupverb"
+  },
+  {
+   "q": "“The government abolished the tax.” Group verb for “abolished”:",
+   "o": [
+    "did away with",
+    "did up",
+    "put up with"
+   ],
+   "a": 0,
+   "x": "do away with = abolish",
+   "tp": "groupverb"
+  },
+  {
+   "q": "“I cannot tolerate this.” Group verb for “tolerate”:",
+   "o": [
+    "put up with",
+    "put off",
+    "put out"
+   ],
+   "a": 0,
+   "x": "put up with = tolerate",
+   "tp": "groupverb"
+  },
+  {
+   "q": "'To hit the nail on the head' means:",
+   "o": [
+    "to say exactly the right thing",
+    "to hurt oneself",
+    "to work very hard"
+   ],
+   "a": 0,
+   "x": "05 Jun 2026 paper",
+   "tp": "idiom"
+  },
+  {
+   "q": "'To burn the midnight oil' means:",
+   "o": [
+    "to work or study late into the night",
+    "to waste money",
+    "to start a fire"
+   ],
+   "a": 0,
+   "x": "05 Jun 2026 paper",
+   "tp": "idiom"
+  },
+  {
+   "q": "'A white elephant' means:",
+   "o": [
+    "a costly but useless possession",
+    "a rare animal",
+    "a peaceful person"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "idiom"
+  },
+  {
+   "q": "'In the red' means:",
+   "o": [
+    "in debt / making a loss",
+    "very angry",
+    "in danger"
+   ],
+   "a": 0,
+   "x": "banking idiom",
+   "tp": "idiom"
+  },
+  {
+   "q": "“The sun set, and the stars appeared, while we sat by the fire” is:",
+   "o": [
+    "compound-complex",
+    "complex",
+    "compound"
+   ],
+   "a": 0,
+   "x": "2 independent clauses + 1 dependent clause",
+   "tp": "structure"
   }
  ],
  "bn": [
@@ -1360,6 +1492,182 @@
    "a": 0,
    "x": "",
    "tp": "shuddhi"
+  },
+  {
+   "q": "'আমার যাওয়া হবে না' — কোন বাচ্য?",
+   "o": [
+    "ভাববাচ্য",
+    "কর্মবাচ্য",
+    "কর্তৃবাচ্য"
+   ],
+   "a": 0,
+   "x": "ক্রিয়ার ভাব প্রধান, কর্তা ষষ্ঠীতে",
+   "tp": "bachyo"
+  },
+  {
+   "q": "'রবীন্দ্রনাথ কর্তৃক গীতাঞ্জলি রচিত হয়েছে' — কোন বাচ্য?",
+   "o": [
+    "কর্মবাচ্য",
+    "ভাববাচ্য",
+    "কর্তৃবাচ্য"
+   ],
+   "a": 0,
+   "x": "কর্ম প্রধান, কর্তার পরে 'কর্তৃক'",
+   "tp": "bachyo"
+  },
+  {
+   "q": "'বাঁশি বাজে' — কোন বাচ্য?",
+   "o": [
+    "কর্মকর্তৃবাচ্য",
+    "ভাববাচ্য",
+    "কর্মবাচ্য"
+   ],
+   "a": 0,
+   "x": "কর্মই কর্তার মতো আচরণ করছে (প্রথাগত)",
+   "tp": "bachyo"
+  },
+  {
+   "q": "'কুহক'-এর স্ত্রীবাচক শব্দ:",
+   "o": [
+    "কুহকিনী",
+    "কুহকী",
+    "কুহকা"
+   ],
+   "a": 0,
+   "x": "০৫ জুন ২০২৬-এর প্রশ্ন",
+   "tp": "linga"
+  },
+  {
+   "q": "'সভাপতি'-র স্ত্রীবাচক শব্দ:",
+   "o": [
+    "সভানেত্রী",
+    "সভাপত্নী",
+    "সভাপতিনী"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "linga"
+  },
+  {
+   "q": "'বিদ্বান'-এর স্ত্রীবাচক শব্দ:",
+   "o": [
+    "বিদুষী",
+    "বিদ্বানী",
+    "বিদ্যাবতী"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "linga"
+  },
+  {
+   "q": "'সম্রাট'-এর স্ত্রীবাচক শব্দ:",
+   "o": [
+    "সম্রাজ্ঞী",
+    "সম্রাটনী",
+    "সম্রাটী"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "linga"
+  },
+  {
+   "q": "'তিলে তৈল হয়' — 'তিলে' কোন কারকে কোন বিভক্তি?",
+   "o": [
+    "অপাদানে ৭মী",
+    "করণে ৭মী",
+    "অধিকরণে ৭মী"
+   ],
+   "a": 0,
+   "x": "তেলের উৎস তিল → অপাদান (০৫ জুন ২০২৬)",
+   "tp": "karok"
+  },
+  {
+   "q": "'টাকায় টাকা আনে' — প্রথম 'টাকায়' কোন কারকে কোন বিভক্তি?",
+   "o": [
+    "কর্তায় ৭মী",
+    "করণে ৭মী",
+    "কর্মে ৭মী"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "karok"
+  },
+  {
+   "q": "'ধোপাকে কাপড় দাও' — 'ধোপাকে' কোন কারক?",
+   "o": [
+    "কর্ম",
+    "সম্প্রদান",
+    "অপাদান"
+   ],
+   "a": 0,
+   "x": "স্বত্বত্যাগ নেই, তাই সম্প্রদান নয়",
+   "tp": "karok"
+  },
+  {
+   "q": "'চক্রপাণি' কোন সমাস?",
+   "o": [
+    "বহুব্রীহি",
+    "তৎপুরুষ",
+    "কর্মধারয়"
+   ],
+   "a": 0,
+   "x": "চক্র পাণিতে যার — ব্যধিকরণ বহুব্রীহি (০৫ জুন ২০২৬)",
+   "tp": "somas"
+  },
+  {
+   "q": "'পুরুষসিংহ' কোন সমাস?",
+   "o": [
+    "উপমিত কর্মধারয়",
+    "উপমান কর্মধারয়",
+    "রূপক কর্মধারয়"
+   ],
+   "a": 0,
+   "x": "পুরুষ সিংহের ন্যায়",
+   "tp": "somas"
+  },
+  {
+   "q": "'অগস্ত্য যাত্রা' বাগধারার অর্থ:",
+   "o": [
+    "চিরদিনের জন্য প্রস্থান",
+    "দীর্ঘ ভ্রমণ",
+    "তীর্থযাত্রা"
+   ],
+   "a": 0,
+   "x": "০৫ জুন ২০২৬-এর প্রশ্ন",
+   "tp": "probad"
+  },
+  {
+   "q": "'বজ্র আঁটুনি ফস্কা গেরো' প্রবাদের নিহিতার্থ:",
+   "o": [
+    "বাইরে কড়াকড়ি, ভেতরে ফাঁক",
+    "শক্ত গিঁট খোলে না",
+    "বজ্রপাতে ক্ষতি"
+   ],
+   "a": 0,
+   "x": "",
+   "tp": "probad"
+  },
+  {
+   "q": "যে ঋণ দেয়:",
+   "o": [
+    "উত্তমর্ণ",
+    "অধমর্ণ",
+    "ঋণী"
+   ],
+   "a": 0,
+   "x": "যে ঋণ নেয় = অধমর্ণ",
+   "tp": "ekkothay"
+  },
+  {
+   "q": "'সাক্ষর' শব্দের অর্থ:",
+   "o": [
+    "অক্ষরজ্ঞানসম্পন্ন",
+    "দস্তখত",
+    "সাক্ষী"
+   ],
+   "a": 0,
+   "x": "স্বাক্ষর = দস্তখত",
+   "tp": "somoccharito"
   }
  ],
  "gk": [
@@ -1843,6 +2151,9 @@
   "somas": "সমাস",
   "sondhi": "সন্ধি বিচ্ছেদ",
   "ekkothay": "এক কথায় প্রকাশ",
-  "somoccharito": "প্রায় সমোচ্চারিত ভিন্নার্থক শব্দ"
+  "somoccharito": "প্রায় সমোচ্চারিত ভিন্নার্থক শব্দ",
+  "voice": "Voice (active ↔ passive)",
+  "bachyo": "বাচ্য (ব্লুপ্রিন্টে এসেছে)",
+  "linga": "লিঙ্গ / স্ত্রীবাচক (ব্লুপ্রিন্টে এসেছে)"
  }
 }
