@@ -34,6 +34,9 @@ struct Cat {
   std::wstring name;
   int done = 0, target = 100;
   long long secs = 0;  // reading time spent in this category
+  int mins = 0;        // time allotted for this session (countdown)
+  long long rem = 0;   // seconds left (negative = overtime)
+  bool alerted = false;
 };
 struct Theme {
   const wchar_t* name;
@@ -119,6 +122,8 @@ static void Save() {
     PutI(sec, L"done", S.cats[i].done);
     PutI(sec, L"target", S.cats[i].target);
     PutI(sec, L"secs", S.cats[i].secs);
+    PutI(sec, L"mins", S.cats[i].mins);
+    PutI(sec, L"rem", S.cats[i].rem);
   }
   // drop stale sections beyond the current count
   for (size_t i = S.cats.size(); i < S.cats.size() + 4; i++) {
@@ -156,6 +161,8 @@ static void Load() {
     c.done = (int)GetI(sec, L"done", 0);
     c.target = (int)GetI(sec, L"target", 100);
     c.secs = GetI(sec, L"secs", 0);
+    c.mins = (int)GetI(sec, L"mins", 0);
+    c.rem = GetI(sec, L"rem", c.mins * 60LL);
     S.cats.push_back(c);
   }
   if (S.cats.empty()) S.cats.push_back({L"Reading", 0, 100});
@@ -302,8 +309,9 @@ static void Paint(HWND hwnd, HDC hdc) {
   std::wstring doneS = std::to_wstring(c.done), targetS = Fmt(L"/ %d", c.target);
   std::wstring leftS = complete ? L"target done!" : Fmt(L"%d left", left);
   double pace = PaceNow();
-  std::wstring timeS = HMS(g_sessionSecs);
-  std::wstring paceS = pace > 0 ? Fmt(L"%.0f p/h · ETA %s", pace, Dur(left / pace).c_str()) : (g_running ? L"reading…" : L"paused");
+  bool over = c.mins > 0 && c.rem < 0;
+  std::wstring timeS = c.mins == 0 ? L"set time" : (over ? L"-" + HMS(-c.rem) : HMS(c.rem));
+  std::wstring paceS = c.mins == 0 ? L"click to set minutes" : over ? L"time up!" : (Fmt(L"of %ls", Dur(c.mins / 60.0).c_str()) + (pace > 0 ? Fmt(L" · %.0f p/h", pace) : (g_running ? L" · running" : L" · paused")));
   long long ex = SecsToExam();
   std::wstring cdS = ex > 0 ? Fmt(L"%lldd %02lldh %02lldm", ex / 86400, (ex / 3600) % 24, (ex / 60) % 60) : (ex > -7200 ? L"exam now" : L"exam done");
   std::wstring cdSub = L"to exam · Fri 9:30";
@@ -463,9 +471,9 @@ static void Paint(HWND hwnd, HDC hdc) {
     bool hv = Hover(r);
     (void)hv;
     RECT tr{cursor + Px(20), mid - Px(20), cursor + timerW, mid};
-    Text(mem, F.title, timeS, tr, g_running ? T.text : T.muted, DT_LEFT);
+    Text(mem, F.title, timeS, tr, over ? RGB(251, 113, 133) : (g_running ? T.text : T.muted), DT_LEFT);
     RECT sr{cursor, mid + Px(1), cursor + timerW, mid + Px(18)};
-    Text(mem, F.small, paceS, sr, T.muted, DT_LEFT);
+    Text(mem, F.small, paceS, sr, over ? RGB(251, 113, 133) : T.muted, DT_LEFT);
     g_zones.push_back({H_TIMER, r, 0});
     cursor += timerW + gap;
   }
@@ -614,6 +622,7 @@ static void Resize() {
 }
 static void SwitchCat(int i) {
   if (S.cats.empty()) return;
+  g_running = false;
   S.cur = ((i % (int)S.cats.size()) + (int)S.cats.size()) % (int)S.cats.size();
   g_sessionSecs = 0;
   g_sessionStartDone = C().done;
@@ -663,6 +672,15 @@ static void EditTarget() {
   std::wstring v = std::to_wstring(C().target);
   if (Ask(L"Target pages — " + C().name, L"Total pages you plan to read", v, true) && !v.empty()) { C().target = std::clamp(_wtoi(v.c_str()), 1, 100000); Changed(); }
 }
+static void SetTime() {
+  std::wstring v = std::to_wstring(C().mins ? C().mins : 60);
+  if (Ask(L"Session time — " + C().name, L"Minutes, e.g. 60", v, true) && !v.empty()) {
+    C().mins = std::clamp(_wtoi(v.c_str()), 1, 1440);
+    C().rem = C().mins * 60LL; C().alerted = false;
+    g_running = true; g_lastTick = GetTickCount64(); g_sessionSecs = 0; g_sessionStartDone = C().done;
+    Changed();
+  }
+}
 static void AddCat() {
   std::wstring v = L"";
   if (!Ask(L"New category", L"e.g. Bangla Grammar", v, false) || v.empty()) return;
@@ -684,7 +702,7 @@ static void DeleteCat() {
 }
 
 enum {
-  M_TITLE = 100, M_DONE, M_TARGET, M_ADDCAT, M_RENCAT, M_DELCAT, M_RESETCAT, M_RESETTIME, M_TIMER, M_TOP, M_CD, M_LOCK, M_START,
+  M_TITLE = 100, M_DONE, M_TARGET, M_ADDCAT, M_RENCAT, M_DELCAT, M_RESETCAT, M_RESETTIME, M_SETTIME, M_TIMER, M_TOP, M_CD, M_LOCK, M_START,
   M_HIDE, M_EXIT, M_BIGGER, M_SMALLER, M_HELP, M_CAT0 = 200, M_THEME0 = 300, M_OP0 = 400
 };
 static void ShowHelp() {
@@ -693,7 +711,7 @@ static void ShowHelp() {
               L"• +  /  −  or mouse wheel over the numbers: pages done (Shift = ±5)\n"
               L"• Click the big number to type the page; click \"/ target\" to set the target\n"
               L"• Click the category (▾) or a chip to switch; wheel over it to cycle\n"
-              L"• Click the timer to start/pause reading time; pace and ETA appear after 5 min\n"
+              L"• Timer = countdown per category: click it to set minutes (e.g. 60), click again to pause/resume;\n   wheel over it = ±5 min (Shift ±15). It beeps at 0 and then shows overtime in red\n"
               L"• Drag empty space or the ring to move; drag the left/right edge to widen\n"
               L"• Ctrl + wheel: whole widget bigger/smaller\n"
               L"• Right-click or ⋮ for themes, opacity, categories, startup\n"
@@ -720,7 +738,8 @@ static void Menu(POINT screen) {
   AppendMenuW(m, MF_STRING, M_TITLE, L"Edit title…");
   AppendMenuW(m, MF_SEPARATOR, 0, nullptr);
   AppendMenuW(m, MF_STRING, M_TIMER, g_running ? L"Pause timer\tSpace" : L"Start timer\tSpace");
-  AppendMenuW(m, MF_STRING, M_RESETTIME, L"Reset session timer");
+  AppendMenuW(m, MF_STRING, M_SETTIME, L"Set session time (minutes)…");
+  AppendMenuW(m, MF_STRING | (C().mins ? 0 : MF_GRAYED), M_RESETTIME, L"Restart timer from full time");
   AppendMenuW(m, MF_SEPARATOR, 0, nullptr);
   AppendMenuW(m, MF_POPUP, (UINT_PTR)theme, L"Theme");
   AppendMenuW(m, MF_POPUP, (UINT_PTR)op, L"Opacity");
@@ -753,8 +772,9 @@ static void Menu(POINT screen) {
           C().done = 0; C().secs = 0; g_sessionSecs = 0; g_sessionStartDone = 0; Changed();
         }
         break;
-      case M_RESETTIME: g_sessionSecs = 0; g_sessionStartDone = C().done; Redraw(); break;
-      case M_TIMER: ToggleTimer(); break;
+      case M_RESETTIME: C().rem = C().mins * 60LL; C().alerted = false; g_sessionSecs = 0; g_sessionStartDone = C().done; Changed(); break;
+      case M_SETTIME: SetTime(); break;
+      case M_TIMER: if (C().mins == 0) SetTime(); else ToggleTimer(); break;
       case M_TOP: S.topmost = !S.topmost; ApplyWindowStyle(); Changed(); break;
       case M_CD: S.countdown = !S.countdown; Changed(); break;
       case M_LOCK: S.locked = !S.locked; Changed(); break;
@@ -843,7 +863,7 @@ static LRESULT CALLBACK WndProc(HWND h, UINT m, WPARAM w, LPARAM l) {
         case H_TITLE: EditTitle(); break;
         case H_CAT: SwitchCat(S.cur + 1); break;
         case H_CHIP: SwitchCat(z->idx); break;
-        case H_TIMER: ToggleTimer(); break;
+        case H_TIMER: if (C().mins == 0 || C().rem <= 0) SetTime(); else ToggleTimer(); break;
         case H_MENU: { POINT s = p; ClientToScreen(h, &s); Menu(s); break; }
         default: break;
       }
@@ -860,7 +880,14 @@ static LRESULT CALLBACK WndProc(HWND h, UINT m, WPARAM w, LPARAM l) {
       POINT p{GET_X_LPARAM(l), GET_Y_LPARAM(l)};
       ScreenToClient(h, &p);
       const Zone* z = ZoneAt(p);
-      if (z && (z->hit == H_CAT || z->hit == H_CHIP || z->hit == H_TITLE)) SwitchCat(S.cur - d);
+      if (z && z->hit == H_TIMER) {
+        int step = (GET_KEYSTATE_WPARAM(w) & MK_SHIFT) ? 15 : 5;
+        int nm = std::clamp(C().mins + d * step, 0, 1440);
+        C().rem += (long long)(nm - C().mins) * 60; C().mins = nm;
+        if (nm == 0) { C().rem = 0; g_running = false; }
+        if (C().rem > 0) C().alerted = false;
+        Changed();
+      } else if (z && (z->hit == H_CAT || z->hit == H_CHIP || z->hit == H_TITLE)) SwitchCat(S.cur - d);
       else AddPages(d * ((GET_KEYSTATE_WPARAM(w) & MK_SHIFT) ? 5 : 1));
       return 0;
     }
@@ -884,6 +911,16 @@ static LRESULT CALLBACK WndProc(HWND h, UINT m, WPARAM w, LPARAM l) {
             long long s = (long long)(ms / 1000);
             g_sessionSecs += s;
             C().secs += s;
+            if (C().mins) {
+              C().rem -= s;
+              if (C().rem <= 0 && !C().alerted) {
+                C().alerted = true;
+                MessageBeep(MB_ICONEXCLAMATION);
+                FLASHWINFO fw{sizeof fw, h, FLASHW_ALL, 3, 0};
+                FlashWindowEx(&fw);
+                Save();
+              }
+            }
             g_lastTick += s * 1000;
             if (g_sessionSecs % 60 == 0) Save();
           }
