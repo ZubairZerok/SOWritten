@@ -2,3 +2,4 @@ corpus/.cache/
 __pycache__/
 *.pyc
 progress/*.local.*
+docs/Analytical_40_Marks_Guide.html
