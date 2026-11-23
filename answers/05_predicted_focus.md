@@ -27,10 +27,8 @@ Banks are the heart of an economy: they collect savings and pump credit into bus
 | Default loans, June 2026 | about Tk 6.06 lakh crore (32.78%) | Bangladesh Bank via Prothom Alo |
 | Default loans, Sept 2026 (latest) | Tk 5.97 lakh crore (32.17%) | Finance Minister in Parliament, 16 Nov 2026 |
 | Private credit growth, Sept 2026 | 4.17% (record low) | Bangladesh Bank via Samakal |
-| Default ratio, state-owned banks | 43.2% | Financial Express |
 | Default ratio, Dec 2024 | 20.20% | Bangladesh Bank, MPS H1FY27 |
-| Five merged Islamic banks | 84.22% of loans in default | 2026 reports |
-| Money stuck in money loan courts | about Tk 6.48 lakh crore | Daily Sun, Sep 2026 |
+| Five merged Islamic banks | about 86% of Tk 1.92 lakh crore loans in default | Daily New Nation; New Age, Aug 2026 |
 
 **Causes**
 1. **Political and insider lending:** loans approved on influence, not on business merit; some groups captured whole banks.
@@ -40,14 +38,14 @@ Banks are the heart of an economy: they collect savings and pump credit into bus
 5. **Board-level governance failure:** directors interfering in credit decisions.
 
 **Consequences**
-Capital shortfalls and liquidity crises in weak banks; loss of depositor confidence; private-sector credit growth falling to a record-low 4.17 percent in September 2026; higher lending rates for honest borrowers; and pressure on the budget for recapitalisation (Tk 36,706 crore set aside in FY27 for bank restructuring).
+Capital shortfalls and liquidity crises in weak banks; loss of depositor confidence; private-sector credit growth falling to a record-low 4.17 percent in September 2026; higher lending rates for honest borrowers; and pressure on the budget for recapitalisation (the government alone put Tk 20,000 crore into Sammilito Islami Bank).
 
 **Reforms under way**
 - **Bank Resolution Act 2026:** a legal framework to merge, restructure or close failing banks. Section 18A, which allowed former owners to reclaim banks, was repealed in September 2026.
-- **Sammilito Islami Bank:** five troubled Shariah banks merged into one state-owned bank with Tk 20,000 crore government capital.
+- **Sammilito Islami Bank:** five troubled Shariah banks merged into one state-owned bank; paid-up capital Tk 35,000 crore (government Tk 20,000 crore + depositor shares Tk 15,000 crore).
 - **Deposit Protection Act 2026:** insurance coverage doubled from Tk 1 lakh to Tk 2 lakh per depositor.
 - **Asset Quality Reviews** and a move to **Expected Credit Loss (IFRS 9)** provisioning by 2027.
-- Recovery of laundered money: about Tk 70,446 crore of assets frozen or attached at home and abroad.
+- Recovery of laundered money: a Governor-led task force with NBR is tracing and freezing assets at home and abroad; the reform roadmap targets NPLs below 20 percent by 2029.
 
 **Recommendations**
 1. Publish a list of wilful defaulters and bar them from new credit, foreign travel and company directorships.
@@ -59,6 +57,50 @@ Capital shortfalls and liquidity crises in weak banks; loss of depositor confide
 
 **Conclusion**
 Bangladesh cannot reach its growth targets with a banking system in which one taka in every three lent is not being repaid. The new laws are a start, but their success depends on consistent enforcement, regardless of who the defaulter is.
+
+
+### বাংলায় পূর্ণ উত্তর (প্রশ্নটি বাংলায় এলে)
+
+#### খেলাপি ঋণ ও ব্যাংক খাত সংস্কার
+
+> "আমানতকারীর আস্থাই ব্যাংকের শক্তি।"
+
+**ভূমিকা**
+ব্যাংক অর্থনীতির হৃৎপিণ্ড: সঞ্চয় সংগ্রহ করে ব্যবসায় ঋণ জোগায়। বাংলাদেশে সেই হৃৎপিণ্ড আজ দুর্বল। সেপ্টেম্বর ২০২৬ শেষে খেলাপি ঋণ দাঁড়িয়েছে ৫ লাখ ৯৭ হাজার ১৫৪ কোটি টাকায়, যা মোট ঋণের ৩২.১৭ শতাংশ (অর্থমন্ত্রী, সংসদে, ১৬ নভেম্বর ২০২৬)। গভর্নর নিজেই বলেছেন, "এ খাত থেকে এক-তৃতীয়াংশ টাকা চুরি হয়ে গেছে।"
+
+**সমস্যার চিত্র (তথ্য-ছক)**
+
+| বিষয় | তথ্য | উৎস |
+|---|---|---|
+| খেলাপি ঋণ, সেপ্টেম্বর ২০২৬ | ৫.৯৭ লাখ কোটি টাকা (৩২.১৭%) | অর্থমন্ত্রী, সংসদে |
+| খেলাপি ঋণ, জুন ২০২৬ | ৩২.৭৮% (বিশ্বে সর্বোচ্চ) | বাংলাদেশ ব্যাংক |
+| বেসরকারি ঋণ প্রবৃদ্ধি | ৪.১৭% (সেপ্টেম্বর, রেকর্ড সর্বনিম্ন) | বাংলাদেশ ব্যাংক |
+| একীভূত ৫ ব্যাংক | ১.৯২ লাখ কোটি টাকার ঋণের প্রায় ৮৬% খেলাপি | নিউ এজ, আগস্ট ২০২৬ |
+
+**কারণ**
+১. **রাজনৈতিক ও স্বার্থসংশ্লিষ্ট ঋণ:** ব্যবসার যোগ্যতা নয়, প্রভাব খাটিয়ে ঋণ নেওয়া। কিছু গোষ্ঠী পুরো ব্যাংক দখল করে নিয়েছিল।
+২. **ইচ্ছাকৃত খেলাপি:** বারবার পুনঃতফসিল আর অবলোপনের সংস্কৃতি।
+৩. **দুর্বল তদারকি:** বছরের পর বছর শিথিল নীতিমালা প্রকৃত চিত্র আড়াল করেছে।
+৪. **দীর্ঘ আইনি প্রক্রিয়া:** অর্থঋণ আদালতে মামলা বছরের পর বছর চলে।
+৫. **বোর্ডের হস্তক্ষেপ:** পরিচালকেরা ঋণ অনুমোদনে নাক গলান।
+
+খেলাপি গণনার সময় ৯০ দিনে নামানোয় আগের লুকানো খেলাপিও এখন হিসাবে আসছে।
+
+**চলমান সংস্কার**
+- **ব্যাংক রেজল্যুশন আইন ২০২৬:** দুর্বল ব্যাংক একীভূত, পুনর্গঠন বা বন্ধ করার আইনি কাঠামো। সাবেক মালিকদের ব্যাংক ফেরত পাওয়ার সুযোগ দেওয়া ১৮ক ধারা সেপ্টেম্বর ২০২৬-এ বাতিল হয়েছে।
+- **সম্মিলিত ইসলামী ব্যাংক:** পাঁচটি শরিয়াহভিত্তিক ব্যাংক একীভূত হয়েছে। পরিশোধিত মূলধন ৩৫,০০০ কোটি টাকা, যার মধ্যে সরকারের ২০,০০০ কোটি।
+- **আমানত সুরক্ষা আইন ২০২৬:** বিমার সীমা ১ লাখ থেকে বেড়ে ২ লাখ টাকা।
+- **টাস্কফোর্স:** গভর্নরের নেতৃত্বে টাস্কফোর্স কাজ করছে। লক্ষ্য ২০২৯ সালের মধ্যে খেলাপি ঋণ ২০ শতাংশের নিচে নামানো।
+
+**করণীয়**
+১. ইচ্ছাকৃত খেলাপিদের তালিকা প্রকাশ করা, আর তাঁদের নতুন ঋণ ও পরিচালক পদে নিষেধাজ্ঞা দেওয়া।
+২. বড় ঋণ মামলার দ্রুত নিষ্পত্তির জন্য বিশেষ বেঞ্চ গঠন করা।
+৩. ব্যাংক পরিচালকদের "ফিট অ্যান্ড প্রপার" যাচাই করা।
+৪. বাংলাদেশ ব্যাংককে তদারকিতে পূর্ণ স্বাধীনতা দেওয়া।
+৫. শুধু স্বতন্ত্র সম্পদমান পর্যালোচনার (একিউআর) পর আর নতুন ব্যবস্থাপনাসহ একীভূত করা।
+
+**উপসংহার**
+যে ব্যাংক খাতে প্রতি তিন টাকার এক টাকা ফেরত আসে না, সে খাত দিয়ে প্রবৃদ্ধির লক্ষ্য পূরণ সম্ভব নয়। নতুন আইন শুরু মাত্র। খেলাপি যে-ই হোক, ধারাবাহিক প্রয়োগেই সাফল্য আসবে।
 
 ## Ans. to the Predicted Q. — LDC Graduation Deferred to 2029: Opportunities and Challenges
 
@@ -87,7 +129,7 @@ Bangladesh met all three graduation criteria (per-capita income, human assets an
 - Low revenue (about 7 percent of GDP) limits investment in skills and infrastructure.
 
 **Opportunities to seize**
-Better credit rating and branding as a graduating economy; more FDI (USD 1.78 billion in 2025, up 45 percent, according to UNCTAD); and a chance to negotiate new trade deals. The EPA with Japan, signed in February 2026, is the first such deal.
+Better credit rating and branding as a graduating economy; more foreign direct investment; and a chance to negotiate new trade deals. The EPA with Japan, signed in February 2026, is the first such deal.
 
 **What must be done before 2029**
 1. Prepare to qualify for EU GSP+ by implementing labour, environment and human-rights conventions.
@@ -107,7 +149,7 @@ The deferral is a breathing space, not a holiday. If Bangladesh uses these three
 > "Inflation is taxation without legislation." — Milton Friedman
 
 **Introduction**
-Bangladesh faces an uncomfortable mix: inflation has stayed above 8 percent for more than two years, while growth has slowed to its weakest level in decades. This combination of high prices and low growth, called stagflation, squeezes household incomes and discourages investment.
+Bangladesh faces an uncomfortable mix: inflation has stayed above 8 percent for more than three years, while growth slowed to 3.68 percent in FY26, among the weakest in decades. This combination of high prices and low growth, called stagflation, squeezes household incomes and discourages investment.
 
 **The picture in numbers**
 
@@ -121,7 +163,7 @@ Bangladesh faces an uncomfortable mix: inflation has stayed above 8 percent for 
 | Poverty rate, 2026 | 22.5% (18.7% in 2022) | World Bank |
 
 **Causes**
-1. **Cost-push factors:** fuel price hikes (diesel up from Tk 100 to Tk 135 in 2026), LNG shortages and costly imports after the Iran war closed the Strait of Hormuz.
+1. **Cost-push factors:** fuel price hikes (diesel up from Tk 100 to Tk 135 in 2026), LNG shortages and costly imports after the Iran war nearly closed the Strait of Hormuz.
 2. **Exchange-rate pass-through:** the taka's depreciation since 2022 raised import costs.
 3. **Market syndicates and supply-chain weaknesses** in essential commodities.
 4. **Investment drought:** high interest rates, weak banks, energy shortages and political uncertainty kept private credit growth near 5 percent.
@@ -131,7 +173,7 @@ Bangladesh faces an uncomfortable mix: inflation has stayed above 8 percent for 
 - **Monetary policy:** Bangladesh Bank kept the policy rate at 10 percent for almost two years. With food inflation falling, it cut the rate to 9.5 percent in July 2026 to revive credit, while holding it there in the first quarterly MPS.
 - **Fiscal policy:** the FY27 budget (Tk 9.38 lakh crore) cut duties on essentials, introduced family and farmer cards, and kept the deficit at 3.6 percent of GDP.
 - **Stimulus:** a Tk 60,000 crore refinance and pre-finance package targets CMSMEs, agriculture and closed factories, aiming at about 25 lakh jobs.
-- **IMF talks:** a new USD 4.5–5 billion programme is being negotiated.
+- **IMF talks:** a new programme of about USD 4.5–5 billion has been reported as under discussion.
 
 **Why tight money alone is not enough**
 Most of today's inflation comes from costs and supply, not excess demand. Raising rates further would hurt investment without bringing down fuel, freight or food prices. Monetary and fiscal policy must act together.
@@ -175,7 +217,7 @@ Artificial intelligence (AI) is changing how banks lend, serve customers and fig
 - **Cyber security:** AI can also be used by criminals for deepfake fraud and phishing. The 2016 reserve heist shows the cost of weak security.
 - **Bias and fairness:** algorithms trained on biased data may exclude women or rural borrowers.
 - **Data privacy:** Bangladesh still needs a strong data-protection law.
-- **Jobs:** routine back-office and teller jobs may decline. Global banks are cutting junior analyst intake, though S&P Global sees no near-term mass layoffs.
+- **Jobs:** routine back-office and teller jobs may decline.
 - **Skills gap:** few bankers are trained in data science.
 
 **Recommendations**
@@ -235,7 +277,7 @@ Remittance has carried the economy through a difficult period. Making the formal
 
 ## Ans. to the Predicted Q. (Bangla focus) — Climate Finance, COP31 and Bangladesh
 
-Tip: Write this in Bangla in the exam. Bangla sub-headings: ভূমিকা · বাংলাদেশের জলবায়ু ঝুঁকি · COP31 ও বাংলাদেশের দাবি · লস অ্যান্ড ড্যামেজ তহবিল: প্রতিশ্রুতি বনাম বাস্তবতা · ঋণ নয়, অনুদান · গ্রিন ব্যাংকিং ও টেকসই অর্থায়ন · করণীয় · উপসংহার
+Tip: Write this in Bangla in the exam. The full Bangla answer follows the English one below. Bangla sub-headings: ভূমিকা · বাংলাদেশের জলবায়ু ঝুঁকি · COP31 ও বাংলাদেশের দাবি · লস অ্যান্ড ড্যামেজ তহবিল: প্রতিশ্রুতি বনাম বাস্তবতা · ঋণ নয়, অনুদান · গ্রিন ব্যাংকিং ও টেকসই অর্থায়ন · করণীয় · উপসংহার
 
 ### Climate Finance and Bangladesh: Expectations from COP31
 
@@ -269,9 +311,47 @@ Implement the National Adaptation Plan; build climate-resilient infrastructure; 
 **Conclusion**
 Climate justice means the polluters pay. Bangladesh must keep pressing for grant-based finance while showing, through strong domestic action, that every dollar received is used well.
 
+
+### বাংলায় পূর্ণ উত্তর (পরীক্ষায় এভাবে লিখুন)
+
+#### জলবায়ু অর্থায়ন, কপ-৩১ ও বাংলাদেশ
+
+**ভূমিকা**
+বিশ্বের মোট গ্রিনহাউস গ্যাস নিঃসরণে বাংলাদেশের অংশ ০.৫ শতাংশের কম। তবু জলবায়ু পরিবর্তনের সবচেয়ে বড় ভুক্তভোগী দেশগুলোর একটি বাংলাদেশ। তুরস্কের আন্তালিয়ায় ৯–২০ নভেম্বর ২০২৬ অনুষ্ঠিত কপ-৩১ সম্মেলনে বাংলাদেশ ন্যায্য ও সহজলভ্য জলবায়ু অর্থায়নের দাবি তুলেছে।
+
+**বাংলাদেশের জলবায়ু ঝুঁকি**
+বন্যা, ঘূর্ণিঝড়, লবণাক্ততা, নদীভাঙন আর তাপপ্রবাহে বছরে প্রায় ১৫.২ বিলিয়ন ডলারের ক্ষতি হয়। জুলাই ২০২৬-এর বন্যায় ৭ জেলার ১০.২ লাখ মানুষ ক্ষতিগ্রস্ত হন।
+
+**প্রতিশ্রুতি বনাম বাস্তবতা (তথ্য-ছক)**
+
+| বিষয় | তথ্য | উৎস |
+|---|---|---|
+| লস অ্যান্ড ড্যামেজ তহবিল | ১১৯টি দেশের চাওয়া ২.৮ বিলিয়ন ডলারের বিপরীতে মাত্র প্রায় ৬০০ মিলিয়ন ডলার | ক্লাইমেট অ্যাকশন নেটওয়ার্ক, নভেম্বর ২০২৬ |
+| বার্ষিক জলবায়ু ক্ষতি | প্রায় ১৫.২ বিলিয়ন ডলার | সরকারি হিসাব |
+| ঝুঁকি সূচক | বিশ্বে ১৩তম ক্ষতিগ্রস্ত দেশ | জার্মানওয়াচ ২০২৬ |
+
+**ঋণ নয়, অনুদান**
+অভিযোজন আর ক্ষয়ক্ষতির জন্য ঋণ দিলে ক্ষতিগ্রস্ত দেশের ওপর নতুন করে ঋণের বোঝা চাপে। তাই বাংলাদেশের মূল দাবি:
+১. অনুদানভিত্তিক অর্থায়ন।
+২. ক্ষতিগ্রস্ত দেশ ও স্থানীয় জনগোষ্ঠীর জন্য সহজ, সরাসরি প্রবেশাধিকার।
+৩. প্রশমনের পাশাপাশি অভিযোজনে বেশি অর্থ।
+৪. নবায়নযোগ্য জ্বালানিতে প্রযুক্তি হস্তান্তর।
+
+**গ্রিন ব্যাংকিং ও টেকসই অর্থায়ন**
+বাংলাদেশ ব্যাংকের টেকসই অর্থায়ন নীতি অনুযায়ী ব্যাংকগুলো সৌরবিদ্যুৎ, জ্বালানিসাশ্রয়ী কারখানা আর বর্জ্য শোধনাগারে অর্থায়ন করছে। এর পাশাপাশি ব্যাংকগুলো সবুজ বন্ড ও সুকুক ছাড়তে পারে, ঋণ দেওয়ার সময় জলবায়ু ঝুঁকি বিবেচনা করতে পারে, আর সৌর সেচে পুনঃঅর্থায়ন বাড়াতে পারে।
+
+**দেশের ভেতরে করণীয়**
+১. জাতীয় অভিযোজন পরিকল্পনা বাস্তবায়ন করা।
+২. জলবায়ু-সহনশীল অবকাঠামো গড়া।
+৩. আমদানিনির্ভর জ্বালানি কমিয়ে নবায়নযোগ্য জ্বালানি বাড়ানো।
+৪. জলবায়ু তহবিল ব্যবহারে স্বচ্ছতা নিশ্চিত করা, যাতে অর্থ প্রকৃত ক্ষতিগ্রস্তের কাছে পৌঁছায়।
+
+**উপসংহার**
+জলবায়ু ন্যায়বিচার মানে দূষণকারী দেশই ক্ষতিপূরণ দেবে। বাংলাদেশকে অনুদানভিত্তিক অর্থায়নের দাবি অব্যাহত রাখতে হবে। একই সঙ্গে দেশের ভেতরে কার্যকর পদক্ষেপ দিয়ে প্রমাণ করতে হবে যে প্রতিটি ডলার সঠিকভাবে ব্যবহৃত হচ্ছে।
+
 ## Ans. to the Predicted Q. (Bangla focus) — Energy Security of Bangladesh amid the Middle East Crisis
 
-Tip: Write this in Bangla in the exam. Bangla sub-headings: ভূমিকা · মধ্যপ্রাচ্য যুদ্ধ ও হরমুজ প্রণালী · আমদানিনির্ভর জ্বালানি খাত · গ্যাস ও বিদ্যুৎ সংকট (তথ্য-ছক) · অর্থনীতিতে প্রভাব · নবায়নযোগ্য জ্বালানির সম্ভাবনা · করণীয় · উপসংহার
+Tip: Write this in Bangla in the exam. The full Bangla answer follows the English one below. Bangla sub-headings: ভূমিকা · মধ্যপ্রাচ্য যুদ্ধ ও হরমুজ প্রণালী · আমদানিনির্ভর জ্বালানি খাত · গ্যাস ও বিদ্যুৎ সংকট (তথ্য-ছক) · অর্থনীতিতে প্রভাব · নবায়নযোগ্য জ্বালানির সম্ভাবনা · করণীয় · উপসংহার
 
 ### Energy Security of Bangladesh amid the Middle East Crisis
 
@@ -305,9 +385,46 @@ Declining domestic gas fields, slow exploration, over-reliance on imported LNG a
 **Conclusion**
 Energy security is national security. Bangladesh must turn this crisis into a push for domestic gas and renewable energy, so that the next global shock does not switch off its factories.
 
+
+### বাংলায় পূর্ণ উত্তর (পরীক্ষায় এভাবে লিখুন)
+
+#### মধ্যপ্রাচ্য সংকটে বাংলাদেশের জ্বালানি নিরাপত্তা
+
+**ভূমিকা**
+জ্বালানি নিরাপত্তা মানে সাশ্রয়ী দামে নির্ভরযোগ্য জ্বালানি সরবরাহ। ২৮ ফেব্রুয়ারি ২০২৬ থেকে শুরু হওয়া ইরান যুদ্ধ আর হরমুজ প্রণালীর কার্যত অচলাবস্থা দেখিয়ে দিয়েছে, আমদানিনির্ভর বাংলাদেশের জ্বালানি ব্যবস্থা কতটা ভঙ্গুর।
+
+**সংকটের চিত্র (তথ্য-ছক)**
+
+| বিষয় | তথ্য | উৎস |
+|---|---|---|
+| ব্রেন্ট অপরিশোধিত তেল (১৯ নভে ২০২৬) | প্রায় ৯২ ডলার/ব্যারেল (শীর্ষে ১০০ ডলারের বেশি) | oilprice.com |
+| স্পট এলএনজি | ২৪–২৮ ডলার/এমএমবিটিইউ (যুদ্ধের আগে প্রায় ১০) | বিডিনিউজ২৪ |
+| গ্যাস সরবরাহ বনাম চাহিদা | ২,৬২৪ বনাম প্রায় ৩,৮০০ এমএমসিএফডি | বিডিনিউজ২৪ |
+| ডিজেলের দাম | ১০০ → ১৩৫ টাকা/লিটার (২০২৬) | জ্বালানি বিভাগ |
+
+**অর্থনীতিতে প্রভাব**
+- **বিদ্যুৎ ও শিল্প:** ২১ জুলাই মহেশখালীর ভাসমান এলএনজি টার্মিনালে অগ্নিকাণ্ডের পর লোডশেডিং ২,৫০০ মেগাওয়াট ছাড়ায়, প্রায় ২,৫০০ কারখানা ক্ষতিগ্রস্ত হয়।
+- **এলএনজি সরবরাহ:** কাতারএনার্জির ফোর্স ম্যাজুর ঘোষণায় এলএনজি সরবরাহ অর্ধেকে নেমে আসে।
+- **মূল্যস্ফীতি:** সেচ ও পরিবহন খরচ বেড়েছে, খাদ্যবহির্ভূত মূল্যস্ফীতি ৯.৮৯ শতাংশে উঠেছে।
+- **রিজার্ভ:** আমদানি ব্যয় বেড়ে রিজার্ভের ওপর চাপ তৈরি হয়েছে।
+
+**দুর্বলতার মূল কারণ**
+দেশীয় গ্যাসক্ষেত্রের মজুত কমছে, অনুসন্ধান ধীর, আমদানি করা এলএনজি ও তেলের ওপর অতিনির্ভরতা, আর নবায়নযোগ্য জ্বালানিতে রূপান্তরও ধীর।
+
+**করণীয়**
+১. বাপেক্স ও আন্তর্জাতিক অংশীদারের মাধ্যমে স্থলে ও সমুদ্রে গ্যাস অনুসন্ধান জোরদার করা।
+২. একাধিক সরবরাহকারীর সঙ্গে দীর্ঘমেয়াদি এলএনজি চুক্তি করা।
+৩. ছাদে, সেচে ও বড় পরিসরে সৌরবিদ্যুৎ এবং বায়ুবিদ্যুৎ বাড়ানো।
+৪. শিল্প ও ভবনে জ্বালানি দক্ষতা বাড়ানো।
+৫. কমপক্ষে ৬০ দিনের কৌশলগত তেল মজুত গড়ে তোলা।
+৬. কৃষকের জন্য লক্ষ্যভিত্তিক সহায়তাসহ স্বচ্ছ মূল্য নির্ধারণ সূত্র চালু করা।
+
+**উপসংহার**
+জ্বালানি নিরাপত্তাই জাতীয় নিরাপত্তা। এই সংকটকে দেশীয় গ্যাস আর নবায়নযোগ্য জ্বালানির দিকে এগিয়ে যাওয়ার সুযোগে পরিণত করতে হবে, যাতে পরের বৈশ্বিক ধাক্কায় আমাদের কারখানা বন্ধ না হয়।
+
 ## Ans. to the Predicted Q. (Bangla focus) — Youth Unemployment and Skills Development
 
-Tip: Write this in Bangla in the exam. Bangla sub-headings: ভূমিকা · তরুণ জনগোষ্ঠী: সম্ভাবনা ও ঝুঁকি · শিক্ষিত বেকারত্বের কারণ · চতুর্থ শিল্পবিপ্লব ও দক্ষতার ঘাটতি · কর্মসংস্থান সৃষ্টিতে ব্যাংকের ভূমিকা · করণীয় · উপসংহার
+Tip: Write this in Bangla in the exam. The full Bangla answer follows the English one below. Bangla sub-headings: ভূমিকা · তরুণ জনগোষ্ঠী: সম্ভাবনা ও ঝুঁকি · শিক্ষিত বেকারত্বের কারণ · চতুর্থ শিল্পবিপ্লব ও দক্ষতার ঘাটতি · কর্মসংস্থান সৃষ্টিতে ব্যাংকের ভূমিকা · করণীয় · উপসংহার
 
 ### Youth Unemployment and Skills Development in Bangladesh
 
@@ -325,7 +442,7 @@ About two million young people enter Bangladesh's labour market every year. With
 IT and freelancing, the care economy, agro-processing, light engineering, overseas employment of skilled workers, and the green economy (solar installation, recycling).
 
 **Role of banks**
-Collateral-free start-up loans; Bangladesh Bank's Tk 60,000 crore stimulus, which includes windows for youth employment and CMSMEs; the new venture-capital platform launched by banks (reported as Bangladesh Startup Investment Company); and digital nano-loans.
+Collateral-free start-up loans; Bangladesh Bank's Tk 60,000 crore stimulus, which includes windows for small businesses, rural employment and non-traditional exports; a venture-capital platform reportedly launched by banks in 2026; and digital nano-loans.
 
 **Recommendations**
 1. Reform the curriculum with industry participation; expand apprenticeships.
@@ -336,3 +453,41 @@ Collateral-free start-up loans; Bangladesh Bank's Tk 60,000 crore stimulus, whic
 
 **Conclusion**
 The youth led Bangladesh's political change in 2024; now they need an economy that can use their talent. Skills, finance and investment together can turn a jobless generation into the engine of growth.
+
+### বাংলায় পূর্ণ উত্তর (পরীক্ষায় এভাবে লিখুন)
+
+#### তরুণ বেকারত্ব ও দক্ষতা উন্নয়ন
+
+**ভূমিকা**
+প্রতিবছর প্রায় ২০ লাখ তরুণ বাংলাদেশের শ্রমবাজারে প্রবেশ করে। কিন্তু প্রবৃদ্ধি কমে এসেছে (অর্থবছর ২০২৫-২৬-এ ৩.৬৮%), বেসরকারি বিনিয়োগও দুর্বল। ফলে অনেক শিক্ষিত তরুণ উপযুক্ত কাজ পাচ্ছেন না। জনমিতিক লভ্যাংশ এখন বোঝায় পরিণত হওয়ার ঝুঁকিতে।
+
+**শিক্ষিত বেকারত্বের চিত্র (তথ্য-ছক)**
+
+| বিষয় | তথ্য | উৎস |
+|---|---|---|
+| স্নাতক বেকারত্ব | প্রতি ৩ জন স্নাতকের ১ জন বেকার (প্রায় ৯ লাখ) | প্রথম আলো, জুলাই ২০২৬ |
+| বেসরকারি ঋণ প্রবৃদ্ধি | ৪.১৭% (সেপ্টেম্বর ২০২৬, রেকর্ড সর্বনিম্ন) | বাংলাদেশ ব্যাংক |
+| দারিদ্র্যের হার | ২২.৫% (২০২৬) | বিশ্বব্যাংক |
+
+**কারণ**
+১. **দক্ষতার অমিল:** ডিগ্রির সঙ্গে নিয়োগদাতার চাহিদা মেলে না। তাঁরা চান কারিগরি, ডিজিটাল আর ভাষার দক্ষতা।
+২. **নতুন কর্মসংস্থান কম:** দুর্বল বিনিয়োগ, জ্বালানি সংকট আর ব্যাংক খাতের সমস্যায় নতুন কারখানা কম হচ্ছে।
+৩. **স্বয়ংক্রিয়করণ:** পোশাক ও সেবা খাতে যন্ত্র মানুষের কাজ নিচ্ছে।
+৪. **দুর্বল কারিগরি শিক্ষা:** কারিগরি ও বৃত্তিমূলক শিক্ষা আকর্ষণীয় নয়।
+৫. **অর্থায়নের অভাব:** তরুণ উদ্যোক্তারা সহজে ঋণ পান না।
+
+**সম্ভাবনার খাত**
+তথ্যপ্রযুক্তি ও ফ্রিল্যান্সিং, সেবা (কেয়ার) অর্থনীতি, কৃষি প্রক্রিয়াজাতকরণ, হালকা প্রকৌশল, দক্ষ শ্রমিক হিসেবে বিদেশে কর্মসংস্থান আর সবুজ অর্থনীতি (সৌর স্থাপন, পুনর্ব্যবহার)।
+
+**কর্মসংস্থানে ব্যাংকের ভূমিকা**
+বাংলাদেশ ব্যাংকের ৬০,০০০ কোটি টাকার প্রণোদনা প্যাকেজে ক্ষুদ্র ব্যবসা, গ্রামীণ কর্মসংস্থান আর অপ্রচলিত রপ্তানির জন্য আলাদা তহবিল আছে, যার লক্ষ্য প্রায় ২৫ লাখ কর্মসংস্থান। ব্যাংকগুলো জামানতবিহীন স্টার্টআপ ঋণ আর ডিজিটাল ন্যানো ঋণও দিতে পারে।
+
+**করণীয়**
+১. শিল্পের অংশগ্রহণে পাঠ্যক্রম সংস্কার করা এবং শিক্ষানবিশ (অ্যাপ্রেন্টিসশিপ) ব্যবস্থা বাড়ানো।
+২. কারিগরি শিক্ষাকে মানসম্মত ও আকর্ষণীয় করা।
+৩. জাতীয় চাকরি-সংযোগ প্ল্যাটফর্ম চালু করা।
+৪. ভেঞ্চার ক্যাপিটাল, ইনকিউবেটর আর সহজ নিবন্ধনের মাধ্যমে স্টার্টআপকে সহায়তা করা।
+৫. বিদেশে চাকরির জন্য ভাষা ও সনদভিত্তিক দক্ষতা প্রশিক্ষণ দেওয়া।
+
+**উপসংহার**
+২০২৪ সালে তরুণেরাই রাজনৈতিক পরিবর্তনের নেতৃত্ব দিয়েছিলেন। এখন তাঁদের দরকার এমন অর্থনীতি, যা তাঁদের মেধা কাজে লাগাতে পারে। দক্ষতা, অর্থায়ন আর বিনিয়োগ একসঙ্গে এগোলে বেকার প্রজন্মই প্রবৃদ্ধির চালিকাশক্তি হয়ে উঠবে।

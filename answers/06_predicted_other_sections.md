@@ -154,9 +154,9 @@ Tip: Translate the meaning, not word by word. Keep tense consistent, use "althou
 (a) **Governor of Bangladesh Bank:** Md Mostaqur Rahman (since 25 Feb 2026).
 (b) **New LDC graduation date:** 24 November 2029 (UN General Assembly, 29 Oct 2026).
 (c) **COP31 venue:** Antalya, Türkiye (9–20 Nov 2026).
-(d) **President of the 81st UN General Assembly:** Khalilur Rahman, Foreign Minister of Bangladesh.
+(d) **President of the 81st UN General Assembly:** Khalilur Rahman, Foreign Minister of Bangladesh (reported by two news sources; not confirmed from a UN primary source).
 (e) **Gini coefficient** measures income inequality; 0 = perfect equality, 1 = perfect inequality.
-(f) **Strait of Hormuz** connects the Persian Gulf with the Gulf of Oman. About one-fifth of world oil passed through it before its closure in 2026.
+(f) **Strait of Hormuz** connects the Persian Gulf with the Gulf of Oman. About one-fifth of world oil passed through it before its near-closure in 2026.
 (g) **Bangladesh's first Economic Partnership Agreement:** with Japan, signed 6 Feb 2026.
 (h) **US tariff on Bangladeshi goods since 24 July 2026:** 10 percent (Section 301).
 (i) **IMF's 2026 world growth forecast (October WEO):** 3.1 percent.

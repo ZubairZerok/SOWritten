@@ -143,6 +143,13 @@ checks = {
 for p, needles in checks.items():
     for n in needles:
         ok(n in ans.get(p, ""), f"{p} contains verified result", n)
+# answer-script stress-test guards (unsourced or superseded figures must not return)
+for bad in ("84.22", "43.2%", "Tk 89 per litre", "36,706", "70,446", "S&P Global", "USD 120", "32 GSP+", "4.14%", "19% reciprocal",
+            "June 2027", "Instant Interoperable", "Tk 6.07 lakh", "set up in 2019 under the Payment Systems", "exited in May 2026", "USD 1.78 billion"):
+    for p, t in ans.items():
+        ok(bad not in t, f"{p} has no unsourced/superseded figure", bad)
+allans = "\n".join(ans.values())
+ok(allans.count("বাংলায় পূর্ণ উত্তর") >= 7, "at least 7 full Bangla focus answers", allans.count("বাংলায় পূর্ণ উত্তর"))
 for p, t in ans.items():
     ok(t.count("**") % 2 == 0, f"{p} balanced bold markers")
     ok("✗ — check" not in t, f"{p} no leftover working note")

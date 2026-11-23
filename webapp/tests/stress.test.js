@@ -356,11 +356,13 @@ const noHScroll = (page) => page.evaluate(() => document.documentElement.scrollW
     await page.evaluate(() => (location.hash = "practice-quiz-bn"));
     await page.getByRole("button", { name: /^কারক/ }).click();
     let tags = new Set();
-    for (let i = 0; i < 5; i++) { tags.add(await page.locator(".eyebrow").last().innerText()); await page.locator("button.opt").first().click(); await page.getByRole("button", { name: i < 4 ? "পরের প্রশ্ন" : "ফলাফল দেখুন" }).click(); }
-    ok([...tags].every((t) => t.includes("কারক")), "'কারক' ফিল্টারে শুধু কারকের প্রশ্ন (৫টি)", [...tags].join(" | "));
+    const nK = Math.min(10, await page.evaluate(() => D.quiz.bn.filter((q) => q.tp === "karok").length));
+    for (let i = 0; i < nK; i++) { tags.add(await page.locator(".eyebrow").last().innerText()); await page.locator("button.opt").first().click(); await page.getByRole("button", { name: i < nK - 1 ? "পরের প্রশ্ন" : "ফলাফল দেখুন" }).click(); }
+    ok([...tags].every((t) => t.includes("কারক")), "'কারক' ফিল্টারে শুধু কারকের প্রশ্ন (" + nK + "টি)", [...tags].join(" | "));
     await page.evaluate(() => (location.hash = "assess"));
     const at = await page.locator("main").innerText();
-    ok(at.includes("ব্যাকরণ সিলেবাস কভারেজ") && /কারক\s+৫\/৫/.test(at), "কভারেজ টেবিলে কারক ৫/৫ দেখা", at.match(/কারক[^\n]*/)?.[0]);
+    const kTot = await page.evaluate(() => D.quiz.bn.filter((q) => q.tp === "karok").length); const bnD = (x) => String(x).replace(/[0-9]/g, (d) => "০১২৩৪৫৬৭৮৯"[d]);
+    ok(at.includes("ব্যাকরণ সিলেবাস কভারেজ") && new RegExp("কারক\\s+" + bnD(nK) + "\\/" + bnD(kTot)).test(at), "কভারেজ টেবিলে কারক " + nK + "/" + kTot + " দেখা", at.match(/কারক[^\n]*/)?.[0]);
     ok(at.includes("লক্ষ্য ১২৮") && at.includes("লক্ষ্য (১২৮)"), "মূল্যায়নে লক্ষ্য ১২৮");
     await page.evaluate(() => (location.hash = "plan"));
     const pt = await page.locator("main").innerText();

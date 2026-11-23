@@ -34,7 +34,7 @@ h = 9(√3 + 1) + 18 = 27 + 9√3 ≈ **42.59 m**.
 ## Essay skeletons (old papers)
 
 **50 Years of Bangladesh's Banking Management System: A Critical Evaluation (2022)**
-Nationalisation (1972) → denationalisation and private banks (1980s) → Financial Sector Reform Programme (1990s) → Basel, digital banking, MFS (2010s) → crisis of governance and default loans (32.17%, Sept 2026) and the Bank Resolution Act 2026. *Achievements:* outreach, inclusion, MFS leadership, remittance channel. *Failures:* political lending, weak supervision, too many banks (61). *Way forward:* independent central bank, consolidation, fit-and-proper directors, ECL provisioning.
+Nationalisation (1972) → denationalisation and private banks (1980s) → Financial Sector Reform Programme (1990s) → Basel, digital banking, MFS (2010s) → crisis of governance and default loans (32.17%, Sept 2026) and the Bank Resolution Act 2026. *Achievements:* outreach, inclusion, MFS leadership, remittance channel. *Failures:* political lending, weak supervision, too many banks (about 60). *Way forward:* independent central bank, consolidation, fit-and-proper directors, ECL provisioning.
 
 **The Role of the Banking Sector for Sustainable E-Commerce (2021)**
 Payment gateways, Bangla QR, escrow services for consumer protection, SME credit for online sellers, cyber security, cross-border payments for freelancers, consumer trust after e-commerce scams.

@@ -60,20 +60,23 @@ order: 4
 | Digital / AI | Predicted: *AI and the Future of Banking*; Dec 2025: *Digital Economy* |
 | Youth and jobs | Predicted: *Youth Unemployment and Skills* |
 | Poverty and finance | June 2025: *Microcredit and Poverty Alleviation* |
+| Governance, revenue, global economy, Rohingya | Section 4 outlines below |
+
+**Bangla versions:** full Bangla answers are given for default loans and banking reform, fuel prices, climate and productivity, democratic movements and youth, COP31, energy security, and youth unemployment, because the Bangla focus question must be answered in Bangla.
 
 ## 4. Quick outlines for the remaining likely topics
 
 **Revenue mobilisation and the new IMF programme**
-Tax-GDP about 7%, among the lowest in the world · FY27 revenue target Tk 6.95 lakh crore (NBR Tk 6.04 lakh crore) · causes: narrow tax base, exemptions, informality, weak digital administration · the new IMF programme of USD 4.5–5 bn under negotiation (old programme exited in May 2026) · reforms: separate tax policy from administration, digital VAT, cut exemptions, a property tax, widen the income-tax net · conclusion: without revenue, no development budget is sustainable.
+Tax-GDP about 7%, among the lowest in the world · FY27 revenue target Tk 6.95 lakh crore (NBR Tk 6.04 lakh crore) · causes: narrow tax base, exemptions, informality, weak digital administration · a new IMF programme of about USD 4.5–5 bn reported as under discussion · reforms: separate tax policy from administration, digital VAT, cut exemptions, a property tax, widen the income-tax net · conclusion: without revenue, no development budget is sustainable.
 
 **Institutional reform and democratic governance**
-2024 uprising → February 2026 election → constitutional reform committee formed 13 July 2026 · independent Election Commission, judiciary, ACC, central bank and public service · checks and balances, local government · role of youth and media · conclusion: elections are necessary but not sufficient; institutions make democracy last.
+2024 uprising → February 2026 election → a constitutional reform process under way · independent Election Commission, judiciary, ACC, central bank and public service · checks and balances, local government · role of youth and media · conclusion: elections are necessary but not sufficient; institutions make democracy last.
 
 **Global economy and its impact on Bangladesh**
-IMF: world growth 3.1% and inflation 4.7% in 2026 · oil about USD 92 after peaking above USD 120 · US tariffs and trade realignment · AI-driven trade boom (WTO 3.9% trade growth) · effects on Bangladesh: imported inflation, export demand, remittance from the Gulf · policy: diversify markets, energy security, reserve buffers.
+IMF: world growth 3.1% and inflation 4.7% in 2026 · Brent about USD 92 (19 Nov) after peaking above USD 100 · US tariffs and trade realignment · AI-driven trade boom (WTO 3.9% trade growth) · effects on Bangladesh: imported inflation, export demand, remittance from the Gulf · policy: diversify markets, energy security, reserve buffers.
 
 **Rohingya crisis**
-About 1.2 million refugees · 2026 Joint Response Plan USD 710.5 m (26% lower) · food rations cut to USD 6 for some · Arakan Army controls about 90% of Rakhine · Bangladesh holds the UNGA presidency, a diplomatic opportunity · solution: safe, voluntary, dignified return; burden-sharing; accountability at the ICJ.
+About 1.2 million refugees · 2026 Joint Response Plan USD 710.5 m (26% lower) · Arakan Army controls about 90% of Rakhine · Bangladesh's Foreign Minister is reported to preside over the 81st UNGA, a diplomatic opportunity · solution: safe, voluntary, dignified return; burden-sharing; accountability at the ICJ.
 
 ## 5. The Analytical section (40): what to expect
 

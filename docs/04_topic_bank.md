@@ -141,8 +141,8 @@
   _Md. Mostaqur Rahman is the 14th Governor of Bangladesh Bank, appointed by notification on 25 Feb 2026 for four years, succeeding Dr Ahsan H Mansur._ `[Daily Star Bangla 25 Feb 2026; Prothom Alo 26 Feb 2026]`
 - খেলাপি ঋণ জুন ২০২৬: প্রায় ৬.০৬ লাখ কোটি টাকা, মোট ঋণের ৩২.৭৮% — IMF তথ্য অনুযায়ী বিশ্বে সর্বোচ্চ  
   _Default loans stood at about Tk 6.06 lakh crore at end-June 2026, 32.78% of total loans — the highest in the world according to IMF data._ `[NEWS: Prothom Alo English / FE, 2026]`
-- সম্মিলিত ইসলামী ব্যাংক: এক্সিম, ফার্স্ট সিকিউরিটি, সোশ্যাল ইসলামী, ইউনিয়ন ও গ্লোবাল ইসলামী ব্যাংক একীভূত (একক ব্যবস্থাপনা ১৬ আগস্ট ২০২৬ থেকে); পাঁচ ব্যাংকের খেলাপি ঋণ ছিল ৮৪.২২%  
-  _Sammilito Islami Bank merged Exim, First Security, Social Islami, Union and Global Islami banks (single management from 16 August 2026); their combined default ratio was 84.22%._ `[NEWS: 2026 reports via digest]`
+- সম্মিলিত ইসলামী ব্যাংক: এক্সিম, ফার্স্ট সিকিউরিটি, সোশ্যাল ইসলামী, ইউনিয়ন ও গ্লোবাল ইসলামী ব্যাংক একীভূত (একক ব্যবস্থাপনা ১৬ আগস্ট ২০২৬ থেকে); পাঁচ ব্যাংকের ১.৯২ লাখ কোটি টাকার ঋণের প্রায় ৮৬% খেলাপি  
+  _Sammilito Islami Bank merged Exim, First Security, Social Islami, Union and Global Islami banks (single management from 16 August 2026); about 86% of their Tk 1.92 lakh crore loans are in default._ `[NEWS: 2026 reports; Daily New Nation / New Age (Fact Pack 20 Nov 2026)]`
 - ব্যাংক রেজল্যুশন আইনের ১৮ক ধারা (সাবেক মালিকদের ব্যাংক ফেরত পাওয়ার সুযোগ) বাতিল, সেপ্টেম্বর ২০২৬ — IMF ও বিশ্বব্যাংকের আপত্তির পর  
   _Parliament repealed Section 18A of the Bank Resolution Act, which let former owners reclaim troubled banks, in September 2026 after IMF and World Bank objections._ `[NEWS: bdnews24, 2026]`
 - সর্বশেষ সরকারি হিসাব: সেপ্টেম্বর ২০২৬-এ খেলাপি ঋণ ৫,৯৭,১৫৪.৯৩ কোটি টাকা = মোট ঋণের (১৮,৫৬,১৬৯ কোটি) ৩২.১৭%; মার্চে ছিল ৩২.২৬%, ২০২২-এ ৭.৬৪% (অর্থমন্ত্রী, সংসদে ১৬ নভে)  
@@ -685,7 +685,7 @@
 - IMF প্রধান: AI একটি 'ধীরগতির সুনামি' — প্রায় ৪০% চাকরি প্রভাবিত হবে  
   _The IMF chief called AI 'a slow-moving tsunami' that will affect about 40% of jobs._ `[IMF / AP, Oct 2026]`
 - ১২ ফেব্রুয়ারি ২০২৬ নির্বাচনে বিএনপি সরকার গঠন; প্রধানমন্ত্রী তারেক রহমান; পররাষ্ট্রমন্ত্রী খলিলুর রহমান জাতিসংঘ সাধারণ পরিষদের ৮১তম অধিবেশনের সভাপতি  
-  _After the 12 February 2026 election the BNP formed the government under Prime Minister Tarique Rahman; Foreign Minister Khalilur Rahman presides over the 81st UN General Assembly._ `[NEWS: Al Jazeera / FE, 2026]`
+  _After the 12 February 2026 election the BNP formed the government under Prime Minister Tarique Rahman; Foreign Minister Khalilur Rahman presides over the 81st UN General Assembly._ `[NEWS: Al Jazeera / FE, 2026 (UNGA সভাপতির তথ্য দুটি সংবাদসূত্রে, প্রাথমিক উৎসে যাচাই হয়নি)]`
 - বেসরকারি ঋণ প্রবৃদ্ধি সেপ্টেম্বর ২০২৬-এ ৪.১৭% — রেকর্ড সর্বনিম্ন, টানা সাত মাস ৫%-এর নিচে  
   _Private-sector credit growth fell to a record-low 4.17% in September 2026, the seventh straight month below 5%._ `[NEWS: Samakal / Ajker Patrika, Oct 2026]`
 - FY27 বাজেট: রাজস্ব লক্ষ্য ৬.৯৫ লাখ কোটি (NBR ৬.০৪), ADP ৩ লাখ কোটি, সামাজিক সুরক্ষা ১,৪৪,৩৩৮ কোটি, করমুক্ত আয়সীমা ৪ লাখ টাকা  
