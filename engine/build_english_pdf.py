@@ -5,7 +5,9 @@ Content = docs/19 (stress-tested) re-organised for memory: one card per syllabus
 Bangla memory hints, themed group verbs and idioms, self-test with key, last-night sheet.
 Run: python3 engine/build_english_pdf.py
 """
-import html, os, subprocess
+import html, os, subprocess, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from english_extras import EXTRA, TENSES, IRREG, PRON, MOCKS, PLAN
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT_HTML = os.path.join(ROOT, "final_pdfs", "SO_English_Grammar_Memorize_Edition.html")
@@ -40,7 +42,23 @@ def qa(items):
     return '<div class="qa">' + "".join(f'<div class="q">{b(q)}</div><div class="a">{b(a)}</div>' for q, a in items) + "</div>"
 
 
+def learn(bn):
+    return f'<div class="learn"><span>শূন্য থেকে বুঝুন</span>{b(bn)}</div>'
+
+
+def steps(items):
+    return '<div class="steps"><span>পরীক্ষায় ধাপে ধাপে</span><ol>' + "".join(f"<li>{b(x)}</li>" for x in items) + "</ol></div>"
+
+
+def worked(items):
+    return '<h3>Worked examples (exactly how to write it)</h3>' + "".join(
+        f'<div class="wk"><div class="q">{b(q)}</div><div class="a">{b(a)}</div><div class="why"><span>কেন</span>{b(w)}</div></div>' for q, a, w in items)
+
+
 def section(num, title, sub, body, stars=""):
+    x = EXTRA.get(num, {})
+    if x:
+        body = (learn(x["learn"]) if "learn" in x else "") + (steps(x["steps"]) if "steps" in x else "") + body + (worked(x["worked"]) if "worked" in x else "")
     return f'<section class="topic"><header><span class="no">{num}</span><div><h2>{e(title)} <i>{stars}</i></h2><p>{b(sub)}</p></div></header>{body}</section>'
 
 
@@ -57,6 +75,17 @@ S.append(section("A", "How the question comes and how to write a 4/4 answer",
         ["Correction / right form / SVA", "whole sentence, changed word in bold + rule", "Each of the officers **has** a laptop. (each of → singular)"],
         ["Finite / clause", "identify + type + function", "'that he is honest' = **noun clause**, object of 'know'."],
     ], "wide") + hint("উত্তরের তিন অংশ: **উত্তর → নিয়ম → উদাহরণ**। শুধু এক শব্দ লিখলে ৪-এর মধ্যে ১–২ নম্বর কাটা যায়।")))
+
+S.append(section("0", "Basics from zero (read this first if English grammar is new)", "Everything else in this booklet uses these four tables.",
+    learn("ইংরেজি বাক্যের মূল ছক: **Subject (কে/কী) + Verb (কী করে/হয়) + Object (কাকে/কী)** — *The bank (S) gave (V) him (O) a loan (O).* বাংলায় verb শেষে বসে (আমি ভাত খাই), ইংরেজিতে **subject-এর ঠিক পরে** (I eat rice)। Verb-এর রূপ বদলায় **সময় (tense)** আর **subject (একবচন/বহুবচন)** অনুযায়ী — এই দুটি বুঝলেই প্রশ্ন ৮-এর অর্ধেক সহজ।")
+    + '<h3>The 12 tenses (with the Bangla ending to recognise them)</h3>'
+    + table(["Tense", "Formula", "Example", "বাংলা"], TENSES, "tense")
+    + hint("**be-এর রূপ:** I am · he/she/it is · we/you/they are · was (একবচন) / were (বহুবচন) · been (have/has/had-এর পরে) · be (will/can/must-এর পরে)। **have-এর রূপ:** he/she/it **has**, বাকিরা **have**, অতীতে সবার **had**।")
+    + '<h3 style="break-before:page">Irregular verbs: V1 – V2 – V3 (these appear in voice, right form and narration)</h3>'
+    + '<div class="irreg">' + "".join(f"<div><b>{e(a)}</b> {e(v2)} · <i>{e(v3)}</i></div>" for a, v2, v3 in IRREG) + "</div>"
+    + hint("নিয়মিত verb-এ শুধু **-ed**: work – worked – worked। বাকিগুলো উপরের তালিকা থেকে। **V3 মুখস্থই passive আর perfect tense-এর চাবি।**")
+    + '<h3>Pronouns (for voice and narration)</h3>'
+    + table(["Subject", "Object (after by / verb)", "Possessive", "In narration it becomes"], PRON)))
 
 S.append(section("1", "Sentence structure", "Count the **finite verbs** → each one = one clause → decide main or sub.",
     table(["Type", "Formula", "Example"], [
@@ -344,6 +373,11 @@ PRACTICE = [
 ]
 pq = '<ol class="practice">' + "".join(f"<li>{b(q)}</li>" for q, _ in PRACTICE) + "</ol>"
 pk = '<ol class="key">' + "".join(f"<li>{b(a)}</li>" for _, a in PRACTICE) + "</ol>"
+mk = "".join(f'<h3>{e(t)} <small>(20 marks · 12 minutes)</small></h3><ol class="mock">' + "".join(f'<li><div class="q">{b(q)}</div><div class="a">{b(a)}</div></li>' for q, a in items) + "</ol>" for t, items in MOCKS)
+S.append(section("M", "Three full Question 8 papers with 4/4 model answers", "Cover the green answer, write yours on paper, then compare: answer + rule + example?", mk))
+S.append(section("P", "8-step study plan for this booklet (about 6½ hours)", "Do the steps in order; tick each one.",
+    table(["ধাপ", "পড়ুন", "সময়", "কীভাবে"], PLAN, "plan")
+    + hint("পরীক্ষার হলে **প্রশ্ন ৮-কে ১২–১৪ মিনিট দিন**, এর বেশি নয়। ৫টির মধ্যে যেটা সবচেয়ে সহজ, সেটা আগে।")))
 S.append(section("T", f"Self-test ({len(PRACTICE)} items in the exam style)", "Answer on paper in 15 minutes, then check with the key on the next page. Every wrong item → reread its card.", pq))
 S.append(section("K", "Answer key", "1 mark off for any missing rule or example.", pk))
 
@@ -401,6 +435,20 @@ table.last td:first-child { font-weight: 700; width: 26mm; color: var(--acc); }
 .trap { background: var(--warnsoft); border-left: 3pt solid var(--warn); border-radius: 0 6pt 6pt 0; padding: 6pt 9pt; margin: 6pt 0 8pt; break-inside: avoid; }
 .trap span { color: var(--warn); }
 .trap ul { margin: 3pt 0 0; padding-left: 14pt; }
+.learn { background: var(--accsoft); border-left: 3pt solid var(--acc); border-radius: 0 6pt 6pt 0; padding: 7pt 10pt; margin: 0 0 8pt; font-family: "TiroB", "Inter", sans-serif; font-size: 11pt; line-height: 1.6; }
+.learn span, .steps span, .why span { display: inline-block; font-family: "Inter", sans-serif; font-size: 7.6pt; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--acc); margin-right: 6pt; }
+.learn span { font-family: "TiroB", sans-serif; font-size: 9pt; letter-spacing: 0; }
+.steps { border: 1px solid var(--rule); border-radius: 6pt; padding: 6pt 10pt; margin: 0 0 9pt; font-family: "TiroB", "Inter", sans-serif; font-size: 10.6pt; line-height: 1.55; break-inside: avoid; }
+.steps span { font-family: "TiroB", sans-serif; font-size: 9pt; letter-spacing: 0; color: var(--ink); }
+.steps ol { margin: 3pt 0 0; padding-left: 16pt; } .steps li { margin: 1pt 0; }
+.wk { border: 1px solid var(--rule); border-radius: 6pt; padding: 6pt 10pt; margin: 0 0 6pt; break-inside: avoid; }
+.wk .q { font-weight: 600; } .wk .a { color: var(--green); margin: 2pt 0; }
+.why { font-family: "TiroB", "Inter", sans-serif; font-size: 10.2pt; color: var(--ink2); }
+.why span { font-family: "TiroB", sans-serif; font-size: 9pt; letter-spacing: 0; color: var(--warn); }
+.irreg { columns: 4; column-gap: 10pt; font-size: 9.6pt; margin-bottom: 8pt; } .irreg div { break-inside: avoid; padding: 1.6pt 0; border-bottom: 1px solid var(--rule); } .irreg i { color: var(--green); font-style: normal; font-weight: 600; }
+table.tense td:last-child, table.plan td { font-family: "TiroB", "Inter", sans-serif; }
+ol.mock li { margin: 0 0 3pt; break-inside: avoid; } ol.mock .q { font-weight: 600; } ol.mock .a { color: var(--green); }
+.hint span, .trap span { font-family: "TiroB", sans-serif !important; font-size: 9pt !important; letter-spacing: 0 !important; }
 .qa { border: 1px solid var(--rule); border-radius: 6pt; padding: 6pt 9pt; margin: 6pt 0; }
 .qa .q { font-weight: 600; } .qa .a { color: var(--green); margin-bottom: 4pt; }
 .families { columns: 2; column-gap: 12pt; }
@@ -415,9 +463,10 @@ ol.key li b { color: var(--green); }
 """
 cover = f"""<section class="cover">
 <div class="tag">SO Written · 27 November 2026 · Question 8</div>
-<h1>English Language Proficiency<br>Memorize &amp; Answer Booklet</h1>
-<div class="sub">The official 9 syllabus items, each on one page: the rule, a trigger → answer table, a Bangla memory hint, the trap examiners set, and the exact way to write a 4/4 answer. Plus 50 group verbs, {n_id} idioms by theme, a {len(PRACTICE)}-item self-test and a last-night sheet.</div>
+<h1>English Language Proficiency<br>Memorize &amp; Answer Booklet<br><span style="font-size:15pt;color:#2563eb">Zero-to-20 edition</span></h1>
+<div class="sub">From zero to 20/20. Every syllabus item explained in plain Bangla first (শূন্য থেকে বুঝুন), then step-by-step exam method, the rule table, worked examples with the reason (কেন), the trap examiners set and a memory hint. Plus a basics chapter (12 tenses, 68 irregular verbs, pronouns), 50 group verbs, {n_id} idioms by theme, 3 full Question 8 papers with model answers, a {len(PRACTICE)}-item self-test, a 6½-hour study plan and a last-night sheet.</div>
 <div class="grid9">
+<div><b>0 · Basics</b><span>tenses · V1-V2-V3 · pronouns</span></div>
 <div><b>1 · Sentence structure</b><span>simple · compound · complex · compound-complex</span></div>
 <div><b>2 · Subject-verb agreement</b><span>16 triggers</span></div>
 <div><b>3 · Right form of verbs</b><span>20 clue words</span></div>
@@ -427,8 +476,10 @@ cover = f"""<section class="cover">
 <div><b>7 · Finite / non-finite</b><span>infinitive · gerund · participle</span></div>
 <div><b>8 · Clause &amp; phrase</b><span>noun · adjective · adverb</span></div>
 <div><b>9–10 · Group verbs &amp; idioms</b><span>50 + {n_id}, themed</span></div>
+<div><b>M · 3 mock papers</b><span>15 items, 4/4 answers</span></div>
+<div><b>T · Self-test + key</b><span>{len(PRACTICE)} items · last-night sheet</span></div>
 </div>
-<div class="note">Source: the stress-tested English pack (docs/19, built from the 5 June 2026 paper, Master English Grammar and the NCTB grammar), re-organised for memory. How to use: one card per sitting → cover the right column and say it → self-test → last-night sheet.</div>
+<div class="note">Source: the stress-tested English pack (docs/19, built from the 5 June 2026 paper, Master English Grammar and the NCTB grammar), re-organised for memory. How to use: follow the 8-step plan (page "P") → read the Bangla box → do the worked examples yourself → cover the right column and say it → mocks → self-test → last-night sheet.</div>
 </section>"""
 html_doc = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><title>English Grammar — Memorize &amp; Answer</title>
 <style>{CSS.replace("__BN__", FONT_BN)}</style></head><body>{cover}{"".join(S)}</body></html>"""
