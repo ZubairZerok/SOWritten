@@ -5,7 +5,7 @@ Math Master Booklet: whole original pages (no rewriting), picked by how often ea
 Scanned pages are re-encoded as grey JPEG (small file); text-based Khairul pages are copied as they are.
 Output: final_pdfs/SO_Math_Master_Booklet.pdf
 """
-import io, os, subprocess, tempfile
+import io, os, re, subprocess, tempfile
 from pypdf import PdfReader, PdfWriter
 from PIL import Image
 
@@ -21,22 +21,49 @@ SRC = {
     "PAR": ("topic_sheets/PDF31_Partnership.pdf", True), "PRB": ("topic_sheets/PDF32_Probability.pdf", True),
     "TRN": ("topic_sheets/PDF62_Problem_on_Train.pdf", True), "MIX": ("topic_sheets/PDF60_Mixture.pdf", True),
     "EQ": ("topic_sheets/PDF16_Formation_of_Equation.pdf", True), "BIBM": ("question_bank/BIBM_Previous_All_Written_Math_Solution.pdf", True),
+    "TSD": ("topic_sheets/PDF61_Time_Speed_Distance.pdf", True),
 }
 # (chapter, Bangla name, priority stars, [(source, [pages])])
 CHAPTERS = [
-    ("Time, Speed, Train, Boat", "গতি · ট্রেন · নৌকা-স্রোত", "★★★", [("K04", range(1, 10)), ("TRN", [1, 2, 3, 7, 8, 11]), ("K07", range(1, 5))]),
-    ("Time & Work, Pipes, Unitary", "সময় ও কাজ · নল-চৌবাচ্চা", "★★★", [("K03", [1, 2, 3, 13, 14, 21, 22, 23, 28, 50, 51, 53, 54]), ("K08", [2, 4])]),
+    ("Time, Speed, Train, Boat", "গতি · ট্রেন · নৌকা-স্রোত", "★★★", [("TSD", [1, 2, 3, 4, 5, 14, 16, 22, 23]), ("TRN", [1, 2, 3, 7, 8, 11]), ("BIBM", [15, 34, 38])]),
+    ("Time & Work, Pipes", "সময় ও কাজ · নল-চৌবাচ্চা", "★★★", [("K03", [1, 2, 3, 13, 14, 21, 22, 23, 28, 50, 51, 53, 54]), ("BIBM", [139])]),
     ("Algebra & Forming Equations", "বীজগণিত ও সমীকরণ", "★★★", [("K02", [1, 2, 35, 44]), ("EQ", [1, 8, 10, 17, 25, 26])]),
     ("Profit & Loss", "লাভ-ক্ষতি", "★★★", [("PL", [1, 7, 13, 20, 22, 33, 38, 42, 43])]),
-    ("Percentage", "শতকরা", "★★★", [("K01", range(1, 10))]),
-    ("Mixture & Alligation", "মিশ্রণ", "★★", [("K06", range(1, 6)), ("MIX", [20, 21])]),
+    ("Percentage", "শতকরা", "★★★", [("K01", [1, 6, 8, 12]), ("BIBM", [35, 88, 128, 134])]),
+    ("Mixture & Alligation", "মিশ্রণ", "★★", [("K06", [1, 2, 5]), ("MIX", [2, 20, 21])]),
     ("Geometry & Mensuration", "জ্যামিতি ও ক্ষেত্রফল", "★★", [("GEO", [1, 3, 10, 16, 17, 21])]),
     ("Simple & Compound Interest", "সরল ও চক্রবৃদ্ধি সুদ", "★★", [("CI", [1, 6, 7, 16, 17, 18])]),
     ("Ratio & Partnership", "অনুপাত ও অংশীদারি", "★★", [("RAT", [10, 11]), ("PAR", [1, 17, 18])]),
     ("Probability, Permutation", "সম্ভাবনা · বিন্যাস-সমাবেশ", "★", [("PRB", [1, 2, 8, 13])]),
-    ("Series (AP / GP)", "ধারা", "★", [("K05", [1, 3, 7])]),
-    ("Recent BIBM papers (solved)", "সাম্প্রতিক BIBM প্রশ্ন ও সমাধান", "★★", [("BIBM", [1, 2, 5, 7, 9, 15, 94])]),
+    ("Series (AP / GP)", "ধারা", "★", [("K05", [1, 2, 3])]),
+    ("Recent BIBM papers (solved)", "সাম্প্রতিক BIBM প্রশ্ন ও সমাধান", "★★", [("BIBM", [1, 2, 5, 7, 9, 94])]),
 ]
+CACHE = {"K01": "01_Percentage", "K02": "02_Algebra", "K03": "03_Time_Work", "K05": "05_Arithmetic_Progression", "K06": "06_Mixture",
+         "PL": "PDF45_Profit_Loss", "GEO": "PDF33_Geometry", "CI": "PDF14_Compound_Interest", "RAT": "PDF30_Ratio_Proportion",
+         "PAR": "PDF31_Partnership", "PRB": "PDF32_Probability", "TRN": "PDF62_Problem_on_Train", "MIX": "PDF60_Mixture",
+         "EQ": "PDF16_Formation_of_Equation", "BIBM": "BIBM_Previous_All_Written_Math_Solution", "TSD": "PDF61_Time_Speed_Distance"}
+SOLRE = re.compile(r"(?i)solution|সমাধান|soln|ATQ|∴|Let,|Let ")
+
+
+def has_solution(key, p):
+    f = os.path.join(ROOT, "corpus", ".cache", CACHE[key], f"p{p:04d}.txt")
+    return os.path.exists(f) and SOLRE.search(open(f, encoding="utf-8").read()) is not None
+
+
+def solved_pages(key, pages):
+    """Questions + answers only: page 1 (formula page) is kept; any page without a worked solution is swapped for the nearest solved page."""
+    n = len(PdfReader(os.path.join(M, SRC[key][0])).pages)
+    out = []
+    for p in pages:
+        if p == 1 or has_solution(key, p):
+            q = p
+        else:
+            q = next((c for d in range(1, n) for c in (p + d, p - d) if 1 < c <= n and c not in out and c not in pages and has_solution(key, c)), None)
+        if q and q not in out:
+            out.append(q)
+    return sorted(out)
+
+
 FORMULAS = [
     ("শতকরা", "x% বৃদ্ধির পর y% হ্রাস → নিট = x − y − xy/100 · দাম x% বাড়লে খরচ ঠিক রাখতে ব্যবহার কমাতে হবে x/(100+x) × 100%"),
     ("লাভ-ক্ষতি", "লাভ% = লাভ/ক্রয়মূল্য × 100 · SP = CP × (100 ± %)/100 · ছাড়: SP = MP × (100 − ছাড়%)/100"),
@@ -81,7 +108,7 @@ td{{padding:4pt 6pt;border-bottom:1px solid #dbe3ee;vertical-align:top}} td span
 </style></head><body>
 <div class="tag">SO Written · 27 November 2026 · Mathematics (30 marks)</div>
 <h1>Math Master Booklet</h1>
-<div class="sub">মূল বইয়ের পাতা হুবহু (Khairul's Bank Written Math, টপিক শিট, BIBM সমাধান) — ১১০০+ পাতা থেকে শুধু সূত্রের পাতা আর ২০১৫-পরবর্তী ও SO পরীক্ষায় বারবার আসা প্রশ্নের পাতা, অধ্যায়ের অগ্রাধিকার অনুযায়ী সাজানো। মোট {total} পাতা।</div>
+<div class="sub">মূল বইয়ের পাতা হুবহু (Khairul's Bank Written Math, টপিক শিট, BIBM সমাধান) — ১১০০+ পাতা থেকে শুধু সূত্রের পাতা আর ২০১৫-পরবর্তী ও SO পরীক্ষায় বারবার আসা প্রশ্নের <b>সমাধানসহ</b> পাতা (প্রশ্ন + পূর্ণ সমাধান; শুধু-প্রশ্নের পাতা বাদ), অধ্যায়ের অগ্রাধিকার অনুযায়ী সাজানো। মোট {total} পাতা।</div>
 <table><thead><tr><th>#</th><th>Chapter</th><th>Priority</th><th>Booklet pages</th><th>Pages</th></tr></thead><tbody>{rows}</tbody></table>
 <div class="box"><b>কীভাবে পড়বেন:</b> ★★★ অধ্যায় আগে। প্রতিটি অধ্যায়ের প্রথম পাতা = সূত্র ও মূল ধারণা; তারপর পরীক্ষায় আসা প্রশ্ন (ব্র্যাকেটে ব্যাংক ও সাল)। প্রতিটি অঙ্ক আগে নিজে করুন (৬ মিনিট), না মিললে সমাধান দেখুন, পরদিন আবার করুন। পরীক্ষায় প্রতিটি ধাপ লিখুন, উত্তর বক্স করুন, একক লিখুন।</div>
 <div class="pb"></div><h2>Formula sheet (পরীক্ষার আগের রাতে শুধু এটা)</h2>
@@ -98,6 +125,10 @@ td{{padding:4pt 6pt;border-bottom:1px solid #dbe3ee;vertical-align:top}} td span
 
 
 def main():
+    global CHAPTERS
+    CHAPTERS = [(en, bn, st, [(k, solved_pages(k, list(ps))) for k, ps in parts]) for en, bn, st, parts in CHAPTERS]
+    for en, _, _, parts in CHAPTERS:
+        print(en, parts)
     FRONT = 2
     index_rows, cur = [], FRONT + 1
     for en, bn, st, parts in CHAPTERS:
@@ -126,7 +157,7 @@ def main():
             w.add_outline_item(f"{en} ({bn})", first)
     for pg in w.pages:
         pg.compress_content_streams()
-    w.compress_identical_objects(remove_identicals=True, remove_unreferenced=True)
+    w.compress_identical_objects(remove_duplicates=True, remove_unreferenced=True)
     with open(OUT, "wb") as f:
         w.write(f)
     print("PDF:", OUT, len(w.pages), "pages", round(os.path.getsize(OUT) / 1e6, 1), "MB")
